@@ -64,7 +64,7 @@ def measure_page_burden(driver: webdriver.Chrome) -> dict:
 def run_playtest() -> dict:
     results: dict = {
         "testedAt": "2026-11-09T14:35:00Z",
-        "version": "0.2.0",
+        "version": "0.3.0",
         "evaluationMode": "SIMULATED_ACCEPTANCE_EXERCISE_HEADLESS_CHROMIUM_NO_REAL_HUMAN_PARTICIPANT",
         "bundleUrl": str(DIST_INDEX.relative_to(ROOT)),
         "viewports": {},
@@ -195,8 +195,8 @@ def run_playtest() -> dict:
 
             # Return to target case, Explore mode, Step 1, and scroll to #investigation for screenshot
             driver.execute_script(f"""
-                document.querySelector("button[data-case='{target_case}']").click();
-                document.querySelector("#depth-switcher button[data-depth='explore']").click();
+                document.querySelector(\"button[data-case='{target_case}']").click();
+                document.querySelector(\"#depth-switcher button[data-depth='explore']").click();
                 document.getElementById('investigation').scrollIntoView({{block:'start'}});
             """)
             time.sleep(0.2)
@@ -578,6 +578,122 @@ def run_playtest() -> dict:
         assert nb_roundtrip["dataHashMatches"] is True
         assert nb_roundtrip["challengesCount"] == 1
         results["workflows"]["notebookExportImportRoundTrip"] = nb_roundtrip
+
+        # 2C. OpenLine v0.3 Unfamiliar Subject Recognition, Provisional Research, Epistemic Separation, Adversarial Gate & Promotion Dogfood
+        # Step 1: Enter "the history of espionage" in Front Door Question Console
+        cq_input = driver.find_element(By.ID, "citizen-question-input")
+        cq_input.clear()
+        cq_input.send_keys("the history of espionage")
+        driver.execute_script("document.querySelector('#citizen-question-form button[type=\"submit\"]').click();")
+        driver.execute_script("document.getElementById('question-briefing').scrollIntoView({block:'start'});")
+        time.sleep(0.25)
+        offer_box = driver.find_element(By.ID, "provisional-research-offer").text
+        assert "OUTSIDE CORE 5 VERIFIED INQUIRIES" in offer_box
+        assert "Secret Intelligence, Technical Collection & Democratic Oversight" in offer_box
+        driver.save_screenshot(str(SCREENSHOT_DIR / "v03_desktop_1_espionage_research_offer.png"))
+
+        # Step 2: Click "Research ... (Open Provisional Inquiry)" button
+        driver.execute_script("document.getElementById('launch-provisional-research-btn').click();")
+        driver.execute_script("document.getElementById('investigation').scrollIntoView({block:'start'});")
+        time.sleep(0.25)
+        banner_text = driver.find_element(By.ID, "provisional-review-banner").text
+        assert "PROVISIONAL INQUIRY · PENDING REVIEW, CHALLENGE & PROMOTION" in banner_text
+        assert "TIER 1 · VERIFIED EVIDENCE" in banner_text
+        assert "TIER 2 · DISPUTED INTERPRETATIONS" in banner_text
+        assert "TIER 3 · UNVERIFIED MATERIAL" in banner_text
+        assert "espionage-facts-6" in banner_text
+        driver.save_screenshot(str(SCREENSHOT_DIR / "v03_desktop_2_espionage_provisional_workspace.png"))
+
+        # Step 3: Attempt premature promotion while UNVERIFIED_MATERIAL remains -> must be BLOCKED
+        driver.execute_script("document.getElementById('btn-promote-inquiry').click();")
+        driver.execute_script("document.getElementById('promotion-gate-panel').scrollIntoView({block:'center'});")
+        time.sleep(0.2)
+        gate_blocked_text = driver.find_element(By.ID, "promotion-gate-status").text
+        assert "PROMOTION BLOCKED" in gate_blocked_text
+        assert "UNREVIEWED_PROVISIONAL_MATERIAL" in gate_blocked_text
+        driver.save_screenshot(str(SCREENSHOT_DIR / "v03_desktop_3_espionage_promotion_blocked.png"))
+
+        # Step 4: Test consequential source challenge inside Espionage provisional inquiry, then restore
+        driver.execute_script("document.querySelector(\"#provisional-review-banner button[data-trigger-sleuth-correction='esp-andrew-jeffreys-historiography']\").click();")
+        time.sleep(0.2)
+        banner_hold_text = driver.find_element(By.ID, "provisional-review-banner").text
+        assert "Active Source Hold: esp-andrew-jeffreys-historiography" in banner_hold_text
+        driver.execute_script("document.querySelector(\"#provisional-review-banner button[data-restore-sleuth-correction='esp-andrew-jeffreys-historiography']\").click();")
+        time.sleep(0.2)
+
+        # Step 5: Correct & verify the unverified claim (espionage-facts-6) and promote to VERIFIED_LOCAL
+        driver.execute_script("document.querySelector(\"#provisional-review-banner button[data-correct-claim='espionage-facts-6']\").click();")
+        time.sleep(0.2)
+        driver.execute_script("document.getElementById('btn-promote-inquiry').click();")
+        driver.execute_script("document.getElementById('provisional-review-banner').scrollIntoView({block:'start'});")
+        time.sleep(0.25)
+        gate_promoted_text = driver.find_element(By.ID, "provisional-review-banner").text
+        assert "VERIFIED LOCAL INQUIRY · PROMOTED AFTER HUMAN REVIEW" in gate_promoted_text
+        assert "PROMOTED TO VERIFIED LOCAL INQUIRY" in gate_promoted_text
+        assert "Promotion Receipt SHA-256:" in gate_promoted_text
+        driver.save_screenshot(str(SCREENSHOT_DIR / "v03_desktop_4_espionage_promoted_verified.png"))
+
+        # Capture the 6-step Story Stage & SVG diagram for Espionage
+        driver.execute_script("document.getElementById('story-steps-nav').scrollIntoView({block:'start'});")
+        time.sleep(0.2)
+        driver.save_screenshot(str(SCREENSHOT_DIR / "v03_desktop_5_espionage_story_journey.png"))
+
+        # Step 6: Dogfood the other 3 unfamiliar subjects (influenza-1918, printing-press, dust-bowl-1930s) + custom scaffold
+        v03_subjects_verified = {"espionage": True}
+        for subj_key, shot_name, unv_id in [
+            ("influenza-1918", "v03_desktop_6_influenza_1918_provisional.png", "influenza-1918-facts-5"),
+            ("printing-press", "v03_desktop_7_printing_press_provisional.png", "printing-press-facts-5"),
+            ("dust-bowl-1930s", "v03_desktop_8_dust_bowl_1930s_provisional.png", "dust-bowl-1930s-facts-5"),
+        ]:
+            driver.execute_script(f"document.querySelector(\"button[data-provisional-case='{subj_key}']\").click();")
+            driver.execute_script("document.getElementById('investigation').scrollIntoView({block:'start'});")
+            time.sleep(0.2)
+            driver.save_screenshot(str(SCREENSHOT_DIR / shot_name))
+            # Check all 3 depths and 6 steps for zero horizontal overflow
+            for d_mode in all_depths:
+                driver.execute_script(f"document.querySelector(\"#depth-switcher button[data-depth='{d_mode}']\").click();")
+                chk = driver.execute_script("return document.documentElement.scrollWidth > document.documentElement.clientWidth + 2;")
+                assert not chk, f"Overflow in {subj_key} depth {d_mode}"
+            driver.execute_script("document.querySelector(\"#depth-switcher button[data-depth='explore']\").click();")
+            for st_id in all_steps:
+                driver.execute_script(f"document.querySelector(\"#story-steps-nav button[data-step='{st_id}']\").click();")
+                chk = driver.execute_script("return document.documentElement.scrollWidth > document.documentElement.clientWidth + 2;")
+                assert not chk, f"Overflow in {subj_key} step {st_id}"
+            # Correct unverified claim and promote
+            driver.execute_script(f"document.querySelector(\"#provisional-review-banner button[data-correct-claim='{unv_id}']\").click();")
+            time.sleep(0.1)
+            driver.execute_script("document.getElementById('btn-promote-inquiry').click();")
+            time.sleep(0.15)
+            promo_txt = driver.find_element(By.ID, "provisional-review-banner").text
+            assert "PROMOTED TO VERIFIED LOCAL INQUIRY" in promo_txt
+            v03_subjects_verified[subj_key] = True
+
+        # Also test a novel custom unfamiliar topic ("What caused the fall of the Roman Republic in the first century BCE?")
+        cq_input = driver.find_element(By.ID, "citizen-question-input")
+        cq_input.clear()
+        cq_input.send_keys("What caused the fall of the Roman Republic in the first century BCE?")
+        driver.execute_script("document.querySelector('#citizen-question-form button[type=\"submit\"]').click();")
+        time.sleep(0.2)
+        driver.execute_script("document.getElementById('launch-provisional-research-btn').click();")
+        time.sleep(0.2)
+        roman_banner = driver.find_element(By.ID, "provisional-review-banner").text
+        assert "Roman Republic" in roman_banner
+        assert "PROVISIONAL INQUIRY" in roman_banner
+        v03_subjects_verified["custom_roman_republic"] = True
+
+        # Return to Hormuz before continuing legacy checks
+        driver.execute_script("document.querySelector(\"button[data-case='hormuz']\").click();")
+        time.sleep(0.15)
+
+        results["v03ProvisionalResearchAndPromotionChecks"] = {
+            "unfamiliarSubjectRecognitionVerified": True,
+            "accessibleSourceOfferVerified": True,
+            "threeTierEpistemicSeparationVerified": True,
+            "prematurePromotionBlockedVerified": True,
+            "provisionalSourceChallengeVerified": True,
+            "claimCorrectionAndPromotionReceiptVerified": True,
+            "subjectsDogfoodedAndPromoted": v03_subjects_verified,
+        }
 
         # 3. Screen-Reader Semantics & Keyboard Accessibility Audit
         aria_audit = driver.execute_script("""

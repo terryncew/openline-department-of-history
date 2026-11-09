@@ -3,8 +3,8 @@
 **Target Release Candidate**: `OPENLINE_DEPARTMENT_OF_HISTORY_M5_PRIVATE.zip`  
 **Prepared By**: Argon (Lead Engineer, M5) for Independent Astra Falsification  
 **Date**: November 8, 2026  
-**Governing Law**: [OpenLine Agent Operating Law v1.0]([private reference removed for public release]) & [Dogfood 001]([private reference removed for public release])  
-**Private Google Drive Folder**: [OpenLine History Lab — Private Development]([private reference removed for public release])
+**Governing Law**: [OpenLine Agent Operating Law v1.0]([private Drive link — redacted for public release]) & [Dogfood 001]([private Drive link — redacted for public release])  
+**Private Google Drive Folder**: [OpenLine History Lab — Private Development]([private Drive link — redacted for public release])
 
 ---
 

@@ -1,6 +1,6 @@
 {
   "testedAt": "2026-11-09T14:35:00Z",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "evaluationMode": "SIMULATED_ACCEPTANCE_EXERCISE_HEADLESS_CHROMIUM_NO_REAL_HUMAN_PARTICIPANT",
   "bundleUrl": "dist/index.html",
   "viewports": {
@@ -137,22 +137,22 @@
     "multiDepthConsequentialCorrectionSyncVerified": true
   },
   "accessibilityAndScreenReaderAudit": {
-    "accessibleSvgDiagramsCount": 0,
+    "accessibleSvgDiagramsCount": 1,
     "hasLabeledDepthSwitcher": true,
     "hasLabeledStepNav": true,
     "hasMainLandmark": true,
     "hasSearchLandmark": true,
     "hasSkipLink": true,
-    "liveRegionsCount": 3,
+    "liveRegionsCount": 4,
     "unlabeledButtonsCount": 0,
     "unlabeledInputsCount": 0
   },
   "comparisonWithV010": {
     "v010_initialVisibleWords": 4114,
-    "v02_initialVisibleWords": 1537,
-    "initialReadingBurdenReductionPercent": 62.6,
+    "v02_initialVisibleWords": 1869,
+    "initialReadingBurdenReductionPercent": 54.6,
     "v010_initialScrollHeightPx": 9962,
-    "v02_initialScrollHeightPx": 4607,
+    "v02_initialScrollHeightPx": 5371,
     "v02_quickLookStageWords": 629,
     "v010_progressiveDepthLevels": 1,
     "v02_progressiveDepthLevels": 3,
@@ -208,5 +208,20 @@
   },
   "consoleErrors": [],
   "externalRequests": [],
-  "allPassed": true
+  "allPassed": true,
+  "v03ProvisionalResearchAndPromotionChecks": {
+    "unfamiliarSubjectRecognitionVerified": true,
+    "accessibleSourceOfferVerified": true,
+    "threeTierEpistemicSeparationVerified": true,
+    "prematurePromotionBlockedVerified": true,
+    "provisionalSourceChallengeVerified": true,
+    "claimCorrectionAndPromotionReceiptVerified": true,
+    "subjectsDogfoodedAndPromoted": {
+      "espionage": true,
+      "influenza-1918": true,
+      "printing-press": true,
+      "dust-bowl-1930s": true,
+      "custom_roman_republic": true
+    }
+  }
 }

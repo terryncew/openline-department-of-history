@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><meta name="description" content="OpenLine Department of History v0.2: What does history say? Explore what happened before, what people believed, what they tried, and what happened next—backed by 3-axis verified historical sources."><meta http-equiv="Content-Security-Policy" content="default-src 'self' data: blob:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%231d4638'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='38' text-anchor='middle' fill='%23f6f4ec'%3EH%3C/text%3E%3C/svg%3E"><title>What Does History Say? · OpenLine Department of History (v0.2)</title><style>/*STYLES*/</style></head><body>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><meta name="description" content="OpenLine Department of History v0.3: What does history say? Explore what happened before, what people believed, what they tried, and what happened next—backed by 3-axis verified historical sources."><meta http-equiv="Content-Security-Policy" content="default-src 'self' data: blob:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%231d4638'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='38' text-anchor='middle' fill='%23f6f4ec'%3EH%3C/text%3E%3C/svg%3E"><title>What Does History Say? · OpenLine Department of History (v0.3)</title><style>/*STYLES*/</style></head><body>
 <a class="skip" href="#main">Skip to main content</a>
 <a class="skip" href="#case-list">Skip to stories</a>
 <a class="skip" href="#depth-switcher">Skip to reading depth</a>
@@ -19,7 +19,7 @@
 <main id="main" tabindex="-1">
   <section class="hero-front-door" id="home" aria-labelledby="hero-headline">
     <div class="hero-copy">
-      <p class="eyebrow">OPENLINE DEPARTMENT OF HISTORY · PUBLIC HISTORY EXPERIENCE (V0.2)</p>
+      <p class="eyebrow">OPENLINE DEPARTMENT OF HISTORY · PUBLIC HISTORY EXPERIENCE (V0.3)</p>
       <h1 id="hero-headline">What does history say?</h1>
       <p class="lede">Something happening today sound familiar? Explore what happened before, what people believed, what they tried, and what happened next.</p>
     </div>
@@ -47,6 +47,14 @@
         <button type="button" class="sample-q" data-q="What historical arrangements have reduced civilian harm during territorial conflicts?">🕊️ What arrangements have reduced civilian harm in conflicts?</button>
       </div>
 
+      <div class="sample-questions unfamiliar-samples" id="unfamiliar-sample-questions" aria-label="Research an unfamiliar historical subject outside the core 5">
+        <span class="sample-label">Or ask about an unfamiliar subject (v0.3 Provisional Research):</span>
+        <button type="button" class="sample-q unfamiliar-pill" data-q="the history of espionage">🕵️ The history of espionage</button>
+        <button type="button" class="sample-q unfamiliar-pill" data-q="How did U.S. cities respond to the 1918 influenza pandemic and school closures?">😷 1918 influenza pandemic</button>
+        <button type="button" class="sample-q unfamiliar-pill" data-q="What is the history of the printing press, Gutenberg, and Milton’s Areopagitica?">🖨️ The printing press &amp; censorship</button>
+        <button type="button" class="sample-q unfamiliar-pill" data-q="What caused the 1930s Dust Bowl and did New Deal soil conservation restore eroded land?">🌾 1930s Dust Bowl &amp; soil conservation</button>
+      </div>
+
       <details class="boundary-samples">
         <summary>Test where the evidence stops (partial coverage &amp; questions history cannot answer)</summary>
         <div class="sample-questions boundary-row">
@@ -68,7 +76,17 @@
       </div>
       <span class="section-meta">5 inquiries · 44 verified sources · 3 reading depths</span>
     </div>
-    <div id="case-list" class="case-grid" tabindex="-1"></div>
+    <div id="case-list" class="case-grid"></div>
+    <div id="provisional-studio" class="provisional-studio" aria-labelledby="provisional-studio-heading">
+      <div class="section-line" style="margin-top:22px">
+        <div>
+          <h3 id="provisional-studio-heading">Research unfamiliar historical subjects (v0.3 Provisional Inquiry Lab)</h3>
+          <p class="section-sub">Topics outside our 5 core verified inquiries are researched using accessible archives—explicitly separating Verified Evidence, Disputed Interpretations, and Unverified Material until reviewed and promoted.</p>
+        </div>
+        <span class="section-meta" id="provisional-studio-meta">4 researched packs + custom archival scaffold</span>
+      </div>
+      <div id="provisional-case-list" class="case-grid provisional-grid"></div>
+    </div>
     <details class="custom-question">
       <summary>Check whether another topic is in our 5-story library</summary>
       <p>This library covers five curated historical inquiries. Topics we have not curated, ideological scorecards, and future forecasts are clearly refused rather than guessed.</p>
@@ -84,6 +102,7 @@
   </section>
 
   <section id="investigation" aria-labelledby="case-title">
+    <div id="provisional-review-banner" role="region" aria-live="polite" aria-label="Epistemic status and provisional review workbench"></div>
     <div class="story-header">
       <div class="story-title-block">
         <p class="eyebrow" id="case-place"></p>
@@ -125,7 +144,7 @@
 
 <footer>
   <div class="footer-main">
-    <strong>OPENLINE DEPARTMENT OF HISTORY · V0.2 PUBLIC HISTORY EXPERIENCE</strong>
+    <strong>OPENLINE DEPARTMENT OF HISTORY · V0.3 PUBLIC HISTORY EXPERIENCE</strong>
     <p>Independent open-source public research preview — not an official government institution. Automated acceptance and browser verification tests were performed; no independent human comprehension study has occurred yet.</p>
     <p>Free MIT code · Zero accounts · Zero paid AI APIs · Zero ideological scoring · Cryptographic SHA-256 digests verify local file integrity, not historical truth.</p>
   </div>

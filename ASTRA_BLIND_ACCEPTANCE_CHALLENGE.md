@@ -1,7 +1,7 @@
 # ASTRA — BLIND ACCEPTANCE-TEST & ADVERSARIAL FALSIFICATION ASSIGNMENT
 
 **Target Release Candidate**: `OPENLINE_HISTORY_LAB_M4_PRIVATE.zip` (Argon M4 Release Candidate)
-**Private Google Drive Folder**: [OpenLine History Lab — Private Development (`[private reference removed for public release]`)]([private reference removed for public release])
+**Private Google Drive Folder**: [OpenLine History Lab — Private Development (`[private Drive ID — redacted]`)]([private Drive link — redacted for public release])
 **Operating Law**: `Bound-First → Receipts → Falsifiers → Emergence → Coherence` (`READ → VERIFY → FIND BOTTLENECK → COMPARE → BUILD → FALSIFY → PRESERVE/REOPEN → REPEAT`)
 
 ## Mission for Astra
@@ -10,7 +10,7 @@ Do **not** merely re-run Argon's existing 38 Node tests, 14 Python tests, or hea
 
 ## 1. Blind Recovery & Clean-Room Verification
 
-1. Download `OPENLINE_HISTORY_LAB_M4_PRIVATE.zip` and `OPENLINE_HISTORY_LAB_M4_PRIVATE.sha256` from the [Private Development Folder (`[private reference removed for public release]`)]([private reference removed for public release]).
+1. Download `OPENLINE_HISTORY_LAB_M4_PRIVATE.zip` and `OPENLINE_HISTORY_LAB_M4_PRIVATE.sha256` from the [Private Development Folder (`[private Drive ID — redacted]`)]([private Drive link — redacted for public release]).
 2. Verify the outer archive SHA-256 and every entry in `SHA256SUMS.txt` (`sha256sum -c SHA256SUMS.txt`).
 3. Verify that all 21 original M2 source card SHA-256 digests (`evidence/*.json` for `cholera`, `triangle`, and `banking`) are **byte-for-byte unchanged** from your M2 baseline (`4494f936ef5e0a3c5144be638e47d98f48b521d824aede40f4a7575c3a00dd7c`).
 4. Verify the SQLite authoring ledger head (`python3 scripts/evidence_ledger.py --dir evidence/authoring-ledger verify --expected-head $(python3 -c 'import json;print(json.load(open("evidence/AUTHORING_HEAD.json"))["head"])')`).

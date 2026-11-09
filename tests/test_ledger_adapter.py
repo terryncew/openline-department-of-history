@@ -132,12 +132,45 @@ class ArgonLedgerAndBaselineTests(unittest.TestCase):
  def test_v02_progressive_depths_and_v010_comparison_metrics(self):
   brief_path = conventional_baseline.generate_conventional_brief(self.data)
   summary = conventional_baseline.evaluate_comparison(self.data, brief_path)
-  self.assertEqual(summary["version"], "0.2.0")
+  self.assertEqual(summary["version"], "0.3.0")  # Repair D-13: baseline comparison now reports the v0.3 tree version
   v02m = summary["v02ComparisonMetrics"]
   self.assertEqual(v02m["progressiveDepthLevels"], 3)
   self.assertEqual(v02m["storyJourneySteps"], 6)
   self.assertEqual(v02m["plainLanguageConcepts"], 20)
   self.assertEqual(v02m["sourceInvestigationChallenges"], 5)
   self.assertGreater(v02m["initialReadingBurdenReductionPercent"], 50.0)
+
+ def test_v03_provisional_subjects_sqlite_ledger_and_withdrawal(self):
+  import importlib.util
+  spec = importlib.util.spec_from_file_location("research_subject", ROOT / "scripts" / "research_subject.py")
+  research_subject = importlib.util.module_from_spec(spec)
+  spec.loader.exec_module(research_subject)
+  catalog = research_subject.load_provisional_catalog()
+  self.assertEqual([c["id"] for c in catalog], ["espionage", "influenza-1918", "printing-press", "dust-bowl-1930s"])
+  for pack in catalog:
+   s = research_subject.summarize_provisional_pack(pack)
+   self.assertGreaterEqual(s["sourcesCount"], 5)
+   self.assertGreaterEqual(s["verifiedEvidenceCount"], 10)
+   self.assertGreaterEqual(s["disputedInterpretationCount"], 6)
+   self.assertEqual(s["unverifiedMaterialCount"], 1)
+  with tempfile.TemporaryDirectory() as tmp:
+   res = research_subject.seed_and_verify_provisional_in_sqlite(pathlib.Path(tmp) / "v03_ledger")
+   self.assertEqual(len(res["cases"]), 4)
+   for cid, info in res["cases"].items():
+    self.assertTrue(info["allCurrent"], f"Expected allCurrent for {cid}")
+   # Now test consequential source withdrawal on espionage in SQLite ledger
+   h = HistoryLedger(pathlib.Path(tmp) / "v03_ledger")
+   self.addCleanup(h.close)
+   h.withdraw("espionage", "esp-andrew-jeffreys-historiography", "Challenging SYNOPSIS_ONLY anthology preview in espionage inquiry.")
+   reopened = sorted(r["review_id"] for r in h.status("espionage") if r["status"] == "REOPEN")
+   self.assertEqual(reopened, [
+    "espionage-arg-1",
+    "espionage-arg-2",
+    "espionage-arg-3",
+    "espionage-interp-1",
+    "espionage-interp-2",
+   ])
+   current_items = [r["review_id"] for r in h.status("espionage") if r["status"] == "CURRENT"]
+   self.assertEqual(len(current_items), 23)  # Repair D-11: +3 Ames items (facts-7, timeline-7, outcomes-4)
 
 if __name__=="__main__":unittest.main()

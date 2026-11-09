@@ -19,7 +19,9 @@ let notebook={schema:'openline-history-notebook.v1',dataHash:DATA_HASH,challenge
   tabName='timeline',
   lastAnalogyResult=null,
   compareOtherCaseId='banking',
-  currentQuestionText='What can history tell us about a prolonged Strait of Hormuz disruption?';
+  currentQuestionText='What can history tell us about a prolonged Strait of Hormuz disruption?',
+  provisionalInquiries={},
+  lastPromotionAttempt=null;
 
 const sections=[
   ['timeline','Timeline & record'],
@@ -47,8 +49,22 @@ try{
   if(saved){const parsed=E.validateNotebook(JSON.parse(saved),DATA);if(parsed.dataHash===DATA_HASH)notebook=parsed;else persistence=false;}
 }catch(e){persistence=false;}
 
-const current=()=>DATA.cases.find(c=>c.id===active)||DATA.cases[0];
-function notify(t){const el=$('#toast');if(!el)return;el.textContent=t;el.classList.add('show');clearTimeout(notify.timer);notify.timer=setTimeout(()=>el.classList.remove('show'),5000);}
+const allCases=()=>[...DATA.cases,...Object.values(provisionalInquiries)];
+const findCaseById=id=>DATA.cases.find(c=>c.id===id)||provisionalInquiries[id]||null;
+const current=()=>findCaseById(active)||DATA.cases[0];
+function ensureProvisionalSubject(keyOrQuery){
+  const existing=provisionalInquiries[keyOrQuery];
+  if(existing)return existing;
+  const inq=E.researchHistoricalSubject(keyOrQuery,{overrides:notebook.standing});
+  provisionalInquiries[inq.id]=inq;
+  return inq;
+}
+function epistemicPill(item,c=current()){
+  const ep=E.classifyEpistemicStatus(item,c,notebook.standing,integrity);
+  const cls=ep.tier==='VERIFIED_EVIDENCE'?'ep-verified':ep.tier==='DISPUTED_INTERPRETATION'?'ep-disputed':ep.tier==='SCAFFOLD_GUIDANCE'?'ep-guidance':'ep-unverified';
+  return `<span class="pill ${cls}" title="${esc(ep.reason)}">${esc(ep.label.toUpperCase())}</span>`;
+}
+function notify(t){const el=$('#toast');if(!el)return;el.textContent=t;el.classList.add('show');clearTimeout(notify.timer);notify.timer=setTimeout(()=>el.classList.remove('show'),3000);}
 function save(){try{localStorage.setItem(KEY,JSON.stringify(notebook));persistence=true;}catch{persistence=false;notify('Browser storage unavailable. Export your notebook to keep this work.');}const nc=$('#note-count');if(nc)nc.textContent=notebook.challenges.length;}
 async function sha(v){return E.sha256(v);}
 function download(name,obj,type='application/json'){const a=document.createElement('a');const blob=new Blob([typeof obj==='string'?obj:JSON.stringify(obj,null,2)+'\n'],{type});const u=URL.createObjectURL(blob);a.href=u;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(u),1000);}
@@ -92,8 +108,11 @@ function causalMeta(item){
   return `<div class="meta-box"><strong>Evidence status:</strong> ${esc(label)}${conf}${gap}</div>`;
 }
 function card(item,kind='Record',title=''){
+  const c=current();
   const pillClass=kind==='Record'?'fact':kind.includes('Counterexample')?'rejected':'interpretation';
-  return `<article class="record" id="${esc(item.id)}"><div class="pill-row"><span class="pill ${pillClass}">${esc(kind)}</span>${item.causalEmphasis?`<span class="pill axis">Emphasis: ${esc(item.causalEmphasis)}</span>`:''}</div>${blocked(item)||`${title?`<h4>${esc(title)}</h4>`:''}<p>${esc(item.text)}</p>${causalMeta(item)}`}${refs(item)}${actions(item)}</article>`;
+  const isUnverified=item.epistemicStatus==='UNVERIFIED_MATERIAL'||item.reviewStatus==='PENDING_REVIEW';
+  const unvBox=isUnverified?`<div class="unverified-queue-card"><strong>Unverified Provisional Material — Review Required Before Promotion:</strong><br>${esc(item.verificationPrompt||'Verify primary locator or quarantine before promoting.')}<div class="notebook-controls" style="margin-top:8px"><button type="button" data-correct-claim="${esc(item.id)}">Correct &amp; Verify with Primary Record ✓</button><button type="button" class="secondary" data-quarantine-claim="${esc(item.id)}">Quarantine &amp; Exclude ✕</button></div></div>`:'';
+  return `<article class="record" id="${esc(item.id)}"><div class="pill-row"><span class="pill ${pillClass}">${esc(kind)}</span>${epistemicPill(item,c)}${item.causalEmphasis?`<span class="pill axis">Emphasis: ${esc(item.causalEmphasis)}</span>`:''}</div>${blocked(item,c)||`${title||item.title?`<h4>${esc(title||item.title)}</h4>`:''}<p>${esc(item.text)}</p>${unvBox}${causalMeta(item)}`}${refs(item,c)}${actions(item)}</article>`;
 }
 function boundaries(){return `<aside class="boundaries"><h3>Where this<br>comparison stops.</h3><ul>${current().limits.map(t=>`<li>${esc(t)}</li>`).join('')}</ul></aside>`;}
 function expectationBadge(verdict){
@@ -274,6 +293,142 @@ function renderArchivalSvg(caseId){
     <text x="380" y="222" font-size="10.5" font-weight="bold" text-anchor="middle" fill="#4c5a54">DOCUMENTED_ARCHIVAL_RECONSTRUCTION_DIAGRAM — NOT_A_PHOTOGRAPH</text>
     </svg>`;
   }
+  if(caseId==='espionage'){
+    return `<svg viewBox="0 0 760 210" role="img" aria-label="Diagram of 1939-1978 Espionage history showing Bletchley Park Ultra and Venona, CORONA satellites, Operation SHAMROCK, and the 1976-1978 Church Committee and FISA reforms">
+      <title>1939–1978 Intelligence Collection Capabilities vs. Constitutional Oversight Reforms</title>
+      <rect width="760" height="210" fill="#faf8f0" rx="6"/>
+      <rect x="16" y="18" width="235" height="174" rx="6" fill="#e6efe9" stroke="#1d4638"/>
+      <text x="28" y="40" font-family="Georgia,serif" font-size="13" font-weight="bold" fill="#1d4638">1. Technical Collection (1940–62)</text>
+      <text x="28" y="62" font-size="10.5" fill="#172a27">• Ultra: Bletchley Enigma/Lorenz</text>
+      <text x="28" y="80" font-size="10.5" fill="#172a27">• Venona: 1942 duplicate KGB pads</text>
+      <text x="28" y="98" font-size="10.5" fill="#1d4638" font-weight="bold">• CORONA (Aug 1960): Orbital film</text>
+      <text x="28" y="114" font-size="10.5" fill="#172a27">  disproved Soviet 'missile gap'</text>
+      <text x="28" y="146" font-size="10" fill="#4c5a54">Limit: Blind under radio silence</text>
+      <text x="28" y="160" font-size="10" fill="#4c5a54">(Ardennes ’44) &amp; clean pads (’48)</text>
+
+      <rect x="263" y="18" width="235" height="174" rx="6" fill="#fcf2e6" stroke="#9b4728"/>
+      <text x="275" y="40" font-family="Georgia,serif" font-size="13" font-weight="bold" fill="#87251d">2. Unchecked Drift (1945–75)</text>
+      <text x="275" y="62" font-size="10.5" fill="#87251d" font-weight="bold">• Project SHAMROCK (30 yrs):</text>
+      <text x="275" y="78" font-size="10.5" fill="#172a27">  Warrantless international telegrams</text>
+      <text x="275" y="98" font-size="10.5" fill="#172a27">• Project MINARET (~1,650 citizens)</text>
+      <text x="275" y="116" font-size="10.5" fill="#172a27">• FBI COINTELPRO &amp; CIA CHAOS</text>
+      <text x="275" y="148" font-size="10" font-weight="bold" fill="#87251d">Venona withheld from 1950s courts</text>
+      <text x="275" y="162" font-size="10" fill="#4c5a54">despite 1948 Soviet mole leak</text>
+
+      <rect x="510" y="18" width="234" height="174" rx="6" fill="#fffef9" stroke="#1d4638"/>
+      <text x="522" y="40" font-family="Georgia,serif" font-size="13" font-weight="bold" fill="#1d4638">3. 1976–78 Oversight Settlement</text>
+      <text x="522" y="62" font-size="10.5" fill="#172a27">• Senate Church Report (Apr 1976)</text>
+      <text x="522" y="82" font-size="10.5" fill="#1d4638" font-weight="bold">• Permanent SSCI (’76) &amp; HPSCI (’77)</text>
+      <text x="522" y="102" font-size="10.5" fill="#1d4638" font-weight="bold">• FISA (1978): Statutory court</text>
+      <text x="522" y="118" font-size="10.5" fill="#172a27">  warrants for domestic wiretaps</text>
+      <text x="522" y="148" font-size="10" fill="#4c5a54">Today’s limit: 1978 wire vs. radio</text>
+      <text x="522" y="162" font-size="10" fill="#4c5a54">line blurred on global fiber networks</text>
+    </svg>`;
+  }
+  if(caseId==='influenza-1918'){
+    return `<svg viewBox="0 0 760 210" role="img" aria-label="1918 Influenza weekly excess death rate comparison showing Philadelphia late single spike vs St. Louis early suppression and November rebound peak">
+      <title>1918 Influenza Weekly Excess Mortality: Late Action (Philadelphia) vs. Early Action &amp; Premature Relaxation (St. Louis)</title>
+      <rect width="760" height="210" fill="#faf8f0" rx="6"/>
+      <rect x="18" y="18" width="350" height="174" rx="6" fill="#fcf2e6" stroke="#9b4728"/>
+      <text x="32" y="42" font-family="Georgia,serif" font-size="13.5" font-weight="bold" fill="#87251d">Philadelphia (Late Closures After Sept 28 Parade)</text>
+      <text x="32" y="64" font-size="11" fill="#172a27">• Sept 28, 1918: 200,000-person Liberty Loan Parade</text>
+      <text x="32" y="84" font-size="11" fill="#172a27">• Oct 3, 1918: Closures ordered AFTER hospital saturation</text>
+      <text x="32" y="106" font-size="11" font-weight="bold" fill="#87251d">• Peak Weekly Excess Death Rate: ~257 per 100,000</text>
+      <path d="M40 165 L110 162 L155 55 L205 152 L330 162" fill="none" stroke="#87251d" stroke-width="3"/>
+      <text x="155" y="49" font-size="9.5" font-weight="bold" text-anchor="middle" fill="#87251d">Oct Peak: 257</text>
+
+      <rect x="386" y="18" width="356" height="174" rx="6" fill="#e6efe9" stroke="#1d4638"/>
+      <text x="400" y="42" font-family="Georgia,serif" font-size="13.5" font-weight="bold" fill="#1d4638">St. Louis (Early Oct 7 Closures + Nov Rebound)</text>
+      <text x="400" y="64" font-size="11" fill="#172a27">• Oct 7, 1918: Preemptive school &amp; gathering closures</text>
+      <text x="400" y="84" font-size="11" font-weight="bold" fill="#1d4638">• Initial Oct Peak Held to ~31 per 100,000</text>
+      <text x="400" y="104" font-size="11" fill="#87251d" font-weight="bold">• Mid-Nov Reopening → Dec Rebound Peak (~58/100k)</text>
+      <path d="M410 165 L475 148 L525 156 L585 125 L665 160 L715 164" fill="none" stroke="#1d4638" stroke-width="3"/>
+      <text x="475" y="140" font-size="9.5" font-weight="bold" text-anchor="middle" fill="#1d4638">Peak 1 (~31)</text>
+      <text x="585" y="118" font-size="9.5" font-weight="bold" text-anchor="middle" fill="#87251d">Rebound Peak 2</text>
+    </svg>`;
+  }
+  if(caseId==='printing-press'){
+    return `<svg viewBox="0 0 760 210" role="img" aria-label="Diagram of early modern print history from Gutenberg 1455 to Parliament's 1643 Licensing Order, Milton's 1644 Areopagitica, and the Eisenstein-Johns debate">
+      <title>1450–1695 Printing Press, Guild Censorship &amp; Verification Institutions</title>
+      <rect width="760" height="210" fill="#faf8f0" rx="6"/>
+      <rect x="16" y="18" width="235" height="174" rx="6" fill="#fffef9" stroke="#c8cec2"/>
+      <text x="28" y="40" font-family="Georgia,serif" font-size="13" font-weight="bold" fill="#172a27">1. Mainz Movable Type (1455)</text>
+      <text x="28" y="62" font-size="10.5" fill="#172a27">• Gutenberg 42-line Bible (~180 copies)</text>
+      <text x="28" y="82" font-size="10.5" fill="#1d4638" font-weight="bold">• Slashed reproduction cost vs. scribes</text>
+      <text x="28" y="102" font-size="10.5" fill="#87251d">• Also multiplied commercial typos,</text>
+      <text x="28" y="117" font-size="10.5" fill="#87251d">  counterfeit imprints &amp; book piracy</text>
+      <text x="28" y="150" font-size="10" fill="#4c5a54">Required new errata &amp; proofreading</text>
+
+      <rect x="263" y="18" width="235" height="174" rx="6" fill="#fcf2e6" stroke="#9b4728"/>
+      <text x="275" y="40" font-family="Georgia,serif" font-size="13" font-weight="bold" fill="#784610">2. 1643 Licensing vs. 1644 Milton</text>
+      <text x="275" y="62" font-size="10.5" fill="#172a27">• June 14, 1643 Ordinance reinstated</text>
+      <text x="275" y="77" font-size="10.5" fill="#172a27">  pre-publication censor + guild monopoly</text>
+      <text x="275" y="99" font-size="10.5" fill="#87251d" font-weight="bold">• Nov 23, 1644: Milton’s unlicensed</text>
+      <text x="275" y="114" font-size="10.5" fill="#172a27">  Areopagitica defied prior restraint</text>
+      <text x="275" y="150" font-size="10" fill="#4c5a54">Licensing Act lapsed in 1695</text>
+
+      <rect x="510" y="18" width="234" height="174" rx="6" fill="#e6efe9" stroke="#1d4638"/>
+      <text x="522" y="40" font-family="Georgia,serif" font-size="13" font-weight="bold" fill="#1d4638">3. Eisenstein vs. Johns (2002)</text>
+      <text x="522" y="62" font-size="10.5" fill="#172a27">• Eisenstein: Preservative power &amp;</text>
+      <text x="522" y="77" font-size="10.5" fill="#172a27">  standardization enabled science</text>
+      <text x="522" y="99" font-size="10.5" fill="#172a27">• Johns: Fixity was not automatic;</text>
+      <text x="522" y="114" font-size="10.5" fill="#172a27">  societies had to construct credit</text>
+      <text x="522" y="150" font-size="10" font-weight="bold" fill="#1d4638">Both reject naive tech determinism</text>
+    </svg>`;
+  }
+  if(caseId==='dust-bowl-1930s'){
+    return `<svg viewBox="0 0 760 210" role="img" aria-label="1930s Dust Bowl diagram comparing 160-acre sod-busting and drought with the 1935 Soil Conservation Act and persistent 28-30% land value loss through 1992">
+      <title>1930s Dust Bowl: Ecological Shock, 1935 Soil Conservation Act &amp; Persistent Natural-Capital Loss (1940–1992)</title>
+      <rect width="760" height="210" fill="#faf8f0" rx="6"/>
+      <rect x="16" y="18" width="235" height="174" rx="6" fill="#fcf2e6" stroke="#9b4728"/>
+      <text x="28" y="40" font-family="Georgia,serif" font-size="13" font-weight="bold" fill="#784610">1. Sod-Busting + Drought (1931–36)</text>
+      <text x="28" y="62" font-size="10.5" fill="#172a27">• 160-acre Homestead rules mismatched</text>
+      <text x="28" y="77" font-size="10.5" fill="#172a27">  to semi-arid shortgrass prairie</text>
+      <text x="28" y="99" font-size="10.5" fill="#87251d" font-weight="bold">• 4 severe 1930s drought waves stripped</text>
+      <text x="28" y="114" font-size="10.5" fill="#87251d" font-weight="bold">  topsoil in Black Blizzards</text>
+      <text x="28" y="150" font-size="10" fill="#4c5a54">1936 Great Plains Committee Report</text>
+
+      <rect x="263" y="18" width="235" height="174" rx="6" fill="#e6efe9" stroke="#1d4638"/>
+      <text x="275" y="40" font-family="Georgia,serif" font-size="13" font-weight="bold" fill="#1d4638">2. New Deal Response (1935–38)</text>
+      <text x="275" y="62" font-size="10.5" fill="#1d4638" font-weight="bold">• April 27, 1935 Soil Conservation Act</text>
+      <text x="275" y="82" font-size="10.5" fill="#172a27">• ~11.3M submarginal acres retired</text>
+      <text x="275" y="102" font-size="10.5" fill="#172a27">• &gt;200M shelterbelt trees planted</text>
+      <text x="275" y="122" font-size="10.5" fill="#172a27">• Local conservation districts (1937)</text>
+      <text x="275" y="150" font-size="10" fill="#1d4638">Curbed future wind erosion</text>
+
+      <rect x="510" y="18" width="234" height="174" rx="6" fill="#fffef9" stroke="#9b4728"/>
+      <text x="522" y="40" font-family="Georgia,serif" font-size="13" font-weight="bold" fill="#87251d">3. Persistent Scarring (1940–92)</text>
+      <text x="522" y="62" font-size="10.5" fill="#87251d" font-weight="bold">• -28% to -30% permanent relative</text>
+      <text x="522" y="77" font-size="10.5" fill="#87251d" font-weight="bold">  land-value loss through 1992</text>
+      <text x="522" y="99" font-size="10.5" fill="#172a27">• Tenancy &amp; credit blocked fast shift</text>
+      <text x="522" y="114" font-size="10.5" fill="#172a27">  from wheat to cattle (&lt;25% offset)</text>
+      <text x="522" y="136" font-size="10.5" fill="#172a27" font-weight="bold">• Main adjustment: ~12% out-migration</text>
+      <text x="522" y="156" font-size="10" fill="#4c5a54">(Hornbeck 2012, 779 Plains counties)</text>
+    </svg>`;
+  }
+  if(String(caseId).startsWith('custom-')){
+    return `<svg viewBox="0 0 760 210" role="img" aria-label="Diagram of OpenLine v0.3 Guided Provisional Research Workflow separating Verified Evidence, Disputed Interpretations, and Unverified Material">
+      <title>OpenLine v0.3 Epistemic Separation &amp; Promotion Gate</title>
+      <rect width="760" height="210" fill="#faf8f0" rx="6"/>
+      <rect x="18" y="22" width="230" height="166" rx="6" fill="#e6efe9" stroke="#1d4638"/>
+      <text x="30" y="46" font-family="Georgia,serif" font-size="13" font-weight="bold" fill="#1d4638">1. Verified Evidence</text>
+      <text x="30" y="70" font-size="10.5" fill="#172a27">Primary archival &amp; institutional</text>
+      <text x="30" y="86" font-size="10.5" fill="#172a27">records with HTTPS URLs, exact</text>
+      <text x="30" y="102" font-size="10.5" fill="#172a27">locators, and SHA-256 card hashes.</text>
+
+      <rect x="265" y="22" width="230" height="166" rx="6" fill="#fcf2e6" stroke="#9b4728"/>
+      <text x="277" y="46" font-family="Georgia,serif" font-size="13" font-weight="bold" fill="#784610">2. Disputed Interpretations</text>
+      <text x="277" y="70" font-size="10.5" fill="#172a27">Competing contemporary arguments</text>
+      <text x="277" y="86" font-size="10.5" fill="#172a27">and rival scholarly schools kept</text>
+      <text x="277" y="102" font-size="10.5" fill="#172a27">visibly plural—never flattened.</text>
+
+      <rect x="512" y="22" width="230" height="166" rx="6" fill="#fff6f2" stroke="#87251d" stroke-dasharray="5,3"/>
+      <text x="524" y="46" font-family="Georgia,serif" font-size="13" font-weight="bold" fill="#87251d">3. Unverified Material</text>
+      <text x="524" y="70" font-size="10.5" fill="#172a27">Unreviewed claims or synopsis-only</text>
+      <text x="524" y="86" font-size="10.5" fill="#172a27">items that block promotion until</text>
+      <text x="524" y="102" font-size="10.5" fill="#172a27">corrected or quarantined.</text>
+    </svg>`;
+  }
   return `<svg viewBox="0 0 760 228" role="img" aria-label="Comparison of 1979 Sinai Peace Treaty verification zones, 1993-95 Oslo interim areas, and 2025 Gaza ceasefire vs crossing closure">
     <title>1949–2026 Treaty Verification &amp; Humanitarian Pause Architecture</title>
     <rect width="760" height="228" fill="#faf8f0" rx="6"/>
@@ -383,10 +538,44 @@ function renderQuestionBriefing(){
     </section>`;
   }).join('');
 
+  const offer=res.researchOffer;
+  const offerHtml=offer&&offer.isResearchableHistoricalSubject
+    ?`<section class="research-offer-box" id="provisional-research-offer" aria-label="Offer to research unfamiliar historical subject">
+        <div class="research-offer-head">
+          <div>
+            <div class="pill-row">
+              <span class="pill ep-disputed">OUTSIDE CORE 5 VERIFIED INQUIRIES · PROVISIONAL RESEARCH AVAILABLE</span>
+              <span class="pill axis">${esc(offer.researchMode==='RESEARCHED_SUBJECT_PACK'?'Deeply Researched Accessible-Source Pack':'Guided Open-Access Archival Scaffold')}</span>
+            </div>
+            <h4 style="margin:6px 0 4px;font:21px/1.25 Georgia,serif">${esc(offer.offerHeadline)}</h4>
+            <p style="margin:0;font-size:14px;color:var(--muted)">${esc(offer.offerExplanation)}</p>
+          </div>
+          <button type="button" id="launch-provisional-research-btn" data-launch-provisional="${esc(offer.subjectKey)}" data-launch-query="${esc(res.question)}">${esc(offer.actionLabel)}</button>
+        </div>
+        <div class="section-line" style="margin-top:14px;padding-top:10px">
+          <h3>Accessible historical sources ready to consult (${offer.accessibleSourcesPreview.length} sources)</h3>
+          <span>Separating Verified Evidence · Disputed Interpretations · Unverified Material</span>
+        </div>
+        <div class="research-offer-sources">
+          ${offer.accessibleSourcesPreview.map(s=>`<div class="offer-source-item">
+            <div class="pill-row">
+              <span class="pill ${s.coverage==='SYNOPSIS_ONLY'||s.coverage==='ABSTRACT_ONLY'?'ep-unverified':'ep-verified'}">${esc(s.type.toUpperCase())} · ${esc(s.coverage||'FULL_TEXT')}</span>
+            </div>
+            <strong>${esc(s.title)}</strong>
+            <div class="help">${esc(s.author)} · ${esc(s.locator)}</div>
+          </div>`).join('')}
+        </div>
+      </section>`
+    :'';
+
+  const effectiveStatusPill=(res.status==='UNSUPPORTED'&&offer&&offer.isResearchableHistoricalSubject)
+    ?`<span class="pill uncertainty">OUTSIDE VERIFIED CORE COVERAGE · PROVISIONAL RESEARCH OFFERED (${esc(res.boundaryCode)})</span>`
+    :statusPill;
+
   container.innerHTML=`<div class="briefing-box">
     <div class="briefing-header">
       <div>
-        <div class="pill-row">${statusPill}<span class="pill axis">Curated as of 2026-11-08</span></div>
+        <div class="pill-row">${effectiveStatusPill}<span class="pill axis">Curated as of 2026-11-09</span></div>
         <h3>Question: “${esc(res.question)}”</h3>
         <p style="margin:6px 0 0;font-size:15px">${esc(res.explanation)}</p>
       </div>
@@ -395,6 +584,7 @@ function renderQuestionBriefing(){
     <div class="briefing-scope">
       <strong>How to read this evidence:</strong> ${esc(res.causalGuardrailNotice)} <em>(${esc(res.libraryScope.scopeNotice)})</em>
     </div>
+    ${offerHtml}
     ${gapsHtml}
     ${precedentsHtml}
   </div>`;
@@ -932,9 +1122,162 @@ function renderEducator(){
 }
 const renders={timeline:renderTimeline,arguments:renderArguments,compare:renderCompare,outcomes:renderOutcomes,perspectives:renderPerspectives,sources:renderSources,notebook:renderNotebook,educator:renderEducator};
 
+
+function renderProvisionalReviewBanner(c){
+  const el=$('#provisional-review-banner');
+  if(!el)return;
+  const eb=E.summarizeEpistemicBreakdown(c,notebook.standing,integrity);
+  const isProvisional=Boolean(c.inquiryStatus&&c.inquiryStatus!=='VERIFIED_CORE');
+  const isPromoted=c.inquiryStatus==='VERIFIED_LOCAL'||c.promotedToVerified===true;
+
+  if(!isProvisional){
+    el.innerHTML=`<div class="epistemic-banner">
+      <div class="pill-row" style="justify-content:space-between;align-items:center">
+        <div class="pill-row" style="margin:0">
+          <span class="pill ep-verified">VERIFIED CORE INQUIRY · CANONICAL REPOSITORY RECORD</span>
+          <span class="pill ep-verified">Verified Evidence: ${eb.verifiedEvidenceCount}</span>
+          <span class="pill ep-disputed">Disputed Interpretations &amp; Debates: ${eb.disputedInterpretationCount}</span>
+          <span class="pill ${eb.unverifiedMaterialCount?'ep-unverified':'axis'}">Synopsis-Only / Challenged Material: ${eb.unverifiedMaterialCount}</span>
+        </div>
+        <span class="help">All claims distinguish verified primary facts, disputed interpretations, and abstract/synopsis material.</span>
+      </div>
+    </div>`;
+    return;
+  }
+
+  const unreviewedHtml=eb.unreviewedProvisionalClaims.length
+    ?`<div class="unverified-review-list" id="unverified-review-queue">
+        <h4 style="margin:10px 0 6px;color:var(--rust)">Step A — Review &amp; Correct Unverified Material Before Promotion (${eb.unreviewedProvisionalClaims.length} remaining)</h4>
+        ${eb.unreviewedProvisionalClaims.map(u=>`<div class="unverified-queue-card" data-unverified-id="${esc(u.id)}">
+          <div class="pill-row">
+            <span class="pill ep-unverified">UNVERIFIED MATERIAL · BLOCKS PROMOTION</span>
+            <code>${esc(u.id)}</code>
+          </div>
+          <strong>${esc(u.title)}</strong>
+          <p style="margin:6px 0">${esc(u.text)}</p>
+          <p class="help" style="margin:4px 0"><strong>Why this is flagged:</strong> ${esc(u.verificationPrompt)}</p>
+          ${u.verifiedCorrection?`<div class="surviving-box" style="margin-top:8px">
+            <strong>Documented Primary-Record Correction (${esc(u.verifiedCorrection.correctedSourceIds.join(', '))}):</strong><br>
+            ${esc(u.verifiedCorrection.correctedText)}
+          </div>`:''}
+          <div class="notebook-controls" style="margin-top:10px">
+            <button type="button" data-correct-claim="${esc(u.id)}">Correct &amp; Bind to Primary Record ✓</button>
+            <button type="button" class="secondary" data-quarantine-claim="${esc(u.id)}">Quarantine &amp; Exclude Unverified Claim ✕</button>
+          </div>
+        </div>`).join('')}
+      </div>`
+    :`<div class="surviving-box" style="margin-top:10px"><strong>✓ All Unverified Material Reviewed:</strong> Every active claim in this provisional inquiry is now bound to verified primary/institutional records or explicitly marked as a competing interpretation.</div>`;
+
+  const promoFeedbackHtml=lastPromotionAttempt&&lastPromotionAttempt.inquiryId===c.id
+    ?(lastPromotionAttempt.promoted
+      ?`<div class="surviving-box" id="promotion-gate-status" role="status" style="margin-top:10px">
+          <strong>✓ PROMOTED TO VERIFIED LOCAL INQUIRY (${esc(lastPromotionAttempt.receipt.promotedAt)})</strong><br>
+          Reviewer attestation: “${esc(lastPromotionAttempt.receipt.reviewerNote)}”<br>
+          <code>Promotion Receipt SHA-256: ${esc(lastPromotionAttempt.receipt.receiptSha256)}</code>
+        </div>`
+      :`<div class="reopen" id="promotion-gate-status" role="status" style="margin-top:10px">
+          <strong>✕ PROMOTION BLOCKED (${lastPromotionAttempt.blockers.length} verification safeguard${lastPromotionAttempt.blockers.length>1?'s':''} triggered):</strong>
+          <ul>${lastPromotionAttempt.blockers.map(b=>`<li><code>[${esc(b.code)}]</code> ${esc(b.message)}</li>`).join('')}</ul>
+        </div>`)
+    :`<div id="promotion-gate-status" role="status"></div>`;
+
+  el.innerHTML=`<section class="epistemic-banner ${isPromoted?'is-promoted':'is-provisional'}" aria-label="Provisional inquiry epistemic status and promotion gate">
+    <div class="research-offer-head">
+      <div>
+        <div class="pill-row">
+          <span class="pill ${isPromoted?'ep-verified':'ep-unverified'}" id="provisional-status-badge">${isPromoted?'VERIFIED LOCAL INQUIRY · PROMOTED AFTER HUMAN REVIEW':'PROVISIONAL INQUIRY · PENDING REVIEW, CHALLENGE & PROMOTION'}</span>
+          <span class="pill axis">Researched from ${c.sources.length} accessible historical sources</span>
+          ${eb.activeChallengedSources.length?`<span class="pill ep-unverified">Active Source Hold: ${esc(eb.activeChallengedSources.join(', '))}</span>`:''}
+        </div>
+        <h3 style="margin:6px 0 4px;font:22px/1.2 Georgia,serif">${isPromoted?`Verified Local Inquiry: ${esc(c.title)}`:`Provisional Research Workspace: ${esc(c.title)}`}</h3>
+        <p class="help" style="margin:0">OpenLine v0.3 separates <strong>Verified Evidence</strong>, <strong>Disputed Interpretations</strong>, and <strong>Unverified Material</strong>. Inspect the 6-step story below, test source challenges, resolve any unverified claims, and promote this inquiry when ready.</p>
+      </div>
+      <div class="notebook-controls" style="margin:0">
+        <button type="button" class="secondary" id="reset-provisional-inquiry" data-reset-provisional="${esc(c.id)}">Reset provisional state ↺</button>
+      </div>
+    </div>
+
+    <div class="epistemic-tier-grid" id="epistemic-breakdown-cards">
+      <div class="epistemic-tier-card tier-verified">
+        <span class="pill ep-verified">TIER 1 · VERIFIED EVIDENCE</span>
+        <span class="epistemic-count">${eb.verifiedEvidenceCount} records</span>
+        <p class="help" style="margin:0">Primary archival &amp; institutional records with verified HTTPS URLs, exact locators, and passing SHA-256 digests.</p>
+      </div>
+      <div class="epistemic-tier-card tier-disputed">
+        <span class="pill ep-disputed">TIER 2 · DISPUTED INTERPRETATIONS</span>
+        <span class="epistemic-count">${eb.disputedInterpretationCount} arguments &amp; schools</span>
+        <p class="help" style="margin:0">Competing contemporary expectations and rival historians’ causal frameworks—never flattened into fake consensus.</p>
+      </div>
+      <div class="epistemic-tier-card tier-unverified">
+        <span class="pill ep-unverified">TIER 3 · UNVERIFIED MATERIAL</span>
+        <span class="epistemic-count">${eb.unverifiedMaterialCount} flagged item${eb.unverifiedMaterialCount===1?'':'s'}</span>
+        <p class="help" style="margin:0">${eb.unreviewedProvisionalClaimsCount} unreviewed provisional claim(s) + ${eb.quarantinedClaimsCount} quarantined. Must be 0 unreviewed to promote.</p>
+      </div>
+    </div>
+
+    ${unreviewedHtml}
+
+    <div class="promotion-gate-box" id="promotion-gate-panel">
+      <div class="pill-row" style="justify-content:space-between;align-items:center">
+        <strong>Step B — Review, Source Challenge &amp; Promotion Gate (${eb.readyForPromotion?'READY FOR PROMOTION':'BLOCKED UNTIL UNVERIFIED ITEMS & HOLDS RESOLVED'})</strong>
+        <span class="help">${c.reviewAuditTrail?.length||1} audit event(s) recorded</span>
+      </div>
+      <div class="promotion-row">
+        <label for="promotion-reviewer-note" class="sr-only">Reviewer verification note</label>
+        <input id="promotion-reviewer-note" maxlength="500" value="${esc(c.reviewerNote||`Verified ${c.sources.length} accessible source locators, competing interpretations, and analogy limits for ${c.title}.`)}" placeholder="Enter reviewer verification note (min 15 chars)…">
+        <button type="button" id="btn-promote-inquiry" data-promote-inquiry="${esc(c.id)}">${isPromoted?'Re-verify &amp; Issue Updated Receipt ✓':'Promote to Verified Status →'}</button>
+        ${c.consequentialCorrection?(!notebook.standing[c.consequentialCorrection.targetSourceId]||notebook.standing[c.consequentialCorrection.targetSourceId].status==='ACTIVE'
+          ?`<button type="button" class="secondary" data-trigger-sleuth-correction="${esc(c.consequentialCorrection.targetSourceId)}">Challenge source (${esc(c.consequentialCorrection.targetSourceId)}) ⚡</button>`
+          :`<button type="button" class="secondary" data-restore-sleuth-correction="${esc(c.consequentialCorrection.targetSourceId)}">Restore challenged source (${esc(c.consequentialCorrection.targetSourceId)}) ↺</button>`):''}
+      </div>
+      ${promoFeedbackHtml}
+    </div>
+  </section>`;
+}
+
 function render(){
   const c=current();
   renderQuestionBriefing();
+  renderProvisionalReviewBanner(c);
+  const provList=$('#provisional-case-list');
+  if(provList){
+    const catalogCards=E.PROVISIONAL_SUBJECT_CATALOG.map((pack,idx)=>{
+      const liveInq=provisionalInquiries[pack.id]||pack;
+      const isPromoted=liveInq.inquiryStatus==='VERIFIED_LOCAL'||liveInq.promotedToVerified===true;
+      const isResearched=Boolean(provisionalInquiries[pack.id]);
+      const eb=E.summarizeEpistemicBreakdown(liveInq,notebook.standing,integrity);
+      const statusBadge=isPromoted
+        ?'VERIFIED LOCAL · PROMOTED'
+        :isResearched
+        ?`PROVISIONAL · ${eb.unreviewedProvisionalClaimsCount} UNVERIFIED TO REVIEW`
+        :'UNFAMILIAR SUBJECT · CLICK TO RESEARCH';
+      return `<button type="button" class="case-card provisional-card ${isPromoted?'promoted-card':''}" data-provisional-case="${esc(pack.id)}" aria-pressed="${pack.id===active}">
+        <div>
+          <span class="card-meta"><span>${esc(pack.place)} · ${esc(pack.period)}</span><span class="card-number">P${idx+1}</span></span>
+          <span class="pill ${isPromoted?'ep-verified':isResearched?'ep-disputed':'ep-unverified'}" style="margin-top:6px">${esc(statusBadge)}</span>
+          <strong>${esc(pack.title)}</strong>
+          <p class="card-hook">${esc(pack.hook||pack.summary)}</p>
+        </div>
+        <span class="card-foot"><span>${pack.sources.length} accessible sources · ${eb.verifiedEvidenceCount} verified · ${eb.disputedInterpretationCount} disputed</span><span class="arrow" aria-hidden="true">→</span></span>
+      </button>`;
+    });
+    const customCards=Object.values(provisionalInquiries)
+      .filter(inq=>!E.PROVISIONAL_SUBJECT_CATALOG.some(p=>p.id===inq.id))
+      .map((inq,idx)=>{
+        const isPromoted=inq.inquiryStatus==='VERIFIED_LOCAL'||inq.promotedToVerified===true;
+        const eb=E.summarizeEpistemicBreakdown(inq,notebook.standing,integrity);
+        return `<button type="button" class="case-card provisional-card ${isPromoted?'promoted-card':''}" data-provisional-case="${esc(inq.id)}" aria-pressed="${inq.id===active}">
+          <div>
+            <span class="card-meta"><span>Guided Custom Scaffold</span><span class="card-number">C${idx+1}</span></span>
+            <span class="pill ${isPromoted?'ep-verified':'ep-unverified'}" style="margin-top:6px">${isPromoted?'VERIFIED LOCAL · PROMOTED':`PROVISIONAL SCAFFOLD · ${eb.unreviewedProvisionalClaimsCount} UNVERIFIED`}</span>
+            <strong>${esc(inq.title)}</strong>
+            <p class="card-hook">${esc(inq.hook||inq.summary)}</p>
+          </div>
+          <span class="card-foot"><span>${inq.sources.length} archival portals · 3 epistemic tiers</span><span class="arrow" aria-hidden="true">→</span></span>
+        </button>`;
+      });
+    provList.innerHTML=[...catalogCards,...customCards].join('');
+  }
   $('#case-list').innerHTML=DATA.cases.map((x,n)=>`<button type="button" class="case-card" data-case="${esc(x.id)}" aria-pressed="${x.id===active}">
     <div>
       <span class="card-meta"><span>${esc(x.place)} · ${esc(x.period)}</span><span class="card-number">0${n+1}</span></span>
@@ -977,7 +1320,7 @@ function render(){
 }
 
 function openSource(id,caseId=active){
-  const c=DATA.cases.find(x=>x.id===caseId)||current(),s=source(c,id);if(!s)return;
+  const c=findCaseById(caseId)||current(),s=source(c,id);if(!s)return;
   const deps=[...E.items(c),...E.historicalArguments(c)].filter(i=>i.sourceIds&&i.sourceIds.includes(id));
   const ax=E.verifyEvidenceAxes(s,notebook.standing,integrity);
   const state=notebook.standing[id]?.status||'ACTIVE';
@@ -988,14 +1331,105 @@ function openSource(id,caseId=active){
 function applySourceStanding(caseObj,id,newStatus,reason){
   if(!integrity)return;
   const s=source(caseObj,id);if(!s)return;
-  notebook.events.push({type:'SOURCE_STANDING',sourceId:id,boundSha256:s.sha256,prior:notebook.standing[id]?.status||'ACTIVE',status:newStatus,reason,created:new Date().toISOString(),affected:E.affected(caseObj,id)});
+  const isCoreSource=DATA.cases.some(x=>x.sources.some(src=>src.id===id));
+  if(isCoreSource){
+    notebook.events.push({type:'SOURCE_STANDING',sourceId:id,boundSha256:s.sha256,prior:notebook.standing[id]?.status||'ACTIVE',status:newStatus,reason,created:new Date().toISOString(),affected:E.affected(caseObj,id)});
+  }else if(Array.isArray(caseObj.reviewAuditTrail)){
+    caseObj.reviewAuditTrail.push({event:'PROVISIONAL_SOURCE_STANDING_CHANGE',sourceId:id,status:newStatus,reason,timestamp:new Date().toISOString()});
+  }
   notebook.standing[id]={status:newStatus,reason,boundSha256:s.sha256};
-  save();render();
+  lastPromotionAttempt=null;
+  if(isCoreSource)save();
+  render();
 }
 
 document.addEventListener('click',async ev=>{
   const b=ev.target.closest('button');if(!b)return;
   if(b.dataset.close){document.getElementById(b.dataset.close).close();return;}
+  if(b.dataset.launchProvisional){
+    const key=b.dataset.launchProvisional;
+    const q=b.dataset.launchQuery||currentQuestionText;
+    const inq=ensureProvisionalSubject(key==='custom-historical-inquiry'?q:key);
+    active=inq.id;
+    depthMode='explore';
+    storyStep='question';
+    timelineIndex=0;
+    compareFilter='all';
+    lastPromotionAttempt=null;
+    render();
+    const inv=$('#investigation');
+    if(inv)inv.scrollIntoView({block:'start'});
+    notify(`Researched "${inq.title}" using ${inq.sources.length} accessible sources. Status: PROVISIONAL (review unverified material before promotion).`);
+    return;
+  }
+  if(b.dataset.provisionalCase){
+    const inq=ensureProvisionalSubject(b.dataset.provisionalCase);
+    active=inq.id;
+    depthMode='explore';
+    storyStep='question';
+    timelineIndex=0;
+    compareFilter='all';
+    lastPromotionAttempt=null;
+    render();
+    const inv=$('#investigation');
+    if(inv)inv.scrollIntoView({block:'start'});
+    return;
+  }
+  if(b.dataset.resetProvisional){
+    const pid=b.dataset.resetProvisional;
+    delete provisionalInquiries[pid];
+    const fresh=ensureProvisionalSubject(pid);
+    // Also clear any local standing overrides on this provisional inquiry's sources
+    fresh.sources.forEach(s=>{delete notebook.standing[s.id];});
+    active=fresh.id;
+    lastPromotionAttempt=null;
+    render();
+    notify(`Reset provisional inquiry "${fresh.title}" to initial unreviewed state.`);
+    return;
+  }
+  if(b.dataset.correctClaim){
+    const c=current();
+    const itemId=b.dataset.correctClaim;
+    try{
+      E.correctProvisionalClaim(c,itemId,{
+        reviewerNote:'Verified against primary/institutional locator in browser review workbench.',
+        overrides:notebook.standing
+      });
+      lastPromotionAttempt=null;
+      render();
+      notify(`Corrected and verified ${itemId} against primary archival records.`);
+    }catch(err){
+      notify(err.message);
+    }
+    return;
+  }
+  if(b.dataset.quarantineClaim){
+    const c=current();
+    const itemId=b.dataset.quarantineClaim;
+    try{
+      E.quarantineProvisionalClaim(c,itemId,'Quarantined unverified provisional claim during review.');
+      lastPromotionAttempt=null;
+      render();
+      notify(`Quarantined and excluded unverified claim ${itemId}.`);
+    }catch(err){
+      notify(err.message);
+    }
+    return;
+  }
+  if(b.dataset.promoteInquiry){
+    const c=current();
+    const noteEl=$('#promotion-reviewer-note');
+    const note=noteEl?noteEl.value:'';
+    const res=E.promoteProvisionalInquiry(c,notebook.standing,{reviewerNote:note});
+    lastPromotionAttempt={inquiryId:c.id,...res};
+    render();
+    if(res.promoted){
+      notify(`Promoted "${c.title}" to VERIFIED_LOCAL! Receipt SHA-256: ${res.receipt.receiptSha256.slice(0,16)}…`);
+    }else{
+      notify(`Promotion blocked: ${res.blockers[0]?.message||'Resolve blockers first.'}`);
+    }
+    return;
+  }
   if(b.id==='expand-initial-briefing'){hasSubmittedQuestion=true;render();return;}
   if(b.id==='collapse-briefing-btn'){hasSubmittedQuestion=false;render();return;}
 
@@ -1150,7 +1584,7 @@ document.addEventListener('click',async ev=>{
   }
   if(b.dataset.challenge){
     const targetId=b.dataset.challenge;
-    const ownerCase=DATA.cases.find(x=>E.items(x).some(i=>i.id===targetId)||E.historicalArguments(x).some(a=>a.id===targetId));
+    const ownerCase=allCases().find(x=>E.items(x).some(i=>i.id===targetId)||E.historicalArguments(x).some(a=>a.id===targetId));
     if(ownerCase)active=ownerCase.id;
     tabName='notebook';
     workbenchOpen=true;
@@ -1160,7 +1594,7 @@ document.addEventListener('click',async ev=>{
     return;
   }
   if(b.dataset.cardDownload){
-    const c=DATA.cases.find(x=>x.id===b.dataset.cardCase)||current();
+    const c=findCaseById(b.dataset.cardCase)||current();
     const s=source(c,b.dataset.cardDownload);
     if(s)download(s.id+'-citation-card.json',s.card);
     return;

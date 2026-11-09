@@ -2,15 +2,15 @@
 
 **Author**: Argon (Lead Engineer, OpenLine Department of History M5)  
 **Date**: November 8, 2026  
-**Governing Law**: [OpenLine Agent Operating Law v1.0]([private reference removed for public release]) (`a3ea42f6cde5355acea07fa1f0c947cf4b96b5a4efcb48bd80133bb38afb9c81`) & [Dogfood 001]([private reference removed for public release]) (`0535e56b63bd114eadf4e7d38208c5661a86702d21caeeba0dee0e62e0e4444f`)  
-**Upstream Accepted Baseline**: [OPENLINE_HISTORY_LAB_M4_1_ASTRA_ACCEPTED_PRIVATE.zip]([private reference removed for public release]) (`3fe975d9c284f15a1c0c44c6ecd6239cf3f130eebb90202eb364d99b85321ecb`) & [ASTRA_M4_INDEPENDENT_ACCEPTANCE_REPORT.md]([private reference removed for public release])  
-**Private Google Drive Folder**: [OpenLine History Lab — Private Development]([private reference removed for public release])  
+**Governing Law**: [OpenLine Agent Operating Law v1.0]([private Drive link — redacted for public release]) (`a3ea42f6cde5355acea07fa1f0c947cf4b96b5a4efcb48bd80133bb38afb9c81`) & [Dogfood 001]([private Drive link — redacted for public release]) (`0535e56b63bd114eadf4e7d38208c5661a86702d21caeeba0dee0e62e0e4444f`)  
+**Upstream Accepted Baseline**: [OPENLINE_HISTORY_LAB_M4_1_ASTRA_ACCEPTED_PRIVATE.zip]([private Drive link — redacted for public release]) (`3fe975d9c284f15a1c0c44c6ecd6239cf3f130eebb90202eb364d99b85321ecb`) & [ASTRA_M4_INDEPENDENT_ACCEPTANCE_REPORT.md]([private Google Doc link — redacted for public release])  
+**Private Google Drive Folder**: [OpenLine History Lab — Private Development]([private Drive link — redacted for public release])  
 **Release Candidate Status**: **`READY FOR INDEPENDENT ASTRA REVIEW`** (No public deployment, merge, spend, or external outreach; simulated browser acceptance exercise explicitly disclosed)
 
 ## 1. Dogfood 001 Execution Summary (`READ → VERIFY → FIND BOTTLENECK → COMPARE → BUILD → FALSIFY → PRESERVE/REOPEN → REPEAT`)
 
 ### Step 1 — `READ` & `VERIFY` (Upstream M4.1 Reproduction)
-1. **Archive & Manifest Verification**: Retrieved `OPENLINE_HISTORY_LAB_M4_1_ASTRA_ACCEPTED_PRIVATE.zip` (`[private reference removed for public release]`) and `ASTRA_M4_INDEPENDENT_ACCEPTANCE_REPORT.md` (`[private reference removed for public release]`) from the private Google Drive folder. Verified exact SHA-256 `3fe975d9c284f15a1c0c44c6ecd6239cf3f130eebb90202eb364d99b85321ecb`, unpacked the archive, verified all `132/132` internal entries in `SHA256SUMS.txt`, verified the 151-event SQLite authoring ledger (`evidence/authoring-ledger/history.sqlite3`, head `f978269a4ddd55c03189f313813c7494106ea0175d1c529b98aa6fcd2edf8ca0`), and executed all 56 M4.1 automated tests (`42/42` Node + `14/14` Python).
+1. **Archive & Manifest Verification**: Retrieved `OPENLINE_HISTORY_LAB_M4_1_ASTRA_ACCEPTED_PRIVATE.zip` (`[private Drive ID — redacted]`) and `ASTRA_M4_INDEPENDENT_ACCEPTANCE_REPORT.md` (`[private Drive ID — redacted]`) from the private Google Drive folder. Verified exact SHA-256 `3fe975d9c284f15a1c0c44c6ecd6239cf3f130eebb90202eb364d99b85321ecb`, unpacked the archive, verified all `132/132` internal entries in `SHA256SUMS.txt`, verified the 151-event SQLite authoring ledger (`evidence/authoring-ledger/history.sqlite3`, head `f978269a4ddd55c03189f313813c7494106ea0175d1c529b98aa6fcd2edf8ca0`), and executed all 56 M4.1 automated tests (`42/42` Node + `14/14` Python).
 2. **Preservation Invariants Confirmed**: All 42 source `card` SHA-256 digests (including the 21 original M2 source cards), all 104 core evidence records, the 151-event SQLite authoring ledger chain, and all 6 Astra M4.1 repairs (`engine.js`, `app.js`, `styles.css`, `scripts/conventional_baseline.py`) remain 100% intact in M5.
 
 ### Step 2 — `FIND BOTTLENECK` (Customer-Value Gap in M4.1)

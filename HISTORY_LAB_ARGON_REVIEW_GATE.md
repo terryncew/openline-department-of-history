@@ -2,16 +2,16 @@
 
 - **Recovered Date**: 2026-11-09 UTC (2026-11-08 PST)
 - **Role**: Argon — Independent engineering lead, historical-evidence auditor, adversarial reviewer, and release-qualification agent for OpenLine History Lab
-- **Private Development Folder**: `[private reference removed for public release]` ([private reference removed for public release])
-- **Recovered Astra M1 Source**: `OPENLINE_HISTORY_LAB_M1_PRIVATE.zip` (`[private reference removed for public release]`)
+- **Private Development Folder**: `[private Drive ID — redacted]` ([private Drive link — redacted for public release])
+- **Recovered Astra M1 Source**: `OPENLINE_HISTORY_LAB_M1_PRIVATE.zip` (`[private Drive ID — redacted]`)
   - **Verified SHA-256**: `f783cb054c71277f3b90f1ea3dbb3a1b8db89b38941a0cd0c9aafbfb798c70e3` (EXACT MATCH)
-- **Recovered Astra M2 Source**: `OPENLINE_HISTORY_LAB_M2_PRIVATE.zip` (`[private reference removed for public release]`)
+- **Recovered Astra M2 Source**: `OPENLINE_HISTORY_LAB_M2_PRIVATE.zip` (`[private Drive ID — redacted]`)
   - **Verified SHA-256**: `4494f936ef5e0a3c5144be638e47d98f48b521d824aede40f4a7575c3a00dd7c` (EXACT MATCH)
-- **Recovered Operating Law v1**: `OpenLine_Agent_Operating_Law_v1.pdf` (`[private reference removed for public release]`)
+- **Recovered Operating Law v1**: `OpenLine_Agent_Operating_Law_v1.pdf` (`[private Drive ID — redacted]`)
   - **Verified SHA-256**: `a3ea42f6cde5355acea07fa1f0c947cf4b96b5a4efcb48bd80133bb38afb9c81`
-- **Recovered Dogfood 001**: `openline_law_dogfood_001.zip` (`[private reference removed for public release]`)
+- **Recovered Dogfood 001**: `openline_law_dogfood_001.zip` (`[private Drive ID — redacted]`)
   - **Verified SHA-256**: `0535e56b63bd114eadf4e7d38208c5661a86702d21caeeba0dee0e62e0e4444f` (EXACT MATCH, 6/6 deterministic tests passing)
-- **Astra M3/M4 Checkpoints Search**: Exhaustively searched Google Drive (`[private reference removed for public release]` and root), Gmail, Keep, and VM workspaces; Astra stopped after M2 (`HANDOFF.md`: "M3 and M4 each must be uploaded and read back before continuation"). No M3 or M4 archives existed prior to Argon takeover.
+- **Astra M3/M4 Checkpoints Search**: Exhaustively searched Google Drive (`[private Drive ID — redacted]` and root), Gmail, Keep, and VM workspaces; Astra stopped after M2 (`HANDOFF.md`: "M3 and M4 each must be uploaded and read back before continuation"). No M3 or M4 archives existed prior to Argon takeover.
 - **Reproduced M2 Baseline**:
   - `sha256sum -c SHA256SUMS.txt`: 66/66 files OK
   - Node test suite (`node --test tests/*.test.cjs`): 26/26 PASS

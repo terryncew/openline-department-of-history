@@ -38,7 +38,7 @@ Verdict: as packaged, these five are links plus short paraphrases, which is how 
 
 ## 5. Other sources — links and curator cards, no full text bundled
 
-The remaining 39 of the 44 sources are represented the same way: a curator-written evidence card in `tree/evidence/` with a URL, locator, and notes. No other publisher full text is bundled in the tree. The one attempted second original (`bank-report`, the 1933 Federal Reserve annual report) is recorded as NOT_PRESERVED in `ORIGINALS_MANIFEST.json` (the response exceeded the 10 MiB/PDF acceptance boundary; no complete original retained).
+The remaining 37 of the 42 sources are represented the same way: a curator-written evidence card in `tree/evidence/` with a URL, locator, and notes. No other publisher full text is bundled in the tree. The one attempted second original (`bank-report`, the 1933 Federal Reserve annual report) is recorded as NOT_PRESERVED in `ORIGINALS_MANIFEST.json` (the response exceeded the 10 MiB/PDF acceptance boundary; no complete original retained).
 
 ## 6. What a redistributor must keep
 

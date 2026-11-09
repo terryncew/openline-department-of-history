@@ -378,7 +378,7 @@ def evaluate_comparison(dataset: dict[str, Any], brief_path: pathlib.Path) -> di
     ]
     summary = {
         "evaluatedAt": "2026-11-09T07:00:00Z",
-        "version": "0.2.0",
+        "version": "0.3.0",
         "baselineArtifact": str(brief_path.relative_to(ROOT)),
         "searchableReferenceInterface": True,
         "datasetSha256": dataset_sha256,

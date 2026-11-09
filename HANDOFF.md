@@ -2,20 +2,20 @@
 
 - **Independent Acceptance Verdict**: **PASS (After 6 Private Reproducible Defect Repairs in Final Candidate M4.1 / FINAL)**
 - **Evaluation Mode Disclosure**: **Simulated Acceptance Exercise** (executed via deterministic Node/Python test harnesses and real headless Chromium across Phone `390×844`, Chromebook `1024×768`, and Desktop `1280×850` viewports; **no real human user participated**).
-- **Private Google Drive Folder**: [OpenLine History Lab — Private Development (`[private reference removed for public release]`)]([private reference removed for public release])
+- **Private Google Drive Folder**: [OpenLine History Lab — Private Development (`[private Drive ID — redacted]`)]([private Drive link — redacted for public release])
 - **Operating Law & Dogfood 001 Compliance**: `Bound-First → Receipts → Falsifiers → Emergence → Coherence` (`READ → VERIFY → FIND BOTTLENECK → COMPARE → BUILD → FALSIFY → PRESERVE/REOPEN → REPEAT`); `STOP` treated as an explicit action; candidate state vs. accepted state strictly separated; zero external network requests at runtime (`connect-src 'self'`); $0.00 spent; zero unapproved publications, deployments, or public merges.
 
 ## 1. Blind Recovery & Clean-Room Reproduction of Argon M4 Baseline
 
-1. **Recovered Argon M4 Archive ([`OPENLINE_HISTORY_LAB_M4_PRIVATE.zip`]([private reference removed for public release]))**:
+1. **Recovered Argon M4 Archive ([`OPENLINE_HISTORY_LAB_M4_PRIVATE.zip`]([private Drive link — redacted for public release]))**:
    - Expected & Verified Outer SHA-256: `3d0fd19151d1f81dcfabfe74eb6f86179bdc6e6d4cd790a13a7a412260e10938` (`EXACT MATCH`).
    - Internal Manifest (`sha256sum -c SHA256SUMS.txt`): `132/132` files `OK`.
-2. **Preservation of Accepted M2 Work ([`OPENLINE_HISTORY_LAB_M2_PRIVATE.zip`]([private reference removed for public release]), SHA-256 `4494f936ef5e0a3c5144be638e47d98f48b521d824aede40f4a7575c3a00dd7c`)**:
+2. **Preservation of Accepted M2 Work ([`OPENLINE_HISTORY_LAB_M2_PRIVATE.zip`]([private Drive link — redacted for public release]), SHA-256 `4494f936ef5e0a3c5144be638e47d98f48b521d824aede40f4a7575c3a00dd7c`)**:
    - All **21/21** original M2 source card SHA-256 digests (`evidence/*.json` for `cholera`, `triangle`, and `banking`) and the bundled `dist/originals/bank-act.pdf` (`ba373276...`) are byte-for-byte unchanged (`0` mismatches).
 3. **Authoring Ledger Verification (`scripts/evidence_ledger.py`)**:
    - Verified 151 hash-chained SQLite events matching `evidence/AUTHORING_HEAD.json` (`f978269a4ddd55c03189f313813c7494106ea0175d1c529b98aa6fcd2edf8ca0`, `hash_chain_valid: true`, `external_anchor_checked: true`).
 4. **Reproduced Baseline Automated Tests (`52/52 PASS`)**:
-   - `38/38` Node tests (`tests/*.test.cjs`), `11/11` Python adapter/baseline tests (`tests/test_ledger_adapter.py`), and `3/3` upstream Mandate-Ledger dependency-recall tests (`third_party/mandate-ledger/test_gpt_dependency_recall.py`), plus `6/6` Dogfood 001 tests ([`openline_law_dogfood_001.zip`]([private reference removed for public release])).
+   - `38/38` Node tests (`tests/*.test.cjs`), `11/11` Python adapter/baseline tests (`tests/test_ledger_adapter.py`), and `3/3` upstream Mandate-Ledger dependency-recall tests (`third_party/mandate-ledger/test_gpt_dependency_recall.py`), plus `6/6` Dogfood 001 tests ([`openline_law_dogfood_001.zip`]([private Drive link — redacted for public release])).
 
 ## 2. Execution of All Five Blind Challenges (`ASTRA_BLIND_ACCEPTANCE_CHALLENGE.md`) & Reproducible Defects Repaired
 

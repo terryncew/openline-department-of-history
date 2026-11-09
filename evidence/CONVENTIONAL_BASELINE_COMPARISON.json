@@ -1,6 +1,6 @@
 {
   "evaluatedAt": "2026-11-09T07:00:00Z",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "baselineArtifact": "dist/conventional_baseline_brief.html",
   "searchableReferenceInterface": true,
   "datasetSha256": "abc519d754a87cd3d6f35074f391400ae6cd849f70304ef02537c5a724d61d9d",

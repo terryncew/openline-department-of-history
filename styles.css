@@ -1008,9 +1008,8 @@ footer{
 .toast{
   position:fixed;
   bottom:22px;
-  left:50%;
-  transform:translateX(-50%);
-  max-width:92vw;
+  right:22px;
+  max-width:min(92vw,420px);
   padding:12px 20px;
   background:var(--green);
   color:var(--white);
@@ -1019,11 +1018,153 @@ footer{
   display:none;
   z-index:50;
   box-shadow:var(--shadow);
+  /* Repair (D-16): a transient toast must never occlude or block an action
+  control (it covered "Correct & Bind to Primary Records"). Docked to the
+  corner, click-through, and short-lived. */
+  pointer-events:none;
 }
 .toast.show{display:block}
 pre{white-space:pre-wrap;overflow-wrap:anywhere;font-size:11.5px}
 body:has(dialog[open]){overflow:hidden}
 .hidden{display:none!important}
+
+
+/* v0.3 Provisional Research, Epistemic Status Tiers & Promotion Workbench */
+.unfamiliar-samples{
+  margin-top:8px;
+  padding-top:8px;
+  border-top:1px dashed var(--line);
+}
+.unfamiliar-pill{
+  background:#f4efe4;
+  border-color:#9b4728;
+  color:#5b2c18;
+}
+.unfamiliar-pill:hover{
+  background:#fcf2e6;
+  border-color:#784610;
+}
+.provisional-studio{
+  margin-top:14px;
+}
+.provisional-grid{
+  grid-template-columns:repeat(4,1fr);
+}
+.case-card.provisional-card{
+  border-style:dashed;
+  border-width:1.5px;
+  border-color:#784610;
+  background:#fdfaf2;
+}
+.case-card.provisional-card.promoted-card{
+  border-style:solid;
+  border-color:var(--green);
+  background:#f2f7f4;
+}
+.case-card.provisional-card[aria-pressed="true"]{
+  background:var(--green);
+  color:var(--white);
+  border-style:solid;
+}
+.research-offer-box{
+  background:#fdfaf2;
+  border:2px solid #9b4728;
+  border-radius:10px;
+  padding:20px;
+  margin-top:14px;
+}
+.research-offer-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:16px;
+  flex-wrap:wrap;
+}
+.research-offer-sources{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:10px;
+  margin:14px 0;
+}
+.offer-source-item{
+  background:var(--white);
+  border:1px solid var(--line);
+  border-radius:6px;
+  padding:10px 12px;
+  font-size:12.5px;
+}
+.epistemic-banner{
+  background:var(--white);
+  border:1.5px solid var(--line);
+  border-radius:10px;
+  padding:18px 20px;
+  margin-bottom:20px;
+  box-shadow:var(--shadow);
+}
+.epistemic-banner.is-provisional{
+  border-color:#9b4728;
+  background:#fffdf7;
+}
+.epistemic-banner.is-promoted{
+  border-color:var(--green);
+  background:#f4f9f6;
+}
+.epistemic-tier-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+  margin:14px 0;
+}
+.epistemic-tier-card{
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:8px;
+  padding:12px 14px;
+}
+.epistemic-tier-card.tier-verified{border-left:4px solid var(--green)}
+.epistemic-tier-card.tier-disputed{border-left:4px solid var(--amber)}
+.epistemic-tier-card.tier-unverified{border-left:4px solid var(--rust);background:#fcf4f1}
+.epistemic-count{
+  font:700 22px/1.1 Georgia,serif;
+  display:block;
+  margin-bottom:4px;
+}
+.pill.ep-verified{background:var(--green-soft);color:var(--green);border:1px solid rgba(29,70,56,.25)}
+.pill.ep-disputed{background:var(--amber-soft);color:var(--amber);border:1px solid rgba(120,70,16,.25)}
+.pill.ep-unverified{background:var(--rust-soft);color:var(--rust);border:1px dashed var(--rust)}
+.pill.ep-guidance{background:#e8eef4;color:#33526b;border:1px solid rgba(51,82,107,.35)}
+.unverified-queue-card{
+  background:#fff6f2;
+  border:1.5px dashed var(--rust);
+  border-radius:8px;
+  padding:14px 16px;
+  margin:12px 0;
+}
+.promotion-gate-box{
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:8px;
+  padding:14px 16px;
+  margin-top:14px;
+}
+.promotion-row{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  align-items:center;
+  margin-top:8px;
+}
+.promotion-row input{
+  flex:1;
+  min-width:240px;
+}
+@media(max-width:1080px){
+  .provisional-grid{grid-template-columns:repeat(2,1fr)}
+  .epistemic-tier-grid,.research-offer-sources{grid-template-columns:1fr}
+}
+@media(max-width:680px){
+  .provisional-grid{grid-template-columns:1fr}
+}
 
 /* Tablet / Chromebook Breakpoint */
 @media(max-width:1080px){
