@@ -1,0 +1,16 @@
+const {test}=require('node:test');const assert=require('node:assert/strict');const fs=require('node:fs');const crypto=require('node:crypto');const E=require('../engine.js');const d=JSON.parse(fs.readFileSync(__dirname+'/../dist/data.json','utf8'));const hash=E.sha256(E.canonical(d));
+const blank=()=>({schema:'openline-history-notebook.v1',dataHash:hash,challenges:[],events:[],standing:{},worksheets:{}});
+const challenge=()=>({id:'test-1',caseId:d.cases[0].id,itemId:d.cases[0].facts[0].id,reason:'This claim needs a more exact locator.',url:'https://example.org/source',created:'2026-11-08T00:00:00Z',status:'OPEN'});
+for(const input of ['', 'abc','a'.repeat(55),'a'.repeat(56),'a'.repeat(64),'a'.repeat(1000),'Café • 1854 ↗ 東京',E.canonical(d)])test('SHA-256 matches native crypto: '+input.length+' chars',()=>assert.equal(E.sha256(input),crypto.createHash('sha256').update(input).digest('hex')));
+test('valid notebook round trip',()=>{const n=blank();n.challenges.push(challenge());assert.deepEqual(E.validateNotebook(JSON.parse(JSON.stringify(n)),d),n)});
+test('wrong dataset refuses import',()=>{const n=blank();n.dataHash='0'.repeat(64);assert.throws(()=>E.validateNotebook(n,d))});
+test('unknown record refuses challenge import',()=>{const n=blank();n.challenges=[{...challenge(),itemId:'invented'}];assert.throws(()=>E.validateNotebook(n,d))});
+test('malicious URLs refused',()=>{const n=blank();n.challenges=[{...challenge(),url:'javascript:alert(1)'}];assert.throws(()=>E.validateNotebook(n,d))});
+test('prototype keys refused recursively',()=>{const n=blank();n.worksheets=JSON.parse('{"__proto__":{"record":"attack"}}');assert.throws(()=>E.validateNotebook(n,d))});
+test('fake historical source event refused',()=>{const n=blank();n.events=[{type:'SOURCE_STANDING',sourceId:'fake'}];assert.throws(()=>E.validateNotebook(n,d))});
+test('imported approval cannot clear local hold',()=>{const a=blank(),b=blank(),s=d.cases[0].sources[0];a.standing[s.id]={status:'WITHDRAWN',reason:'An independent local review rejected attribution.',boundSha256:s.sha256};b.standing[s.id]={status:'ACTIVE',reason:'A different person approved this source.',boundSha256:s.sha256};assert.equal(E.mergeNotebook(a,b,d).standing[s.id].status,'WITHDRAWN')});
+test('contradictory challenge ID refused',()=>{const a=blank(),b=blank();a.challenges=[challenge()];b.challenges=[{...challenge(),reason:'Different claim using the same identifier.'}];assert.throws(()=>E.mergeNotebook(a,b,d))});
+test('repeated import deduplicates challenges',()=>{const a=blank(),b=blank();b.challenges=[challenge()];assert.equal(E.mergeNotebook(E.mergeNotebook(a,b,d),b,d).challenges.length,1)});
+test('dataset corruption detected independently',()=>{const changed=JSON.parse(JSON.stringify(d));changed.cases[0].facts[0].text='Fabricated fact';assert.notEqual(E.sha256(E.canonical(changed)),hash)});
+test('missing analogy limitation fails validation',()=>{const x=JSON.parse(JSON.stringify(d));delete x.cases[0].comparison[0].limit;assert.throws(()=>E.validate(x))});
+test('obsolete restoration binding reopens evidence',()=>{const c=d.cases[0],s=c.sources[0];assert.equal(E.standing(c.facts[0],c.sources,{[s.id]:{status:'ACTIVE',boundSha256:'0'.repeat(64)}}).state,'REOPEN')});

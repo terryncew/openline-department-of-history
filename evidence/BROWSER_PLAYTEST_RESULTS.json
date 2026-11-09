@@ -1,0 +1,176 @@
+{
+  "testedAt": "2026-11-08T20:05:00Z",
+  "evaluationMode": "SIMULATED_ACCEPTANCE_EXERCISE_HEADLESS_CHROMIUM_NO_REAL_HUMAN_PARTICIPANT",
+  "bundleUrl": "dist/index.html",
+  "viewports": {
+    "phone_390x844": {
+      "width": 390,
+      "height": 844,
+      "caseRendered": "hormuz",
+      "combinationsTested": 40,
+      "questionsTested": 6,
+      "overflowCombinations": [],
+      "clientWidth": 375,
+      "scrollWidth": 375,
+      "horizontalOverflow": false,
+      "integrityBadge": "3-Axis Verification PASS: 10 preserved citation cards passed SHA-256 byte checks. Checksums prove byte integrity, not historical truth or publisher signature.",
+      "severeConsoleLogs": 0,
+      "screenshot": "phone_390x844_hormuz.png"
+    },
+    "chromebook_1024x768": {
+      "width": 1024,
+      "height": 768,
+      "caseRendered": "israel-palestine",
+      "combinationsTested": 40,
+      "questionsTested": 6,
+      "overflowCombinations": [],
+      "clientWidth": 1009,
+      "scrollWidth": 1009,
+      "horizontalOverflow": false,
+      "integrityBadge": "3-Axis Verification PASS: 11 preserved citation cards passed SHA-256 byte checks. Checksums prove byte integrity, not historical truth or publisher signature.",
+      "severeConsoleLogs": 0,
+      "screenshot": "chromebook_1024x768_israel-palestine.png"
+    },
+    "desktop_1280x850": {
+      "width": 1280,
+      "height": 850,
+      "caseRendered": "hormuz",
+      "combinationsTested": 40,
+      "questionsTested": 6,
+      "overflowCombinations": [],
+      "clientWidth": 1265,
+      "scrollWidth": 1265,
+      "horizontalOverflow": false,
+      "integrityBadge": "3-Axis Verification PASS: 10 preserved citation cards passed SHA-256 byte checks. Checksums prove byte integrity, not historical truth or publisher signature.",
+      "severeConsoleLogs": 0,
+      "screenshot": "desktop_1280x850_hormuz.png"
+    }
+  },
+  "mandatoryQuestionsTested": [
+    {
+      "question": "What can history tell us about a prolonged Strait of Hormuz disruption?",
+      "expectedBadge": "SUPPORTED BY VERIFIED DOSSIER(S)",
+      "expectedCase": "hormuz",
+      "verifiedInBrowser": true,
+      "horizontalOverflow": false
+    },
+    {
+      "question": "What historical arrangements have reduced civilian harm during territorial conflicts?",
+      "expectedBadge": "SUPPORTED BY VERIFIED DOSSIER(S)",
+      "expectedCase": "israel-palestine",
+      "verifiedInBrowser": true,
+      "horizontalOverflow": false
+    },
+    {
+      "question": "What happened when governments responded to banking panics?",
+      "expectedBadge": "SUPPORTED BY VERIFIED DOSSIER(S)",
+      "expectedCase": "banking",
+      "verifiedInBrowser": true,
+      "horizontalOverflow": false
+    },
+    {
+      "question": "How did the 1933 banking panic compare to the 2023 Silicon Valley Bank run and European sovereign debt crises?",
+      "expectedBadge": "PARTIALLY SUPPORTED",
+      "expectedCase": "banking",
+      "verifiedInBrowser": true,
+      "horizontalOverflow": false
+    },
+    {
+      "question": "Has history proved that one political ideology always succeeds?",
+      "expectedBadge": "UNSUPPORTED · REFUSED TO MANUFACTURE PRECEDENT (UNIVERSAL_IDEOLOGY_OR_DETERMINISM_REFUSED)",
+      "expectedCase": null,
+      "verifiedInBrowser": true,
+      "horizontalOverflow": false
+    },
+    {
+      "question": "What will happen in 2030?",
+      "expectedBadge": "UNSUPPORTED · REFUSED TO MANUFACTURE PRECEDENT (EXTERNAL_FUTURE_FORECAST_REFUSED)",
+      "expectedCase": null,
+      "verifiedInBrowser": true,
+      "horizontalOverflow": false
+    }
+  ],
+  "inquiriesTested": [
+    {
+      "caseId": "cholera",
+      "citizenGuideCells": 6,
+      "citationButtons": 36,
+      "threeAxisInspectorVerified": true
+    },
+    {
+      "caseId": "triangle",
+      "citizenGuideCells": 6,
+      "citationButtons": 33,
+      "threeAxisInspectorVerified": true
+    },
+    {
+      "caseId": "banking",
+      "citizenGuideCells": 6,
+      "citationButtons": 31,
+      "threeAxisInspectorVerified": true
+    },
+    {
+      "caseId": "hormuz",
+      "citizenGuideCells": 6,
+      "citationButtons": 47,
+      "threeAxisInspectorVerified": true
+    },
+    {
+      "caseId": "israel-palestine",
+      "citizenGuideCells": 6,
+      "citationButtons": 43,
+      "threeAxisInspectorVerified": true
+    }
+  ],
+  "workflows": {
+    "questionToHistoryAndComparableArguments": {
+      "samplePillsVerified": true,
+      "fourColumnComparableArgumentsVerified": true,
+      "crossInquiryArgumentComparatorVerified": true
+    },
+    "liveAnalogyFalsifier": {
+      "misleadingSampleRejected": true,
+      "hedgedAcademicFallacyRejected": true,
+      "boundedSampleAccepted": true
+    },
+    "hormuzConsequentialCorrection": {
+      "challengedSources": [
+        "hormuz-gholz-press-2010",
+        "hormuz-eia-chokepoints"
+      ],
+      "statusTransitionVerified": true,
+      "inlineNarrowedBasisVerified": true,
+      "multiSourceDrillConsistencyVerified": true,
+      "restorationVerified": true
+    },
+    "israelPalestineConsequentialCorrection": {
+      "challengedSource": "ip-shlaim-lustick-reviews",
+      "statusTransitionVerified": true,
+      "restorationVerified": true
+    },
+    "unsupportedQuestionGuardrail": {
+      "refusedOutOfScopeForecastAndPartisanPrompt": true,
+      "responsePreview": "UNSUPPORTED (EXTERNAL_FUTURE_FORECAST_REFUSED) — UNSUPPORTED (Future Forecast Refused): Historical evidence cannot predict what will happen in 2030 or any future date. This library can only show what past actors argued, what interventions were tried, what outcomes and unintended consequences followed, and what structural constraints bounded those episodes."
+    },
+    "notebookExportImportRoundTrip": {
+      "challengesCount": 1,
+      "dataHashMatches": true,
+      "eventsCount": 6,
+      "schema": "openline-history-notebook.v1"
+    },
+    "simulatedFirstTimeReaderExercise": {
+      "simulatedOnlyNoHumanParticipant": true,
+      "step1_askOrdinaryLanguageQuestion": "Verified in Question-to-History Console: Enters ordinary-language questions on Hormuz, territorial conflicts, and banking panics, and receives SUPPORTED, PARTIALLY_SUPPORTED, or fail-closed UNSUPPORTED responses.",
+      "step2_compareContemporaryArgumentsVsHindsight": "Verified in 4-column Comparable Historical Arguments Matrix: Distinguishes what contemporaries argued and what policymakers expected from subsequent events and later historians' conclusions.",
+      "step3_identifyConsequentialDifferenceAndRejectAnalogy": "Verified in Citizen Guide Cell 03, Compare Tab & Live Analogy Falsifier: Rejects Red Sea -> Hormuz rerouting, SPR -> Qatari LNG drawdown, Sinai MFO -> Area C turnkey transplant, and ICJ/ICC procedural conflations.",
+      "step4_understandWhyConclusionChanged": "Verified in Consequential Correction Lab & inline `.reopen` / `.surviving-box` banners: Shows exact challenged source IDs, which sole-source claims are quarantined, and which multi-source claims and arguments narrow to surviving independent citations."
+    },
+    "accessibilityAndPrint": {
+      "keyboardTabFocusActiveElement": "BUTTON",
+      "hasPrintStylesheet": true
+    }
+  },
+  "consoleErrors": [],
+  "externalRequests": [],
+  "allPassed": true
+}

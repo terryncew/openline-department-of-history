@@ -1,0 +1,44 @@
+{
+  "records": [
+    {
+      "path": "third_party/mandate-ledger/ledger.py",
+      "repository": "terryncew/mandate-ledger",
+      "githubBlobSha": "05fda5a88e348dd95a8cf6e337443bcc5892b81f",
+      "url": "https://github.com/terryncew/mandate-ledger/blob/main/ledger.py",
+      "retrieved": "2026-11-08"
+    },
+    {
+      "path": "third_party/mandate-ledger/house_clerk_loop.py",
+      "repository": "terryncew/mandate-ledger",
+      "githubBlobSha": "4d394dfd0b22106b3f1634a354a4ac9fc070d279",
+      "url": "https://github.com/terryncew/mandate-ledger/blob/main/house_clerk_loop.py",
+      "retrieved": "2026-11-08"
+    },
+    {
+      "path": "third_party/mandate-ledger/LICENSE",
+      "repository": "terryncew/mandate-ledger",
+      "githubBlobSha": "05edd409c1218be4febdb922deca9f7e498cb340",
+      "url": "https://github.com/terryncew/mandate-ledger/blob/main/LICENSE",
+      "retrieved": "2026-11-08"
+    },
+    {
+      "path": "third_party/mandate-ledger/README.md",
+      "repository": "terryncew/mandate-ledger",
+      "githubBlobSha": "b4f03d2592c5a64cd4afbb6c93d0f040e8c973cc",
+      "url": "https://github.com/terryncew/mandate-ledger/blob/main/README.md",
+      "retrieved": "2026-11-08"
+    },
+    {
+      "path": "third_party/mandate-ledger/test_gpt_dependency_recall.py",
+      "repository": "terryncew/mandate-ledger",
+      "githubBlobSha": "1ac6596a3c1c24d678bd8acfd43342f88d30412f",
+      "url": "https://github.com/terryncew/mandate-ledger/blob/main/tests/test_gpt_dependency_recall.py",
+      "retrieved": "2026-11-08"
+    }
+  ],
+  "inspectedButNotVendored": {
+    "repository": "terryncew/openline-living-projects",
+    "readmeBlobSha": "a04e6df23204ff3d0fab8d7b11bc36835afdae22",
+    "reason": "Signed receiver admission needs server identities; not required for a local unsigned educational prototype."
+  }
+}

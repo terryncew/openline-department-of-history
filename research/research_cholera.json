@@ -1,0 +1,485 @@
+{
+  "id": "cholera",
+  "title": "London’s cholera investigation",
+  "question": "When should a community act on incomplete evidence of a public-health hazard?",
+  "summary": "The Broad Street inquiry shows how records, household testimony and a testable explanation can inform action—and why an intervention followed by improvement does not, by itself, prove that the intervention caused the improvement.",
+  "period": "1854–1855",
+  "sources": [
+    {
+      "id": "snow1855",
+      "title": "On the Mode of Communication of Cholera, second edition",
+      "author": "John Snow",
+      "url": "https://www.academia.dk/MedHist/Biblioteket/Print/snow_1855.html",
+      "type": "primary",
+      "locator": "Broad Street section; Table of attacks and deaths near Golden Square; discussion immediately after table (printed pp. 38–55)",
+      "accessed": "2026-11-08",
+      "rights": "1855 original text is public domain; hosted transcription is linked, not redistributed as a complete edition.",
+      "notes": "Participant account, not a neutral modern synthesis. Snow explicitly acknowledges pre-intervention decline and uncertainty about contamination on September 8.",
+      "coverage": "EXCERPT_WITH_CONTEXT",
+      "scopeConstraint": "Participant account, not a neutral modern synthesis. Snow explicitly acknowledges pre-intervention decline and uncertainty about contamination on September 8."
+    },
+    {
+      "id": "parish1855",
+      "title": "Report on the cholera outbreak in the Parish of St. James, Westminster, during the autumn of 1854",
+      "author": "Cholera Inquiry Committee; includes Henry Whitehead’s Special Investigation of Broad Street",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Report_on_the_cholera_outbreak_in_the_Parish_of_St._James,_Westminster,_during_the_autumn_of_1854_(IA_b21780778).pdf",
+      "type": "primary",
+      "locator": "Introduction, printed pp. iii–vi; Whitehead’s report, printed pp. 125–128 (PDF pages 127–130)",
+      "accessed": "2026-11-08",
+      "rights": "1855 original is public domain; linked scan. No modern editorial text or images copied.",
+      "notes": "A local official inquiry, including participants in the events. Its public records allow disagreement and missing testimony to be inspected.",
+      "coverage": "EXCERPT_WITH_CONTEXT",
+      "scopeConstraint": "A local official inquiry, including participants in the events. Its public records allow disagreement and missing testimony to be inspected."
+    },
+    {
+      "id": "brody2000",
+      "title": "Map-making and myth-making in Broad Street: the London cholera epidemic, 1854",
+      "author": "Howard Brody, Michael R. Rip, Peter Vinten-Johansen, Nigel Paneth and Stephen Rachman",
+      "url": "https://epi-snow.ph.ucla.edu/Stream2_BSPoutbreak_f.html",
+      "type": "scholarship",
+      "locator": "UCLA reproduction, section Map-making and myth-making; original The Lancet 356 (9223), 64–68, 2000; DOI 10.1016/S0140-6736(00)02442-9",
+      "accessed": "2026-11-08",
+      "rights": "Copyrighted scholarship; original short paraphrase and link only.",
+      "notes": "Historical reconstruction distinguishes Snow’s prior hypothesis from later map-making. Does not imply that visual evidence is useless.",
+      "coverage": "EXCERPT_WITH_CONTEXT",
+      "scopeConstraint": "Historical reconstruction distinguishes Snow’s prior hypothesis from later map-making. Does not imply that visual evidence is useless."
+    },
+    {
+      "id": "oleckno2008",
+      "title": "Remembering Dr. John Snow on the sesquicentennial of his death",
+      "author": "William A. Oleckno",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2413309/",
+      "type": "scholarship",
+      "locator": "CMAJ 178(13), 1691–1692 (2008), DOI 10.1503/cmaj.080772; Golden Square and grand-experiment paragraphs",
+      "accessed": "2026-11-08",
+      "rights": "Copyright Canadian Medical Association; original short paraphrase and link only.",
+      "notes": "Full text retrieved through search index; direct opening intermittently shows a browser check. Positive assessment of Snow’s evidential contribution while rejecting the simple pump-handle success story.",
+      "coverage": "EXCERPT_WITH_CONTEXT",
+      "scopeConstraint": "Full text retrieved through search index; direct opening intermittently shows a browser check. Positive assessment of Snow’s evidential contribution while rejecting the simple pump-handle success story."
+    },
+    {
+      "id": "koch2008",
+      "title": "John Snow, hero of cholera: RIP",
+      "author": "Tom Koch",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2413317/",
+      "type": "scholarship",
+      "locator": "CMAJ 178(13), 1736 (2008), DOI 10.1503/cmaj.080805; myths 3–6 and concluding discussion",
+      "accessed": "2026-11-08",
+      "rights": "Copyright Canadian Medical Association; original short paraphrase and link only.",
+      "notes": "A critical scholarly commentary, not a consensus statement. Challenges methodological adequacy and the solitary-hero narrative.",
+      "coverage": "EXCERPT_WITH_CONTEXT",
+      "scopeConstraint": "A critical scholarly commentary, not a consensus statement. Challenges methodological adequacy and the solitary-hero narrative."
+    },
+    {
+      "id": "cdc2004",
+      "title": "150th Anniversary of John Snow and the Pump Handle",
+      "author": "Centers for Disease Control and Prevention, MMWR",
+      "url": "https://www.cdc.gov/mmwr/preview/mmwrhtml/mm5334a1.htm",
+      "type": "institutional",
+      "locator": "Opening three paragraphs; page reviewed September 2, 2004",
+      "accessed": "2026-11-08",
+      "rights": "US federal government publication; link and short original paraphrase.",
+      "notes": "Its strong claim that removal prevented deaths is presented as an interpretation to test against Snow’s own uncertainty, not adopted as a measured effect.",
+      "coverage": "EXCERPT_WITH_CONTEXT",
+      "scopeConstraint": "Its strong claim that removal prevented deaths is presented as an interpretation to test against Snow’s own uncertainty, not adopted as a measured effect."
+    }
+  ],
+  "facts": [
+    {
+      "id": "cholera-f1",
+      "text": "Snow reviewed death records and questioned households about use of the Broad Street pump.",
+      "sourceIds": [
+        "snow1855",
+        "cdc2004"
+      ],
+      "causalStatus": "DOCUMENTED_RECORD",
+      "survivingTextByWithdrawnSource": {
+        "cdc2004": "Surviving primary record (Snow 1855): Snow's 1855 account directly documents his review of death records, household inquiries, and the September 7–8 Board of Guardians action without relying on CDC's 2004 commemorative framing.",
+        "snow1855": "Surviving institutional summary (CDC 2004): CDC's 2004 notice summarizes the September 7–8 pump-handle sequence, though without Snow's primary 1855 table the pre-intervention decline cannot be verified."
+      }
+    },
+    {
+      "id": "cholera-f2",
+      "text": "He addressed the parish’s Board of Guardians on September 7, 1854; the pump handle was removed the next day.",
+      "sourceIds": [
+        "snow1855",
+        "cdc2004"
+      ],
+      "causalStatus": "DOCUMENTED_RECORD",
+      "survivingTextByWithdrawnSource": {
+        "cdc2004": "Surviving primary record (Snow 1855): Snow's 1855 account directly documents his review of death records, household inquiries, and the September 7–8 Board of Guardians action without relying on CDC's 2004 commemorative framing.",
+        "snow1855": "Surviving institutional summary (CDC 2004): CDC's 2004 notice summarizes the September 7–8 pump-handle sequence, though without Snow's primary 1855 table the pre-intervention decline cannot be verified."
+      }
+    },
+    {
+      "id": "cholera-f3",
+      "text": "His published account says attacks were already declining before removal. It does not establish how many illnesses the removal prevented.",
+      "sourceIds": [
+        "snow1855"
+      ],
+      "causalStatus": "DOCUMENTED_RECORD"
+    },
+    {
+      "id": "cholera-f4",
+      "text": "The parish inquiry began work on November 25, 1854 and adopted its report on July 25, 1855. An initial written questionnaire produced poor results; house-to-house visits were more productive.",
+      "sourceIds": [
+        "parish1855"
+      ],
+      "causalStatus": "DOCUMENTED_RECORD"
+    },
+    {
+      "id": "cholera-f5",
+      "text": "Whitehead reported uncertain, unavailable and contrary testimony, alongside evidence supporting a connection between pump-water use and the outbreak.",
+      "sourceIds": [
+        "parish1855"
+      ],
+      "causalStatus": "DOCUMENTED_RECORD"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "1854-08-31",
+      "title": "A sharp local outbreak",
+      "text": "A sudden increase began during the night of August 31–September 1.",
+      "sourceIds": [
+        "snow1855"
+      ]
+    },
+    {
+      "date": "1854-09-07",
+      "title": "Evidence reaches decision-makers",
+      "text": "Snow presented his findings to the Board of Guardians.",
+      "sourceIds": [
+        "snow1855"
+      ]
+    },
+    {
+      "date": "1854-09-08",
+      "title": "Pump handle removed",
+      "text": "Authorities disabled the pump; attacks had already declined.",
+      "sourceIds": [
+        "snow1855",
+        "cdc2004"
+      ]
+    },
+    {
+      "date": "1854-11-25",
+      "title": "A wider inquiry begins",
+      "text": "The parish committee began its investigation.",
+      "sourceIds": [
+        "parish1855"
+      ]
+    },
+    {
+      "date": "1854-12-04",
+      "title": "The map follows the intervention",
+      "text": "Snow presented a Broad Street death map to the Epidemiological Society, after the September action.",
+      "sourceIds": [
+        "brody2000"
+      ]
+    },
+    {
+      "date": "1855-07-25",
+      "title": "An inspectable public record",
+      "text": "The committee adopted its report, including Snow’s and Whitehead’s investigations.",
+      "sourceIds": [
+        "parish1855"
+      ]
+    }
+  ],
+  "comparison": [
+    {
+      "dimension": "Evidence before certainty",
+      "historical": "Household histories and death records supported a suspected exposure route.",
+      "present": "For a current hazard, ask what observations identify an exposure and what evidence would contradict it.",
+      "limit": "The present-side question is an investigative prompt, not evidence that a modern hazard has the same cause.",
+      "sourceIds": [
+        "snow1855"
+      ],
+      "asOfDate": "2026-11-08",
+      "timeframe": "Days (emergency exposure restriction) vs. Months (parish household inquiry & water-company comparison)"
+    },
+    {
+      "dimension": "Testing an intervention",
+      "historical": "The fall in attacks began before the pump was disabled.",
+      "present": "Examine the pre-intervention trend, changes in exposure and alternative causes before crediting a policy with improvement.",
+      "limit": "A before-and-after sequence alone cannot identify the counterfactual outcome.",
+      "sourceIds": [
+        "snow1855",
+        "oleckno2008"
+      ],
+      "asOfDate": "2026-11-08",
+      "timeframe": "Days (emergency exposure restriction) vs. Months (parish household inquiry & water-company comparison)",
+      "survivingTextByWithdrawnSource": {
+        "oleckno2008": "Surviving primary basis (Snow 1855): Snow's 1855 table alone establishes that fatal attacks were already declining prior to September 8.",
+        "snow1855": "Surviving secondary basis (Oleckno 2008): Oleckno's 2008 peer-reviewed synthesis notes the pre-removal decline, though the primary 1855 mortality table is required for direct inspection."
+      }
+    },
+    {
+      "dimension": "Who can correct the account?",
+      "historical": "The parish inquiry combined records, local visits and testimony that included uncertainty.",
+      "present": "Make the underlying record and conflicting observations available for independent challenge.",
+      "limit": "Local interviews and records are not automatically representative or free of error.",
+      "sourceIds": [
+        "parish1855",
+        "koch2008"
+      ],
+      "asOfDate": "2026-11-08",
+      "timeframe": "Days (emergency exposure restriction) vs. Months (parish household inquiry & water-company comparison)"
+    },
+    {
+      "dimension": "A compelling visualization",
+      "historical": "Snow’s famous map followed his initial hypothesis and the pump intervention.",
+      "present": "Ask whether a graphic tests an explanation or merely illustrates one already selected.",
+      "limit": "A spatial cluster does not, by itself, identify a causal mechanism.",
+      "sourceIds": [
+        "brody2000"
+      ],
+      "asOfDate": "2026-11-08",
+      "timeframe": "Days (emergency exposure restriction) vs. Months (parish household inquiry & water-company comparison)"
+    }
+  ],
+  "outcomes": [
+    {
+      "text": "A concrete exposure-reduction measure was implemented: the handle was removed. The surviving account cannot isolate its additional effect from the decline already underway.",
+      "sourceIds": [
+        "snow1855",
+        "oleckno2008"
+      ],
+      "causalStatus": "CONFOUNDED_SEQUENCE",
+      "confounders": [
+        "Pre-existing decline in daily attacks before September 8",
+        "Population flight from Soho during the first week of September"
+      ],
+      "counterfactualGap": "Cannot isolate prevented illnesses from natural epidemic exhaustion and resident evacuation.",
+      "survivingTextByWithdrawnSource": {
+        "snow1855": "Surviving secondary basis (Oleckno 2008): Oleckno notes that pump removal occurred after the peak decline, though Snow's primary 1855 table is withheld."
+      }
+    },
+    {
+      "text": "The inquiry produced a public evidentiary record. Its shift from an ineffective questionnaire to household visits illustrates a documented correction in method.",
+      "sourceIds": [
+        "parish1855"
+      ],
+      "causalStatus": "CONFOUNDED_SEQUENCE",
+      "confounders": [
+        "Pre-existing decline in daily attacks before September 8",
+        "Population flight from Soho during the first week of September"
+      ],
+      "counterfactualGap": "Cannot isolate prevented illnesses from natural epidemic exhaustion and resident evacuation."
+    },
+    {
+      "text": "Later accounts have sometimes overstated the map’s role and the intervention’s measured success. That distortion is itself an outcome worth examining when history becomes a policy lesson.",
+      "sourceIds": [
+        "brody2000",
+        "koch2008"
+      ],
+      "causalStatus": "CONFOUNDED_SEQUENCE",
+      "confounders": [
+        "Pre-existing decline in daily attacks before September 8",
+        "Population flight from Soho during the first week of September"
+      ],
+      "counterfactualGap": "Cannot isolate prevented illnesses from natural epidemic exhaustion and resident evacuation."
+    }
+  ],
+  "interpretations": [
+    {
+      "title": "A durable contribution to causal investigation",
+      "text": "Oleckno credits Snow with credible evidence about waterborne transmission, especially the South London comparison, while acknowledging methodological weaknesses and the limited role of pump removal in ending the local outbreak.",
+      "sourceIds": [
+        "oleckno2008"
+      ],
+      "causalEmphasis": "Methodological & comparative epidemiology (South London water supply natural experiment)"
+    },
+    {
+      "title": "A collective inquiry obscured by a heroic story",
+      "text": "Koch gives greater weight to missing comparisons, unanswered questions and other investigators’ work. He argues that later celebration overstates how conclusive Snow’s work was to contemporaries. The disagreement concerns evidential adequacy and credit, not a claim that cholera is unrelated to contaminated water.",
+      "sourceIds": [
+        "koch2008"
+      ],
+      "causalEmphasis": "Collective parish inquiry & critique of retrospective solitary-hero mythmaking"
+    },
+    {
+      "title": "An institutional success story under challenge",
+      "text": "CDC’s 2004 commemoration attributes prevented deaths to removal. Snow’s own account leaves the pump’s continuing contamination uncertain. This interface preserves that tension instead of presenting an unmeasured benefit as an established fact.",
+      "sourceIds": [
+        "cdc2004",
+        "snow1855"
+      ],
+      "causalEmphasis": "Institutional public-health commemoration vs. primary-source causal uncertainty",
+      "survivingTextByWithdrawnSource": {
+        "cdc2004": "Surviving primary basis (Snow 1855): With CDC 2004 withdrawn, Snow's 1855 text directly establishes that attacks had already declined before September 8 and that future contamination remained uncertain.",
+        "snow1855": "Surviving institutional claim (CDC 2004): CDC's 2004 summary asserts prevented deaths, but without Snow 1855 the primary counter-evidence of pre-intervention decline is missing."
+      }
+    }
+  ],
+  "limits": [
+    "This is one local outbreak, not a template predicting the outcome of a present-day public-health controversy.",
+    "The material compares ways of investigating evidence. It does not supply diagnosis, treatment or advice about any current outbreak.",
+    "A persuasive map, an official report and a participant’s account each require scrutiny; institutional authority is not a substitute for supporting records.",
+    "Later scholarly disagreement is real, but these selected works are not a survey of every historian or an assertion of consensus.",
+    "The case does not estimate lives saved by the pump intervention. Population flight and the pre-existing decline prevent a simple attribution."
+  ],
+  "challengePrompts": [
+    "Does the source support the exact causal claim, or only the timing of events?",
+    "What evidence would distinguish prevention by pump closure from an outbreak already ending?",
+    "Whose observations are missing from the account, and could that change the comparison?",
+    "Would this analogy survive if the present problem had a different exposure route?"
+  ],
+  "place": "London, England",
+  "theme": "Evidence & public health",
+  "asOfDate": "2026-11-08",
+  "citizenGuide": {
+    "whatHappenedBefore": "In August–September 1854, a severe cholera outbreak near Golden Square in Soho, London killed over 500 residents within ten days; Dr. John Snow investigated household water use and presented findings to the Board of Guardians on September 7, leading to removal of the Broad Street pump handle on September 8.",
+    "whyComparable": "Demonstrates how investigators combine field records, household interviews, and spatial/institutional comparisons when deciding whether to act before laboratory proof of a pathogen exists.",
+    "whatsDifferent": "Snow's own 1855 table shows daily fatal attacks had already peaked and fallen steeply before the pump handle was removed on September 8; a modern hazard may have different transmission routes, baseline trends, or institutional powers.",
+    "whatWorked": "Replacing an ineffective written parish questionnaire with systematic house-to-house visits (including Rev. Henry Whitehead's skeptical inquiry) and comparing households served by competing South London water companies.",
+    "whatFailed": "Relying on the initial written parish questionnaire, or treating the famous spot map (presented in December 1854, months after the September action) and pump-handle removal as single-handed proof of how many lives the handle removal saved.",
+    "howWeKnow": "2 primary 1855 texts (Snow's 2nd edition and the St. James Parish Inquiry Report including Whitehead), 3 peer-reviewed historiographical analyses (Brody et al. 2000, Oleckno 2008, Koch 2008), and 1 institutional commemoration (CDC 2004)."
+  },
+  "counterexamples": [
+    {
+      "id": "cholera-ce-1",
+      "title": "Pre-intervention epidemic decline (September 1–8, 1854)",
+      "text": "Snow's own mortality table records that daily fatal attacks peaked on September 1–2 and had already fallen sharply before the pump handle was removed on September 8, falsifying claims that handle removal alone ended the outbreak.",
+      "failureCondition": "Before-and-after policy credit fails when the hazard is already declining due to population flight or exposure saturation.",
+      "sourceIds": [
+        "snow1855",
+        "oleckno2008"
+      ]
+    },
+    {
+      "id": "cholera-ce-2",
+      "title": "Failure of the initial written parish questionnaire",
+      "text": "The St. James Parish Inquiry Committee initially distributed a written circular to residents, which yielded almost no usable data until replaced by direct house-to-house visits.",
+      "failureCondition": "Passive self-reporting fails in a displaced, high-mortality community.",
+      "sourceIds": [
+        "parish1855"
+      ]
+    }
+  ],
+  "rejectedComparisons": [
+    {
+      "id": "cholera-rej-1",
+      "claim": "Snow's spot map discovered the cause of the outbreak and removing the pump handle single-handedly ended the epidemic, proving that a single decisive executive action guarantees immediate crisis resolution.",
+      "failureCode": "CAUSAL_CONFOUNDING_AND_CHRONOLOGY_INVERSION",
+      "whyItFails": "Chronology and counterfactual failure: (1) Snow presented the famous spot map in December 1854, three months AFTER the September 8 pump-handle removal (Brody et al. 2000); (2) Snow's own 1855 table shows attacks were already steeply declining before September 8 due to population flight.",
+      "counterEvidence": "Snow (1855, pp. 38–55) explicitly notes the pre-September 8 decline, and Brody et al. (2000) document the December 1854 map chronology.",
+      "sourceIds": [
+        "snow1855",
+        "brody2000",
+        "oleckno2008"
+      ]
+    }
+  ],
+  "consequentialCorrection": {
+    "targetSourceId": "cdc2004",
+    "targetSourceTitle": "150th Anniversary of John Snow and the Pump Handle (CDC MMWR, 2004)",
+    "challengeReason": "CDC's 2004 commemorative summary states that removing the pump handle 'prevented additional deaths,' which overstates causal certainty compared to Snow's 1855 primary record showing attacks had already fallen steeply before September 8.",
+    "expectedImpact": "Challenging or withdrawing `cdc2004` reopens 4 records (`cholera-facts-1`, `cholera-facts-2`, `cholera-timeline-3`, `cholera-interpretations-3`) where `snow1855` provides a surviving primary fallback, while leaving 16 unrelated parish and scholarly records `AVAILABLE`."
+  },
+  "questionProfile": {
+    "primaryDomain": "Public health, epidemic investigation & contested causal evidence",
+    "whyRelevantSummary": "The September 1854 Broad Street cholera outbreak in Soho, London shows how investigators and local boards argued over competing causal theories (waterborne contamination vs. airborne miasma) under emergency uncertainty, why removing the pump handle on September 8 did not single-handedly end an already declining outbreak, and how institutional inquiry (the 1855 St. James Parish Committee and Henry Whitehead's street-level interviewing) established a mechanism for preventing repeat contamination.",
+    "coreConcepts": [
+      "cholera",
+      "epidemic",
+      "outbreak",
+      "pandemic",
+      "public health",
+      "waterborne",
+      "miasma",
+      "pump handle",
+      "john snow",
+      "broad street",
+      "soho",
+      "contagion",
+      "sanitation",
+      "disease",
+      "quarantine",
+      "epidemiology"
+    ],
+    "supportedThemes": [
+      "How competing scientific and local explanations are tested during a public health emergency",
+      "Why a famous symbolic intervention (removing the Broad Street pump handle) differs from the underlying epidemiological trajectory",
+      "How local parish inquiry and household cross-checking turn a contested hypothesis into infrastructural prevention"
+    ],
+    "knownCoverageGaps": [
+      "Does not cover modern respiratory virus transmission, airborne aerosol modelling, or mRNA vaccine trials",
+      "Does not cover 20th/21st-century national public health lockdowns, hospital ICU surge capacity, or global WHO treaty governance"
+    ]
+  },
+  "historicalArguments": [
+    {
+      "id": "cholera-arg-1",
+      "topic": "Waterborne sewage contamination vs. atmospheric miasma in Soho (September 1854)",
+      "decisionWindow": "September 1–8, 1854 (St. James Parish Board of Governors emergency session)",
+      "contemporaryActor": "Dr. John Snow vs. sanitary authorities and miasma theorists",
+      "contemporaryArgument": "John Snow argued to the St. James Parish Board of Governors on September 7, 1854 that the explosive cluster of cholera deaths around Broad Street pointed to ingested water from the Broad Street pump rather than a general atmospheric miasma over Soho.",
+      "policymakerExpectation": "The Board of Governors ordered the pump handle removed on September 8 as a precautionary civic measure to prevent further exposure, though many local officials and medical authorities remained unconvinced that water alone explained the outbreak.",
+      "expectationVerdict": "SUPPORTED_WITH_LIMITS",
+      "subsequentEvidence": "Snow's own mortality table showed daily fatal attacks had already peaked around September 1–2 and fallen substantially before the handle was removed on September 8 (snow1855, parish1855). However, the subsequent St. James Parish Inquiry and Reverend Henry Whitehead's investigation uncovered the leaky cesspool at 40 Broad Street feet from the pump well, explaining how index contamination had entered the water supply and why shutting the well prevented a secondary wave.",
+      "laterHistoriography": "Modern historians of medicine and cartography (Brody et al. 2000; Oleckno 2008; Koch 2008) distinguish Snow's prior clinical/epidemiological waterborne hypothesis from his later dot map (drawn after the outbreak to illustrate the pattern) and reject the textbook myth that removing the handle single-handedly halted the epidemic.",
+      "differenceThatLimits": "Modern epidemic responses operate with microbiological pathogen identification, real-time genomic surveillance, and municipal water chlorination rather than Victorian parish pump wells.",
+      "asOfDate": "2026-11-08",
+      "sourceIds": [
+        "snow1855",
+        "parish1855",
+        "brody2000",
+        "oleckno2008",
+        "koch2008"
+      ],
+      "survivingTextByWithdrawnSource": {
+        "koch2008": "Primary records from Snow (snow1855) and the St. James Parish inquiry (parish1855) along with Brody et al. (brody2000) and Oleckno (oleckno2008) establish that fatal attacks were already declining before the handle was removed on September 8, 1854 and that the famous dot map was produced after the emergency decision.",
+        "oleckno2008": "Snow's 1855 mortality tables (snow1855), the 1855 St. James Parish inquiry (parish1855), and Brody et al. (brody2000) establish that daily fatal attacks had already fallen substantially before the September 8 pump-handle removal and that the spot map was created after the initial Board decision.",
+        "brody2000": "Snow's 1855 treatise (snow1855) and the 1855 St. James Parish report (parish1855) document that the Broad Street outbreak was already declining before September 8, 1854 and that the parish excavation later confirmed cesspool seepage at 40 Broad Street."
+      }
+    },
+    {
+      "id": "cholera-arg-2",
+      "topic": "Solitary scientific hero & spot-map proof vs. collaborative parish inquiry",
+      "decisionWindow": "November 1854 – August 1855 (St. James Parish Cholera Inquiry Committee)",
+      "contemporaryActor": "St. James Parish Cholera Inquiry Committee & Rev. Henry Whitehead",
+      "contemporaryArgument": "Members of the St. James Parish Committee argued that determining what caused the Soho outbreak required systematic house-to-house verification of water consumption among both victims and survivors, physical excavation of the Broad Street well and drains, and documentation of anomalies such as the Poland Street workhouse and Lion Brewery.",
+      "policymakerExpectation": "Parish investigators expected rigorous local testimony—including from skeptical committee members like Reverend Henry Whitehead—to either falsify Snow's pump claim or identify the physical pathway of contamination so the vestry could reform local drainage.",
+      "expectationVerdict": "SUPPORTED_WITH_LIMITS",
+      "subsequentEvidence": "Whitehead's interviews and surveyor York's physical excavation confirmed that a cesspool at 40 Broad Street leaked into the pump well, converting local skeptics on the Parish Committee (parish1855). Yet Parliament and metropolitan authorities did not immediately overhaul all London water infrastructure in 1855; broader sanitary reconstruction required years of legislative and engineering work.",
+      "laterHistoriography": "While commemorative summaries (cdc2004) popularized the simplified 'pump handle prevented deaths' story, historians (brody2000, oleckno2008, koch2008) emphasize that durable verification depended on the collaborative St. James Parish inquiry and South London water-company comparisons rather than a lone map or single gesture.",
+      "differenceThatLimits": "Local parish vestry investigations in 1854 lacked statutory authority over private metropolitan water companies across London.",
+      "asOfDate": "2026-11-08",
+      "sourceIds": [
+        "snow1855",
+        "parish1855",
+        "brody2000",
+        "cdc2004"
+      ],
+      "survivingTextByWithdrawnSource": {
+        "cdc2004": "Primary records in Snow (snow1855) and the St. James Parish report (parish1855), together with Brody et al. (brody2000), document how house-to-house parish inquiry and physical excavation of 40 Broad Street verified the well contamination.",
+        "brody2000": "Snow (snow1855) and the St. James Parish Committee report (parish1855) directly document the house-to-house inquiry, brewery/workhouse comparisons, and physical excavation of the Broad Street well."
+      }
+    },
+    {
+      "id": "cholera-arg-3",
+      "topic": "Grand South London water-company natural experiment vs. neighborhood anomalies",
+      "decisionWindow": "1854–1855 (Southwark & Vauxhall vs. Lambeth water supply comparison)",
+      "contemporaryActor": "Dr. John Snow & William Farr (General Register Office)",
+      "contemporaryArgument": "Snow argued that comparing intermingled South London households served by the Southwark & Vauxhall Company (drawing sewage-polluted Thames water at Battersea) against those served by the Lambeth Company (which had moved its intake upstream to Thames Ditton) provided a natural test of waterborne transmission independent of street-level elevation or air quality.",
+      "policymakerExpectation": "Snow expected household-level water supply data to demonstrate vastly higher cholera mortality in homes receiving downstream sewage-tainted water, convincing registrars and medical officers to require clean upstream intakes and filtration.",
+      "expectationVerdict": "MIXED_AND_CONFOUNDED",
+      "subsequentEvidence": "Snow's early four-week figures showed vastly higher mortality among Southwark & Vauxhall customers than Lambeth customers in intermingled districts (snow1855), and the 1852 Metropolis Water Act's filtration/intake mandates gradually reduced waterborne cholera in subsequent decades. However, household water company identity frequently had to be inferred through chemical salinity tests because tenants did not know their supplier.",
+      "laterHistoriography": "Later scholars (oleckno2008, koch2008) debate the methodological completeness of Snow's denominator estimates and neighborhood mapping while recognizing the South London comparison and St. James Parish investigation as foundational milestones in field epidemiology.",
+      "differenceThatLimits": "19th-century competitive private water pipes running down the same London streets without metering have no direct equivalent in unified modern municipal water utilities.",
+      "asOfDate": "2026-11-08",
+      "sourceIds": [
+        "snow1855",
+        "oleckno2008",
+        "koch2008"
+      ],
+      "survivingTextByWithdrawnSource": {
+        "koch2008": "Snow's 1855 treatise (snow1855) and Oleckno's historical review (oleckno2008) document the South London water-company comparison alongside the practical difficulty of verifying which company supplied individual tenant households.",
+        "oleckno2008": "Snow's 1855 treatise (snow1855) and Koch's critical commentary (koch2008) document both the South London water-supply comparison and methodological debates over Snow's data collection.",
+        "koch2008+oleckno2008": "Snow's 1855 treatise (snow1855) directly records his South London comparison between the Southwark & Vauxhall and Lambeth water companies alongside his own notes on household verification challenges."
+      }
+    }
+  ]
+}

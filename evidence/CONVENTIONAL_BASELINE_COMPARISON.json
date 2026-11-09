@@ -1,0 +1,116 @@
+{
+  "evaluatedAt": "2026-11-08T20:00:00Z",
+  "baselineArtifact": "dist/conventional_baseline_brief.html",
+  "searchableReferenceInterface": true,
+  "datasetSha256": "84f16aec3c59045033ad54c8d30c70cf10d699b081d546bcbe5887647da91439",
+  "casesCount": 5,
+  "sourcesCount": 42,
+  "recordsCount": 104,
+  "argumentsCount": 15,
+  "overallVerdict": "QUALIFIED_IMPROVEMENT_ON_QUESTION_BOUNDARIES_MULTI_SOURCE_CORRECTION_AND_FALSIFICATION_PARITY_ON_SEARCHABLE_READING_AND_SINGLE_SOURCE_INDEXING",
+  "criteria": [
+    {
+      "id": "C1_claim_traceability",
+      "criterion": "Claim Traceability, Searchability & Verification Separation",
+      "verdict": "IMPROVED_ON_VERIFICATION_SEPARATION_PARITY_ON_CITATION_COVERAGE",
+      "historyLabMetric": {
+        "citedRecords": "104/104 (100%)",
+        "comparableArguments": "15/15 (100%)",
+        "sourceCards": 42,
+        "threeAxisSeparation": true,
+        "clicksToInspectLocatorAndStanding": 1
+      },
+      "conventionalBriefMetric": {
+        "citedRecords": "104/104 (100%)",
+        "comparableArguments": "15/15 (100% in Section 6B)",
+        "sourceCards": 42,
+        "threeAxisSeparation": "Static coverage/type column in Section 7 & Section 8 dependency table",
+        "clicksToInspectLocatorAndStanding": "Client-side text filter or scroll across bibliography and dependency matrix (1-3 steps)"
+      },
+      "honestAssessment": "A competent conventional searchable reference interface with Section 6B Argument tables and Section 8 Source-Dependency Matrices achieves 100% citation coverage, keyword searchability, and single-source lookup PARITY with OpenLine Department of History M5. M5 earns a verifiable advantage on (1) honest question boundary classification (SUPPORTED vs. PARTIALLY_SUPPORTED with explicit coverage gaps vs. UNSUPPORTED refusal on future forecasts/ideological laws, where a naive keyword search returns zero hits without explaining why or returns false-friend substring matches), and (2) live 3-axis verification + co-cited quote-attribution enforcement."
+    },
+    {
+      "id": "C2_differences_and_rejected_comparisons",
+      "criterion": "Important Differences, Omitted Context & Rejected Comparisons",
+      "verdict": "IMPROVED_ON_ACTIVE_ANALOGY_FALSIFICATION_PARITY_ON_STATIC_READING",
+      "historyLabMetric": {
+        "comparisonsWithExplicitBreakConditions": "20/20 (100%)",
+        "rejectedComparisonsWithAuditTrail": 7,
+        "interactiveAnalogyFalsifier": true,
+        "hedgedStructuralFallacyCatchRate": "5/5 (100%) on tested domain-specific structural fallacies"
+      },
+      "conventionalBriefMetric": {
+        "comparisonsWithExplicitBreakConditions": "20/20 (100%)",
+        "rejectedComparisonsWithAuditTrail": 7,
+        "interactiveAnalogyFalsifier": false
+      },
+      "honestAssessment": "For reading pre-authored comparisons, argument limits, and rejected analogies, the searchable reference interface achieves PARITY with M5. M5 improves over the reference interface when a user tests a novel or hedged analogy: the live Analogy Falsifier rejects deterministic overclaims, missing breakdown limits, and structural domain mismatches."
+    },
+    {
+      "id": "C3_competing_explanations",
+      "criterion": "Comparable Historical Arguments, Competing Explanations & Non-Manufactured Consensus",
+      "verdict": "PARITY_ON_READING_IMPROVED_ON_INGESTION_GUARDRAILS",
+      "historyLabMetric": {
+        "schoolsAcross5Cases": 15,
+        "comparableArgumentChains": 15,
+        "refusesConsensusFlatteningOnBuildAndRuntime": true
+      },
+      "conventionalBriefMetric": {
+        "schoolsAcross5Cases": 15,
+        "comparableArgumentChains": 15,
+        "refusesConsensusFlatteningOnBuildAndRuntime": false
+      },
+      "honestAssessment": "PARITY for a reader inspecting the pre-authored historiography and Section 6B Comparable Historical Arguments table. M5's specific advantage is interactive cross-inquiry argument comparison plus runtime validation that refuses consensus-washing or incomplete argument chains."
+    },
+    {
+      "id": "C4_conditional_interventions_and_falsifiers",
+      "criterion": "Conditional Interventions, Counterexamples & Falsifiers",
+      "verdict": "IMPROVED_ON_CAUSAL_DISCIPLINE_PARITY_ON_DESCRIPTIVE_TEXT",
+      "historyLabMetric": {
+        "interventionsWithConfoundersAndGaps": "15/15 (100%)",
+        "explicitCounterexamples": 12,
+        "refusesSingleCauseCorrelationClaims": true
+      },
+      "conventionalBriefMetric": {
+        "interventionsWithConfoundersAndGaps": "15/15 (100%)",
+        "explicitCounterexamples": 12,
+        "refusesSingleCauseCorrelationClaims": false
+      },
+      "honestAssessment": "Descriptive comprehension of documented outcomes and counterexamples is at PARITY. M5 adds active causal-discipline guardrails (refusing single-cause correlation claims, superficial keyword causation, and future predictions like 'What will happen in 2030?')."
+    },
+    {
+      "id": "C5_correction_after_challenged_evidence",
+      "criterion": "Correction Behavior After Challenged or Withdrawn Evidence",
+      "verdict": "PARITY_ON_SINGLE_SOURCE_LOOKUP_IMPROVED_ON_MULTI_SOURCE_COMBINATORIAL_NARROWING",
+      "historyLabMetric": {
+        "automaticDependencyGraph": true,
+        "singleSourceChallenge": "1 click (<10ms) to quarantine sole-source claims and narrow multi-source claims and arguments.",
+        "multiSourceSimultaneousChallenge": "Automatically computes set-intersection across simultaneously withdrawn sources across both 104 core records and 15 comparable arguments, withholding any single-source fallback text that depends on a second withdrawn source.",
+        "sqliteLedgerAudit": "Mandate-Ledger hash-chained SQLite ledger records withdrawal, reopening, and re-review without rewriting prior history."
+      },
+      "conventionalBriefMetric": {
+        "automaticDependencyGraph": "Static Reverse-Impact Matrix in Section 8 (searchable via toolbar)",
+        "singleSourceChallenge": "PARITY on single-source lookup: reader can filter or inspect the Section 8 Source-Dependency Matrix in 1 lookup to see sole-source vs. co-cited records and arguments for any single source.",
+        "multiSourceSimultaneousChallenge": "When 2+ sources are challenged simultaneously, reader must manually compute set intersections across multiple rows of Section 8 and manually rewrite narrowed claims.",
+        "sqliteLedgerAudit": "None; static reference table has no live multi-source intersection state or append-only challenge ledger."
+      },
+      "honestAssessment": "With Section 8 Source-Dependency Matrices and client-side search, the conventional searchable reference interface achieves PARITY on single-source dependency lookup. M5's genuine advantage is combinatorial multi-source withdrawal propagation across both records and comparable arguments, live text replacement in the Question-to-History briefing, and append-only SQLite/notebook state."
+    },
+    {
+      "id": "C6_first_time_user_effort",
+      "criterion": "First-Time User Effort, Question Routing & Cognitive Load",
+      "verdict": "PARITY_FOR_LINEAR_READING_IMPROVED_FOR_QUESTION_ROUTING_AND_STRESS_TESTING",
+      "historyLabMetric": {
+        "questionFirstEntry": "Ordinary-language Question-to-History console classifies SUPPORTED, PARTIALLY_SUPPORTED (with explicit missing coverage), and UNSUPPORTED (refusing future forecasts and ideological determinism) in 1 step.",
+        "linearReadingEffort": "Question Briefing + Citizen Guide display relevance, comparable arguments, outcomes, and limits immediately on load.",
+        "sourceVerificationEffort": "1 click on any citation chip opens the full 3-axis Source Card in the modal inspector."
+      },
+      "conventionalBriefMetric": {
+        "questionFirstEntry": "Substring search bar filters matching paragraphs (`PARITY` for exact keyword hits), but cannot distinguish supported vs. partially supported coverage gaps or explain why 'What will happen in 2030?' is refused.",
+        "linearReadingEffort": "0 tab clicks (continuous vertical scroll across all 5 inquiries, slight advantage for uninterrupted linear reading).",
+        "sourceVerificationEffort": "Filter or scroll to Section 7/8 for source details."
+      },
+      "honestAssessment": "Continuous linear reading and exact-keyword filtering are at PARITY. M5 improves first-time citizen comprehension when asking ordinary-language questions, distinguishing partial coverage from unsupported speculation, and stress-testing sources."
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "sourceId": "bank-act",
+    "url": "https://www.govinfo.gov/content/pkg/STATUTE-48/pdf/STATUTE-48-Pg1.pdf",
+    "finalUrl": "https://www.govinfo.gov/content/pkg/STATUTE-48/pdf/STATUTE-48-Pg1.pdf",
+    "path": "research/originals/bank-act.pdf",
+    "sha256": "2be96cc32f9d1317a45b86b643ddf1171c2484b6a60d81165987d0a7ca727b94",
+    "bytes": 1790864,
+    "mime": "application/pdf",
+    "acquisition": "HTTPS GET using standard certificate validation; observed response, not a publisher signature",
+    "accessed": "2026-11-08",
+    "rights": "US federal government historical work; public domain"
+  },
+  {
+    "sourceId": "bank-report",
+    "url": "https://fraser.stlouisfed.org/files/docs/publications/arfr/1930s/arfr_1933.pdf",
+    "status": "NOT_PRESERVED",
+    "error": "Response failed the 10 MiB/PDF acceptance boundary; no complete original retained"
+  }
+]

@@ -1,0 +1,661 @@
+{
+  "id": "israel-palestine",
+  "title": "Israel–Palestine, civilian protection & durable arrangements",
+  "question": "What documented historical interventions have reduced civilian harm or sustained negotiated arrangements, and under what conditions did they succeed or fail?",
+  "summary": "Across 1949–2026 diplomatic, humanitarian, and judicial records, durable interstate treaties (1979 Egypt–Israel with the MFO; 1994 Israel–Jordan) held when sovereign states paired defined borders with tiered demilitarization, equal third-party verification buy-in, and resource commissions. Conversely, open-ended interim arrangements without settlement freezes or third-party enforcement (1949 Armistice DMZs; 1993–95 Oslo Accords) and short-term Gaza pauses (2023, 2025) reduced immediate harm during active truces but broke down under asymmetric control, crossing closures, and spoiler violence.",
+  "period": "1949–2026",
+  "place": "Israel, Palestine, Sinai & Jordan Valley",
+  "theme": "Civilian protection, law & treaties",
+  "asOfDate": "2026-11-08",
+  "citizenGuide": {
+    "whatHappenedBefore": "Major historical interventions include the 1949 Rhodes Armistice Agreements & UNTSO observers, the 1979 Egypt–Israel Peace Treaty & 1981 Multinational Force and Observers (MFO) in Sinai, the 1993–95 Oslo I/II Interim Accords, the 1994 Israel–Jordan Peace Treaty, the 2024 ICJ Provisional Measures Orders & Advisory Opinion and ICC Art. 58 warrants, and the Nov 2023 (7-day) and Jan–Mar 2025 (42-day Phase One) Gaza ceasefires.",
+    "whyComparable": "Allows side-by-side testing of which verification, border-demarcation, crossing-access, and spoiler-management conditions enabled arrangements to last for 30–45+ years versus those that collapsed into renewed war.",
+    "whatsDifferent": "The 1979 Sinai/MFO and 1994 Jordan treaties operated between recognized sovereign states with clear external borders, centralized militaries, and zero remaining settlements, whereas the Occupied Palestinian Territory (West Bank, East Jerusalem, Gaza) involves >700,000 settlers, fragmented Area A/B/C enclaves, non-state armed factions, and unresolved self-determination.",
+    "whatWorked": "For durable interstate peace: upfront sovereignty/border resolution + 4-zone Sinai demilitarization + equal 1/3 Egypt/Israel/US funding of the independent MFO with bi-monthly and 48-hour on-demand verification and daily military liaison (45+ years). For acute civilian protection: territory-wide negotiated ceasefires opening multiple crossings simultaneously (during the 42-day Jan–Mar 2025 Phase One truce, UN food inflow rose 3.4x to >78,000 MT, 25 bakeries operated, >586,000 displaced people moved north, 602,795 children received polio vaccinations, and armed convoy looting nearly vanished).",
+    "whatFailed": "Deferring final borders, Jerusalem, refugees, and settlements in open-ended interim accords without a settlement freeze or third-party enforcement (1993–95 Oslo Accords); relying on unarmed observers in ambiguous DMZs (1949 Armistice); relying on unilateral military 'deconfliction' during active combat; and transactional single-phase truces vulnerable to unilateral cargo crossing closure (such as the March 2, 2025 closure that preceded the August 2025 IPC Phase 5 Famine confirmation in Gaza Governorate).",
+    "howWeKnow": "4 primary treaty/mission archives (1949 Armistice/UNTSO, 1979 Egypt–Israel Treaty/MFO, 1993–95 Oslo I/II, 1994 Jordan–Israel Treaty), 2 institutional humanitarian records (UN OCHA Ceasefire Reports & IPC Famine Review Committee), 3 official judicial records with explicit procedural status (ICJ Case 192 Provisional Orders, ICJ Case 186 Advisory Opinion, ICC Art. 58 Pre-Trial Decisions), and 3 competing scholarly/mediation sources (Carnegie 2026 comparative study, Shlaim 2000/2014 review, Lustick 2019 review)."
+  },
+  "sources": [
+    {
+      "id": "ip-armistice-1949",
+      "title": "Egyptian-Israeli General Armistice Agreement (1949, 42 UNTS 251) & UNTSO Mandate",
+      "author": "Governments of Egypt and Israel; United Nations Security Council / UNTSO",
+      "url": "https://peacemaker.un.org/en/node/9440",
+      "type": "primary",
+      "locator": "Articles I–XII (especially Art. V(2) on non-political Armistice Demarcation Line, Art. VIII on El Auja DMZ, Art. X on Mixed Armistice Commission); UNTSO mandate (https://untso.unmissions.org/en/mandate)",
+      "accessed": "2026-11-08",
+      "rights": "Public domain official United Nations treaty and peacekeeping record.",
+      "notes": "Establishes that the 1949 armistice lines were explicitly defined in Art. V(2) as military lines without prejudice to ultimate territorial settlement, monitored by unarmed UNTSO observers with no enforcement power over DMZ sovereignty disputes.",
+      "coverage": "FULL_TEXT",
+      "scopeConstraint": "Bilateral military armistice text; does not adjudicate 1948 refugee property claims or establish permanent political borders."
+    },
+    {
+      "id": "ip-sinai-mfo-1979",
+      "title": "1979 Egypt–Israel Treaty of Peace (Annex I Security Arrangements) & 1981 Protocol Establishing the Multinational Force and Observers (MFO)",
+      "author": "Arab Republic of Egypt, State of Israel, and Multinational Force and Observers (MFO)",
+      "url": "https://www.mfo.org/origins",
+      "type": "primary",
+      "locator": "Treaty of Peace Arts. I–IX; Annex I Arts. II–VI (Zones A, B, C in Sinai and Zone D in Israel; bi-monthly & 48-hour on-demand verification); 1981 Protocol & MFO Mission (https://www.mfo.org/our-mission)",
+      "accessed": "2026-11-08",
+      "rights": "Treaty text in public domain (1136 UNTS 115); mission documentation copyright MFO, linked for public verification.",
+      "notes": "Primary record of the 45+ year Sinai peace architecture: complete Israeli withdrawal and full restoration of Egyptian sovereignty paired with four tiered force-limitation zones, equal one-third funding by Egypt, Israel, and the U.S., daily LAWIO–IDFICD military liaison, and consensual border-guard amendments (2005, 2007, 2018, 2021).",
+      "coverage": "FULL_TEXT",
+      "scopeConstraint": "Applies to an interstate border between two sovereign states with full territorial withdrawal and evacuation of settlements."
+    },
+    {
+      "id": "ip-oslo-1993-1995",
+      "title": "Declaration of Principles on Interim Self-Government Arrangements (Oslo I, 1993) & Israeli-Palestinian Interim Agreement (Oslo II, 1995)",
+      "author": "Government of the State of Israel and Palestine Liberation Organization (PLO)",
+      "url": "https://peacemaker.un.org/en/node/9432",
+      "type": "primary",
+      "locator": "Oslo I (A/48/486-S/26560) Arts. I, V (deferral of Jerusalem, refugees, settlements, borders, security), VIII; Oslo II (https://peacemaker.un.org/en/node/9434) Ch. 2, Arts. XI–XIII (Areas A, B, and C) and Art. XXXI(7)",
+      "accessed": "2026-11-08",
+      "rights": "Official bilateral diplomatic instruments archived in UN Peacemaker.",
+      "notes": "Primary text showing that Oslo I/II created a five-year interim autonomy arrangement dividing the West Bank into Areas A, B, and C (~60% under full Israeli civil/military control) while deferring permanent-status issues without an explicit settlement freeze or third-party enforcement mechanism.",
+      "coverage": "FULL_TEXT",
+      "scopeConstraint": "Interim bilateral agreement text; per ICJ Advisory Opinion (2024, para. 102), cannot derogate from Fourth Geneva Convention protections under Art. 47."
+    },
+    {
+      "id": "ip-jordan-1994",
+      "title": "Treaty of Peace between the State of Israel and the Hashemite Kingdom of Jordan (Wadi Araba Treaty, 1994)",
+      "author": "State of Israel and Hashemite Kingdom of Jordan",
+      "url": "https://peacemaker.un.org/en/node/9431",
+      "type": "primary",
+      "locator": "2042 UNTS 351; Art. 3 & Annex I (Boundary Delimitation), Art. 4 (Security), Art. 6 & Annex II (Joint Water Committee), Art. 9 (Jerusalem Muslim Holy shrines custodianship role)",
+      "accessed": "2026-11-08",
+      "rights": "Public international law treaty registered in the United Nations Treaty Series.",
+      "notes": "Primary treaty record showing how finalized interstate border demarcation, institutionalized transboundary water sharing (Joint Water Committee), and U.S. security/economic backing sustained a 32+ year interstate peace despite recurrent political strain.",
+      "coverage": "FULL_TEXT",
+      "scopeConstraint": "Sovereign interstate treaty along the Jordan River/Arava border; did not resolve West Bank or Jerusalem sovereignty."
+    },
+    {
+      "id": "ip-ocha-pauses",
+      "title": "UN OCHA Report on the Humanitarian Response During the Phase One Ceasefire (19 Jan – 1 Mar 2025) & Flash Update #57 (Nov 2023 Pause)",
+      "author": "United Nations Office for the Coordination of Humanitarian Affairs (OCHA oPt)",
+      "url": "https://www.ochaopt.org/content/report-humanitarian-response-un-and-humanitarian-partners-during-phase-one-ceasefire",
+      "type": "institutional",
+      "locator": "Report of 17 March 2025 ('Highlights', 'Situation Overview', 'Improved humanitarian access', 'Disclaimer'); paired with Flash Update #57 (https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-57) and Oct 2025 Update #331",
+      "accessed": "2026-11-08",
+      "rights": "Copyright United Nations OCHA; open humanitarian monitoring record.",
+      "notes": "Documents operational metrics during the 42-day Phase One Gaza ceasefire (19 Jan–1 Mar 2025: 30 living hostages, 8 deceased hostages, and 1,777 Palestinian detainees released; >586,000 displaced people returning north across Netzarim; UN food inflow surging 3.4x from ~23,000 MT to >78,000 MT; bakeries rising from 5 to 25; water output +50%; 602,795 children vaccinated against polio; near-total halt in armed convoy looting) and the immediate reversal on 2 March 2025 when Israel closed all cargo crossings upon Phase One expiration.",
+      "coverage": "FULL_TEXT",
+      "scopeConstraint": "OCHA logistics figures track UN-coordinated dispatches (distinct from unverified bilateral/commercial trucks); casualty figures are attributed to the Gaza Ministry of Health and Israeli official authorities pending independent forensic access."
+    },
+    {
+      "id": "ip-ipc-reviews",
+      "title": "IPC Acute Food Insecurity & Malnutrition Analyses and Famine Review Committee Report for the Gaza Strip",
+      "author": "Integrated Food Security Phase Classification (IPC) Famine Review Committee",
+      "url": "https://www.ipcinfo.org/ipc-country-analysis/en/?country=PSE",
+      "type": "institutional",
+      "locator": "IPC Gaza Strip Portal & Famine Review Committee Gaza Report (22 August 2025, https://www.ipcinfo.org/fileadmin/user_upload/ipcinfo/docs/IPC_Famine_Review_Committee_Report_Gaza_Aug2025.pdf) and Dec 2025 Special Brief",
+      "accessed": "2026-11-08",
+      "rights": "Copyright IPC multi-agency initiative; open-access technical classification.",
+      "notes": "Multi-agency technical nutrition and food-security record confirming IPC Phase 5 Famine in Gaza Governorate in August 2025 following the post-March 2025 cargo blockade (>500,000 in Phase 5 Catastrophe, 1.07M in Phase 4 Emergency), and documenting measurable nutrition improvements after the October 2025 ceasefire aid surge.",
+      "coverage": "FULL_TEXT",
+      "scopeConstraint": "Technical humanitarian classification under IPC v3.1 'reasonable evidence' anthropometric and mortality thresholds during combat access restrictions; not a judicial ruling on criminal mens rea."
+    },
+    {
+      "id": "ip-icj-provisional-2024",
+      "title": "Application of the Convention on the Prevention and Punishment of the Crime of Genocide in the Gaza Strip (South Africa v. Israel) — Provisional Measures Orders (26 Jan, 28 Mar, 24 May 2024)",
+      "author": "International Court of Justice (ICJ)",
+      "url": "https://www.icj-cij.org/case/192/orders",
+      "type": "primary",
+      "locator": "Order of 26 Jan 2024 paras. 15–32 (prima facie jurisdiction), para. 54 (plausibility of rights), para. 86 (Operative Clause); Order of 28 Mar 2024; Order of 24 May 2024 para. 57 (Rafah offensive & crossing access)",
+      "accessed": "2026-11-08",
+      "rights": "Official judicial record of the International Court of Justice.",
+      "notes": "Legally binding incidental Orders under ICJ Statute Art. 41. PROCEDURAL STATUS: Establishes prima facie jurisdiction and that at least some rights claimed by South Africa are 'plausible' (26 Jan Order, para. 54) and face imminent risk of irreparable harm; orders prevention of Art. II acts, unhindered aid at scale, halting military operations in Rafah that may inflict conditions of physical destruction, and unconditional hostage release. It is NOT a final judgment on the merits of whether genocide occurred.",
+      "coverage": "FULL_TEXT",
+      "scopeConstraint": "Incidental Provisional Measures Orders under Art. 41 (plausibility/urgency threshold); merits proceedings remain ongoing."
+    },
+    {
+      "id": "ip-icj-advisory-2024",
+      "title": "Legal Consequences arising from the Policies and Practices of Israel in the Occupied Palestinian Territory, including East Jerusalem — Advisory Opinion of 19 July 2024",
+      "author": "International Court of Justice (ICJ)",
+      "url": "https://www.icj-cij.org/case/186/advisory-opinions",
+      "type": "primary",
+      "locator": "Advisory Opinion of 19 July 2024 (Case 186), paras. 78–102 (single territorial unit; Oslo Accords cannot derogate from Fourth Geneva Convention per Art. 47), paras. 115–156 (settlements & forcible transfer), paras. 251–285 (unlawfulness of continued presence)",
+      "accessed": "2026-11-08",
+      "rights": "Official judicial record of the International Court of Justice.",
+      "notes": "Authoritative judicial opinion under Art. 65 of the ICJ Statute requested by UNGA Res. 77/247, finding that the West Bank, East Jerusalem, and Gaza form a single territorial unit, that Oslo cannot detract from Fourth Geneva Convention duties, and that Israel's continued presence in the OPT is unlawful.",
+      "coverage": "FULL_TEXT",
+      "scopeConstraint": "Advisory Opinion under ICJ Statute Art. 65; authoritative statement of international law and erga omnes obligations, distinct from a contentious bilateral enforcement judgment."
+    },
+    {
+      "id": "ip-icc-warrants-2024",
+      "title": "Situation in the State of Palestine (ICC-01/18) — Pre-Trial Chamber I Decisions and Article 58 Warrants of Arrest (21 November 2024)",
+      "author": "International Criminal Court (ICC) Pre-Trial Chamber I",
+      "url": "https://www.icc-cpi.int/news/situation-state-palestine-icc-pre-trial-chamber-i-rejects-state-israels-challenges",
+      "type": "primary",
+      "locator": "Decision ICC-01/18-374 (21 Nov 2024) rejecting pre-warrant Art. 19(2) challenge as premature, and Registry summary of Art. 58(1)(a) arrest warrants for Benjamin Netanyahu, Yoav Gallant, and Mohammed Diab Ibrahim Al-Masri ('Deif')",
+      "accessed": "2026-11-08",
+      "rights": "Official judicial record and press registry of the International Criminal Court.",
+      "notes": "PROCEDURAL STATUS: Pre-trial arrest warrants issued ex parte under Rome Statute Art. 58(1)(a) on a threshold of 'reasonable grounds to believe' (alleging starvation as a method of warfare and crimes against humanity for Netanyahu/Gallant, and Oct 7 mass atrocities and hostage-taking for Deif). An Art. 58 warrant is NOT a confirmation of charges (Art. 61) or a trial conviction beyond reasonable doubt (Art. 66), where the presumption of innocence strictly applies.",
+      "coverage": "FULL_TEXT",
+      "scopeConstraint": "Ex parte Pre-Trial Art. 58 arrest warrant stage ('reasonable grounds to believe'); post-warrant Art. 19 jurisdictional litigation and presumption of innocence remain active."
+    },
+    {
+      "id": "ip-carnegie-mediation-2026",
+      "title": "U.S. Peace Mediation in the Middle East: Lessons for the Gaza Peace Plan",
+      "author": "Amr Hamzawy, Sarah Yerkes, and Kathryn Selfe (Carnegie Endowment for International Peace)",
+      "url": "https://carnegieendowment.org/research/2026/02/gaza-trump-board-of-peace-negotiations-israel-lessons-from-oslo",
+      "type": "scholarly",
+      "locator": "Carnegie Endowment Research Paper (Feb 9, 2026), Sections 'The U.S. Policy Tool Kit', 'Egypt-Israel', 'Jordan-Israel', 'Palestine-Israel', and 'Conclusion'",
+      "accessed": "2026-11-08",
+      "rights": "Copyright 2026 Carnegie Endowment for International Peace; open-access research publication.",
+      "notes": "Comparative mediation analysis across four tracks (Egypt, Jordan, Syria, Palestine), showing why pre-defined final borders, MFO third-party verification, and conditional U.S. inducements sustained the 1979 and 1994 treaties while Oslo's deferred final-status issues, lack of settlement freeze, and unpoliced spoilers led to breakdown.",
+      "coverage": "FULL_TEXT",
+      "scopeConstraint": "Comparative political-science mediation analysis; evaluates diplomatic design and third-party leverage rather than primary battlefield forensics."
+    },
+    {
+      "id": "ip-shlaim-lustick-reviews",
+      "title": "Competing Historiographical Syntheses: Reviews of Avi Shlaim's The Iron Wall (2000/2014), Ian S. Lustick's Paradigm Lost (2019), Rashid Khalidi's Hundred Years' War (2020), and Benny Morris's Righteous Victims (2001)",
+      "author": "Institute of Historical Research (Reviews in History #153) & Journal of Palestine Studies (Vol. 49, No. 4)",
+      "url": "https://online.ucpress.edu/jps/article/49/4/145/111934/Review-Paradigm-Lost-From-Two-State-Solution-to",
+      "type": "scholarly",
+      "locator": "Journal of Palestine Studies 49(4): 145–148 (2020 review of Lustick's Paradigm Lost) and IHR Review #153 (https://reviews.history.ac.uk/review/153/, review of Shlaim's The Iron Wall and Morris's Righteous Victims)",
+      "accessed": "2026-11-08",
+      "rights": "Copyright University of California Press / Institute of Historical Research; scholarly review synopsis and link only.",
+      "notes": "Documents competing scholarly interpretations of why negotiated arrangements failed: Khalidi's structural settler-colonial asymmetry thesis, Morris's mutual national-movement clash and Palestinian/Arab rejectionism thesis, Shlaim's revisionist critique of post-1996 Israeli 'Iron Wall' maximalism, and Lustick's institutional lock-in / 'One-State Reality' thesis. Represented via published peer-reviewed book reviews and synopses rather than full monograph reprints.",
+      "coverage": "SYNOPSIS_ONLY",
+      "scopeConstraint": "Secondary scholarly book reviews and synopses (`SYNOPSIS_ONLY`); underlying copyrighted monographs are not redistributed in full."
+    }
+  ],
+  "facts": [
+    {
+      "id": "ip-facts-1",
+      "text": "The 1949 Bilateral General Armistice Agreements (Egypt, Lebanon, Jordan, Syria) halted open interstate combat from the 1948 war and created Mixed Armistice Commissions with unarmed UNTSO observers, but Article V(2) of the Egyptian-Israeli agreement explicitly stated that the Armistice Demarcation Line was a military line and 'not to be construed in any sense as a political or territorial boundary.'",
+      "sourceIds": [
+        "ip-armistice-1949"
+      ],
+      "causalStatus": "DOCUMENTED_RECORD",
+      "asOfDate": "2026-11-08"
+    },
+    {
+      "id": "ip-facts-2",
+      "text": "The 1979 Egypt–Israel Treaty of Peace paired complete Israeli withdrawal from the Sinai Peninsula with Annex I's four tiered security zones (Zones A, B, C in Sinai; Zone D in Israel) and the 1981 Protocol establishing the independent Multinational Force and Observers (MFO)—funded in equal thirds by Egypt, Israel, and the U.S., conducting bi-monthly and 48-hour on-demand inspections plus daily military liaison (LAWIO–IDFICD) for over 45 years.",
+      "sourceIds": [
+        "ip-sinai-mfo-1979",
+        "ip-carnegie-mediation-2026"
+      ],
+      "causalStatus": "DOCUMENTED_RECORD",
+      "survivingTextByWithdrawnSource": {
+        "ip-carnegie-mediation-2026": "Surviving primary treaty & mission record (`ip-sinai-mfo-1979`): The 1979 Treaty of Peace Annex I and 1981 MFO Protocol independently establish the four-zone security regime, equal tripartite funding, 48-hour verification rule, and 2005–2021 agreed amendments."
+      },
+      "asOfDate": "2026-11-08"
+    },
+    {
+      "id": "ip-facts-3",
+      "text": "The 1993–1995 Oslo Accords (Oslo I Art. V; Oslo II Arts. XI–XIII) created a five-year interim autonomy arrangement dividing the West Bank into Area A, Area B, and Area C (~60% under full Israeli civil and military control), while deferring Jerusalem, refugees, settlements, borders, and sovereignty to permanent-status talks without a textual settlement freeze or third-party enforcement mechanism.",
+      "sourceIds": [
+        "ip-oslo-1993-1995",
+        "ip-icj-advisory-2024"
+      ],
+      "causalStatus": "DOCUMENTED_RECORD",
+      "asOfDate": "2026-11-08",
+      "survivingTextByWithdrawnSource": {
+        "ip-icj-advisory-2024": "Surviving primary treaty basis (`ip-oslo-1993-1995`): The primary texts of Oslo I (Art. V) and Oslo II (Arts. XI–XIII) independently establish the 5-year interim autonomy arrangement, the division of the West Bank into Areas A, B, and C (~60% under Israeli control), and the deferral of Jerusalem, refugees, settlements, and borders.",
+        "ip-oslo-1993-1995": "Surviving judicial record (`ip-icj-advisory-2024`): The ICJ Advisory Opinion of 19 July 2024 (paras. 78–102) independently summarizes the Oslo I/II Area A, B, and C jurisdictional division while ruling that Oslo cannot derogate from Fourth Geneva Convention obligations under Art. 47."
+      }
+    },
+    {
+      "id": "ip-facts-4",
+      "text": "During the 42-day Phase One ceasefire in Gaza (19 January – 1 March 2025), mediated by Egypt, Qatar, and the U.S., 30 living hostages, 8 deceased hostages, and 1,777 Palestinian detainees were released; >586,000 displaced Palestinians returned north across the Netzarim Corridor; UN-coordinated food inflow surged 3.4x (from ~23,000 MT to >78,000 MT); operational bakeries rose from 5 to 25; water production rose ~50%; WHO vaccinated 602,795 children against polio; and armed convoy looting nearly vanished—until Israel closed all cargo crossings on 2 March 2025 when Phase One expired without a Phase Two agreement.",
+      "sourceIds": [
+        "ip-ocha-pauses",
+        "ip-ipc-reviews"
+      ],
+      "causalStatus": "DOCUMENTED_RECORD",
+      "asOfDate": "2026-11-08"
+    },
+    {
+      "id": "ip-facts-5",
+      "text": "Following the March–May 2025 cargo blockade, the IPC Famine Review Committee confirmed IPC Phase 5 Famine with reasonable evidence in Gaza Governorate in August 2025 (>500,000 people in Phase 5 Catastrophe across the Strip), before scaled-up aid entry under the 10 October 2025 ceasefire improved acute nutrition classifications in late 2025.",
+      "sourceIds": [
+        "ip-ipc-reviews",
+        "ip-ocha-pauses"
+      ],
+      "causalStatus": "DOCUMENTED_RECORD",
+      "asOfDate": "2026-11-08"
+    },
+    {
+      "id": "ip-facts-6",
+      "text": "In South Africa v. Israel (Case 192), the ICJ issued three binding Provisional Measures Orders (26 Jan, 28 Mar, and 24 May 2024) under Statute Art. 41 based on 'plausibility of rights' (not a final merits judgment of genocide), ordering prevention of Art. II acts, unhindered humanitarian aid at scale, halting military operations in Rafah that may inflict conditions of physical destruction, and unconditional hostage release. Separately, in its 19 July 2024 Advisory Opinion (Case 186), the ICJ ruled that Israel's continued presence in the Occupied Palestinian Territory is unlawful, and on 21 November 2024, ICC Pre-Trial Chamber I issued ex parte Art. 58 arrest warrants ('reasonable grounds to believe', distinct from trial conviction) for Benjamin Netanyahu, Yoav Gallant, and Mohammed Diab Ibrahim Al-Masri ('Deif').",
+      "sourceIds": [
+        "ip-icj-provisional-2024",
+        "ip-icj-advisory-2024",
+        "ip-icc-warrants-2024"
+      ],
+      "causalStatus": "DOCUMENTED_RECORD",
+      "asOfDate": "2026-11-08",
+      "survivingTextByWithdrawnSource": {
+        "ip-icj-provisional-2024": "Surviving primary judicial basis (`ip-icj-advisory-2024`, `ip-icc-warrants-2024`): With the ICJ Case 192 Provisional Measures Orders withdrawn, the 19 July 2024 ICJ Advisory Opinion (Case 186, Art. 65 ruling on the unlawfulness of continued OPT presence and Fourth Geneva Convention Art. 47 non-derogation) and the 21 November 2024 ICC Pre-Trial Chamber I Art. 58 arrest warrants ('reasonable grounds to believe' pre-trial threshold) remain independently established.",
+        "ip-icj-advisory-2024": "Surviving primary judicial basis (`ip-icj-provisional-2024`, `ip-icc-warrants-2024`): With the ICJ Case 186 Advisory Opinion withdrawn, the ICJ Case 192 binding Provisional Measures Orders of Jan/Mar/May 2024 (Art. 41 'plausibility of rights' standard) and the 21 Nov 2024 ICC Pre-Trial Chamber I Art. 58 arrest warrants ('reasonable grounds to believe' pre-trial threshold) remain independently established.",
+        "ip-icc-warrants-2024": "Surviving primary ICJ judicial basis (`ip-icj-provisional-2024`, `ip-icj-advisory-2024`): With the ICC Art. 58 pre-trial warrants withdrawn, the ICJ's binding Art. 41 Provisional Measures Orders (Case 192, Jan/Mar/May 2024) and the 19 July 2024 Art. 65 Advisory Opinion (Case 186) remain independently established.",
+        "ip-icj-advisory-2024+ip-icj-provisional-2024": "Surviving primary ICC judicial basis (`ip-icc-warrants-2024`): With both ICJ Case 192 (Provisional Measures) and ICJ Case 186 (Advisory Opinion) withdrawn, ICC Pre-Trial Chamber I's 21 November 2024 decisions (ICC-01/18-374) and ex parte Art. 58(1)(a) arrest warrants ('reasonable grounds to believe' pre-trial threshold, distinct from Art. 61 charge confirmation or Art. 66 trial conviction) remain independently established."
+      }
+    }
+  ],
+  "timeline": [
+    {
+      "date": "1949-02 – 1949-07",
+      "title": "1949 Rhodes Armistice Agreements & UNTSO",
+      "text": "Bilateral military armistices halted the 1948 interstate war and set non-political Armistice Demarcation Lines (Art. V(2)) monitored by unarmed UNTSO observers, but DMZ sovereignty disputes and lack of political settlement eroded the regime by 1956–1967.",
+      "sourceIds": [
+        "ip-armistice-1949"
+      ],
+      "asOfDate": "2026-11-08"
+    },
+    {
+      "date": "1979-03-26 / 1981-08-03",
+      "title": "Egypt–Israel Peace Treaty & MFO Protocol",
+      "text": "Paired full Sinai withdrawal with 4 tiered security zones (Annex I) and the independent MFO (funded equally by Egypt, Israel, and the U.S.) with 48-hour verification and daily military liaison.",
+      "sourceIds": [
+        "ip-sinai-mfo-1979"
+      ],
+      "asOfDate": "2026-11-08"
+    },
+    {
+      "date": "1993-09-13 – 1995-09-28",
+      "title": "Oslo I & Oslo II Interim Accords",
+      "text": "Created a 5-year interim autonomy framework (Areas A, B, C) deferring borders, Jerusalem, refugees, and settlements without a settlement freeze or third-party enforcement.",
+      "sourceIds": [
+        "ip-oslo-1993-1995"
+      ],
+      "asOfDate": "2026-11-08"
+    },
+    {
+      "date": "1994-10-26",
+      "title": "Israel–Jordan Peace Treaty (Wadi Araba)",
+      "text": "Demarcated the international boundary, established the Joint Water Committee (Annex II), and recognized Jordan's historic role over Jerusalem Muslim shrines.",
+      "sourceIds": [
+        "ip-jordan-1994"
+      ],
+      "asOfDate": "2026-11-08"
+    },
+    {
+      "date": "2024-01-26 – 2024-11-21",
+      "title": "ICJ Orders, ICJ Advisory Opinion & ICC Art. 58 Warrants",
+      "text": "ICJ issued binding Art. 41 Provisional Measures Orders (Jan, Mar, May 2024) and the July 19, 2024 Advisory Opinion on the unlawfulness of OPT occupation; ICC Pre-Trial Chamber I issued Art. 58 arrest warrants on Nov 21, 2024.",
+      "sourceIds": [
+        "ip-icj-provisional-2024",
+        "ip-icj-advisory-2024",
+        "ip-icc-warrants-2024"
+      ],
+      "asOfDate": "2026-11-08",
+      "survivingTextByWithdrawnSource": {
+        "ip-icj-provisional-2024": "Surviving primary judicial basis (`ip-icj-advisory-2024`, `ip-icc-warrants-2024`): With the ICJ Case 192 Provisional Measures Orders withdrawn, the 19 July 2024 ICJ Advisory Opinion (Case 186, Art. 65 ruling on the unlawfulness of continued OPT presence and Fourth Geneva Convention Art. 47 non-derogation) and the 21 November 2024 ICC Pre-Trial Chamber I Art. 58 arrest warrants ('reasonable grounds to believe' pre-trial threshold) remain independently established.",
+        "ip-icj-advisory-2024": "Surviving primary judicial basis (`ip-icj-provisional-2024`, `ip-icc-warrants-2024`): With the ICJ Case 186 Advisory Opinion withdrawn, the ICJ Case 192 binding Provisional Measures Orders of Jan/Mar/May 2024 (Art. 41 'plausibility of rights' standard) and the 21 Nov 2024 ICC Pre-Trial Chamber I Art. 58 arrest warrants ('reasonable grounds to believe' pre-trial threshold) remain independently established.",
+        "ip-icc-warrants-2024": "Surviving primary ICJ judicial basis (`ip-icj-provisional-2024`, `ip-icj-advisory-2024`): With the ICC Art. 58 pre-trial warrants withdrawn, the ICJ's binding Art. 41 Provisional Measures Orders (Case 192, Jan/Mar/May 2024) and the 19 July 2024 Art. 65 Advisory Opinion (Case 186) remain independently established.",
+        "ip-icj-advisory-2024+ip-icj-provisional-2024": "Surviving primary ICC judicial basis (`ip-icc-warrants-2024`): With both ICJ Case 192 (Provisional Measures) and ICJ Case 186 (Advisory Opinion) withdrawn, ICC Pre-Trial Chamber I's 21 November 2024 decisions (ICC-01/18-374) and ex parte Art. 58(1)(a) arrest warrants ('reasonable grounds to believe' pre-trial threshold, distinct from Art. 61 charge confirmation or Art. 66 trial conviction) remain independently established."
+      }
+    },
+    {
+      "date": "2025-01-19 – 2025-10-10",
+      "title": "Gaza Phase One Ceasefire, March Siege & August Famine Confirmation",
+      "text": "The 42-day Phase One ceasefire tripled food aid (>78,000 MT) and halted convoy looting, but the March 2, 2025 cargo closure led to the August 2025 IPC Phase 5 Famine confirmation in Gaza Governorate before the October 2025 ceasefire.",
+      "sourceIds": [
+        "ip-ocha-pauses",
+        "ip-ipc-reviews"
+      ],
+      "asOfDate": "2026-11-08"
+    }
+  ],
+  "comparison": [
+    {
+      "dimension": "Sovereign final-status treaties vs. open-ended interim autonomy",
+      "historical": "The 1979 Egypt–Israel Treaty and 1994 Israel–Jordan Treaty resolved international borders upfront between sovereign states, paired withdrawal with tiered demilitarization (Sinai Zones A–D) or resource commissions (Joint Water Committee), and endured for 32–45+ years. By contrast, the 1993–95 Oslo Accords deferred borders, Jerusalem, refugees, and settlements for five years while leaving 60% of the West Bank (Area C) under Israeli control without a settlement freeze.",
+      "present": "As of 2026-11-08, examine whether a proposed arrangement defines a binding final territorial/sovereignty horizon upfront with reciprocal freezes on unilateral facts on the ground, or whether it creates an open-ended transitional phase vulnerable to spoilers.",
+      "limit": "Interstate treaties between sovereign states with external borders and zero remaining settlements (Sinai 1979, Jordan 1994) cannot be copied mechanically into the West Bank, East Jerusalem, and Gaza without addressing >700,000 settlers, fragmented enclaves, and Palestinian self-determination.",
+      "timeframe": "3 Years (phased Sinai withdrawal to pre-agreed sovereign border) vs. 5+ Years (Oslo interim phase that expired in 1999 without final-status agreement)",
+      "asOfDate": "2026-11-08",
+      "sourceIds": [
+        "ip-sinai-mfo-1979",
+        "ip-oslo-1993-1995",
+        "ip-jordan-1994",
+        "ip-carnegie-mediation-2026"
+      ],
+      "survivingTextByWithdrawnSource": {
+        "ip-carnegie-mediation-2026": "Surviving primary treaty basis (`ip-sinai-mfo-1979`, `ip-oslo-1993-1995`, `ip-jordan-1994`): The primary texts of the 1979, 1993–95, and 1994 agreements independently establish the structural contrast between pre-agreed sovereign boundaries (1979/1994) and deferred permanent-status issues in Area A/B/C interim autonomy (Oslo I Art. V, Oslo II Arts. XI–XIII)."
+      }
+    },
+    {
+      "dimension": "Third-party verification & spoiler insulation",
+      "historical": "In Sinai, the independent MFO (1981 Protocol)—funded equally by Egypt, Israel, and the U.S.—conducts bi-monthly inspections, responds to verification requests within 48 hours, and runs daily military liaison (LAWIO–IDFICD), adapting via consensual amendments (2005–2021). Under the 1949 Armistice (unarmed UNTSO) and 1993–95 Oslo Accords (bilateral committees with no third-party enforcement), violations and spoiler attacks escalated unchecked.",
+      "present": "As of 2026-11-08, ask who verifies compliance on the ground, whether the monitor has independent inspection access and equal buy-in from the parties, and what happens when an armed faction or political coalition violates interim commitments.",
+      "limit": "Third-party monitors (like the MFO or UNTSO) verify compliance with an agreed political settlement; they cannot impose peace by force if the underlying parties reject the territorial status quo.",
+      "timeframe": "Daily (LAWIO–IDFICD military liaison) · 48 Hours (MFO on-demand verification response) · Bi-monthly (MFO Zone A–D inspections)",
+      "asOfDate": "2026-11-08",
+      "sourceIds": [
+        "ip-sinai-mfo-1979",
+        "ip-armistice-1949",
+        "ip-oslo-1993-1995"
+      ]
+    },
+    {
+      "dimension": "Territory-wide ceasefires vs. wartime 'deconfliction' & phased siege levers",
+      "historical": "During active Gaza combat, unilateral military 'deconfliction' saw high mission denial/impediment rates and widespread convoy looting. During the 42-day Phase One ceasefire (19 Jan – 1 Mar 2025), halting bombardment and opening northern/southern crossings caused food tonnage to surge 3.4x (>78,000 MT) and armed looting to nearly vanish—yet when Phase One expired on 2 March 2025, unilateral closure of all cargo crossings reversed those gains within days and led to the August 2025 IPC Phase 5 Famine confirmation in Gaza Governorate.",
+      "present": "As of 2026-11-08, distinguish short-term transactional pauses (where border crossings and dual-use lists remain subject to unilateral closure between phases) from protected humanitarian access backed by binding phase-transition guarantees.",
+      "limit": "Temporary humanitarian pauses immediately reduce daily bombardment deaths and enable mass vaccination/feeding, but cannot sustain civilian survival if essential water, power, medical gear, and food crossings can be shut off as bargaining leverage between phases.",
+      "timeframe": "7 Days (Nov 2023 pause) · 42 Days (Jan–Mar 2025 Phase One ceasefire) · Days to Weeks (erosion of bakery/food stocks after March 2, 2025 crossing closure)",
+      "asOfDate": "2026-11-08",
+      "sourceIds": [
+        "ip-ocha-pauses",
+        "ip-ipc-reviews"
+      ]
+    },
+    {
+      "dimension": "International legal rulings: procedural posture vs. physical enforcement",
+      "historical": "In 2024, three distinct international judicial processes addressed the conflict: (1) ICJ Provisional Measures Orders in South Africa v. Israel (Art. 41 'plausibility of rights' and imminent risk standard), (2) the ICJ Advisory Opinion of 19 July 2024 (Art. 65 authoritative finding that continued presence in the OPT is unlawful and Oslo cannot override Fourth Geneva Convention Art. 47), and (3) ICC Pre-Trial Chamber I Art. 58 arrest warrants ('reasonable grounds to believe' pre-trial threshold).",
+      "present": "As of 2026-11-08, verify the exact procedural posture of any cited legal document (allegation vs. Art. 41 provisional order vs. Art. 65 advisory opinion vs. Art. 58 arrest warrant vs. merits judgment) and examine the enforcement gap when courts lack autonomous police power.",
+      "limit": "Judicial rulings establish authoritative legal obligations and individual criminal exposure, but without UN Security Council enforcement or state compliance, court orders did not halt the May 2024 Rafah offensive or prevent the March 2025 crossing closures.",
+      "timeframe": "Weeks to Months (Art. 41 Provisional Measures & Art. 58 Pre-Trial Warrants) vs. Years (ICJ contentious merits pleadings through 2026+ and ICC trial proceedings)",
+      "asOfDate": "2026-11-08",
+      "sourceIds": [
+        "ip-icj-provisional-2024",
+        "ip-icj-advisory-2024",
+        "ip-icc-warrants-2024"
+      ],
+      "survivingTextByWithdrawnSource": {
+        "ip-icj-provisional-2024": "Surviving primary judicial basis (`ip-icj-advisory-2024`, `ip-icc-warrants-2024`): With the ICJ Case 192 Provisional Measures Orders withdrawn, the 19 July 2024 ICJ Advisory Opinion (Case 186, Art. 65 ruling on the unlawfulness of continued OPT presence and Fourth Geneva Convention Art. 47 non-derogation) and the 21 November 2024 ICC Pre-Trial Chamber I Art. 58 arrest warrants ('reasonable grounds to believe' pre-trial threshold) remain independently established.",
+        "ip-icj-advisory-2024": "Surviving primary judicial basis (`ip-icj-provisional-2024`, `ip-icc-warrants-2024`): With the ICJ Case 186 Advisory Opinion withdrawn, the ICJ Case 192 binding Provisional Measures Orders of Jan/Mar/May 2024 (Art. 41 'plausibility of rights' standard) and the 21 Nov 2024 ICC Pre-Trial Chamber I Art. 58 arrest warrants ('reasonable grounds to believe' pre-trial threshold) remain independently established.",
+        "ip-icc-warrants-2024": "Surviving primary ICJ judicial basis (`ip-icj-provisional-2024`, `ip-icj-advisory-2024`): With the ICC Art. 58 pre-trial warrants withdrawn, the ICJ's binding Art. 41 Provisional Measures Orders (Case 192, Jan/Mar/May 2024) and the 19 July 2024 Art. 65 Advisory Opinion (Case 186) remain independently established.",
+        "ip-icj-advisory-2024+ip-icj-provisional-2024": "Surviving primary ICC judicial basis (`ip-icc-warrants-2024`): With both ICJ Case 192 (Provisional Measures) and ICJ Case 186 (Advisory Opinion) withdrawn, ICC Pre-Trial Chamber I's 21 November 2024 decisions (ICC-01/18-374) and ex parte Art. 58(1)(a) arrest warrants ('reasonable grounds to believe' pre-trial threshold, distinct from Art. 61 charge confirmation or Art. 66 trial conviction) remain independently established."
+      }
+    }
+  ],
+  "rejectedComparisons": [
+    {
+      "id": "ip-rej-1",
+      "claim": "The 1979 Egypt–Israel Peace Treaty and Sinai MFO prove that deploying international observers can stabilize Gaza and the West Bank indefinitely without resolving Palestinian sovereignty, borders, or Israeli settlements.",
+      "failureCode": "STRUCTURAL_SOVEREIGNTY_AND_DEMOGRAPHIC_MISMATCH",
+      "whyItFails": "Ignores the foundational prerequisite of the 1979 Sinai treaty: Israel withdrew 100% of its military forces and settlers from the Sinai Peninsula and recognized full Egyptian sovereignty upfront (`ip-sinai-mfo-1979`). Deploying monitors inside fragmented enclaves without a sovereignty settlement or settlement freeze replicates the failed 1949 DMZ and 1993–95 Oslo Area A/B/C interim model, not the 1979 Sinai model.",
+      "counterEvidence": "1979 Egypt–Israel Treaty of Peace Art. I & Annex I (`ip-sinai-mfo-1979`), Oslo II Arts. XI–XIII (`ip-oslo-1993-1995`), and ICJ Advisory Opinion of 19 July 2024 paras. 102 & 251–285 (`ip-icj-advisory-2024`).",
+      "sourceIds": [
+        "ip-sinai-mfo-1979",
+        "ip-oslo-1993-1995",
+        "ip-icj-advisory-2024"
+      ]
+    },
+    {
+      "id": "ip-rej-2",
+      "claim": "The ICJ's January 2024 Provisional Measures Order convicted Israel on the merits of committing genocide (or conversely, decided that South Africa's case was unfounded), and ICC Article 58 warrants are equivalent to final criminal convictions.",
+      "failureCode": "JUDICIAL_PROCEDURAL_POSTURE_CONFLATION",
+      "whyItFails": "Falsifies the explicit legal threshold of both courts: (1) Under ICJ Statute Art. 41, the 26 January 2024 Order (para. 54) determined that at least some rights claimed by South Africa under the Genocide Convention are 'plausible' and face imminent risk of irreparable harm—neither a final merits conviction nor a dismissal; (2) Under Rome Statute Art. 58(1)(a), the 21 November 2024 ICC warrants are pre-trial arrest orders issued on 'reasonable grounds to believe', prior to Art. 61 charge confirmation or Art. 66 trial beyond reasonable doubt.",
+      "counterEvidence": "ICJ Order of 26 Jan 2024 paras. 15–32, 54, 86 (`ip-icj-provisional-2024`) and ICC Pre-Trial Chamber I Press Release & Decision ICC-01/18-374 of 21 Nov 2024 (`ip-icc-warrants-2024`).",
+      "sourceIds": [
+        "ip-icj-provisional-2024",
+        "ip-icc-warrants-2024"
+      ]
+    }
+  ],
+  "outcomes": [
+    {
+      "id": "ip-outcomes-1",
+      "text": "Documented outcome (1979 Sinai/MFO & 1994 Jordan Treaties vs. 1949 Armistice & 1993–95 Oslo): Sovereign treaties with defined borders, tiered demilitarization (Sinai Zones A–D), equal tripartite MFO funding, 48-hour verification, and joint water commissions prevented interstate war between Israel, Egypt, and Jordan for 32–45+ years. Conversely, the 1949 Armistice DMZs and 1993–95 Oslo interim zones (Areas A, B, C) lacked final-status borders, settlement freezes, and third-party enforcement, breaking down under settlement expansion, the 1995 assassination of Yitzhak Rabin, and Hamas/PIJ suicide bombings.",
+      "causalStatus": "CONFOUNDED_SEQUENCE",
+      "confounders": [
+        "State-to-state symmetry and low demographic entanglement in Sinai/Jordan vs. >700,000 settlers in West Bank/East Jerusalem",
+        "Large-scale U.S. bilateral military and economic aid packages tied to the 1979 and 1994 treaties"
+      ],
+      "counterfactualGap": "Cannot isolate third-party monitoring rules from the underlying decision of sovereign states to recognize final borders and evacuate settlements.",
+      "sourceIds": [
+        "ip-sinai-mfo-1979",
+        "ip-oslo-1993-1995",
+        "ip-jordan-1994",
+        "ip-carnegie-mediation-2026"
+      ],
+      "asOfDate": "2026-11-08",
+      "survivingTextByWithdrawnSource": {
+        "ip-carnegie-mediation-2026": "Surviving primary treaty basis (`ip-sinai-mfo-1979`, `ip-oslo-1993-1995`, `ip-jordan-1994`): The primary texts of the 1979 Egypt–Israel Treaty/MFO Protocol, 1994 Israel–Jordan Treaty, and 1993–95 Oslo I/II Accords independently establish the structural contrast between defined sovereign borders with verification mechanisms and Oslo's deferred permanent-status issues."
+      }
+    },
+    {
+      "id": "ip-outcomes-2",
+      "text": "Documented outcome (Gaza Humanitarian Pauses & Ceasefires, 2023–2025): During the 42-day Phase One ceasefire (19 Jan – 1 Mar 2025), pausing aerial/ground combat and opening multiple crossings simultaneously allowed UN food deliveries to surge 3.4x (>78,000 MT), 25 bakeries to operate, >586,000 displaced civilians to return north, 602,795 children to receive polio vaccinations, and armed convoy looting to virtually disappear. However, when Phase One expired without a Phase Two agreement and Israel closed all cargo crossings on 2 March 2025, bakery and food stocks collapsed within days, culminating in the August 2025 IPC Phase 5 Famine confirmation in Gaza Governorate.",
+      "causalStatus": "DOCUMENTED_OUTCOME",
+      "confounders": [
+        "Ongoing dual-use restrictions blocking generators, water pipes, and medical fixators even during Phase One",
+        "Destruction of 80%+ of WASH and agricultural infrastructure prior to January 2025"
+      ],
+      "counterfactualGap": "Demonstrates that short-term pauses sharply reduce daily harm during active windows, but cannot sustain civilian protection when crossing access remains reversible at each phase boundary.",
+      "sourceIds": [
+        "ip-ocha-pauses",
+        "ip-ipc-reviews"
+      ],
+      "asOfDate": "2026-11-08"
+    },
+    {
+      "id": "ip-outcomes-3",
+      "text": "Documented outcome (2024 International Judicial Interventions): The ICJ's Jan/Mar/May 2024 Provisional Measures Orders established binding Art. 41 obligations to prevent genocidal acts, ensure unhindered aid at scale, and halt Rafah operations risking physical destruction; the July 2024 Advisory Opinion declared continued OPT occupation unlawful and confirmed Oslo cannot override Fourth Geneva Convention Art. 47; and the Nov 2024 ICC Art. 58 warrants established pre-trial criminal exposure for both Israeli leaders and Hamas commanders. Yet in the absence of autonomous enforcement or Security Council execution, military operations and crossing closures continued on the ground.",
+      "causalStatus": "DOCUMENTED_OUTCOME",
+      "confounders": [
+        "Lack of independent ICJ/ICC enforcement forces",
+        "Reliance on state party cooperation and UN Security Council permanent-member consensus"
+      ],
+      "counterfactualGap": "Establishes authoritative legal norms and long-term diplomatic/legal constraints, without producing immediate battlefield compliance.",
+      "sourceIds": [
+        "ip-icj-provisional-2024",
+        "ip-icj-advisory-2024",
+        "ip-icc-warrants-2024"
+      ],
+      "asOfDate": "2026-11-08",
+      "survivingTextByWithdrawnSource": {
+        "ip-icj-provisional-2024": "Surviving primary judicial basis (`ip-icj-advisory-2024`, `ip-icc-warrants-2024`): With the ICJ Case 192 Provisional Measures Orders withdrawn, the 19 July 2024 ICJ Advisory Opinion (Case 186, Art. 65 ruling on the unlawfulness of continued OPT presence and Fourth Geneva Convention Art. 47 non-derogation) and the 21 November 2024 ICC Pre-Trial Chamber I Art. 58 arrest warrants ('reasonable grounds to believe' pre-trial threshold) remain independently established.",
+        "ip-icj-advisory-2024": "Surviving primary judicial basis (`ip-icj-provisional-2024`, `ip-icc-warrants-2024`): With the ICJ Case 186 Advisory Opinion withdrawn, the ICJ Case 192 binding Provisional Measures Orders of Jan/Mar/May 2024 (Art. 41 'plausibility of rights' standard) and the 21 Nov 2024 ICC Pre-Trial Chamber I Art. 58 arrest warrants ('reasonable grounds to believe' pre-trial threshold) remain independently established.",
+        "ip-icc-warrants-2024": "Surviving primary ICJ judicial basis (`ip-icj-provisional-2024`, `ip-icj-advisory-2024`): With the ICC Art. 58 pre-trial warrants withdrawn, the ICJ's binding Art. 41 Provisional Measures Orders (Case 192, Jan/Mar/May 2024) and the 19 July 2024 Art. 65 Advisory Opinion (Case 186) remain independently established.",
+        "ip-icj-advisory-2024+ip-icj-provisional-2024": "Surviving primary ICC judicial basis (`ip-icc-warrants-2024`): With both ICJ Case 192 (Provisional Measures) and ICJ Case 186 (Advisory Opinion) withdrawn, ICC Pre-Trial Chamber I's 21 November 2024 decisions (ICC-01/18-374) and ex parte Art. 58(1)(a) arrest warrants ('reasonable grounds to believe' pre-trial threshold, distinct from Art. 61 charge confirmation or Art. 66 trial conviction) remain independently established."
+      }
+    }
+  ],
+  "counterexamples": [
+    {
+      "id": "ip-ce-1",
+      "title": "March 2, 2025 Post-Phase-One Cargo Blockade & August 2025 IPC Phase 5 Famine",
+      "text": "Immediately after the 42-day Phase One ceasefire tripled food inflows (>78,000 MT) and eliminated armed convoy looting, the expiration of Phase One on March 1, 2025 was followed on March 2 by a total closure of cargo crossings, shutting down 6 of 25 UN bakeries within a week and leading to the August 2025 IPC Phase 5 Famine confirmation in Gaza Governorate.",
+      "failureCondition": "Phased humanitarian truces fail to provide durable civilian protection when border crossings remain subject to unilateral closure between negotiation phases.",
+      "sourceIds": [
+        "ip-ocha-pauses",
+        "ip-ipc-reviews"
+      ]
+    },
+    {
+      "id": "ip-ce-2",
+      "title": "1993–2000 Oslo Interim Breakdown Amid Settlement Expansion and Spoiler Violence",
+      "text": "Rather than building confidence toward a 1999 final-status treaty, the five-year Oslo interim period saw West Bank settler numbers surge in Area C, the November 1995 assassination of Prime Minister Yitzhak Rabin, waves of Hamas/PIJ suicide bombings, and the collapse of the 2000 Camp David summit into the Second Intifada.",
+      "failureCondition": "Gradualist interim confidence-building fails when core grievances (borders, land, sovereignty) are deferred without a settlement freeze or spoiler-proof third-party verification.",
+      "sourceIds": [
+        "ip-oslo-1993-1995",
+        "ip-carnegie-mediation-2026"
+      ]
+    },
+    {
+      "id": "ip-ce-3",
+      "title": "1949 Armistice Demilitarized Zones (El Auja & Syrian/Jordanian DMZs)",
+      "text": "Unarmed UNTSO observers and Mixed Armistice Commissions under the 1949 Rhodes Agreements could not prevent competing sovereignty claims, civilian expulsions, and military encroachments inside Demilitarized Zones, which repeatedly deadlocked MACs prior to the 1956 and 1967 wars.",
+      "failureCondition": "Unarmed observer missions fail when asked to referee unresolved political sovereignty inside ambiguous buffer zones.",
+      "sourceIds": [
+        "ip-armistice-1949"
+      ]
+    }
+  ],
+  "interpretations": [
+    {
+      "title": "Structural asymmetry & settler-colonial critique (Khalidi 2020; Shlaim 2000/2014 — Synopsis & review records)",
+      "text": "Khalidi argues that Oslo failed because its structural design preserved asymmetric Israeli control over borders, airspace, water, and 60% of the West Bank (Area C) while excluding Palestinian self-determination and refugee rights, turning the Palestinian Authority into a security subcontractor. Shlaim's 'Iron Wall' critique adds that while the 1979 Egypt and 1994 Jordan treaties traded territory for peace, post-1996 Israeli governments used military superiority and settlement expansion to perpetuate permanent control rather than negotiate partition. (Note: Represented via published scholarly reviews/synopses in `ip-shlaim-lustick-reviews` and `ip-carnegie-mediation-2026`.)",
+      "causalEmphasis": "Structural power asymmetry, settlement expansion in Area C, and absence of self-determination (Synopsis/review record)",
+      "sourceIds": [
+        "ip-shlaim-lustick-reviews",
+        "ip-oslo-1993-1995"
+      ],
+      "survivingTextByWithdrawnSource": {
+        "ip-shlaim-lustick-reviews": "Surviving primary treaty basis (`ip-oslo-1993-1995`): With the secondary book-review synopsis (`ip-shlaim-lustick-reviews`) reopened, the primary text of Oslo I (Art. V) and Oslo II (Ch. 2, Arts. XI–XIII) independently establishes the division into Areas A, B, and C (~60% under Israeli control) and the deferral of Jerusalem, refugees, settlements, and borders."
+      },
+      "asOfDate": "2026-11-08"
+    },
+    {
+      "title": "Mutual national-movement collision, rejectionism & violent spoilers (Morris 1999/2008 — Review synthesis)",
+      "text": "Drawing on Israeli and Western diplomatic archives, Morris frames the conflict as a zero-sum collision between two national movements and attributes the collapse of the Oslo process and the 2000 Camp David talks primarily to Palestinian and Arab rejection of Jewish national sovereignty over shared core territory and the strategic use of suicide bombings by Hamas and Palestinian Islamic Jihad, which destroyed Israeli domestic support for territorial withdrawal. (Note: Represented via published scholarly review synthesis in `ip-shlaim-lustick-reviews`.)",
+      "causalEmphasis": "National-movement zero-sum collision, final-status rejectionism, and armed spoiler terrorism (Synopsis/review record)",
+      "sourceIds": [
+        "ip-shlaim-lustick-reviews",
+        "ip-carnegie-mediation-2026"
+      ],
+      "survivingTextByWithdrawnSource": {
+        "ip-shlaim-lustick-reviews": "Surviving comparative mediation analysis (`ip-carnegie-mediation-2026`): Carnegie's 2026 study independently documents the role of domestic spoilers (including the 1995 Rabin assassination and Hamas/PIJ attacks) and public distrust in derailing Oslo."
+      },
+      "asOfDate": "2026-11-08"
+    },
+    {
+      "title": "Institutional lock-in & 'One-State Reality' vs. Third-Party Mediation Design (Lustick 2019; Hamzawy, Yerkes & Selfe 2026)",
+      "text": "Lustick (2019) argues that decades of settlement integration and legal entanglement have locked in a single overarching governing regime between the Jordan River and the Mediterranean Sea ('One-State Reality'), making diplomatic partition obsolete and shifting future struggles toward equal rights within one polity. Conversely, Hamzawy, Yerkes, and Selfe (Carnegie, 2026) argue that comparing the successful 1979 Egypt and 1994 Jordan tracks with Oslo shows that durable arrangements require binding final-status horizons, independent third-party monitoring (the MFO model), and strict conditionality on external incentives.",
+      "causalEmphasis": "Institutional one-state lock-in vs. enforceable third-party mediation design and conditionality",
+      "sourceIds": [
+        "ip-carnegie-mediation-2026",
+        "ip-shlaim-lustick-reviews",
+        "ip-sinai-mfo-1979"
+      ],
+      "survivingTextByWithdrawnSource": {
+        "ip-shlaim-lustick-reviews": "Surviving full-text mediation & treaty basis (`ip-carnegie-mediation-2026`, `ip-sinai-mfo-1979`): With the Lustick review synopsis reopened, Carnegie's full-text 2026 comparative study and the 1979 MFO records independently establish the third-party mediation, conditionality, and verification findings.",
+        "ip-carnegie-mediation-2026+ip-shlaim-lustick-reviews": "Surviving primary treaty basis (`ip-sinai-mfo-1979`): With both the Lustick review synopsis and the Carnegie 2026 mediation study withdrawn, the 1979 Egypt–Israel Treaty of Peace (Annex I) and 1981 MFO Protocol independently establish the primary four-zone verification and tripartite funding architecture.",
+        "ip-shlaim-lustick-reviews+ip-sinai-mfo-1979": "Surviving comparative mediation basis (`ip-carnegie-mediation-2026`): With both the Lustick review synopsis and the 1979 Sinai/MFO primary card withdrawn, Carnegie's 2026 comparative study independently documents why binding final-status horizons and conditional third-party mediation succeeded in 1979/1994 versus Oslo's open-ended interim framework."
+      },
+      "asOfDate": "2026-11-08"
+    }
+  ],
+  "consequentialCorrection": {
+    "targetSourceId": "ip-shlaim-lustick-reviews",
+    "targetSourceTitle": "Competing Historiographical Syntheses (IHR & Journal of Palestine Studies Book Reviews — Synopsis Only)",
+    "challengeReason": "Source `ip-shlaim-lustick-reviews` summarizes four copyrighted academic monographs (Khalidi, Morris, Shlaim, Lustick) through published peer-reviewed book reviews (`SYNOPSIS_ONLY`) rather than full-text monograph inspection. Challenging its standing tests whether primary treaty, humanitarian, and judicial findings remain intact and how interpretive claims narrow to full-text primary/institutional records.",
+    "expectedImpact": "Challenging or withdrawing `ip-shlaim-lustick-reviews` reopens the 3 scholarly interpretation cards (`israel-palestine-interpretations-1`, `israel-palestine-interpretations-2`, `israel-palestine-interpretations-3`), narrowing them to their surviving primary treaty (`ip-oslo-1993-1995`, `ip-sinai-mfo-1979`) and full-text Carnegie mediation (`ip-carnegie-mediation-2026`) bases, while all 19 primary facts, timeline events, comparisons, and outcomes remain 100% `AVAILABLE`."
+  },
+  "limits": [
+    "No historical treaty is a universal recipe: the 1979 Egypt–Israel Treaty + MFO and 1994 Jordan–Israel Treaty operated between sovereign states with recognized external borders and zero remaining settlements; they cannot be mechanically transplanted onto the West Bank, East Jerusalem, and Gaza without addressing >700,000 settlers, fragmented enclaves, and self-determination.",
+    "Strict legal procedural distinctions apply as of 2026-11-08: ICJ Provisional Measures Orders in South Africa v. Israel (Case 192) establish plausibility of rights and imminent risk under Statute Art. 41, NOT a final merits judgment of genocide; the ICJ's 19 July 2024 ruling (Case 186) is an authoritative Art. 65 Advisory Opinion; and ICC Art. 58 arrest warrants (21 Nov 2024) establish 'reasonable grounds to believe' at the pre-trial stage, NOT a trial conviction beyond reasonable doubt under Art. 66.",
+    "During active combat and access restrictions in Gaza, UN OCHA casualty figures are attributed to the Gaza Ministry of Health and Israeli official authorities pending independent forensic access, and IPC Famine Review Committee classifications apply IPC v3.1 'reasonable evidence' anthropometric and mortality thresholds.",
+    "Competing historiographical monographs (Khalidi, Morris, Shlaim, Lustick) are represented via published academic reviews (`SYNOPSIS_ONLY`) alongside Carnegie's open-access 2026 comparative mediation paper (`FULL_TEXT`); no artificial scholarly consensus or political ranking is manufactured."
+  ],
+  "challengePrompts": [
+    "Why did phased implementation build 45+ years of compliance under the 1979 Egypt–Israel Treaty and MFO, whereas the 5-year phased transition of the 1993–95 Oslo Accords broke down?",
+    "What operational changes during the 42-day Phase One Gaza ceasefire (19 Jan – 1 Mar 2025) caused food inflows to triple and armed convoy looting to nearly vanish, and why did those gains collapse after 2 March 2025?",
+    "How do both claims that 'the ICJ convicted Israel of genocide in January 2024' and counter-claims that 'the ICJ dismissed the case or issued non-binding remarks' misrepresent Article 41 Provisional Measures Orders?",
+    "What primary evidence in this dossier supports Khalidi's structural-asymmetry thesis versus Morris's national-movement/spoiler thesis versus Hamzawy et al.'s third-party mediation-design thesis?"
+  ],
+  "questionProfile": {
+    "primaryDomain": "Israel–Palestine, civilian protection, humanitarian pauses, armistices & durable peace treaties",
+    "whyRelevantSummary": "The Israel–Palestine, Civilian Protection & Durable Arrangements dossier (1949–2026) compares five historical mechanisms across 77 years: the 1949 Armistice Agreements & UNTSO observer model, the 1979 Egypt–Israel Peace Treaty & Multinational Force and Observers (MFO) in Sinai, the 1993–1995 Oslo I/II interim autonomy accords, the 1994 Israel–Jordan Wadi Araba Peace Treaty, and the Nov 2023 / Jan–Mar 2025 / Oct 2025 Gaza humanitarian pauses alongside 2024 ICJ/ICC legal orders. It shows what measurably reduced civilian harm in the short run vs. what sustained multi-decade peace, and where analogies fail.",
+    "coreConcepts": [
+      "israel",
+      "palestine",
+      "palestinian",
+      "gaza",
+      "west bank",
+      "sinai",
+      "civilian harm",
+      "civilian protection",
+      "territorial conflict",
+      "ceasefire",
+      "humanitarian pause",
+      "hostage",
+      "famine",
+      "ocha",
+      "ipc",
+      "oslo",
+      "armistice",
+      "peace treaty",
+      "mfo",
+      "untso",
+      "jordan",
+      "egypt",
+      "icj",
+      "icc",
+      "genocide convention",
+      "provisional measures",
+      "occupation",
+      "settlement"
+    ],
+    "supportedThemes": [
+      "Why finalized interstate borders, complete Sinai withdrawal, tiered force-limitation zones, and third-party MFO verification sustained the 1979 Egypt–Israel and 1994 Israel–Jordan peace treaties for 30–45+ years",
+      "Why the 1949 Armistice lines (unarmed UNTSO observers without DMZ enforcement) and 1993–95 Oslo I/II interim accords (Areas A/B/C, deferred final status, no settlement freeze or third-party enforcement) broke down",
+      "What the 42-day Phase One Gaza ceasefire (19 Jan – 1 Mar 2025) measurably achieved for civilians and hostages—and how rapidly famine (IPC Phase 5 in Aug 2025) followed when crossings closed on 2 March 2025 without a political transition"
+    ],
+    "knownCoverageGaps": [
+      "Does not cover non-Middle Eastern territorial peacekeeping missions (e.g., Dayton/Bosnia, Good Friday/Northern Ireland, Colombia, or Cyprus)",
+      "Shlaim, Lustick, Khalidi, and Morris are represented via published peer-reviewed book reviews and synopses (ip-shlaim-lustick-reviews) rather than full monograph reprints"
+    ]
+  },
+  "historicalArguments": [
+    {
+      "id": "israel-palestine-arg-1",
+      "topic": "1979 Sinai Peace Treaty & 1994 Jordan Treaty (defined borders + MFO/joint mechanisms) vs. 1949 Armistice lines",
+      "decisionWindow": "1949 Armistice Agreements vs. 1979 Egypt–Israel Treaty & 1994 Wadi Araba Treaty",
+      "contemporaryActor": "1949 Armistice negotiators vs. 1979 Camp David / Sinai Treaty & 1994 Israel–Jordan Treaty negotiators",
+      "contemporaryArgument": "In 1949, negotiators framed the General Armistice Agreements (Art. V(2)) as temporary military lines dictated exclusively by military considerations without prejudice to ultimate territorial settlement, monitored by unarmed UNTSO observers (ip-armistice-1949). By contrast, architects of the 1979 Egypt–Israel Peace Treaty and 1981 MFO Protocol argued that durable peace required full Israeli withdrawal from Sinai, complete evacuation of settlements, finalized international borders, four tiered security zones (Zones A, B, C, and D), daily liaison, and a dedicated Multinational Force and Observers funded equally by Egypt, Israel, and the United States (ip-sinai-mfo-1979).",
+      "policymakerExpectation": "1949 diplomats expected interim armistice lines to transition quickly into permanent peace treaties via the Lausanne Conference, whereas 1979 and 1994 treaty framers expected pre-defined sovereign borders, mutual verification (MFO in Sinai; Joint Water Committee and demarcated borders with Jordan), and conditional U.S. backing to prevent return to interstate war.",
+      "expectationVerdict": "SUPPORTED_WITH_LIMITS",
+      "subsequentEvidence": "The 1949 expectation of rapid transition failed: contested demilitarized zones (DMZs), cross-border raids, and unarmed UNTSO observers lacking enforcement power culminated in the 1956 and 1967 wars (ip-armistice-1949). Conversely, the 1979 Egypt–Israel Sinai architecture (45+ years) and 1994 Israel–Jordan Wadi Araba Treaty (32+ years) prevented interstate war and adapted through consensual border-guard force amendments in 2005, 2007, 2018, and 2021 (ip-sinai-mfo-1979, ip-jordan-1994, ip-carnegie-mediation-2026).",
+      "laterHistoriography": "Comparative mediation researchers (ip-carnegie-mediation-2026) and historians (ip-shlaim-lustick-reviews) conclude that third-party monitors succeed when verifying compliance along an agreed interstate border after full withdrawal, but cannot substitute for unresolved sovereignty.",
+      "differenceThatLimits": "The 1979 Sinai treaty regulated a sparsely populated peninsula buffer between two recognized sovereign states after 100% settlement evacuation, unlike the densely populated West Bank, East Jerusalem, and Gaza Strip.",
+      "asOfDate": "2026-11-08",
+      "sourceIds": [
+        "ip-armistice-1949",
+        "ip-sinai-mfo-1979",
+        "ip-jordan-1994",
+        "ip-carnegie-mediation-2026",
+        "ip-shlaim-lustick-reviews"
+      ],
+      "survivingTextByWithdrawnSource": {
+        "ip-shlaim-lustick-reviews": "With ip-shlaim-lustick-reviews (review/synopsis source) withdrawn, primary treaty records (ip-armistice-1949, ip-sinai-mfo-1979, ip-jordan-1994) and Carnegie mediation analysis (ip-carnegie-mediation-2026) establish why the 1979 Sinai/MFO and 1994 Jordan treaties endured 32–45+ years through finalized borders and verification while the 1949 armistice lines broke down.",
+        "ip-carnegie-mediation-2026": "Primary treaty texts in the 1949 Armistice Agreement (ip-armistice-1949), 1979 Egypt–Israel Treaty & MFO Protocol (ip-sinai-mfo-1979), and 1994 Israel–Jordan Treaty (ip-jordan-1994) establish the structural contrast between temporary unpoliced armistice lines and finalized interstate treaties with zoned verification.",
+        "ip-carnegie-mediation-2026+ip-shlaim-lustick-reviews": "Primary treaty records in the 1949 Armistice Agreement (ip-armistice-1949), 1979 Egypt–Israel Peace Treaty & MFO Protocol (ip-sinai-mfo-1979), and 1994 Israel–Jordan Wadi Araba Treaty (ip-jordan-1994) directly establish the contrast between temporary armistice lines monitored by unarmed UNTSO observers and finalized interstate borders verified by the MFO and Joint Water Committee."
+      }
+    },
+    {
+      "id": "israel-palestine-arg-2",
+      "topic": "1993–1995 Oslo I/II gradual interim confidence-building vs. deferred final status and institutional lock-in",
+      "decisionWindow": "September 1993 – September 1995 (Oslo I Declaration of Principles & Oslo II Interim Agreement)",
+      "contemporaryActor": "Israeli, PLO & U.S. Oslo negotiators vs. structural critics",
+      "contemporaryArgument": "Architects of the 1993 Declaration of Principles (Oslo I) and 1995 Interim Agreement (Oslo II) argued that a five-year interim self-government period—dividing the West Bank into Areas A, B, and C (~60% under full Israeli civil and military control)—would build mutual trust and security cooperation before negotiating permanent-status issues (Jerusalem, refugees, borders, settlements, and security) by May 1999 (ip-oslo-1993-1995).",
+      "policymakerExpectation": "Oslo's framers expected gradual phased redeployments and economic/security cooperation to create momentum toward a final two-state agreement within five years even without an explicit textual settlement freeze or binding third-party arbitration mechanism.",
+      "expectationVerdict": "CONTRADICTED_BY_EVENTS",
+      "subsequentEvidence": "Instead of concluding a permanent-status treaty within five years, the interim Areas A/B/C division became indefinitely entrenched while settlements expanded, spoilers on both sides derailed redeployments without independent enforcement, and the July 2024 ICJ Advisory Opinion concluded that the Oslo accords cannot detract from obligations under the Fourth Geneva Convention and that Israel's continued presence in the Occupied Palestinian Territory is unlawful (ip-oslo-1993-1995, ip-icj-advisory-2024, ip-carnegie-mediation-2026).",
+      "laterHistoriography": "Later scholars offer competing explanations for Oslo's breakdown (ip-carnegie-mediation-2026, ip-shlaim-lustick-reviews): mediation analysts highlight asymmetric bilateralism, deferred end-states, and lack of settlement freeze; Khalidi emphasizes structural settler-colonial power asymmetry; Morris emphasizes mutual national-movement clash and rejectionism; Shlaim emphasizes post-1996 'Iron Wall' revisionism; and Lustick emphasizes domestic institutional lock-in.",
+      "differenceThatLimits": "Interim administrative autonomy without defined sovereign borders or enforceable settlement freezes operates fundamentally differently from an interstate treaty between recognized states.",
+      "asOfDate": "2026-11-08",
+      "sourceIds": [
+        "ip-oslo-1993-1995",
+        "ip-icj-advisory-2024",
+        "ip-carnegie-mediation-2026",
+        "ip-shlaim-lustick-reviews"
+      ],
+      "survivingTextByWithdrawnSource": {
+        "ip-shlaim-lustick-reviews": "With ip-shlaim-lustick-reviews withdrawn, the primary Oslo I/II accords (ip-oslo-1993-1995), the July 2024 ICJ Advisory Opinion (ip-icj-advisory-2024), and Carnegie mediation analysis (ip-carnegie-mediation-2026) establish that Oslo deferred final-status issues and left Area C (~60% of the West Bank) under Israeli control without a settlement freeze or third-party enforcement, though the four named monograph historiographical labels are withheld.",
+        "ip-carnegie-mediation-2026": "Primary Oslo I/II texts (ip-oslo-1993-1995) and the 2024 ICJ Advisory Opinion (ip-icj-advisory-2024) establish the five-year interim structure (Areas A/B/C), deferred permanent-status issues, and legal limits under the Fourth Geneva Convention.",
+        "ip-carnegie-mediation-2026+ip-shlaim-lustick-reviews": "Primary texts in the 1993–1995 Oslo I/II Accords (ip-oslo-1993-1995) and the 19 July 2024 ICJ Advisory Opinion (ip-icj-advisory-2024) establish the interim Areas A/B/C division, the deferral of permanent-status issues without a settlement freeze, and the Court's finding that Oslo cannot detract from Fourth Geneva Convention obligations."
+      }
+    },
+    {
+      "id": "israel-palestine-arg-3",
+      "topic": "Temporary humanitarian pauses (Nov 2023, Jan–Mar 2025, Oct 2025) vs. durable civilian protection without political transition",
+      "decisionWindow": "November 2023, January 19 – March 1, 2025 (Phase One Ceasefire) & March–October 2025",
+      "contemporaryActor": "UN OCHA, IPC Famine Review Committee, ceasefire mediators & warring parties",
+      "contemporaryArgument": "Humanitarian agencies and mediators argued that negotiated multi-week ceasefire phases with explicit crossing quotas, deconflicted internal corridors, and reciprocal hostage/detainee releases were immediately necessary to halt mass civilian mortality, release captives, and surge food, medical, and vaccination supplies—while warning that temporary pauses without a binding Phase Two political transition would collapse back into blockade and famine (ip-ocha-pauses, ip-ipc-reviews).",
+      "policymakerExpectation": "Mediators expected the 42-day Phase One Gaza ceasefire (19 Jan – 1 Mar 2025) to deliver measurable life-saving relief and create a bridge to Phase Two permanent ceasefire negotiations.",
+      "expectationVerdict": "MIXED_AND_CONFOUNDED",
+      "subsequentEvidence": "Operational monitoring by UN OCHA and the IPC confirmed both halves of that expectation: during the 42-day Phase One pause (19 Jan – 1 Mar 2025), 30 living hostages, 8 deceased hostages, and 1,777 Palestinian detainees were released, >586,000 displaced civilians returned north across Netzarim, UN food inflows surged 3.4x (from ~23,000 MT to >78,000 MT), operating bakeries quintupled (5 to 25), water output rose +50%, 602,795 children received polio vaccinations, and armed convoy looting nearly ceased (ip-ocha-pauses). Yet on 2 March 2025, when Phase One expired without a Phase Two agreement, Israel closed all cargo crossings; within five months, the IPC Famine Review Committee confirmed Phase 5 Famine in Gaza Governorate in August 2025 (>500,000 people in Phase 5 Catastrophe, 1.07 million in Phase 4 Emergency) before the October 2025 ceasefire renewed aid inflows (ip-ocha-pauses, ip-ipc-reviews).",
+      "laterHistoriography": "Humanitarian and legal analysts (ip-ocha-pauses, ip-ipc-reviews, ip-icj-provisional-2024, ip-icc-warrants-2024, ip-carnegie-mediation-2026) conclude that temporary pauses produce rapid, verifiable drops in acute deprivation only while crossings remain open, and that international legal orders (ICJ Art. 41 Provisional Measures on plausible rights; ICC Art. 58 pre-trial warrants on reasonable grounds to believe) establish binding interim legal duties and pre-trial accountability thresholds but do not self-execute on the ground without political enforcement.",
+      "differenceThatLimits": "A reversible cargo-crossing truce without agreed governance or border sovereignty cannot self-sustain once political spoiler incentives resume.",
+      "asOfDate": "2026-11-08",
+      "sourceIds": [
+        "ip-ocha-pauses",
+        "ip-ipc-reviews",
+        "ip-icj-provisional-2024",
+        "ip-icc-warrants-2024",
+        "ip-carnegie-mediation-2026"
+      ],
+      "survivingTextByWithdrawnSource": {
+        "ip-carnegie-mediation-2026": "UN OCHA operational reports (ip-ocha-pauses), IPC Famine Review Committee findings (ip-ipc-reviews), ICJ Provisional Measures Orders (ip-icj-provisional-2024), and ICC Art. 58 decisions (ip-icc-warrants-2024) establish the 42-day Phase One ceasefire relief metrics (3.4x food surge, 30 living hostages and 1,777 detainees released, 602,795 children vaccinated) and the rapid descent into August 2025 IPC Phase 5 Famine after crossings closed on 2 March 2025.",
+        "ip-ipc-reviews": "UN OCHA operational reports (ip-ocha-pauses), ICJ Provisional Measures Orders (ip-icj-provisional-2024), ICC Art. 58 warrants (ip-icc-warrants-2024), and Carnegie mediation analysis (ip-carnegie-mediation-2026) document the Phase One ceasefire relief surge (19 Jan – 1 Mar 2025) and the immediate closure of all cargo crossings on 2 March 2025 upon Phase One expiration."
+      }
+    }
+  ]
+}
