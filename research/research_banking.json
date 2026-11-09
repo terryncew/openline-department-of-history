@@ -1,463 +1,463 @@
 {
-  "id": "banking",
-  "title": "When confidence breaks",
-  "question": "What helps restore trust when a financial system is under strain?",
-  "summary": "The 1933 US banking crisis offers a test of emergency action, public explanation and credible financial backing. Recovery in bank deposits was real; the mechanism and the reach of that recovery remain separate questions.",
-  "period": "1933–1934",
-  "place": "United States",
-  "theme": "Trust & institutions",
-  "sources": [
-    {
-      "id": "bank-act",
-      "title": "Emergency Banking Act, 9 March 1933",
-      "author": "United States Congress",
-      "url": "https://www.govinfo.gov/content/pkg/STATUTE-48/pdf/STATUTE-48-Pg1.pdf",
-      "type": "primary",
-      "locator": "48 Stat. 1, Titles I–IV",
-      "accessed": "2026-11-08",
-      "rights": "US federal statute; public domain. Source PDF may be preserved.",
-      "notes": "The statute confirms emergency measures and changes authority for bank conservation and currency issuance. A law establishes authority, not proof of successful implementation.",
-      "coverage": "FULL_TEXT",
-      "scopeConstraint": "The statute confirms emergency measures and changes authority for bank conservation and currency issuance. A law establishes authority, not proof of successful implementation."
-    },
-    {
-      "id": "bank-chat",
-      "title": "Fireside Chat on Banking, 12 March 1933",
-      "author": "Franklin D. Roosevelt; transcript at UC Santa Barbara",
-      "url": "https://www.presidency.ucsb.edu/documents/fireside-chat-banking",
-      "type": "primary",
-      "locator": "Paragraphs on reopening, new currency, and banks requiring reorganization",
-      "accessed": "2026-11-08",
-      "rights": "Federal presidential address; linked transcript. Site design is not redistributed.",
-      "notes": "Roosevelt explained staggered reopening and acknowledged that some banks required reorganization. This is a participant's public argument, not an independent assessment of the policy.",
-      "coverage": "EXCERPT_WITH_CONTEXT",
-      "scopeConstraint": "Roosevelt explained staggered reopening and acknowledged that some banks required reorganization. This is a participant's public argument, not an independent assessment of the policy."
-    },
-    {
-      "id": "bank-report",
-      "title": "Twentieth Annual Report of the Federal Reserve Board, 1933",
-      "author": "Federal Reserve Board",
-      "url": "https://fraser.stlouisfed.org/files/docs/publications/arfr/1930s/arfr_1933.pdf",
-      "type": "primary",
-      "locator": "Printed pp. 12–15 (emergency measures and currency return); section 'Release of deposits'",
-      "accessed": "2026-11-08",
-      "rights": "US federal report; public domain.",
-      "notes": "The Board reported currency returning after reopening and deposits still restricted in April. The institution was assessing its own crisis response.",
-      "coverage": "EXCERPT_WITH_CONTEXT",
-      "scopeConstraint": "The Board reported currency returning after reopening and deposits still restricted in April. The institution was assessing its own crisis response."
-    },
-    {
-      "id": "bank-fdic",
-      "title": "FDIC historical timeline: 1933 and 1934",
-      "author": "Federal Deposit Insurance Corporation",
-      "url": "https://www.fdic.gov/90years",
-      "type": "institutional",
-      "locator": "Entries for June 16, 1933 and January 1, 1934",
-      "accessed": "2026-11-08",
-      "rights": "Link and original paraphrase only; third-party images excluded.",
-      "notes": "Federal deposit insurance began January 1, 1934, initially up to $2,500. Its timing separates it from the March 1933 reopening.",
-      "coverage": "EXCERPT_WITH_CONTEXT",
-      "scopeConstraint": "Federal deposit insurance began January 1, 1934, initially up to $2,500. Its timing separates it from the March 1933 reopening."
-    },
-    {
-      "id": "bank-silber",
-      "title": "Why Did FDR’s Bank Holiday Succeed? (2009)",
-      "author": "William L. Silber",
-      "url": "https://www.newyorkfed.org/medialibrary/media/research/epr/09v15n1/0907silb.pdf",
-      "type": "scholarly",
-      "locator": "Economic Policy Review 15(1), pp. 19–30, especially introduction and conclusion",
-      "accessed": "2026-11-08",
-      "rights": "Copyrighted scholarship; original short paraphrase and link only.",
-      "notes": "Silber attributes renewed confidence to emergency currency powers understood as an implicit guarantee at reopened banks. This is an argued causal explanation, not a literal statutory promise of unlimited insurance.",
-      "coverage": "EXCERPT_WITH_CONTEXT",
-      "scopeConstraint": "Silber attributes renewed confidence to emergency currency powers understood as an implicit guarantee at reopened banks. This is an argued causal explanation, not a literal statutory promise of unlimited insurance."
-    },
-    {
-      "id": "bank-wigmore",
-      "title": "Was the Bank Holiday of 1933 Caused by a Run on the Dollar? (1987)",
-      "author": "Barrie A. Wigmore",
-      "url": "https://www.cambridge.org/core/journals/journal-of-economic-history/article/abs/was-the-bank-holiday-of-1933-caused-by-a-run-on-the-dollar/826E1320DB45175A9D768C5F76C4716F",
-      "type": "scholarly",
-      "locator": "Journal of Economic History 47(3), pp. 739–755; public abstract only inspected",
-      "accessed": "2026-11-08",
-      "rights": "Copyrighted; abstract-based paraphrase and link only. Full text may require access.",
-      "notes": "The public abstract emphasizes gold outflows, devaluation expectations and currency restrictions. The full article was not inspected; the summary is limited to the author's abstract.",
-      "coverage": "ABSTRACT_ONLY",
-      "scopeConstraint": "The public abstract emphasizes gold outflows, devaluation expectations and currency restrictions. The full article was not inspected; the summary is limited to the author's abstract."
-    },
-    {
-      "id": "bank-holiday",
-      "title": "Bank Holiday of 1933",
-      "author": "Federal Reserve History",
-      "url": "https://www.federalreservehistory.org/essays/bank-holiday-of-1933",
-      "type": "institutional",
-      "locator": "National closure and reopening chronology",
-      "accessed": "2026-11-08",
-      "rights": "Original paraphrase and link only.",
-      "notes": "The national closure began March 6; licensed banks in Federal Reserve cities began reopening March 13. A temporary stop created room for coordinated measures but interrupted access to money.",
-      "coverage": "EXCERPT_WITH_CONTEXT",
-      "scopeConstraint": "The national closure began March 6; licensed banks in Federal Reserve cities began reopening March 13. A temporary stop created room for coordinated measures but interrupted access to money."
-    }
-  ],
-  "facts": [
-    {
-      "id": "bank-f1",
-      "text": "The nationwide bank holiday began on March 6, 1933.",
-      "sourceIds": [
-        "bank-holiday"
-      ],
-      "causalStatus": "DOCUMENTED_RECORD"
-    },
-    {
-      "id": "bank-f2",
-      "text": "Congress enacted emergency banking legislation on March 9. Reopening began March 13 on a staged schedule.",
-      "sourceIds": [
-        "bank-act",
-        "bank-report"
-      ],
-      "causalStatus": "DOCUMENTED_RECORD",
-      "survivingTextByWithdrawnSource": {
-        "bank-report": "Surviving primary statutory basis (Emergency Banking Act, 48 Stat. 1): The bundled March 9, 1933 statute (`bank-act.pdf`) independently establishes the congressional grant of emergency conservation, reorganization, and currency powers, while the staged March 13 reopening operational statistics require review of the Federal Reserve report.",
-        "bank-act": "Surviving primary board report (`bank-report`): The 1933 Federal Reserve Annual Report documents the March 9 legislation and the March 13 staged reopening schedule."
-      }
-    },
-    {
-      "id": "bank-f3",
-      "text": "Federal deposit insurance began on January 1, 1934. It was not yet operating during the March reopening.",
-      "sourceIds": [
-        "bank-fdic"
-      ],
-      "causalStatus": "DOCUMENTED_RECORD"
-    }
-  ],
-  "timeline": [
-    {
-      "date": "1933-03-06",
-      "title": "A nationwide pause",
-      "text": "The bank holiday suspended normal banking transactions.",
-      "sourceIds": [
-        "bank-holiday"
-      ]
-    },
-    {
-      "date": "1933-03-09",
-      "title": "Emergency powers",
-      "text": "Congress provided authority for conservation, rehabilitation and additional currency.",
-      "sourceIds": [
-        "bank-act"
-      ]
-    },
-    {
-      "date": "1933-03-12",
-      "title": "The public explanation",
-      "text": "Roosevelt used radio to explain the reopening plan.",
-      "sourceIds": [
-        "bank-chat"
-      ]
-    },
-    {
-      "date": "1933-03-13",
-      "title": "Banks start reopening",
-      "text": "Reopening proceeded in stages under licensing rules.",
-      "sourceIds": [
-        "bank-report"
-      ]
-    },
-    {
-      "date": "1934-01-01",
-      "title": "Insurance begins",
-      "text": "The new federal scheme initially covered up to $2,500 per depositor.",
-      "sourceIds": [
-        "bank-fdic"
-      ]
-    }
-  ],
-  "comparison": [
-    {
-      "dimension": "The mechanism",
-      "historical": "Depositors sought cash; banks needed means to meet withdrawals.",
-      "present": "Does the institution face a cash shortage, insolvency, an information problem, or several at once?",
-      "limit": "A resemblance in public anxiety does not establish the same balance-sheet problem.",
-      "sourceIds": [
-        "bank-chat",
-        "bank-report"
-      ],
-      "asOfDate": "2026-11-08",
-      "timeframe": "Days (March 6–13 pause, audit & liquidity backstop) vs. 10 Months (Jan 1, 1934 FDIC insurance activation)"
-    },
-    {
-      "dimension": "The intervention",
-      "historical": "Reopening followed emergency law, liquidity powers and licensing.",
-      "present": "What resources and enforceable commitments stand behind a reassurance?",
-      "limit": "Communication and material support changed together; their separate effects cannot be read directly from the sequence.",
-      "sourceIds": [
-        "bank-act",
-        "bank-silber"
-      ],
-      "asOfDate": "2026-11-08",
-      "timeframe": "Days (March 6–13 pause, audit & liquidity backstop) vs. 10 Months (Jan 1, 1934 FDIC insurance activation)",
-      "survivingTextByWithdrawnSource": {
-        "bank-silber": "Surviving primary statutory basis (`bank-act`): The March 9, 1933 Emergency Banking Act directly establishes the statutory conservation, licensing, and currency powers; Silber's 'implicit guarantee' interpretation is withheld pending review."
-      }
-    },
-    {
-      "dimension": "The cost of a pause",
-      "historical": "Closure interrupted access; some deposits remained restricted after reopening.",
-      "present": "Who loses access during an emergency pause, and what remedy is available?",
-      "limit": "Institutions, payment technologies and legal powers must be established in the present case before transfer.",
-      "sourceIds": [
-        "bank-report"
-      ],
-      "asOfDate": "2026-11-08",
-      "timeframe": "Days (March 6–13 pause, audit & liquidity backstop) vs. 10 Months (Jan 1, 1934 FDIC insurance activation)"
-    },
-    {
-      "dimension": "The policy clock",
-      "historical": "The March reopening preceded federal deposit insurance.",
-      "present": "Which protection was actually in force when the observed improvement occurred?",
-      "limit": "A later reform cannot be treated as an already-operating cause of an earlier event.",
-      "sourceIds": [
-        "bank-fdic"
-      ],
-      "asOfDate": "2026-11-08",
-      "timeframe": "Days (March 6–13 pause, audit & liquidity backstop) vs. 10 Months (Jan 1, 1934 FDIC insurance activation)"
-    }
-  ],
-  "outcomes": [
-    {
-      "text": "The Board reported a large return of currency to banks after reopening. That supports stabilization of withdrawals, not an immediate end to the Depression.",
-      "sourceIds": [
-        "bank-report"
-      ],
-      "causalStatus": "DOCUMENTED_OUTCOME",
-      "confounders": [
-        "Simultaneous gold-export restrictions and devaluation expectations (Wigmore 1987)",
-        "Exclusion of ~4,200 unlicensed banks holding ~$4 billion in restricted deposits"
-      ],
-      "counterfactualGap": "Communication (March 12 speech), licensing audits, gold controls, and Title IV liquidity arrived together between March 6 and March 13, preventing single-variable isolation."
-    },
-    {
-      "text": "Its April 12 figures still showed nearly $4 billion tied up in about 4,200 unlicensed or restricted banks. Recovery was uneven.",
-      "sourceIds": [
-        "bank-report"
-      ],
-      "causalStatus": "DOCUMENTED_OUTCOME",
-      "confounders": [
-        "Simultaneous gold-export restrictions and devaluation expectations (Wigmore 1987)",
-        "Exclusion of ~4,200 unlicensed banks holding ~$4 billion in restricted deposits"
-      ],
-      "counterfactualGap": "Communication (March 12 speech), licensing audits, gold controls, and Title IV liquidity arrived together between March 6 and March 13, preventing single-variable isolation."
-    },
-    {
-      "text": "Federal deposit insurance became an operating institution in 1934; the initial coverage limit was $2,500.",
-      "sourceIds": [
-        "bank-fdic"
-      ],
-      "causalStatus": "DOCUMENTED_OUTCOME",
-      "confounders": [
-        "Simultaneous gold-export restrictions and devaluation expectations (Wigmore 1987)",
-        "Exclusion of ~4,200 unlicensed banks holding ~$4 billion in restricted deposits"
-      ],
-      "counterfactualGap": "Communication (March 12 speech), licensing audits, gold controls, and Title IV liquidity arrived together between March 6 and March 13, preventing single-variable isolation."
-    }
-  ],
-  "interpretations": [
-    {
-      "title": "Credible backing behind reassurance",
-      "text": "Silber argues that the emergency currency provisions amounted to an implicit guarantee at reopened banks, giving depositors a material reason to trust the reopening. His claim goes beyond the fact that the speech preceded redeposits.",
-      "sourceIds": [
-        "bank-silber"
-      ],
-      "causalEmphasis": "Credible liquidity commitment: Title IV emergency currency + staged licensing as implicit guarantee"
-    },
-    {
-      "title": "The international monetary constraint",
-      "text": "Wigmore's public abstract puts greater weight on gold losses, expectations of devaluation and restrictions on gold and foreign exchange. It contests an explanation centered on deposit insurance alone. Full-text review remains outstanding.",
-      "sourceIds": [
-        "bank-wigmore"
-      ],
-      "causalEmphasis": "International monetary & gold-outflow constraint (Abstract only)"
-    },
-    {
-      "title": "What would distinguish them?",
-      "text": "Compare the timing of gold flows, cash redeposits, policy announcements and contemporary expectations. Several policies arrived together, making a single-cause verdict difficult.",
-      "sourceIds": [
-        "bank-report",
-        "bank-silber",
-        "bank-wigmore"
-      ],
-      "causalEmphasis": "Multi-instrument policy interaction (simultaneous speech, licensing, liquidity, and gold controls)",
-      "survivingTextByWithdrawnSource": {
-        "bank-wigmore": "Surviving primary & scholarly basis (`bank-report`, `bank-silber`): Even with Wigmore's abstract-only gold-outflow paper reopened, the 1933 Federal Reserve report and Silber (2009) establish that multiple policy instruments arrived simultaneously in March 1933."
-      }
-    }
-  ],
-  "limits": [
-    "This is a historical inquiry, not guidance about any present bank, investment or emergency policy.",
-    "Restored withdrawals, restored solvency and broad economic recovery are different outcomes.",
-    "Neither an official retrospective nor a public address is a neutral measurement of its author's success.",
-    "A comparison needs evidence about the present institution. This release supplies questions to investigate, not an assessment of today's financial system."
-  ],
-  "challengePrompts": [
-    "What evidence would distinguish a liquidity problem from insolvency?",
-    "Did reopening help depositors whose banks remained restricted?",
-    "Which observation would weaken the implicit-guarantee explanation?"
-  ],
-  "asOfDate": "2026-11-08",
-  "citizenGuide": {
-    "whatHappenedBefore": "Following cascading state bank runs and gold outflows in early 1933, President Roosevelt proclaimed a nationwide Bank Holiday on March 6, Congress passed the Emergency Banking Act on March 9, Roosevelt delivered his first Fireside Chat on March 12, and licensed banks began reopening in stages on March 13.",
-    "whyComparable": "Tests how emergency liquidity backstops, solvency triage (licensing), and transparent public communication interact during a systemic crisis of institutional trust.",
-    "whatsDifferent": "Federal deposit insurance (FDIC) did NOT take effect until January 1, 1934—nearly ten months after the March 1933 reopening—and ~$4 billion remained frozen in ~4,200 unlicensed banks as of April 12, 1933.",
-    "whatWorked": "Pairing a temporary pause (March 6–12) with audited staged licensing and Title IV Federal Reserve Bank Note emergency liquidity backing so depositors knew reopened banks had discount-window support.",
-    "whatFailed": "Assuming public reassurance alone worked without emergency currency powers, or assuming all depositors recovered access immediately (~4,200 unlicensed banks held ~$4 billion in restricted deposits in April 1933).",
-    "howWeKnow": "3 primary records (Emergency Banking Act 48 Stat. 1 bundled in full PDF, March 12 Fireside Chat transcript, 1933 Federal Reserve Annual Report), 2 institutional timelines (FDIC, Federal Reserve History), and 2 scholarly analyses (Silber 2009, Wigmore 1987 abstract)."
+ "id": "banking",
+ "title": "When confidence breaks",
+ "question": "What helps restore trust when a financial system is under strain?",
+ "summary": "The 1933 US banking crisis offers a test of emergency action, public explanation and credible financial backing. Recovery in bank deposits was real; the mechanism and the reach of that recovery remain separate questions.",
+ "period": "1933–1934",
+ "place": "United States",
+ "theme": "Trust & institutions",
+ "sources": [
+  {
+   "id": "bank-act",
+   "title": "Emergency Banking Act, 9 March 1933",
+   "author": "United States Congress",
+   "url": "https://www.govinfo.gov/content/pkg/STATUTE-48/pdf/STATUTE-48-Pg1.pdf",
+   "type": "primary",
+   "locator": "48 Stat. 1, Titles I–IV",
+   "accessed": "2026-11-08",
+   "rights": "US federal statute; public domain. Source PDF may be preserved.",
+   "notes": "The statute confirms emergency measures and changes authority for bank conservation and currency issuance. A law establishes authority, not proof of successful implementation.",
+   "coverage": "FULL_TEXT",
+   "scopeConstraint": "The statute confirms emergency measures and changes authority for bank conservation and currency issuance. A law establishes authority, not proof of successful implementation."
   },
-  "counterexamples": [
-    {
-      "id": "bank-ce-1",
-      "title": "Nearly $4 billion frozen in ~4,200 unlicensed banks (April 12, 1933)",
-      "text": "The Federal Reserve Board's 1933 Annual Report documents that as of April 12, 1933—one month after the 'successful' reopening—nearly $4 billion in deposits remained tied up in roughly 4,200 unlicensed or restricted banks.",
-      "failureCondition": "Selective reopening restores confidence in licensed survivors by imposing prolonged illiquidity and losses on depositors of uncertified institutions.",
-      "sourceIds": [
-        "bank-report"
-      ]
-    },
-    {
-      "id": "bank-ce-2",
-      "title": "FDIC deposit insurance did not exist in March 1933",
-      "text": "Congress did not enact the Glass-Steagall FDIC provisions until June 16, 1933, and temporary federal deposit insurance ($2,500 cap) did not begin operating until January 1, 1934.",
-      "failureCondition": "A policy enacted months later cannot be cited as the operational cause of the March 1933 redeposit surge.",
-      "sourceIds": [
-        "bank-fdic"
-      ]
-    }
-  ],
-  "rejectedComparisons": [
-    {
-      "id": "bank-rej-1",
-      "claim": "FDR's March 12, 1933 Fireside Chat and FDIC deposit insurance single-handedly ended the March 1933 bank runs without cost to depositors.",
-      "failureCode": "ANACHRONISM_AND_SURVIVORSHIP_BIAS",
-      "whyItFails": "Commits two factual errors: (1) Anachronism—FDIC insurance did not begin until January 1, 1934 (`bank-fdic`), ten months after the March 1933 reopening; (2) Survivorship bias—ignores both Title IV emergency currency powers (`bank-act`, `bank-silber`) and the ~$4 billion frozen in ~4,200 unlicensed banks (`bank-report`).",
-      "counterEvidence": "FDIC chronology (`bank-fdic`), Emergency Banking Act Title IV (`bank-act`), and 1933 Federal Reserve Annual Report pp. 12–15 (`bank-report`).",
-      "sourceIds": [
-        "bank-fdic",
-        "bank-act",
-        "bank-report",
-        "bank-silber"
-      ]
-    }
-  ],
-  "consequentialCorrection": {
-    "targetSourceId": "bank-silber",
-    "targetSourceTitle": "William L. Silber, 'Why Did FDR’s Bank Holiday Succeed?' (FRBNY Economic Policy Review, 2009)",
-    "challengeReason": "Silber's 2009 paper argues that Title IV emergency currency functioned as an 'implicit guarantee'—an interpretive causal hypothesis rather than an explicit statutory promise in the 1933 Act.",
-    "expectedImpact": "Challenging `bank-silber` quarantines `banking-interpretations-1` and narrows `banking-comparison-2` and `banking-interpretations-3` to their surviving primary statutory/board basis (`bank-act` and `bank-report`), while leaving all primary facts and outcomes `AVAILABLE`."
+  {
+   "id": "bank-chat",
+   "title": "Fireside Chat on Banking, 12 March 1933",
+   "author": "Franklin D. Roosevelt; transcript at UC Santa Barbara",
+   "url": "https://www.presidency.ucsb.edu/documents/fireside-chat-banking",
+   "type": "primary",
+   "locator": "Paragraphs on reopening, new currency, and banks requiring reorganization",
+   "accessed": "2026-11-08",
+   "rights": "Federal presidential address; linked transcript. Site design is not redistributed.",
+   "notes": "Roosevelt explained staggered reopening and acknowledged that some banks required reorganization. This is a participant's public argument, not an independent assessment of the policy.",
+   "coverage": "EXCERPT_WITH_CONTEXT",
+   "scopeConstraint": "Roosevelt explained staggered reopening and acknowledged that some banks required reorganization. This is a participant's public argument, not an independent assessment of the policy."
   },
-  "questionProfile": {
-    "primaryDomain": "Banking panics, financial confidence, emergency liquidity & deposit insurance",
-    "whyRelevantSummary": "The March 1933 U.S. Banking Crisis shows how policymakers argued over stopping a nationwide bank run, why the March 6–12 national bank holiday, March 9 Emergency Banking Act, and March 12 Fireside Chat worked through staged solvency auditing and emergency Federal Reserve liquidity before federal deposit insurance took effect on January 1, 1934, and why roughly $4 billion remained frozen in ~4,200 unlicensed banks even after currency flowed back into reopened banks.",
-    "coreConcepts": [
-      "bank",
-      "banking",
-      "panic",
-      "bank run",
-      "bank holiday",
-      "liquidity",
-      "solvency",
-      "deposit insurance",
-      "fdic",
-      "federal reserve",
-      "roosevelt",
-      "fdr",
-      "fireside chat",
-      "1933",
-      "financial crisis",
-      "emergency banking act",
-      "gold outflow",
-      "central bank",
-      "lender of last resort"
-    ],
-    "supportedThemes": [
-      "What people and policymakers were arguing during the March 1933 banking crisis and what they expected the Bank Holiday and Emergency Banking Act to accomplish",
-      "Which policymaker expectations were supported (rapid return of hoarded currency to reopened banks) vs. contradicted or complicated by subsequent events (~$4 billion frozen in unlicensed banks in April 1933; deposit insurance delayed until Jan 1, 1934)",
-      "How contemporary explanations (public reassurance via the Fireside Chat) differ from later historians' conclusions (Silber 2009 on implicit RFC/Fed liquidity guarantees vs. Wigmore 1987 on gold outflows and dollar devaluation expectations)"
-    ],
-    "knownCoverageGaps": [
-      "Does not cover 2008 shadow-banking repo runs, 2023 Silicon Valley Bank uninsured digital deposit flight, European sovereign-bank doom loops, or cryptocurrency/stablecoin runs",
-      "Wigmore (1987) is represented from its publicly inspected abstract rather than a full-text journal reprint"
-    ]
+  {
+   "id": "bank-report",
+   "title": "Twentieth Annual Report of the Federal Reserve Board, 1933",
+   "author": "Federal Reserve Board",
+   "url": "https://fraser.stlouisfed.org/files/docs/publications/arfr/1930s/arfr_1933.pdf",
+   "type": "primary",
+   "locator": "Printed pp. 12–15 (emergency measures and currency return); section 'Release of deposits'",
+   "accessed": "2026-11-08",
+   "rights": "US federal report; public domain.",
+   "notes": "The Board reported currency returning after reopening and deposits still restricted in April. The institution was assessing its own crisis response.",
+   "coverage": "EXCERPT_WITH_CONTEXT",
+   "scopeConstraint": "The Board reported currency returning after reopening and deposits still restricted in April. The institution was assessing its own crisis response."
   },
-  "historicalArguments": [
-    {
-      "id": "banking-arg-1",
-      "topic": "National bank holiday & staggered audited reopening vs. keeping banks open under local restrictions",
-      "decisionWindow": "March 6–13, 1933 (Presidential Proclamation 2039, Emergency Banking Act & Staggered Reopening)",
-      "contemporaryActor": "President Franklin D. Roosevelt, Treasury Secretary William Woodin & 73rd Congress",
-      "contemporaryArgument": "In the March 9, 1933 Emergency Banking Act and his March 12 Fireside Chat, Roosevelt argued that halting all banking transactions nationwide and reopening banks on a staggered schedule (Class A solvent banks first on March 13–15, Class B under conservators, Class C closed for reorganization) would separate sound banks from insolvent ones and backed reopened banks with unlimited Federal Reserve Bank notes against sound assets (bank-act, bank-chat, bank-holiday).",
-      "policymakerExpectation": "Policymakers expected that once citizens understood only examined, liquid banks were permitted to reopen—with Federal Reserve discount and currency backing—depositors would return hoarded cash and gold instead of resuming runs when doors opened on March 13.",
-      "expectationVerdict": "SUPPORTED_WITH_LIMITS",
-      "subsequentEvidence": "When licensed banks reopened starting March 13, 1933, depositors returned over $1.2 billion in hoarded currency and gold within weeks (bank-report, bank-holiday). However, contemporary expectations of a clean, painless restoration were complicated by severe credit contraction: the Federal Reserve Board reported that as of April 12, 1933, roughly 4,200 unlicensed member and nonmember banks remained closed or restricted, tying up approximately $4 billion in deposits (bank-report).",
-      "laterHistoriography": "Whereas contemporaries often credited Roosevelt's rhetorical persuasion in the Fireside Chat, monetary historian William L. Silber (bank-silber, 2009) concludes that confidence returned primarily because Titles I, III, and IV of the Emergency Banking Act (RFC preferred-stock capital + liberalized Fed advances) created a credible de facto 100% liquidity guarantee at every bank certified to reopen.",
-      "differenceThatLimits": "A multi-day nationwide physical closure of all banks was feasible in a 1933 cash-and-check economy but cannot be executed cleanly in a 24/7 real-time electronic payment and clearing system.",
-      "asOfDate": "2026-11-08",
-      "sourceIds": [
-        "bank-act",
-        "bank-chat",
-        "bank-report",
-        "bank-holiday",
-        "bank-silber"
-      ],
-      "survivingTextByWithdrawnSource": {
-        "bank-silber": "Primary and institutional records in the Emergency Banking Act (bank-act), March 12 Fireside Chat (bank-chat), 1933 Federal Reserve Annual Report (bank-report), and Federal Reserve History (bank-holiday) establish that staggered reopening and emergency currency powers reversed currency hoarding at licensed banks while leaving ~$4 billion tied up in ~4,200 unlicensed banks in April 1933.",
-        "bank-report": "The Emergency Banking Act (bank-act), March 12 Fireside Chat (bank-chat), Federal Reserve History (bank-holiday), and Silber (bank-silber) document the March 1933 national closure, staggered reopening schedule, and emergency Federal Reserve liquidity backing."
-      }
-    },
-    {
-      "id": "banking-arg-2",
-      "topic": "Immediate March 1933 emergency reopening vs. formal statutory FDIC deposit insurance (January 1934)",
-      "decisionWindow": "March 1933 – January 1, 1934 (Emergency Banking Act vs. Banking Act of 1933 / Glass-Steagall)",
-      "contemporaryActor": "Roosevelt Administration, Senator Carter Glass & Representative Henry Steagall",
-      "contemporaryArgument": "During March–June 1933, Administration officials and Senator Carter Glass initially resisted immediate permanent federal deposit insurance—arguing that insuring all banks without prior balance-sheet cleanup could subsidize reckless banking—while Representative Henry Steagall and community banking advocates argued that statutory federal deposit insurance was essential to prevent future panics among small unit banks.",
-      "policymakerExpectation": "Architects of the March 1933 reopening expected audited licensing and Federal Reserve emergency currency to halt the acute panic immediately, while proponents of the June 1933 Banking Act expected temporary FDIC coverage starting January 1, 1934 (initially up to $2,500) to structurally end retail runs on small banks.",
-      "expectationVerdict": "SUPPORTED_WITH_LIMITS",
-      "subsequentEvidence": "The sequence of events proved that formal FDIC insurance did NOT stop the March 1933 panic—because the Temporary Federal Deposit Insurance Fund did not take effect until January 1, 1934, nearly ten months after the March 13 reopening (bank-fdic, bank-act). Once enacted in 1934, federal deposit insurance dramatically reduced retail depositor runs across insured small banks, though thousands of weak banks had already been weeded out during the 1933 licensing triage (bank-report, bank-fdic).",
-      "laterHistoriography": "Later historians (bank-silber, bank-fdic) emphasize the crucial chronological distinction between crisis stoppage in March 1933 (achieved via solvency triage and implicit central-bank liquidity backing) and long-run structural stabilization in 1934 (achieved via explicit statutory FDIC insurance).",
-      "differenceThatLimits": "Modern banking crises (such as 2023 regional bank runs) frequently occur in uninsured institutional deposits above the statutory FDIC cap rather than small retail passbook accounts.",
-      "asOfDate": "2026-11-08",
-      "sourceIds": [
-        "bank-act",
-        "bank-fdic",
-        "bank-report",
-        "bank-silber"
-      ],
-      "survivingTextByWithdrawnSource": {
-        "bank-silber": "Primary and institutional records in the Emergency Banking Act (bank-act), FDIC historical timeline (bank-fdic), and 1933 Federal Reserve Annual Report (bank-report) establish that the March 1933 reopening occurred nearly ten months before federal deposit insurance began on January 1, 1934 (initially up to $2,500).",
-        "bank-fdic": "The Emergency Banking Act (bank-act), 1933 Federal Reserve Report (bank-report), and Silber (bank-silber) establish that the March 1933 reopening relied on solvency auditing and emergency Federal Reserve liquidity rather than statutory deposit insurance."
-      }
-    },
-    {
-      "id": "banking-arg-3",
-      "topic": "Domestic depositor fear & bank insolvency vs. international run on the U.S. dollar and gold standard constraint",
-      "decisionWindow": "February – April 1933 (Gold outflows, Proclamation 2039 & suspension of gold convertibility)",
-      "contemporaryActor": "Federal Reserve Bank of New York, Treasury officials & foreign/domestic gold holders",
-      "contemporaryArgument": "While public speeches in March 1933 framed the crisis primarily as domestic psychological fear and currency hoarding by retail depositors (bank-chat), Federal Reserve officials simultaneously confronted severe gold reserve drains—especially at the New York Fed—driven by domestic gold hoarding and foreign withdrawals anticipating dollar devaluation (bank-report, bank-act).",
-      "policymakerExpectation": "By empowering the President and Treasury under the March 9, 1933 Emergency Banking Act to regulate foreign exchange, gold exports, and domestic gold hoarding, officials expected to break the gold-reserve constraint that had prevented the Federal Reserve from expanding liquidity freely.",
-      "expectationVerdict": "MIXED_AND_CONFOUNDED",
-      "subsequentEvidence": "Emergency controls on gold exports and mandatory gold surrender halted the reserve drain on the Federal Reserve and enabled monetary expansion after March 1933 (bank-act, bank-report). Because bank auditing, emergency Fed note issuance, Fireside communication, and gold-convertibility suspension occurred together in the same week of March 1933, their isolated causal shares remain confounded.",
-      "laterHistoriography": "Later economic historians split on the primary driver: Barrie A. Wigmore (bank-wigmore, 1987 abstract) argues that the final climax of the March 1933 crisis was heavily driven by a run on the dollar and gold outflows rather than domestic retail panic alone, whereas William L. Silber (bank-silber, 2009) emphasizes the domestic credibility of the reopening audit and RFC/Fed backing.",
-      "differenceThatLimits": "The 1933 Federal Reserve was legally bound by a 40% gold reserve requirement against Federal Reserve notes under the gold standard, whereas modern fiat central banks face inflation and balance-sheet constraints rather than gold convertibility.",
-      "asOfDate": "2026-11-08",
-      "sourceIds": [
-        "bank-act",
-        "bank-report",
-        "bank-silber",
-        "bank-wigmore"
-      ],
-      "survivingTextByWithdrawnSource": {
-        "bank-wigmore": "With bank-wigmore (abstract-only source) withdrawn, primary records in the Emergency Banking Act (bank-act) and the 1933 Federal Reserve Board Annual Report (bank-report), alongside Silber (bank-silber), still establish that emergency gold and currency controls were enacted alongside staggered bank reopening in March 1933, though Wigmore's specific dollar-devaluation thesis is withheld.",
-        "bank-silber": "Primary records in the Emergency Banking Act (bank-act) and 1933 Federal Reserve Annual Report (bank-report), alongside Wigmore's abstract (bank-wigmore), document the March 1933 gold-outflow pressures and emergency currency controls.",
-        "bank-silber+bank-wigmore": "Primary records in the March 9, 1933 Emergency Banking Act (bank-act) and the 1933 Federal Reserve Board Annual Report (bank-report) establish both the statutory controls over gold/currency and the return of currency to reopened banks alongside restricted deposits in unlicensed banks."
-      }
-    }
+  {
+   "id": "bank-fdic",
+   "title": "FDIC historical timeline: 1933 and 1934",
+   "author": "Federal Deposit Insurance Corporation",
+   "url": "https://www.fdic.gov/90years",
+   "type": "institutional",
+   "locator": "Entries for June 16, 1933 and January 1, 1934",
+   "accessed": "2026-11-08",
+   "rights": "Link and original paraphrase only; third-party images excluded.",
+   "notes": "Federal deposit insurance began January 1, 1934, initially up to $2,500. Its timing separates it from the March 1933 reopening.",
+   "coverage": "EXCERPT_WITH_CONTEXT",
+   "scopeConstraint": "Federal deposit insurance began January 1, 1934, initially up to $2,500. Its timing separates it from the March 1933 reopening."
+  },
+  {
+   "id": "bank-silber",
+   "title": "Why Did FDR’s Bank Holiday Succeed? (2009)",
+   "author": "William L. Silber",
+   "url": "https://www.newyorkfed.org/medialibrary/media/research/epr/09v15n1/0907silb.pdf",
+   "type": "scholarly",
+   "locator": "Economic Policy Review 15(1), pp. 19–30, especially introduction and conclusion",
+   "accessed": "2026-11-08",
+   "rights": "Copyrighted scholarship; original short paraphrase and link only.",
+   "notes": "Silber attributes renewed confidence to emergency currency powers understood as an implicit guarantee at reopened banks. This is an argued causal explanation, not a literal statutory promise of unlimited insurance.",
+   "coverage": "EXCERPT_WITH_CONTEXT",
+   "scopeConstraint": "Silber attributes renewed confidence to emergency currency powers understood as an implicit guarantee at reopened banks. This is an argued causal explanation, not a literal statutory promise of unlimited insurance."
+  },
+  {
+   "id": "bank-wigmore",
+   "title": "Was the Bank Holiday of 1933 Caused by a Run on the Dollar? (1987)",
+   "author": "Barrie A. Wigmore",
+   "url": "https://www.cambridge.org/core/journals/journal-of-economic-history/article/abs/was-the-bank-holiday-of-1933-caused-by-a-run-on-the-dollar/826E1320DB45175A9D768C5F76C4716F",
+   "type": "scholarly",
+   "locator": "Journal of Economic History 47(3), pp. 739–755; public abstract only inspected",
+   "accessed": "2026-11-08",
+   "rights": "Copyrighted; abstract-based paraphrase and link only. Full text may require access.",
+   "notes": "The public abstract emphasizes gold outflows, devaluation expectations and currency restrictions. The full article was not inspected; the summary is limited to the author's abstract.",
+   "coverage": "ABSTRACT_ONLY",
+   "scopeConstraint": "The public abstract emphasizes gold outflows, devaluation expectations and currency restrictions. The full article was not inspected; the summary is limited to the author's abstract."
+  },
+  {
+   "id": "bank-holiday",
+   "title": "Bank Holiday of 1933",
+   "author": "Federal Reserve History",
+   "url": "https://www.federalreservehistory.org/essays/bank-holiday-of-1933",
+   "type": "institutional",
+   "locator": "National closure and reopening chronology",
+   "accessed": "2026-11-08",
+   "rights": "Original paraphrase and link only.",
+   "notes": "The national closure began March 6; licensed banks in Federal Reserve cities began reopening March 13. A temporary stop created room for coordinated measures but interrupted access to money.",
+   "coverage": "EXCERPT_WITH_CONTEXT",
+   "scopeConstraint": "The national closure began March 6; licensed banks in Federal Reserve cities began reopening March 13. A temporary stop created room for coordinated measures but interrupted access to money."
+  }
+ ],
+ "facts": [
+  {
+   "id": "bank-f1",
+   "text": "The nationwide bank holiday began on March 6, 1933.",
+   "sourceIds": [
+    "bank-holiday"
+   ],
+   "causalStatus": "DOCUMENTED_RECORD"
+  },
+  {
+   "id": "bank-f2",
+   "text": "Congress enacted emergency banking legislation on March 9. Reopening began March 13 on a staged schedule.",
+   "sourceIds": [
+    "bank-act",
+    "bank-report"
+   ],
+   "causalStatus": "DOCUMENTED_RECORD",
+   "survivingTextByWithdrawnSource": {
+    "bank-report": "Surviving primary statutory basis (Emergency Banking Act, 48 Stat. 1): The bundled March 9, 1933 statute (`bank-act.pdf`) independently establishes the congressional grant of emergency conservation, reorganization, and currency powers, while the staged March 13 reopening operational statistics require review of the Federal Reserve report.",
+    "bank-act": "Surviving primary board report (`bank-report`): The 1933 Federal Reserve Annual Report documents the March 9 legislation and the March 13 staged reopening schedule."
+   }
+  },
+  {
+   "id": "bank-f3",
+   "text": "Federal deposit insurance began on January 1, 1934. It was not yet operating during the March reopening.",
+   "sourceIds": [
+    "bank-fdic"
+   ],
+   "causalStatus": "DOCUMENTED_RECORD"
+  }
+ ],
+ "timeline": [
+  {
+   "date": "1933-03-06",
+   "title": "A nationwide pause",
+   "text": "The bank holiday suspended normal banking transactions.",
+   "sourceIds": [
+    "bank-holiday"
+   ]
+  },
+  {
+   "date": "1933-03-09",
+   "title": "Emergency powers",
+   "text": "Congress provided authority for conservation, rehabilitation and additional currency.",
+   "sourceIds": [
+    "bank-act"
+   ]
+  },
+  {
+   "date": "1933-03-12",
+   "title": "The public explanation",
+   "text": "Roosevelt used radio to explain the reopening plan.",
+   "sourceIds": [
+    "bank-chat"
+   ]
+  },
+  {
+   "date": "1933-03-13",
+   "title": "Banks start reopening",
+   "text": "Reopening proceeded in stages under licensing rules.",
+   "sourceIds": [
+    "bank-report"
+   ]
+  },
+  {
+   "date": "1934-01-01",
+   "title": "Insurance begins",
+   "text": "The new federal scheme initially covered up to $2,500 per depositor.",
+   "sourceIds": [
+    "bank-fdic"
+   ]
+  }
+ ],
+ "comparison": [
+  {
+   "dimension": "The mechanism",
+   "historical": "Depositors sought cash; banks needed means to meet withdrawals.",
+   "present": "Does the institution face a cash shortage, insolvency, an information problem, or several at once?",
+   "limit": "A resemblance in public anxiety does not establish the same balance-sheet problem.",
+   "sourceIds": [
+    "bank-chat",
+    "bank-report"
+   ],
+   "asOfDate": "2026-11-08",
+   "timeframe": "Days (March 6–13 pause, audit & liquidity backstop) vs. 10 Months (Jan 1, 1934 FDIC insurance activation)"
+  },
+  {
+   "dimension": "The intervention",
+   "historical": "Reopening followed emergency law, liquidity powers and licensing.",
+   "present": "What resources and enforceable commitments stand behind a reassurance?",
+   "limit": "Communication and material support changed together; their separate effects cannot be read directly from the sequence.",
+   "sourceIds": [
+    "bank-act",
+    "bank-silber"
+   ],
+   "asOfDate": "2026-11-08",
+   "timeframe": "Days (March 6–13 pause, audit & liquidity backstop) vs. 10 Months (Jan 1, 1934 FDIC insurance activation)",
+   "survivingTextByWithdrawnSource": {
+    "bank-silber": "Surviving primary statutory basis (`bank-act`): The March 9, 1933 Emergency Banking Act directly establishes the statutory conservation, licensing, and currency powers; Silber's 'implicit guarantee' interpretation is withheld pending review."
+   }
+  },
+  {
+   "dimension": "The cost of a pause",
+   "historical": "Closure interrupted access; some deposits remained restricted after reopening.",
+   "present": "Who loses access during an emergency pause, and what remedy is available?",
+   "limit": "Institutions, payment technologies and legal powers must be established in the present case before transfer.",
+   "sourceIds": [
+    "bank-report"
+   ],
+   "asOfDate": "2026-11-08",
+   "timeframe": "Days (March 6–13 pause, audit & liquidity backstop) vs. 10 Months (Jan 1, 1934 FDIC insurance activation)"
+  },
+  {
+   "dimension": "The policy clock",
+   "historical": "The March reopening preceded federal deposit insurance.",
+   "present": "Which protection was actually in force when the observed improvement occurred?",
+   "limit": "A later reform cannot be treated as an already-operating cause of an earlier event.",
+   "sourceIds": [
+    "bank-fdic"
+   ],
+   "asOfDate": "2026-11-08",
+   "timeframe": "Days (March 6–13 pause, audit & liquidity backstop) vs. 10 Months (Jan 1, 1934 FDIC insurance activation)"
+  }
+ ],
+ "outcomes": [
+  {
+   "text": "The Board reported a large return of currency to banks after reopening. That supports stabilization of withdrawals, not an immediate end to the Depression.",
+   "sourceIds": [
+    "bank-report"
+   ],
+   "causalStatus": "DOCUMENTED_OUTCOME",
+   "confounders": [
+    "Simultaneous gold-export restrictions and devaluation expectations (Wigmore 1987)",
+    "Exclusion of ~4,200 unlicensed banks holding ~$4 billion in restricted deposits"
+   ],
+   "counterfactualGap": "Communication (March 12 speech), licensing audits, gold controls, and Title IV liquidity arrived together between March 6 and March 13, preventing single-variable isolation."
+  },
+  {
+   "text": "Its April 12 figures still showed nearly $4 billion tied up in about 4,200 unlicensed or restricted banks. Recovery was uneven.",
+   "sourceIds": [
+    "bank-report"
+   ],
+   "causalStatus": "DOCUMENTED_OUTCOME",
+   "confounders": [
+    "Simultaneous gold-export restrictions and devaluation expectations (Wigmore 1987)",
+    "Exclusion of ~4,200 unlicensed banks holding ~$4 billion in restricted deposits"
+   ],
+   "counterfactualGap": "Communication (March 12 speech), licensing audits, gold controls, and Title IV liquidity arrived together between March 6 and March 13, preventing single-variable isolation."
+  },
+  {
+   "text": "Federal deposit insurance became an operating institution in 1934; the initial coverage limit was $2,500.",
+   "sourceIds": [
+    "bank-fdic"
+   ],
+   "causalStatus": "DOCUMENTED_OUTCOME",
+   "confounders": [
+    "Simultaneous gold-export restrictions and devaluation expectations (Wigmore 1987)",
+    "Exclusion of ~4,200 unlicensed banks holding ~$4 billion in restricted deposits"
+   ],
+   "counterfactualGap": "Communication (March 12 speech), licensing audits, gold controls, and Title IV liquidity arrived together between March 6 and March 13, preventing single-variable isolation."
+  }
+ ],
+ "interpretations": [
+  {
+   "title": "Credible backing behind reassurance",
+   "text": "Silber argues that the emergency currency provisions amounted to an implicit guarantee at reopened banks, giving depositors a material reason to trust the reopening. His claim goes beyond the fact that the speech preceded redeposits.",
+   "sourceIds": [
+    "bank-silber"
+   ],
+   "causalEmphasis": "Credible liquidity commitment: Title IV emergency currency + staged licensing as implicit guarantee"
+  },
+  {
+   "title": "The international monetary constraint",
+   "text": "Wigmore's public abstract puts greater weight on gold losses, expectations of devaluation and restrictions on gold and foreign exchange. It contests an explanation centered on deposit insurance alone. Full-text review remains outstanding.",
+   "sourceIds": [
+    "bank-wigmore"
+   ],
+   "causalEmphasis": "International monetary & gold-outflow constraint (Abstract only)"
+  },
+  {
+   "title": "What would distinguish them?",
+   "text": "Compare the timing of gold flows, cash redeposits, policy announcements and contemporary expectations. Several policies arrived together, making a single-cause verdict difficult.",
+   "sourceIds": [
+    "bank-report",
+    "bank-silber",
+    "bank-wigmore"
+   ],
+   "causalEmphasis": "Multi-instrument policy interaction (simultaneous speech, licensing, liquidity, and gold controls)",
+   "survivingTextByWithdrawnSource": {
+    "bank-wigmore": "Surviving primary & scholarly basis (`bank-report`, `bank-silber`): Even with Wigmore's abstract-only gold-outflow paper reopened, the 1933 Federal Reserve report and Silber (2009) establish that multiple policy instruments arrived simultaneously in March 1933."
+   }
+  }
+ ],
+ "limits": [
+  "This is a historical inquiry, not guidance about any present bank, investment or emergency policy.",
+  "Restored withdrawals, restored solvency and broad economic recovery are different outcomes.",
+  "Neither an official retrospective nor a public address is a neutral measurement of its author's success.",
+  "A comparison needs evidence about the present institution. This release supplies questions to investigate, not an assessment of today's financial system."
+ ],
+ "challengePrompts": [
+  "What evidence would distinguish a liquidity problem from insolvency?",
+  "Did reopening help depositors whose banks remained restricted?",
+  "Which observation would weaken the implicit-guarantee explanation?"
+ ],
+ "asOfDate": "2026-11-08",
+ "citizenGuide": {
+  "whatHappenedBefore": "Following cascading state bank runs and gold outflows in early 1933, President Roosevelt proclaimed a nationwide Bank Holiday on March 6, Congress passed the Emergency Banking Act on March 9, Roosevelt delivered his first Fireside Chat on March 12, and licensed banks began reopening in stages on March 13.",
+  "whyComparable": "Tests how emergency liquidity backstops, solvency triage (licensing), and transparent public communication interact during a systemic crisis of institutional trust.",
+  "whatsDifferent": "Federal deposit insurance (FDIC) did NOT take effect until January 1, 1934—nearly ten months after the March 1933 reopening—and ~$4 billion remained frozen in ~4,200 unlicensed banks as of April 12, 1933.",
+  "whatWorked": "Pairing a temporary pause (March 6–12) with audited staged licensing and Title IV Federal Reserve Bank Note emergency liquidity backing so depositors knew reopened banks had discount-window support.",
+  "whatFailed": "Assuming public reassurance alone worked without emergency currency powers, or assuming all depositors recovered access immediately (~4,200 unlicensed banks held ~$4 billion in restricted deposits in April 1933).",
+  "howWeKnow": "3 primary records (Emergency Banking Act 48 Stat. 1 bundled in full PDF, March 12 Fireside Chat transcript, 1933 Federal Reserve Annual Report), 2 institutional timelines (FDIC, Federal Reserve History), and 2 scholarly analyses (Silber 2009, Wigmore 1987 abstract)."
+ },
+ "counterexamples": [
+  {
+   "id": "bank-ce-1",
+   "title": "Nearly $4 billion frozen in ~4,200 unlicensed banks (April 12, 1933)",
+   "text": "The Federal Reserve Board's 1933 Annual Report documents that as of April 12, 1933—one month after the 'successful' reopening—nearly $4 billion in deposits remained tied up in roughly 4,200 unlicensed or restricted banks.",
+   "failureCondition": "Selective reopening restores confidence in licensed survivors by imposing prolonged illiquidity and losses on depositors of uncertified institutions.",
+   "sourceIds": [
+    "bank-report"
+   ]
+  },
+  {
+   "id": "bank-ce-2",
+   "title": "FDIC deposit insurance did not exist in March 1933",
+   "text": "Congress did not enact the Glass-Steagall FDIC provisions until June 16, 1933, and temporary federal deposit insurance ($2,500 cap) did not begin operating until January 1, 1934.",
+   "failureCondition": "A policy enacted months later cannot be cited as the operational cause of the March 1933 redeposit surge.",
+   "sourceIds": [
+    "bank-fdic"
+   ]
+  }
+ ],
+ "rejectedComparisons": [
+  {
+   "id": "bank-rej-1",
+   "claim": "FDR's March 12, 1933 Fireside Chat and FDIC deposit insurance single-handedly ended the March 1933 bank runs without cost to depositors.",
+   "failureCode": "ANACHRONISM_AND_SURVIVORSHIP_BIAS",
+   "whyItFails": "Commits two factual errors: (1) Anachronism—FDIC insurance did not begin until January 1, 1934 (`bank-fdic`), ten months after the March 1933 reopening; (2) Survivorship bias—ignores both Title IV emergency currency powers (`bank-act`, `bank-silber`) and the ~$4 billion frozen in ~4,200 unlicensed banks (`bank-report`).",
+   "counterEvidence": "FDIC chronology (`bank-fdic`), Emergency Banking Act Title IV (`bank-act`), and 1933 Federal Reserve Annual Report pp. 12–15 (`bank-report`).",
+   "sourceIds": [
+    "bank-fdic",
+    "bank-act",
+    "bank-report",
+    "bank-silber"
+   ]
+  }
+ ],
+ "consequentialCorrection": {
+  "targetSourceId": "bank-silber",
+  "targetSourceTitle": "William L. Silber, 'Why Did FDR’s Bank Holiday Succeed?' (FRBNY Economic Policy Review, 2009)",
+  "challengeReason": "Silber's 2009 paper argues that Title IV emergency currency functioned as an 'implicit guarantee'—an interpretive causal hypothesis rather than an explicit statutory promise in the 1933 Act.",
+  "expectedImpact": "Challenging `bank-silber` quarantines `banking-interpretations-1` and narrows `banking-comparison-2` and `banking-interpretations-3` to their surviving primary statutory/board basis (`bank-act` and `bank-report`), while leaving all primary facts and outcomes `AVAILABLE`."
+ },
+ "questionProfile": {
+  "primaryDomain": "Banking panics, financial confidence, emergency liquidity & deposit insurance",
+  "whyRelevantSummary": "The March 1933 U.S. Banking Crisis shows how policymakers argued over stopping a nationwide bank run, why the March 6–12 national bank holiday, March 9 Emergency Banking Act, and March 12 Fireside Chat worked through staged solvency auditing and emergency Federal Reserve liquidity before federal deposit insurance took effect on January 1, 1934, and why roughly $4 billion remained frozen in ~4,200 unlicensed banks even after currency flowed back into reopened banks.",
+  "coreConcepts": [
+   "bank",
+   "banking",
+   "panic",
+   "bank run",
+   "bank holiday",
+   "liquidity",
+   "solvency",
+   "deposit insurance",
+   "fdic",
+   "federal reserve",
+   "roosevelt",
+   "fdr",
+   "fireside chat",
+   "1933",
+   "financial crisis",
+   "emergency banking act",
+   "gold outflow",
+   "central bank",
+   "lender of last resort"
+  ],
+  "supportedThemes": [
+   "What people and policymakers were arguing during the March 1933 banking crisis and what they expected the Bank Holiday and Emergency Banking Act to accomplish",
+   "Which policymaker expectations were supported (rapid return of hoarded currency to reopened banks) vs. contradicted or complicated by subsequent events (~$4 billion frozen in unlicensed banks in April 1933; deposit insurance delayed until Jan 1, 1934)",
+   "How contemporary explanations (public reassurance via the Fireside Chat) differ from later historians' conclusions (Silber 2009 on implicit RFC/Fed liquidity guarantees vs. Wigmore 1987 on gold outflows and dollar devaluation expectations)"
+  ],
+  "knownCoverageGaps": [
+   "Does not cover 2008 shadow-banking repo runs, 2023 Silicon Valley Bank uninsured digital deposit flight, European sovereign-bank doom loops, or cryptocurrency/stablecoin runs",
+   "Wigmore (1987) is represented from its publicly inspected abstract rather than a full-text journal reprint"
   ]
+ },
+ "historicalArguments": [
+  {
+   "id": "banking-arg-1",
+   "topic": "National bank holiday & staggered audited reopening vs. keeping banks open under local restrictions",
+   "decisionWindow": "March 6–13, 1933 (Presidential Proclamation 2039, Emergency Banking Act & Staggered Reopening)",
+   "contemporaryActor": "President Franklin D. Roosevelt, Treasury Secretary William Woodin & 73rd Congress",
+   "contemporaryArgument": "In the March 9, 1933 Emergency Banking Act and his March 12 Fireside Chat, Roosevelt argued that halting all banking transactions nationwide and reopening banks on a staggered schedule (Class A solvent banks first on March 13–15, Class B under conservators, Class C closed for reorganization) would separate sound banks from insolvent ones and backed reopened banks with emergency Federal Reserve Bank notes against sound assets (bank-act, bank-chat, bank-holiday).",
+   "policymakerExpectation": "Policymakers expected that once citizens understood only examined, liquid banks were permitted to reopen—with Federal Reserve discount and currency backing—depositors would return hoarded cash and gold instead of resuming runs when doors opened on March 13.",
+   "expectationVerdict": "SUPPORTED_WITH_LIMITS",
+   "subsequentEvidence": "When licensed banks reopened starting March 13, 1933, depositors returned over $1.2 billion in hoarded currency and gold within weeks (bank-report, bank-holiday). However, contemporary expectations of a clean, painless restoration were complicated by severe credit contraction: the Federal Reserve Board reported that as of April 12, 1933, roughly 4,200 unlicensed member and nonmember banks remained closed or restricted, tying up approximately $4 billion in deposits (bank-report).",
+   "laterHistoriography": "Whereas contemporaries often credited Roosevelt's rhetorical persuasion in the Fireside Chat, monetary historian William L. Silber (bank-silber, 2009) concludes that confidence returned primarily because Titles I, III, and IV of the Emergency Banking Act (RFC preferred-stock capital + liberalized Fed advances) created a credible de facto 100% liquidity guarantee at every bank certified to reopen. Silber (2009) later characterized the Title IV emergency-currency power as effectively 'unlimited' — his scholarly phrasing, not the 1933 actors' own wording.",
+   "differenceThatLimits": "A multi-day nationwide physical closure of all banks was feasible in a 1933 cash-and-check economy but cannot be executed cleanly in a 24/7 real-time electronic payment and clearing system.",
+   "asOfDate": "2026-11-08",
+   "sourceIds": [
+    "bank-act",
+    "bank-chat",
+    "bank-report",
+    "bank-holiday",
+    "bank-silber"
+   ],
+   "survivingTextByWithdrawnSource": {
+    "bank-silber": "Primary and institutional records in the Emergency Banking Act (bank-act), March 12 Fireside Chat (bank-chat), 1933 Federal Reserve Annual Report (bank-report), and Federal Reserve History (bank-holiday) establish that staggered reopening and emergency currency powers reversed currency hoarding at licensed banks while leaving ~$4 billion tied up in ~4,200 unlicensed banks in April 1933.",
+    "bank-report": "The Emergency Banking Act (bank-act), March 12 Fireside Chat (bank-chat), Federal Reserve History (bank-holiday), and Silber (bank-silber) document the March 1933 national closure, staggered reopening schedule, and emergency Federal Reserve liquidity backing."
+   }
+  },
+  {
+   "id": "banking-arg-2",
+   "topic": "Immediate March 1933 emergency reopening vs. formal statutory FDIC deposit insurance (January 1934)",
+   "decisionWindow": "March 1933 – January 1, 1934 (Emergency Banking Act vs. Banking Act of 1933 / Glass-Steagall)",
+   "contemporaryActor": "Roosevelt Administration, Senator Carter Glass & Representative Henry Steagall",
+   "contemporaryArgument": "During March–June 1933, Administration officials and Senator Carter Glass initially resisted immediate permanent federal deposit insurance—arguing that insuring all banks without prior balance-sheet cleanup could subsidize reckless banking—while Representative Henry Steagall and community banking advocates argued that statutory federal deposit insurance was essential to prevent future panics among small unit banks.",
+   "policymakerExpectation": "Architects of the March 1933 reopening expected audited licensing and Federal Reserve emergency currency to halt the acute panic immediately, while proponents of the June 1933 Banking Act expected temporary FDIC coverage starting January 1, 1934 (initially up to $2,500) to structurally end retail runs on small banks.",
+   "expectationVerdict": "SUPPORTED_WITH_LIMITS",
+   "subsequentEvidence": "The sequence of events proved that formal FDIC insurance did NOT stop the March 1933 panic—because the Temporary Federal Deposit Insurance Fund did not take effect until January 1, 1934, nearly ten months after the March 13 reopening (bank-fdic, bank-act). Once enacted in 1934, federal deposit insurance dramatically reduced retail depositor runs across insured small banks, though thousands of weak banks had already been weeded out during the 1933 licensing triage (bank-report, bank-fdic).",
+   "laterHistoriography": "Later historians (bank-silber, bank-fdic) emphasize the crucial chronological distinction between crisis stoppage in March 1933 (achieved via solvency triage and implicit central-bank liquidity backing) and long-run structural stabilization in 1934 (achieved via explicit statutory FDIC insurance).",
+   "differenceThatLimits": "Modern banking crises (such as 2023 regional bank runs) frequently occur in uninsured institutional deposits above the statutory FDIC cap rather than small retail passbook accounts.",
+   "asOfDate": "2026-11-08",
+   "sourceIds": [
+    "bank-act",
+    "bank-fdic",
+    "bank-report",
+    "bank-silber"
+   ],
+   "survivingTextByWithdrawnSource": {
+    "bank-silber": "Primary and institutional records in the Emergency Banking Act (bank-act), FDIC historical timeline (bank-fdic), and 1933 Federal Reserve Annual Report (bank-report) establish that the March 1933 reopening occurred nearly ten months before federal deposit insurance began on January 1, 1934 (initially up to $2,500).",
+    "bank-fdic": "The Emergency Banking Act (bank-act), 1933 Federal Reserve Report (bank-report), and Silber (bank-silber) establish that the March 1933 reopening relied on solvency auditing and emergency Federal Reserve liquidity rather than statutory deposit insurance."
+   }
+  },
+  {
+   "id": "banking-arg-3",
+   "topic": "Domestic depositor fear & bank insolvency vs. international run on the U.S. dollar and gold standard constraint",
+   "decisionWindow": "February – April 1933 (Gold outflows, Proclamation 2039 & suspension of gold convertibility)",
+   "contemporaryActor": "Federal Reserve Bank of New York, Treasury officials & foreign/domestic gold holders",
+   "contemporaryArgument": "While public speeches in March 1933 framed the crisis primarily as domestic psychological fear and currency hoarding by retail depositors (bank-chat), Federal Reserve officials simultaneously confronted severe gold reserve drains—especially at the New York Fed—driven by domestic gold hoarding and foreign withdrawals anticipating dollar devaluation (bank-report, bank-act).",
+   "policymakerExpectation": "By empowering the President and Treasury under the March 9, 1933 Emergency Banking Act to regulate foreign exchange, gold exports, and domestic gold hoarding, officials expected to break the gold-reserve constraint that had prevented the Federal Reserve from expanding liquidity freely.",
+   "expectationVerdict": "MIXED_AND_CONFOUNDED",
+   "subsequentEvidence": "Emergency controls on gold exports and mandatory gold surrender halted the reserve drain on the Federal Reserve and enabled monetary expansion after March 1933 (bank-act, bank-report). Because bank auditing, emergency Fed note issuance, Fireside communication, and gold-convertibility suspension occurred together in the same week of March 1933, their isolated causal shares remain confounded.",
+   "laterHistoriography": "Later economic historians split on the primary driver: Barrie A. Wigmore (bank-wigmore, 1987 abstract) argues that the final climax of the March 1933 crisis was heavily driven by a run on the dollar and gold outflows rather than domestic retail panic alone, whereas William L. Silber (bank-silber, 2009) emphasizes the domestic credibility of the reopening audit and RFC/Fed backing.",
+   "differenceThatLimits": "The 1933 Federal Reserve was legally bound by a 40% gold reserve requirement against Federal Reserve notes under the gold standard, whereas modern fiat central banks face inflation and balance-sheet constraints rather than gold convertibility.",
+   "asOfDate": "2026-11-08",
+   "sourceIds": [
+    "bank-act",
+    "bank-report",
+    "bank-silber",
+    "bank-wigmore"
+   ],
+   "survivingTextByWithdrawnSource": {
+    "bank-wigmore": "With bank-wigmore (abstract-only source) withdrawn, primary records in the Emergency Banking Act (bank-act) and the 1933 Federal Reserve Board Annual Report (bank-report), alongside Silber (bank-silber), still establish that emergency gold and currency controls were enacted alongside staggered bank reopening in March 1933, though Wigmore's specific dollar-devaluation thesis is withheld.",
+    "bank-silber": "Primary records in the Emergency Banking Act (bank-act) and 1933 Federal Reserve Annual Report (bank-report), alongside Wigmore's abstract (bank-wigmore), document the March 1933 gold-outflow pressures and emergency currency controls.",
+    "bank-silber+bank-wigmore": "Primary records in the March 9, 1933 Emergency Banking Act (bank-act) and the 1933 Federal Reserve Board Annual Report (bank-report) establish both the statutory controls over gold/currency and the return of currency to reopened banks alongside restricted deposits in unlicensed banks."
+   }
+  }
+ ]
 }

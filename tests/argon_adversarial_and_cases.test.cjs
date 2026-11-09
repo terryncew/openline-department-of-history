@@ -92,7 +92,7 @@ test('Attack Vector 7: Revoked or superseded sources in active dataset are refus
   const hormuz=d.cases.find(c=>c.id==='hormuz');
   const corr=E.evaluateConsequentialCorrection(hormuz,'hormuz-gholz-press-2010','WITHDRAWN','Abstract-only source challenged.');
   assert.equal(corr.changedCount,4);
-  assert.equal(corr.unaffectedCount,18);
+  assert.equal(corr.unaffectedCount,19); // Repair F9: +1 untouched core record (hormuz-outcomes-4, Feb-Jun 2026 closure)
 });
 
 test('Attack Vector 8: Conflicting scholarly interpretations presented as consensus are refused',()=>{
@@ -129,7 +129,7 @@ test('Attack Vector 9: Malicious imported notebook content (XSS/script/SVG paylo
 test('Case A (Strait of Hormuz): demonstrates defensible comparison, rejected comparison, and consequential correction',()=>{
   const hormuz=d.cases.find(c=>c.id==='hormuz');
   assert.ok(hormuz);
-  assert.equal(hormuz.sources.length,10);
+  assert.equal(hormuz.sources.length,11); // Repair F9: +1 EIA Aug 2026 closure source
 
   // 1. Defensible comparison accepted with explicit limits
   const defensible=E.evaluateComparisonCandidate(hormuz.comparison[0],hormuz);
@@ -144,10 +144,10 @@ test('Case A (Strait of Hormuz): demonstrates defensible comparison, rejected co
   assert.equal(rejected2.verdict,'REJECTED');
   assert.ok(rejected2.reasons.some(r=>r.includes('4.4 mb/d')||r.includes('deterministic')));
 
-  // 3. Consequential correction: challenging hormuz-gholz-press-2010 narrows 4 multi-source records to surviving primary/institutional basis and leaves 16 untouched
+  // 3. Consequential correction: challenging hormuz-gholz-press-2010 narrows 4 multi-source records to surviving primary/institutional basis and leaves 19 untouched (Repair F9: +1 outcome record)
   const corrGholz=E.evaluateConsequentialCorrection(hormuz,'hormuz-gholz-press-2010','WITHDRAWN',hormuz.consequentialCorrection.challengeReason);
   assert.equal(corrGholz.changedCount,4);
-  assert.equal(corrGholz.unaffectedCount,18);
+  assert.equal(corrGholz.unaffectedCount,19); // Repair F9: +1 untouched core record (hormuz-outcomes-4)
   assert.ok(corrGholz.changed.every(x=>x.survivingSourceIds.length>=1&&x.survivingText.includes('Surviving')));
 
   // Challenging hormuz-eia-chokepoints quarantines sole-source record hormuz-facts-1
@@ -221,7 +221,7 @@ test('Astra Blind Challenge 2: Simultaneous multi-source withdrawal in Hormuz an
   );
   assert.equal(simH1.quarantinedCount,3);
   assert.equal(simH1.changedCount,7);
-  assert.equal(simH1.unaffectedCount,12);
+  assert.equal(simH1.unaffectedCount,13); // Repair F9: +1 untouched core record (hormuz-outcomes-4)
   for(const ch of simH1.changed){
     assert.ok(!ch.survivingSourceIds.includes('hormuz-gholz-press-2010'));
     assert.ok(!ch.survivingSourceIds.includes('hormuz-crs-abqaiq-2019'));
@@ -236,7 +236,7 @@ test('Astra Blind Challenge 2: Simultaneous multi-source withdrawal in Hormuz an
   );
   assert.equal(simH2.quarantinedCount,1);
   assert.equal(simH2.changedCount,8);
-  assert.equal(simH2.unaffectedCount,13);
+  assert.equal(simH2.unaffectedCount,14); // Repair F9: +1 untouched core record (hormuz-outcomes-4)
   for(const ch of simH2.changed){
     assert.ok(!ch.survivingSourceIds.includes('hormuz-gholz-press-2010'));
     assert.ok(!ch.survivingSourceIds.includes('hormuz-eia-chokepoints'));
@@ -330,7 +330,7 @@ test('M5 Question-to-History 1: Mandatory supported questions retrieve verified 
   assert.ok(qHormuz.precedents[0].whatHappenedAfterward.documentedOutcomes.length>=3);
   assert.ok(qHormuz.precedents[0].whatHappenedAfterward.counterexamplesAndFailures.length>=2);
   assert.ok(qHormuz.precedents[0].differencesThatLimit.caseBoundaries.length>=3);
-  assert.equal(qHormuz.precedents[0].sourcesAndStanding.length,10);
+  assert.equal(qHormuz.precedents[0].sourcesAndStanding.length,11); // Repair F9: +1 EIA Aug 2026 closure source
 
   const qConflict=E.askHistory('What historical arrangements have reduced civilian harm during territorial conflicts?',d);
   assert.equal(qConflict.status,'SUPPORTED');

@@ -1,6 +1,6 @@
 {
   "schema": "openline-history-sources.v1",
-  "data_sha256": "4c21b49e0c46d25ff6898ee044fce6a8e4302fafb4dccb6cd4737aa68d529088",
+  "data_sha256": "933bfa186b928a91bd6ae365c7c1362070cb5e99848ffe185e72310e93826e4a",
   "scope": "Card hashes preserve exact curator notes, not publisher origin or truth. Original attachments have separate hashes. No live monitoring.",
   "originals": [
     {
@@ -176,6 +176,17 @@
       "rights": "Copyright retained by source; original short paraphrase and link only. State hosting does not make the booklet public domain.",
       "preservation": "CURATOR_CARD_ONLY",
       "sha256": "2763d4494e3b9292c1cf2b30e13e91adbd8e0e736957aec18c07b30771bd5f48"
+    },
+    {
+      "id": "tri-dyrud-insurance",
+      "title": "Fire! Three Case Studies in Ethics (Triangle Shirtwaist Factory Fire section)",
+      "url": "https://www.researchgate.net/publication/224061086_Fire_Three_Case_Studies_in_Ethics",
+      "locator": "Triangle Shirtwaist Factory Fire section: insurance settlement and civil-suit figures, citing Von Drehle (2003) and Pence et al. (2003)",
+      "type": "scholarly interpretation",
+      "accessed": "2026-11-09",
+      "rights": "Copyright retained by author/publisher; figures paraphrased and linked, paper not redistributed.",
+      "preservation": "CURATOR_CARD_ONLY",
+      "sha256": "d237cf5325ca147abe9253b8708a61e93cab785501b1633d1dd5df6c4f62f22b"
     },
     {
       "id": "bank-act",
@@ -363,6 +374,17 @@
       "rights": "U.S. Congressional Research Service work; public domain.",
       "preservation": "CURATOR_CARD_ONLY",
       "sha256": "efea334b825ba9ff9d00c7eb3d3bc7b31d145b6911b301fd8ccc7b760fe12331"
+    },
+    {
+      "id": "hormuz-eia-2026-closure",
+      "title": "Short-Term Energy Outlook, August 2026 \u2014 Global Energy Security Data (Strait of Hormuz tables)",
+      "url": "https://www.eia.gov/outlooks/steo/report/energysecurity/article.php",
+      "locator": "Release date August 12, 2026; Table 2 (chokepoint volumes) and Table 4 (Strait of Hormuz oil and LNG, 1Q25\u20132Q26); methodology note on AIS reliability",
+      "type": "institutional",
+      "accessed": "2026-11-09",
+      "rights": "U.S. federal government work (17 U.S.C. \u00a7 105); public domain with attribution to EIA and Vortexa.",
+      "preservation": "CURATOR_CARD_ONLY",
+      "sha256": "183cbf98575673300120b73a912b3b8fdbb41f0447e7cfc87168e6e0d0d9380f"
     },
     {
       "id": "ip-armistice-1949",

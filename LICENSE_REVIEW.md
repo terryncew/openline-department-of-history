@@ -5,7 +5,7 @@ Prepared 2026-11-09 from the files in the package tree. No rights asserted beyon
 ## 1. The project's own code and text — MIT
 
 - `tree/LICENSE`: MIT License, copyright (c) 2026 Terrynce White. Grants use, copy, modification, merger, publication, distribution, sublicensing, and sale, provided the copyright and permission notices are included in all copies or substantial portions. Provided "as is", no warranty.
-- `tree/package.json`: `"license": "MIT"`, name `openline-history-lab`, version `0.1.0`, `private: true`. Note: the `private: true` flag is a packaging marker in the source tree; a public release should decide whether to keep or drop it. It does not change the MIT license text. Publication decision 2026-11-09: the founder authorized publication and `private` was flipped to `false` in the published repo; the MIT license text is unchanged.
+- `tree/package.json`: `"license": "MIT"`, name `openline-history-lab`, version `0.1.0`, `private: true`. Note: the `private: true` flag is a packaging marker in the source tree; a public release should decide whether to keep or drop it. It does not change the MIT license text.
 - The project's own application source (`app.js`, `engine.js`, `styles.css`, `template.html`), scripts, tests, research JSON/Markdown, evidence cards, and documentation are covered by that MIT license as the project's own work, except for the third-party and source-material items below.
 
 ## 2. Bundled third-party code — MIT, same copyright holder
@@ -38,7 +38,7 @@ Verdict: as packaged, these five are links plus short paraphrases, which is how 
 
 ## 5. Other sources — links and curator cards, no full text bundled
 
-The remaining 37 of the 42 sources are represented the same way: a curator-written evidence card in `tree/evidence/` with a URL, locator, and notes. No other publisher full text is bundled in the tree. The one attempted second original (`bank-report`, the 1933 Federal Reserve annual report) is recorded as NOT_PRESERVED in `ORIGINALS_MANIFEST.json` (the response exceeded the 10 MiB/PDF acceptance boundary; no complete original retained).
+The remaining 39 of the 44 sources are represented the same way: a curator-written evidence card in `tree/evidence/` with a URL, locator, and notes. No other publisher full text is bundled in the tree. The one attempted second original (`bank-report`, the 1933 Federal Reserve annual report) is recorded as NOT_PRESERVED in `ORIGINALS_MANIFEST.json` (the response exceeded the 10 MiB/PDF acceptance boundary; no complete original retained).
 
 ## 6. What a redistributor must keep
 

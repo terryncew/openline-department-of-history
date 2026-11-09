@@ -1,33 +1,57 @@
 {
-  "evaluatedAt": "2026-11-08T20:00:00Z",
+  "evaluatedAt": "2026-11-09T07:00:00Z",
+  "version": "0.2.0",
   "baselineArtifact": "dist/conventional_baseline_brief.html",
   "searchableReferenceInterface": true,
-  "datasetSha256": "84f16aec3c59045033ad54c8d30c70cf10d699b081d546bcbe5887647da91439",
+  "datasetSha256": "abc519d754a87cd3d6f35074f391400ae6cd849f70304ef02537c5a724d61d9d",
   "casesCount": 5,
-  "sourcesCount": 42,
-  "recordsCount": 104,
+  "sourcesCount": 44,
+  "recordsCount": 105,
   "argumentsCount": 15,
-  "overallVerdict": "QUALIFIED_IMPROVEMENT_ON_QUESTION_BOUNDARIES_MULTI_SOURCE_CORRECTION_AND_FALSIFICATION_PARITY_ON_SEARCHABLE_READING_AND_SINGLE_SOURCE_INDEXING",
+  "v02ComparisonMetrics": {
+    "v010InitialVisibleWords": 4114,
+    "v02InitialVisibleWords": 1537,
+    "initialReadingBurdenReductionPercent": 62.6,
+    "v010InitialScrollHeightPx": 9962,
+    "v02InitialScrollHeightPx": 4607,
+    "scrollHeightReductionPercent": 53.8,
+    "quickLookStageWords": "~260-271 per inquiry (step body text)",
+    "progressiveDepthLevels": 3,
+    "storyJourneySteps": 6,
+    "plainLanguageConcepts": 20,
+    "sourceInvestigationChallenges": 5,
+    "archivalExhibitsWithHotspots": 5
+  },
+  "overallVerdict": "QUALIFIED_IMPROVEMENT_ON_FIRST_TIME_ACCESSIBILITY_PROGRESSIVE_DEPTH_QUESTION_BOUNDARIES_MULTI_SOURCE_CORRECTION_AND_FALSIFICATION_PARITY_ON_SEARCHABLE_READING_AND_SINGLE_SOURCE_INDEXING",
   "criteria": [
     {
       "id": "C1_claim_traceability",
       "criterion": "Claim Traceability, Searchability & Verification Separation",
       "verdict": "IMPROVED_ON_VERIFICATION_SEPARATION_PARITY_ON_CITATION_COVERAGE",
       "historyLabMetric": {
-        "citedRecords": "104/104 (100%)",
+        "citedRecords": "105/105 (100%)",
         "comparableArguments": "15/15 (100%)",
-        "sourceCards": 42,
+        "sourceCards": 44,
         "threeAxisSeparation": true,
-        "clicksToInspectLocatorAndStanding": 1
+        "clicksToInspectLocatorAndStanding": 1,
+        "v02SourceInvestigationChallenges": "5 primary-vs-secondary source sleuth challenges in Step 6 (Explore the Evidence)"
+      },
+      "v010BaselineMetric": {
+        "citedRecords": "105/105 (100%)",
+        "comparableArguments": "15/15 (100%)",
+        "sourceCards": 44,
+        "threeAxisSeparation": true,
+        "clicksToInspectLocatorAndStanding": 1,
+        "v02SourceInvestigationChallenges": 0
       },
       "conventionalBriefMetric": {
-        "citedRecords": "104/104 (100%)",
+        "citedRecords": "105/105 (100%)",
         "comparableArguments": "15/15 (100% in Section 6B)",
-        "sourceCards": 42,
+        "sourceCards": 44,
         "threeAxisSeparation": "Static coverage/type column in Section 7 & Section 8 dependency table",
         "clicksToInspectLocatorAndStanding": "Client-side text filter or scroll across bibliography and dependency matrix (1-3 steps)"
       },
-      "honestAssessment": "A competent conventional searchable reference interface with Section 6B Argument tables and Section 8 Source-Dependency Matrices achieves 100% citation coverage, keyword searchability, and single-source lookup PARITY with OpenLine Department of History M5. M5 earns a verifiable advantage on (1) honest question boundary classification (SUPPORTED vs. PARTIALLY_SUPPORTED with explicit coverage gaps vs. UNSUPPORTED refusal on future forecasts/ideological laws, where a naive keyword search returns zero hits without explaining why or returns false-friend substring matches), and (2) live 3-axis verification + co-cited quote-attribution enforcement."
+      "honestAssessment": "A competent conventional searchable reference interface with Section 6B Argument tables and Section 8 Source-Dependency Matrices achieves 100% citation coverage, keyword searchability, and single-source lookup PARITY with OpenLine Department of History. Both v0.1.0 and v0.2 earn a verifiable advantage on (1) honest question boundary classification (SUPPORTED vs. PARTIALLY_SUPPORTED with explicit coverage gaps vs. UNSUPPORTED refusal on future forecasts/ideological laws), and (2) live 3-axis verification + co-cited quote-attribution enforcement. v0.2 further improves over v0.1.0 by moving dense hash manifests out of the initial front door while embedding interactive Source-Investigation Challenges in Step 6."
     },
     {
       "id": "C2_differences_and_rejected_comparisons",
@@ -37,22 +61,36 @@
         "comparisonsWithExplicitBreakConditions": "20/20 (100%)",
         "rejectedComparisonsWithAuditTrail": 7,
         "interactiveAnalogyFalsifier": true,
+        "v02BeforeAndAfterStep5Explorer": "Side-by-side 'Back Then vs. What to Examine Today' dimension filter with explicit 'Where this analogy breaks' callout",
         "hedgedStructuralFallacyCatchRate": "5/5 (100%) on tested domain-specific structural fallacies"
+      },
+      "v010BaselineMetric": {
+        "comparisonsWithExplicitBreakConditions": "20/20 (100%)",
+        "rejectedComparisonsWithAuditTrail": 7,
+        "interactiveAnalogyFalsifier": true,
+        "v02BeforeAndAfterStep5Explorer": "Requires navigating to Compare or Falsify workbench tabs"
       },
       "conventionalBriefMetric": {
         "comparisonsWithExplicitBreakConditions": "20/20 (100%)",
         "rejectedComparisonsWithAuditTrail": 7,
         "interactiveAnalogyFalsifier": false
       },
-      "honestAssessment": "For reading pre-authored comparisons, argument limits, and rejected analogies, the searchable reference interface achieves PARITY with M5. M5 improves over the reference interface when a user tests a novel or hedged analogy: the live Analogy Falsifier rejects deterministic overclaims, missing breakdown limits, and structural domain mismatches."
+      "honestAssessment": "For reading pre-authored comparisons, argument limits, and rejected analogies, the searchable reference interface achieves PARITY. v0.2 improves over both the reference interface and v0.1.0 by integrating a dedicated 'Step 5: What's Different Today' Before-and-After dimension explorer directly in the main story flow alongside the live Analogy Falsifier."
     },
     {
       "id": "C3_competing_explanations",
       "criterion": "Comparable Historical Arguments, Competing Explanations & Non-Manufactured Consensus",
-      "verdict": "PARITY_ON_READING_IMPROVED_ON_INGESTION_GUARDRAILS",
+      "verdict": "IMPROVED_ON_EXPECTATION_VS_OUTCOME_REVEAL_AND_INGESTION_GUARDRAILS",
       "historyLabMetric": {
         "schoolsAcross5Cases": 15,
         "comparableArgumentChains": 15,
+        "v02ExpectationVsOutcomeReveals": "15 interactive 'What did people believe?' expectation-vs-outcome reveals in Step 3 (The Debate) before showing the documented outcome",
+        "refusesConsensusFlatteningOnBuildAndRuntime": true
+      },
+      "v010BaselineMetric": {
+        "schoolsAcross5Cases": 15,
+        "comparableArgumentChains": 15,
+        "v02ExpectationVsOutcomeReveals": "Static 4-column table displaying expectations and outcomes simultaneously",
         "refusesConsensusFlatteningOnBuildAndRuntime": true
       },
       "conventionalBriefMetric": {
@@ -60,23 +98,29 @@
         "comparableArgumentChains": 15,
         "refusesConsensusFlatteningOnBuildAndRuntime": false
       },
-      "honestAssessment": "PARITY for a reader inspecting the pre-authored historiography and Section 6B Comparable Historical Arguments table. M5's specific advantage is interactive cross-inquiry argument comparison plus runtime validation that refuses consensus-washing or incomplete argument chains."
+      "honestAssessment": "While v0.1.0 and the conventional brief display all 4 columns of each historical debate simultaneously (inviting hindsight bias), v0.2's Step 3 ('The Debate') lets visitors read what contemporaries argued and what policymakers expected first, test their own historical intuition, and then reveal what actually happened afterward and what later historians concluded—with a 1-click 'Reveal all 3 outcomes at once' bypass."
     },
     {
       "id": "C4_conditional_interventions_and_falsifiers",
       "criterion": "Conditional Interventions, Counterexamples & Falsifiers",
       "verdict": "IMPROVED_ON_CAUSAL_DISCIPLINE_PARITY_ON_DESCRIPTIVE_TEXT",
       "historyLabMetric": {
-        "interventionsWithConfoundersAndGaps": "15/15 (100%)",
-        "explicitCounterexamples": 12,
+        "interventionsWithConfoundersAndGaps": "16/16 (100%)",
+        "explicitCounterexamples": 13,
+        "v02Step2AndStep4Integration": "Swipeable/keyboard timeline in Step 2 ('Back Then') + Outcomes, Confounders & Counterexamples in Step 4 ('What Happened')",
+        "refusesSingleCauseCorrelationClaims": true
+      },
+      "v010BaselineMetric": {
+        "interventionsWithConfoundersAndGaps": "16/16 (100%)",
+        "explicitCounterexamples": 13,
         "refusesSingleCauseCorrelationClaims": true
       },
       "conventionalBriefMetric": {
-        "interventionsWithConfoundersAndGaps": "15/15 (100%)",
-        "explicitCounterexamples": 12,
+        "interventionsWithConfoundersAndGaps": "16/16 (100%)",
+        "explicitCounterexamples": 13,
         "refusesSingleCauseCorrelationClaims": false
       },
-      "honestAssessment": "Descriptive comprehension of documented outcomes and counterexamples is at PARITY. M5 adds active causal-discipline guardrails (refusing single-cause correlation claims, superficial keyword causation, and future predictions like 'What will happen in 2030?')."
+      "honestAssessment": "Descriptive comprehension of documented outcomes and counterexamples is at PARITY across all three interfaces. v0.2 improves narrative comprehension by pairing each case's interactive chronological sequence (Step 2) directly with documented outcomes, confounders, and counterexamples (Step 4) before asking what is different today (Step 5)."
     },
     {
       "id": "C5_correction_after_challenged_evidence",
@@ -84,9 +128,15 @@
       "verdict": "PARITY_ON_SINGLE_SOURCE_LOOKUP_IMPROVED_ON_MULTI_SOURCE_COMBINATORIAL_NARROWING",
       "historyLabMetric": {
         "automaticDependencyGraph": true,
-        "singleSourceChallenge": "1 click (<10ms) to quarantine sole-source claims and narrow multi-source claims and arguments.",
-        "multiSourceSimultaneousChallenge": "Automatically computes set-intersection across simultaneously withdrawn sources across both 104 core records and 15 comparable arguments, withholding any single-source fallback text that depends on a second withdrawn source.",
+        "singleSourceChallenge": "1 click (<10ms) to quarantine sole-source claims and narrow multi-source claims and arguments across Quick Look, Explore, and Examine the Evidence.",
+        "multiSourceSimultaneousChallenge": "Automatically computes set-intersection across simultaneously withdrawn sources across both 105 core records and 15 comparable arguments, withholding any single-source fallback text that depends on a second withdrawn source.",
+        "v02MultiDepthSynchronization": "Challenging a source in Step 6, Examine the Evidence, or the Notebook immediately updates Quick Look (~1 min), Explore (6 steps), and the Question Briefing.",
         "sqliteLedgerAudit": "Mandate-Ledger hash-chained SQLite ledger records withdrawal, reopening, and re-review without rewriting prior history."
+      },
+      "v010BaselineMetric": {
+        "automaticDependencyGraph": true,
+        "singleSourceChallenge": "1 click in Notebook tab; requires opening Notebook tab to trigger case consequential drill.",
+        "multiSourceSimultaneousChallenge": "Supported across workbench tabs and question briefing."
       },
       "conventionalBriefMetric": {
         "automaticDependencyGraph": "Static Reverse-Impact Matrix in Section 8 (searchable via toolbar)",
@@ -94,23 +144,32 @@
         "multiSourceSimultaneousChallenge": "When 2+ sources are challenged simultaneously, reader must manually compute set intersections across multiple rows of Section 8 and manually rewrite narrowed claims.",
         "sqliteLedgerAudit": "None; static reference table has no live multi-source intersection state or append-only challenge ledger."
       },
-      "honestAssessment": "With Section 8 Source-Dependency Matrices and client-side search, the conventional searchable reference interface achieves PARITY on single-source dependency lookup. M5's genuine advantage is combinatorial multi-source withdrawal propagation across both records and comparable arguments, live text replacement in the Question-to-History briefing, and append-only SQLite/notebook state."
+      "honestAssessment": "With Section 8 Source-Dependency Matrices and client-side search, the conventional searchable reference interface achieves PARITY on single-source dependency lookup. OpenLine's genuine advantage is combinatorial multi-source withdrawal propagation across both records and comparable arguments, and v0.2 surfaces this directly in Step 6 ('Explore the Evidence') and 'Examine the Evidence' mode without requiring the visitor to hunt through an 8-tab specialist toolbar."
     },
     {
       "id": "C6_first_time_user_effort",
-      "criterion": "First-Time User Effort, Question Routing & Cognitive Load",
-      "verdict": "PARITY_FOR_LINEAR_READING_IMPROVED_FOR_QUESTION_ROUTING_AND_STRESS_TESTING",
+      "criterion": "First-Time User Effort, Progressive Depth & Initial Reading Burden",
+      "verdict": "SIGNIFICANTLY_IMPROVED_IN_V0_2_ON_INITIAL_READING_BURDEN_AND_PROGRESSIVE_DEPTH",
       "historyLabMetric": {
-        "questionFirstEntry": "Ordinary-language Question-to-History console classifies SUPPORTED, PARTIALLY_SUPPORTED (with explicit missing coverage), and UNSUPPORTED (refusing future forecasts and ideological determinism) in 1 step.",
-        "linearReadingEffort": "Question Briefing + Citizen Guide display relevance, comparable arguments, outcomes, and limits immediately on load.",
-        "sourceVerificationEffort": "1 click on any citation chip opens the full 3-axis Source Card in the modal inspector."
+        "frontDoorHeadline": "What does history say? — Something happening today sound familiar? Explore what happened before, what people believed, what they tried, and what happened next.",
+        "initialVisibleWordsOnLoad": "1,537 words (-62.6% reduction vs. v0.1.0's 4,114 words)",
+        "initialScrollHeightPx": "4,607 px (-53.8% reduction vs. v0.1.0's 9,962 px)",
+        "progressiveDepthLevels": "3 depths backed by identical verified dataset: Quick Look (~1 min, ~260-271 words per inquiry, step body text), Explore (6-step interactive journey), Examine the Evidence (3-axis source ledger & consequential hold drill)",
+        "plainLanguageConceptCards": "20 source-bound plain-language concept explainers (4 per inquiry)"
+      },
+      "v010BaselineMetric": {
+        "frontDoorHeadline": "Ask what history says. Inspect the argument & the limit.",
+        "initialVisibleWordsOnLoad": "4,114 words (auto-rendered Hormuz multi-table briefing + 6-card citizen guide + 8-tab workbench on initial load)",
+        "initialScrollHeightPx": "9,962 px",
+        "progressiveDepthLevels": "1 depth (specialist multi-table briefing + 8-tab workbench)",
+        "plainLanguageConceptCards": 0
       },
       "conventionalBriefMetric": {
         "questionFirstEntry": "Substring search bar filters matching paragraphs (`PARITY` for exact keyword hits), but cannot distinguish supported vs. partially supported coverage gaps or explain why 'What will happen in 2030?' is refused.",
-        "linearReadingEffort": "0 tab clicks (continuous vertical scroll across all 5 inquiries, slight advantage for uninterrupted linear reading).",
+        "linearReadingEffort": "0 tab clicks (continuous vertical scroll across all 5 inquiries, ~18,100 words visible at once; tag-stripped count 18,093 on the regenerated brief, script/style excluded).",
         "sourceVerificationEffort": "Filter or scroll to Section 7/8 for source details."
       },
-      "honestAssessment": "Continuous linear reading and exact-keyword filtering are at PARITY. M5 improves first-time citizen comprehension when asking ordinary-language questions, distinguishing partial coverage from unsupported speculation, and stress-testing sources."
+      "honestAssessment": "v0.1.0 confronted a first-time visitor with 4,114 visible words, 9,962 px of vertical scroll, SHA-256 verification badges in the top banner, and an 8-tab specialist toolbar. v0.2 reduces initial visible words on load by 62.6% (to 1,537 words), adds a ~1-minute Quick Look mode (~260-271 words per inquiry, step body text), guides visitors through a 6-step narrative journey (The Question → Back Then → The Debate → What Happened → What's Different Today → Explore the Evidence), and explains 20 specialist terms in plain language while preserving 100% of the v0.1.0 evidence engine underneath."
     }
   ]
 }

@@ -1,486 +1,508 @@
 {
-  "id": "triangle",
-  "title": "When warnings become protection",
-  "question": "What turns warnings about unsafe work into enforceable protection?",
-  "summary": "The Triangle fire and New York's response let us examine inspection, worker testimony, lawmaking and enforcement as distinct parts of accountability. The record documents a disaster and enacted protections; it does not establish that publicity alone makes workplaces safe.",
-  "period": "New York · 1909–1915",
-  "sources": [
-    {
-      "id": "tri-harmon",
-      "title": "Testimony of G. I. Harmon, labor inspector (1911)",
-      "author": "New York State Factory Investigating Commission; Cornell Kheel Center transcription",
-      "url": "https://trianglefire.ilr.cornell.edu/primary/reports/GIHarmonTestimony.html",
-      "type": "primary",
-      "locator": "Preliminary Report (1912), testimony pp. 242–249; especially pp. 243–244",
-      "accessed": "2026-11-08",
-      "rights": "Historical 1912 text is public domain in the United States; Cornell webpage/transcription is linked, not relicensed or copied wholesale.",
-      "notes": "Sworn testimony reports an inspection on February 27, 1911. A witness's report of what he saw is not proof of conditions throughout the following month.",
-      "coverage": "EXCERPT_WITH_CONTEXT",
-      "scopeConstraint": "Sworn testimony reports an inspection on February 27, 1911. A witness's report of what he saw is not proof of conditions throughout the following month."
-    },
-    {
-      "id": "tri-relief",
-      "title": "Report of the Joint Relief Committee (January 15, 1913)",
-      "author": "Ladies' Waist & Dressmakers' Union No. 25; Cornell Kheel Center transcription",
-      "url": "https://trianglefire.ilr.cornell.edu/primary/reports/JointReliefCommittee.html",
-      "type": "primary",
-      "locator": "Opening paragraphs; paragraph beginning with the basis for relief",
-      "accessed": "2026-11-08",
-      "rights": "1913 report is public domain in the United States; host webpage is linked, not copied wholesale.",
-      "notes": "A union relief committee's contemporary account. Useful for casualty count, organizing and relief; it represents a participant institution.",
-      "coverage": "EXCERPT_WITH_CONTEXT",
-      "scopeConstraint": "A union relief committee's contemporary account. Useful for casualty count, organizing and relief; it represents a participant institution."
-    },
-    {
-      "id": "tri-fic",
-      "title": "Fourth Report of the Factory Investigating Commission (1915)",
-      "author": "New York State Factory Investigating Commission; Cornell Kheel Center transcription",
-      "url": "https://trianglefire.ilr.cornell.edu/primary/reports/FourthReportOfFIC",
-      "type": "primary",
-      "locator": "Volume 1, pp. 2–11; enacted laws on pp. 3, 6–7 and 10",
-      "accessed": "2026-11-08",
-      "rights": "1915 report is public domain in the United States; host webpage is linked, not copied wholesale.",
-      "notes": "The commission's own retrospective report identifies laws enacted after its recommendations. Its self-assessment of success requires independent scrutiny.",
-      "coverage": "EXCERPT_WITH_CONTEXT",
-      "scopeConstraint": "The commission's own retrospective report identifies laws enacted after its recommendations. Its self-assessment of success requires independent scrutiny."
-    },
-    {
-      "id": "tri-cornell-reform",
-      "title": "Legislative Reform at State and Local Level",
-      "author": "Cornell University, ILR School / Kheel Center",
-      "url": "https://trianglefire.ilr.cornell.edu/legacy/legislativeReform.html",
-      "type": "institutional interpretation",
-      "locator": "Opening sections on pre-existing reform organizations; paragraphs on commission creation and 1913 laws",
-      "accessed": "2026-11-08",
-      "rights": "Copyright retained by source; original brief paraphrase and link only.",
-      "notes": "Places reform within established Progressive Era organizing, documenting a route from worker responses to investigation and legislation.",
-      "coverage": "EXCERPT_WITH_CONTEXT",
-      "scopeConstraint": "Places reform within established Progressive Era organizing, documenting a route from worker responses to investigation and legislation."
-    },
-    {
-      "id": "tri-trial",
-      "title": "Investigation & Trial",
-      "author": "Cornell University, ILR School / Kheel Center",
-      "url": "https://trianglefire.ilr.cornell.edu/story/investigationTrial.html",
-      "type": "institutional interpretation",
-      "locator": "Paragraph on December 27 acquittal; paragraph on August 1913 locked-door prosecution",
-      "accessed": "2026-11-08",
-      "rights": "Copyright retained by source; original brief paraphrase and link only.",
-      "notes": "The exhibition summarizes the trial and links its transcript. Do not equate acquittal with a finding that the workplace was safe.",
-      "coverage": "EXCERPT_WITH_CONTEXT",
-      "scopeConstraint": "The exhibition summarizes the trial and links its transcript. Do not equate acquittal with a finding that the workplace was safe."
-    },
-    {
-      "id": "tri-mcevoy",
-      "title": "The Triangle Shirtwaist Factory Fire of 1911: Social Change, Industrial Accidents, and the Evolution of Common-Sense Causality",
-      "author": "Arthur F. McEvoy",
-      "url": "https://www.cambridge.org/core/journals/law-and-social-inquiry/article/abs/triangle-shirtwaist-factory-fire-of-1911-social-change-industrial-accidents-and-the-evolution-of-commonsense-causality/576CA665F1EC2DB1C246F9DA22AAD2BC",
-      "type": "scholarly interpretation",
-      "locator": "Law & Social Inquiry 20(2), Spring 1995, pp. 621–651; publicly accessible abstract and note 8; DOI 10.1111/j.1747-4469.1995.tb01072.x",
-      "accessed": "2026-11-08",
-      "rights": "Copyright American Bar Foundation 1995. Abstract paraphrased; article not redistributed.",
-      "notes": "The full article was not obtained. This case represents only the argument stated in the accessible abstract. Online date 2018 is not the article's original publication year.",
-      "coverage": "ABSTRACT_ONLY",
-      "scopeConstraint": "The full article was not obtained. This case represents only the argument stated in the accessible abstract. Online date 2018 is not the article's original publication year."
-    },
-    {
-      "id": "tri-greenwald",
-      "title": "The Triangle Fire, the Protocols of Peace, and Industrial Democracy in Progressive Era New York",
-      "author": "Richard Alan Greenwald; Temple University Press publisher synopsis",
-      "url": "https://tupress.temple.edu/books/the-triangle-fire-the-protocols-of-peace-and-industrial-democracy-in-progressive-era-new-york",
-      "type": "scholarly interpretation",
-      "locator": "Publisher's book description, June 2005 edition; synopsis only",
-      "accessed": "2026-11-08",
-      "rights": "Copyright retained by publisher/author. Synopsis paraphrased; book not redistributed.",
-      "notes": "Full book not reviewed. Used narrowly for the publisher-documented argument linking collective industrial negotiation and state investigation.",
-      "coverage": "SYNOPSIS_ONLY",
-      "scopeConstraint": "Full book not reviewed. Used narrowly for the publisher-documented argument linking collective industrial negotiation and state investigation."
-    },
-    {
-      "id": "tri-markowitz-rosner",
-      "title": "The revolution in workplace safety",
-      "author": "Gerald Markowitz and David Rosner",
-      "url": "https://dol.ny.gov/system/files/documents/2021/02/triangle-nycosh-booklet.pdf",
-      "type": "scholarly interpretation",
-      "locator": "NYCOSH Triangle centennial booklet (2011), essay headed The revolution in workplace safety, printed p. 22",
-      "accessed": "2026-11-08",
-      "rights": "Copyright retained by source; original short paraphrase and link only. State hosting does not make the booklet public domain.",
-      "notes": "Original essay by two historians, published in an advocacy/commemoration collection. Use the named essay, not the collection's other political claims.",
-      "coverage": "EXCERPT_WITH_CONTEXT",
-      "scopeConstraint": "Original essay by two historians, published in an advocacy/commemoration collection. Use the named essay, not the collection's other political claims."
-    }
-  ],
-  "facts": [
-    {
-      "id": "tri-f1",
-      "text": "The union's 1913 report records that the March 25, 1911 fire killed 146 people.",
-      "sourceIds": [
-        "tri-relief"
-      ],
-      "causalStatus": "DOCUMENTED_RECORD"
-    },
-    {
-      "id": "tri-f2",
-      "text": "Inspector G. I. Harmon testified that he inspected the building on February 27, 1911 and reported finding its stair doors unlocked then.",
-      "sourceIds": [
-        "tri-harmon"
-      ],
-      "causalStatus": "DOCUMENTED_RECORD"
-    },
-    {
-      "id": "tri-f3",
-      "text": "The commission's report lists fire drills and automatic sprinklers among the subjects of laws enacted in 1912.",
-      "sourceIds": [
-        "tri-fic"
-      ],
-      "causalStatus": "DOCUMENTED_RECORD"
-    },
-    {
-      "id": "tri-f4",
-      "text": "The 1913 laws listed by the commission included Department of Labor reorganization, an Industrial Board, and rules on exits, alarms and occupancy.",
-      "sourceIds": [
-        "tri-fic"
-      ],
-      "causalStatus": "DOCUMENTED_RECORD"
-    },
-    {
-      "id": "tri-f5",
-      "text": "The owners were acquitted in December 1911; the trial required proof of their knowledge that the relevant door was locked.",
-      "sourceIds": [
-        "tri-trial"
-      ],
-      "causalStatus": "DOCUMENTED_RECORD"
-    }
-  ],
-  "timeline": [
-    {
-      "date": "1909",
-      "title": "Organizing before disaster",
-      "text": "The union relief report describes a preceding strike at Triangle that failed to secure union control there.",
-      "sourceIds": [
-        "tri-relief"
-      ]
-    },
-    {
-      "date": "1911-02-27",
-      "title": "An inspection snapshot",
-      "text": "Harmon later testified to inspecting the building on this date.",
-      "sourceIds": [
-        "tri-harmon"
-      ]
-    },
-    {
-      "date": "1911-03-25",
-      "title": "Triangle fire",
-      "text": "The fire killed 146 people, according to the contemporary relief report.",
-      "sourceIds": [
-        "tri-relief"
-      ]
-    },
-    {
-      "date": "1911-06-30",
-      "title": "Investigation authorized",
-      "text": "The legislature approved funding to establish the Factory Investigating Commission.",
-      "sourceIds": [
-        "tri-cornell-reform"
-      ]
-    },
-    {
-      "date": "1911-12-27",
-      "title": "Criminal acquittal",
-      "text": "A jury acquitted the owners. Criminal liability and preventive reform followed different paths.",
-      "sourceIds": [
-        "tri-trial"
-      ]
-    },
-    {
-      "date": "1912–1913",
-      "title": "Rules and administrative capacity",
-      "text": "Enacted measures addressed fire precautions and reorganized labor administration.",
-      "sourceIds": [
-        "tri-fic"
-      ]
-    }
-  ],
-  "comparison": [
-    {
-      "dimension": "Inspection versus continuous safety",
-      "historical": "Harmon described unlocked doors at an earlier visit and acknowledged that announcing the inspection gave management time to change temporary conditions.",
-      "present": "For a workplace claim today, ask what an inspection observes, how long the observation remains valid, and how workers can report later changes.",
-      "limit": "This is a question for investigation. It does not establish conditions at any present-day employer.",
-      "sourceIds": [
-        "tri-harmon"
-      ],
-      "asOfDate": "2026-11-08",
-      "timeframe": "Immediate (emergency relief) vs. 1–4 Years (FIC investigation, 1912–1913 statutory reorganization, ongoing compliance audits)"
-    },
-    {
-      "dimension": "Worker evidence",
-      "historical": "The Women's Trade Union League gathered workers' accounts after the fire and used them in a campaign for investigation.",
-      "present": "Ask whether affected workers can document hazards and have their evidence considered by an institution able to act.",
-      "limit": "The political rights, employment relations and channels for reporting in a modern jurisdiction must be investigated separately.",
-      "sourceIds": [
-        "tri-cornell-reform"
-      ],
-      "asOfDate": "2026-11-08",
-      "timeframe": "Immediate (emergency relief) vs. 1–4 Years (FIC investigation, 1912–1913 statutory reorganization, ongoing compliance audits)"
-    },
-    {
-      "dimension": "Authority to act",
-      "historical": "The commission could require witnesses and documents; later legislation changed the organization of labor regulation.",
-      "present": "Identify who can obtain records, require a remedy, and verify that a remedy lasts.",
-      "limit": "A modern oversight body may have a different mandate. An institution's name alone supplies no equivalence.",
-      "sourceIds": [
-        "tri-fic"
-      ],
-      "asOfDate": "2026-11-08",
-      "timeframe": "Immediate (emergency relief) vs. 1–4 Years (FIC investigation, 1912–1913 statutory reorganization, ongoing compliance audits)"
-    },
-    {
-      "dimension": "Relief versus prevention",
-      "historical": "The relief committee described aid organized around immediate need rather than compensation for death or injury.",
-      "present": "Separate emergency aid, compensation, accountability and prevention when examining a response to harm.",
-      "limit": "Different legal and social-insurance arrangements alter what each form of remedy can provide.",
-      "sourceIds": [
-        "tri-relief"
-      ],
-      "asOfDate": "2026-11-08",
-      "timeframe": "Immediate (emergency relief) vs. 1–4 Years (FIC investigation, 1912–1913 statutory reorganization, ongoing compliance audits)"
-    }
-  ],
-  "outcomes": [
-    {
-      "text": "Documented intervention: New York enacted fire-safety provisions and reorganized labor regulation. These are verified institutional changes, not a quantified estimate of injuries prevented.",
-      "sourceIds": [
-        "tri-fic"
-      ],
-      "causalStatus": "DOCUMENTED_OUTCOME",
-      "confounders": [
-        "Pre-existing Progressive Era labor organizing (1909 strike)",
-        "Subsequent enforcement gaps (1913 repeat locked-door violation)"
-      ],
-      "counterfactualGap": "Enactment of 1912–1913 statutes is documented, but the exact reduction in statewide injury rates cannot be attributed to statutory text apart from inspection staffing."
-    },
-    {
-      "text": "Criminal case and compliance: the prosecution ended in acquittal. Cornell also records a later locked-door violation by owner Max Blanck in 1913, showing that reform did not ensure automatic compliance.",
-      "sourceIds": [
-        "tri-trial"
-      ],
-      "causalStatus": "DOCUMENTED_OUTCOME",
-      "confounders": [
-        "Pre-existing Progressive Era labor organizing (1909 strike)",
-        "Subsequent enforcement gaps (1913 repeat locked-door violation)"
-      ],
-      "counterfactualGap": "Enactment of 1912–1913 statutes is documented, but the exact reduction in statewide injury rates cannot be attributed to statutory text apart from inspection staffing."
-    },
-    {
-      "text": "Documented relief: union and Red Cross committees coordinated assistance to affected families. Relief addressed surviving needs; it could not reverse the loss of life.",
-      "sourceIds": [
-        "tri-relief"
-      ],
-      "causalStatus": "DOCUMENTED_OUTCOME",
-      "confounders": [
-        "Pre-existing Progressive Era labor organizing (1909 strike)",
-        "Subsequent enforcement gaps (1913 repeat locked-door violation)"
-      ],
-      "counterfactualGap": "Enactment of 1912–1913 statutes is documented, but the exact reduction in statewide injury rates cannot be attributed to statutory text apart from inspection staffing."
-    }
-  ],
-  "interpretations": [
-    {
-      "title": "A change in what counted as a preventable cause",
-      "text": "McEvoy argues that the fire made systemic explanations of industrial injury tangible and weakened intellectual barriers to regulation. This emphasizes a change in public and legal causal reasoning. Here the claim is represented from his accessible abstract, not a review of the full article.",
-      "sourceIds": [
-        "tri-mcevoy"
-      ],
-      "causalEmphasis": "Shift in legal & public causal attribution of industrial accidents (Abstract only)"
-    },
-    {
-      "title": "Reform through linked institutions",
-      "text": "Greenwald connects negotiated industrial arrangements with the commission, emphasizing interaction among labor, employers and the state. This foregrounds institutional development rather than treating a shocking event as a sufficient explanation. This summary is limited to the publisher's description of his book.",
-      "sourceIds": [
-        "tri-greenwald"
-      ],
-      "causalEmphasis": "Tripartite institutional corporatism: labor, employers, and state commission (Synopsis only)"
-    },
-    {
-      "title": "A longer movement, already under way",
-      "text": "Markowitz and Rosner place Triangle inside an existing movement against dangerous work. Their emphasis challenges any account that starts worker action only after the fire. These interpretations can overlap; the contest is over causal emphasis, not the documented date of the disaster.",
-      "sourceIds": [
-        "tri-markowitz-rosner"
-      ],
-      "causalEmphasis": "Long-term pre-1911 worker organizing and labor movement continuity"
-    }
-  ],
-  "limits": [
-    "This case does not estimate how much any single law reduced deaths or injuries. That requires outcome data and a defensible causal comparison.",
-    "Testimony is evidence about what witnesses reported. The inspector's earlier visit cannot settle every disputed condition at the time of the fire.",
-    "New York's specific institutions, workforce and political coalitions cannot be carried unchanged into another place or time.",
-    "A disaster followed by reform does not show that disasters are necessary, or that another disaster will produce reform.",
-    "The scholarship shown here offers differing causal emphases rather than a manufactured two-sided dispute about established casualties."
-  ],
-  "challengePrompts": [
-    "Which record would distinguish an inspection that merely records conditions from one that reliably changes them?",
-    "Does a claim about improved safety cite injury outcomes, or only the passage of a law?",
-    "What evidence of organizing before March 1911 would change a disaster-alone explanation?",
-    "Which present-day institution actually has power to enforce the proposed remedy?"
-  ],
-  "place": "New York, United States",
-  "theme": "Work & accountability",
-  "asOfDate": "2026-11-08",
-  "citizenGuide": {
-    "whatHappenedBefore": "On March 25, 1911, a fire at the Triangle Waist Company in New York City killed 146 garment workers—16 months after the 1909 garment strike raised safety demands and one month after a state labor inspector recorded unlocked stair doors during an announced visit.",
-    "whyComparable": "Illustrates the gap between periodic announced inspections, criminal liability standards, emergency charity relief, and statutory regulatory overhaul.",
-    "whatsDifferent": "New York's 1911–1915 reforms depended on an existing coalition of labor unions, the Women's Trade Union League, Tammany legislative allies, and the subpoena-empowered Factory Investigating Commission.",
-    "whatWorked": "Empowering the Factory Investigating Commission (1911–1915) to compel testimony, conduct unannounced inspections, and enact 1912–1913 laws reorganizing the Department of Labor and mandating sprinklers, fire drills, and exit standards.",
-    "whatFailed": "Announced inspections that let owners temporarily unlock doors (Feb 1911), criminal prosecution requiring proof of the owners' personal knowledge at the exact moment of the fire (acquittal Dec 1911), and statutory passage without continuous enforcement (owner Max Blanck was caught locking doors again in August 1913).",
-    "howWeKnow": "3 primary records (1911 inspector testimony, 1913 union relief report, 1915 Factory Investigating Commission report), 2 Cornell Kheel Center archival syntheses, and 3 scholarly works (McEvoy 1995 abstract, Greenwald 2005 synopsis, Markowitz & Rosner 2011 essay)."
+ "id": "triangle",
+ "title": "When warnings become protection",
+ "question": "What turns warnings about unsafe work into enforceable protection?",
+ "summary": "The Triangle fire and New York's response let us examine inspection, worker testimony, lawmaking and enforcement as distinct parts of accountability. The record documents a disaster and enacted protections; it does not establish that publicity alone makes workplaces safe.",
+ "period": "New York · 1909–1915",
+ "sources": [
+  {
+   "id": "tri-harmon",
+   "title": "Testimony of G. I. Harmon, labor inspector (1911)",
+   "author": "New York State Factory Investigating Commission; Cornell Kheel Center transcription",
+   "url": "https://trianglefire.ilr.cornell.edu/primary/reports/GIHarmonTestimony.html",
+   "type": "primary",
+   "locator": "Preliminary Report (1912), testimony pp. 242–249; especially pp. 243–244",
+   "accessed": "2026-11-08",
+   "rights": "Historical 1912 text is public domain in the United States; Cornell webpage/transcription is linked, not relicensed or copied wholesale.",
+   "notes": "Sworn testimony reports an inspection on February 27, 1911. A witness's report of what he saw is not proof of conditions throughout the following month.",
+   "coverage": "EXCERPT_WITH_CONTEXT",
+   "scopeConstraint": "Sworn testimony reports an inspection on February 27, 1911. A witness's report of what he saw is not proof of conditions throughout the following month."
   },
-  "counterexamples": [
-    {
-      "id": "tri-ce-1",
-      "title": "Repeat locked-door violation by Triangle co-owner Max Blanck (August 1913)",
-      "text": "Despite the 1911 tragedy, the December 1911 criminal trial, and the 1912–1913 fire-safety statutes, Triangle co-owner Max Blanck was prosecuted again in August 1913 for locking a factory door during working hours and fined $20.",
-      "failureCondition": "Statutory reform and public outrage fail to guarantee compliance when penalties are trivial and continuous unannounced enforcement is absent.",
-      "sourceIds": [
-        "tri-trial"
-      ]
-    },
-    {
-      "id": "tri-ce-2",
-      "title": "Announced inspection of February 27, 1911",
-      "text": "Inspector G. I. Harmon testified that the building passed his February 27, 1911 inspection with unlocked doors, noting that advance notice at the front desk gave management time to unlock doors before he reached upper floors.",
-      "failureCondition": "Announced point-in-time inspections do not establish day-to-day operational safety.",
-      "sourceIds": [
-        "tri-harmon"
-      ]
-    }
-  ],
-  "rejectedComparisons": [
-    {
-      "id": "tri-rej-1",
-      "claim": "The December 1911 acquittal of owners Blanck and Harris proves the factory complied with safety standards, and passing new safety laws in 1912–1913 automatically eliminated locked doors.",
-      "failureCode": "LEGAL_BURDEN_CONFLATION_AND_COMPLIANCE_FALLACY",
-      "whyItFails": "Confuses a criminal jury burden ('beyond a reasonable doubt' that the owners personally knew the door was locked at that moment) with workplace safety compliance, and ignores the documented August 1913 repeat locked-door conviction of Max Blanck.",
-      "counterEvidence": "Cornell Kheel Center trial record (`tri-trial`) documenting both the narrow criminal mens rea instruction in Dec 1911 and Blanck's August 1913 locked-door violation.",
-      "sourceIds": [
-        "tri-trial",
-        "tri-harmon"
-      ]
-    }
-  ],
-  "consequentialCorrection": {
-    "targetSourceId": "tri-mcevoy",
-    "targetSourceTitle": "Arthur F. McEvoy, Law & Social Inquiry (1995 — Abstract Only)",
-    "challengeReason": "Source `tri-mcevoy` was curated from its publicly accessible journal abstract rather than a full-text review (`ABSTRACT_ONLY`); challenging its standing tests whether primary factual and statutory conclusions remain untouched when an abstract-only scholarly interpretation is reopened.",
-    "expectedImpact": "Challenging `tri-mcevoy` reopens only `triangle-interpretations-1` (quarantining the McEvoy causal-attribution interpretation pending full-text review) while all 17 primary factual, timeline, comparison, outcome, and competing scholarly records remain `AVAILABLE`."
+  {
+   "id": "tri-relief",
+   "title": "Report of the Joint Relief Committee (January 15, 1913)",
+   "author": "Ladies' Waist & Dressmakers' Union No. 25; Cornell Kheel Center transcription",
+   "url": "https://trianglefire.ilr.cornell.edu/primary/reports/JointReliefCommittee.html",
+   "type": "primary",
+   "locator": "Opening paragraphs; paragraph beginning with the basis for relief",
+   "accessed": "2026-11-08",
+   "rights": "1913 report is public domain in the United States; host webpage is linked, not copied wholesale.",
+   "notes": "A union relief committee's contemporary account. Useful for casualty count, organizing and relief; it represents a participant institution.",
+   "coverage": "EXCERPT_WITH_CONTEXT",
+   "scopeConstraint": "A union relief committee's contemporary account. Useful for casualty count, organizing and relief; it represents a participant institution."
   },
-  "questionProfile": {
-    "primaryDomain": "Workplace safety, regulatory enforcement, labor organizing & legal accountability",
-    "whyRelevantSummary": "The March 25, 1911 Triangle Shirtwaist Factory fire in New York (146 killed) demonstrates why pre-disaster warnings and routine building inspections fail when statutes lack clear enforcement mandates, why criminal prosecution of factory owners resulted in acquittal despite mass casualties, and how coalition organizing plus the New York State Factory Investigating Commission (1911–1915) translated disaster into statutory fire and labor code reforms.",
-    "coreConcepts": [
-      "triangle",
-      "shirtwaist",
-      "factory fire",
-      "workplace safety",
-      "labor",
-      "union",
-      "strike",
-      "inspection",
-      "building code",
-      "fire escape",
-      "locked door",
-      "accountability",
-      "manslaughter",
-      "trial",
-      "acquittal",
-      "regulation",
-      "industrial accident",
-      "osha",
-      "worker protection"
-    ],
-    "supportedThemes": [
-      "Why prior worker warnings (the 1909–1910 shirtwaist strike) and routine inspections (February 27, 1911) failed to prevent the March 25, 1911 catastrophe",
-      "Why criminal prosecution (People v. Harris and Blanck) ended in acquittal under narrow statutory knowledge standards while legislative reform succeeded",
-      "How labor unions, civic reformers, and the Factory Investigating Commission enacted 30+ state safety laws—and where enforcement still fell short later"
-    ],
-    "knownCoverageGaps": [
-      "Does not cover modern federal OSHA administrative rulemaking, workers' compensation actuarial tables, or global garment supply-chain treaties (e.g., 2013 Rana Plaza Accord)",
-      "Full text of McEvoy (1995/2018) and Greenwald (2005) was not inspected; those two scholarly sources are represented solely from their public abstract and publisher synopsis"
-    ]
+  {
+   "id": "tri-fic",
+   "title": "Fourth Report of the Factory Investigating Commission (1915)",
+   "author": "New York State Factory Investigating Commission; Cornell Kheel Center transcription",
+   "url": "https://trianglefire.ilr.cornell.edu/primary/reports/FourthReportOfFIC",
+   "type": "primary",
+   "locator": "Volume 1, pp. 2–11; enacted laws on pp. 3, 6–7 and 10",
+   "accessed": "2026-11-08",
+   "rights": "1915 report is public domain in the United States; host webpage is linked, not copied wholesale.",
+   "notes": "The commission's own retrospective report identifies laws enacted after its recommendations. Its self-assessment of success requires independent scrutiny.",
+   "coverage": "EXCERPT_WITH_CONTEXT",
+   "scopeConstraint": "The commission's own retrospective report identifies laws enacted after its recommendations. Its self-assessment of success requires independent scrutiny."
   },
-  "historicalArguments": [
-    {
-      "id": "triangle-arg-1",
-      "topic": "Routine inspection compliance & 'fireproof' loft construction vs. locked exits and occupancy traps",
-      "decisionWindow": "1909 Shirtwaist Strike – March 25, 1911 (Asch Building Fire)",
-      "contemporaryActor": "Triangle Waist Co. owners, Building/Labor Inspectors (G. I. Harmon) & WTUL/ILGWU strikers",
-      "contemporaryArgument": "Before the fire, building authorities treated the iron-and-stone Asch Building as structurally fireproof, and labor inspector G. I. Harmon testified that during his February 27, 1911 inspection visit the factory conditions he observed appeared passable under existing rules, whereas garment workers and union organizers argued during the 1909–1910 strike that overcrowded high-rise lofts, inward-opening or locked doors, and inadequate fire escapes created deadly traps.",
-      "policymakerExpectation": "Municipal and state officials assumed prior to March 1911 that structural fireproofing of the building shell and periodic inspector visits were sufficient to protect garment workers on upper floors without mandatory automatic sprinklers, outward-opening unlocked doors, or occupancy drills.",
-      "expectationVerdict": "CONTRADICTED_BY_EVENTS",
-      "subsequentEvidence": "On March 25, 1911, fire spread rapidly through cotton scrap on the 8th, 9th, and 10th floors of the Asch Building. Although the building's masonry shell survived intact, 146 workers died within roughly 18 minutes because the 9th-floor Washington Place door was locked, the Greene Street exit was blocked by flame, the single narrow exterior fire escape collapsed, and fire department ladders reached only the 6th floor (tri-harmon, tri-relief, tri-trial).",
-      "laterHistoriography": "Historians (tri-markowitz-rosner, tri-cornell-reform; abstract/synopsis in tri-mcevoy, tri-greenwald) show that the catastrophe exposed the fallacy of equating a fireproof building shell with occupant life safety and shifted public understanding of industrial accidents from individual misfortune to preventable structural hazard.",
-      "differenceThatLimits": "Early 20th-century New York loft manufacturing operated under fragmented municipal/state jurisdiction without modern NFPA life-safety codes or federal workplace inspection mandates.",
-      "asOfDate": "2026-11-08",
-      "sourceIds": [
-        "tri-harmon",
-        "tri-relief",
-        "tri-trial",
-        "tri-cornell-reform",
-        "tri-markowitz-rosner"
-      ],
-      "survivingTextByWithdrawnSource": {
-        "tri-markowitz-rosner": "Sworn inspection testimony (tri-harmon), the Joint Relief Committee report (tri-relief), trial records (tri-trial), and Cornell ILR archives (tri-cornell-reform) establish that the Asch Building shell survived while 146 workers died due to blocked/locked exits, collapsed fire escapes, and ladder height limits.",
-        "tri-cornell-reform": "Primary testimony (tri-harmon), Joint Relief records (tri-relief), trial records (tri-trial), and Markowitz & Rosner (tri-markowitz-rosner) document the failure of pre-1911 inspection standards and the fatal exit bottlenecks on March 25, 1911."
-      }
-    },
-    {
-      "id": "triangle-arg-2",
-      "topic": "Criminal manslaughter prosecution of individual owners vs. structural statutory reform",
-      "decisionWindow": "April – December 1911 (People v. Isaac Harris and Max Blanck)",
-      "contemporaryActor": "Manhattan District Attorney's Office vs. Defense Counsel Max Steuer & Trial Jury",
-      "contemporaryArgument": "Prosecutors argued that owners Isaac Harris and Max Blanck should be convicted of first- and second-degree manslaughter because the 9th-floor Washington Place exit door was locked during working hours to prevent theft, trapping workers such as Margaret Schwartz. Defense counsel argued that the prosecution could not prove beyond a reasonable doubt that the owners personally knew the door was locked at the exact moment of the fire.",
-      "policymakerExpectation": "Many grieving families, unions, and civic observers expected a criminal trial to establish legal accountability and deter unsafe factory operations, while legal critics warned that Judge Crain's strict jury instructions on personal knowledge at the time of the fire made conviction unlikely.",
-      "expectationVerdict": "CONTRADICTED_BY_EVENTS",
-      "subsequentEvidence": "On December 27, 1911, the jury acquitted Harris and Blanck after deliberating less than two hours because jurors concluded the state had not met the criminal standard of proving the owners personally knew the door was locked at the time of the fire (tri-trial). Subsequent civil suits settled in 1913 for $75 per deceased victim, and Blanck was later fined just $20 when caught locking a factory door again in 1913.",
-      "laterHistoriography": "Institutional and legal historians (tri-trial, tri-cornell-reform; abstract in tri-mcevoy) emphasize that acquittal in a criminal trial did not mean the workplace was safe; rather, the failure of after-the-fact criminal blame catalyzed demand for prospective statutory mandates and administrative inspection power.",
-      "differenceThatLimits": "Criminal manslaughter standards requiring proof of individual mens rea beyond a reasonable doubt remain distinct from strict-liability administrative safety citations.",
-      "asOfDate": "2026-11-08",
-      "sourceIds": [
-        "tri-trial",
-        "tri-cornell-reform",
-        "tri-mcevoy"
-      ],
-      "survivingTextByWithdrawnSource": {
-        "tri-mcevoy": "The Cornell Triangle Fire trial archive (tri-trial) and Legislative Reform record (tri-cornell-reform) establish that Harris and Blanck were acquitted under jury instructions requiring proof of personal knowledge that the door was locked at the time of the fire, spurring legislative reform.",
-        "tri-cornell-reform": "The Cornell trial record (tri-trial) and McEvoy's abstract (tri-mcevoy) establish that the December 1911 acquittal turned on narrow criminal proof requirements rather than a finding that the factory was safe.",
-        "tri-cornell-reform+tri-mcevoy": "The Cornell Investigation & Trial archive (tri-trial) directly documents the December 1911 acquittal of Harris and Blanck and why acquittal under criminal proof standards did not establish that the factory was safe."
-      }
-    },
-    {
-      "id": "triangle-arg-3",
-      "topic": "Private union-employer Protocols of Peace vs. state Factory Investigating Commission legislation",
-      "decisionWindow": "June 1911 – 1915 (New York State Factory Investigating Commission)",
-      "contemporaryActor": "Factory Investigating Commission (Robert F. Wagner, Alfred E. Smith, Frances Perkins) & ILGWU/WTUL reformers",
-      "contemporaryArgument": "Commission leaders and labor reformers argued that neither voluntary employer goodwill nor shop-by-shop collective bargaining alone could protect unorganized loft workers; instead, the state had to conduct on-site inspections across thousands of workplaces and enact mandatory statutory requirements for automatic sprinklers, unlocked outward-swinging doors, fire drills, occupancy limits, and a reorganized Department of Labor.",
-      "policymakerExpectation": "The Factory Investigating Commission expected that embedding technical fire-engineering rules into the New York Labor Law and empowering state inspectors would systematically eliminate high-rise loft fire traps across New York.",
-      "expectationVerdict": "SUPPORTED_WITH_LIMITS",
-      "subsequentEvidence": "Between 1912 and 1914, New York enacted more than 30 labor and fire-safety statutes recommended by the Commission, reorganizing the Labor Department and mandating sprinklers, exit capacity, and fire alarms (tri-fic, tri-cornell-reform). However, the Commission's own reports noted ongoing enforcement challenges when inspection budgets, judicial penalties, or municipal coordination lagged.",
-      "laterHistoriography": "Historians (tri-markowitz-rosner; publisher synopsis in tri-greenwald) conclude that durable workplace protection arose from the interaction between militant labor organizing, cross-class Progressive reform coalitions, and permanent state regulatory machinery—while warning that statutory victories erode whenever inspection staffing and penalties are weakened.",
-      "differenceThatLimits": "New York State's 1912–1914 factory laws bound factories within a single state jurisdiction and could not prevent manufacturers from relocating production to jurisdictions with weaker enforcement.",
-      "asOfDate": "2026-11-08",
-      "sourceIds": [
-        "tri-fic",
-        "tri-relief",
-        "tri-cornell-reform",
-        "tri-greenwald",
-        "tri-markowitz-rosner"
-      ],
-      "survivingTextByWithdrawnSource": {
-        "tri-greenwald": "The Factory Investigating Commission's 1915 Fourth Report (tri-fic), Joint Relief Committee report (tri-relief), Cornell Legislative Reform archive (tri-cornell-reform), and Markowitz & Rosner (tri-markowitz-rosner) establish how state investigation and labor coalition advocacy produced over 30 New York safety laws while still facing ongoing inspection enforcement limits.",
-        "tri-markowitz-rosner": "The Factory Investigating Commission's 1915 report (tri-fic), Joint Relief report (tri-relief), and Cornell Legislative Reform record (tri-cornell-reform) document the enactment of New York's post-1911 factory safety statutes and the continuing need for active inspection enforcement.",
-        "tri-greenwald+tri-markowitz-rosner": "Primary and institutional records in the Factory Investigating Commission's 1915 report (tri-fic), Joint Relief Committee report (tri-relief), and Cornell Legislative Reform archive (tri-cornell-reform) establish the enactment of New York's post-1911 factory safety statutes and the distinction between statutory enactment and ongoing enforcement."
-      }
-    }
+  {
+   "id": "tri-cornell-reform",
+   "title": "Legislative Reform at State and Local Level",
+   "author": "Cornell University, ILR School / Kheel Center",
+   "url": "https://trianglefire.ilr.cornell.edu/legacy/legislativeReform.html",
+   "type": "institutional interpretation",
+   "locator": "Opening sections on pre-existing reform organizations; paragraphs on commission creation and 1913 laws",
+   "accessed": "2026-11-08",
+   "rights": "Copyright retained by source; original brief paraphrase and link only.",
+   "notes": "Places reform within established Progressive Era organizing, documenting a route from worker responses to investigation and legislation.",
+   "coverage": "EXCERPT_WITH_CONTEXT",
+   "scopeConstraint": "Places reform within established Progressive Era organizing, documenting a route from worker responses to investigation and legislation."
+  },
+  {
+   "id": "tri-trial",
+   "title": "Investigation & Trial",
+   "author": "Cornell University, ILR School / Kheel Center",
+   "url": "https://trianglefire.ilr.cornell.edu/story/investigationTrial.html",
+   "type": "institutional interpretation",
+   "locator": "Paragraph on December 27 acquittal; paragraph on August 1913 locked-door prosecution",
+   "accessed": "2026-11-08",
+   "rights": "Copyright retained by source; original brief paraphrase and link only.",
+   "notes": "The exhibition summarizes the trial and links its transcript. Do not equate acquittal with a finding that the workplace was safe.",
+   "coverage": "EXCERPT_WITH_CONTEXT",
+   "scopeConstraint": "The exhibition summarizes the trial and links its transcript. Do not equate acquittal with a finding that the workplace was safe."
+  },
+  {
+   "id": "tri-mcevoy",
+   "title": "The Triangle Shirtwaist Factory Fire of 1911: Social Change, Industrial Accidents, and the Evolution of Common-Sense Causality",
+   "author": "Arthur F. McEvoy",
+   "url": "https://www.cambridge.org/core/journals/law-and-social-inquiry/article/abs/triangle-shirtwaist-factory-fire-of-1911-social-change-industrial-accidents-and-the-evolution-of-commonsense-causality/576CA665F1EC2DB1C246F9DA22AAD2BC",
+   "type": "scholarly interpretation",
+   "locator": "Law & Social Inquiry 20(2), Spring 1995, pp. 621–651; publicly accessible abstract and note 8; DOI 10.1111/j.1747-4469.1995.tb01072.x",
+   "accessed": "2026-11-08",
+   "rights": "Copyright American Bar Foundation 1995. Abstract paraphrased; article not redistributed.",
+   "notes": "The full article was not obtained. This case represents only the argument stated in the accessible abstract. Online date 2018 is not the article's original publication year.",
+   "coverage": "ABSTRACT_ONLY",
+   "scopeConstraint": "The full article was not obtained. This case represents only the argument stated in the accessible abstract. Online date 2018 is not the article's original publication year."
+  },
+  {
+   "id": "tri-greenwald",
+   "title": "The Triangle Fire, the Protocols of Peace, and Industrial Democracy in Progressive Era New York",
+   "author": "Richard Alan Greenwald; Temple University Press publisher synopsis",
+   "url": "https://tupress.temple.edu/books/the-triangle-fire-the-protocols-of-peace-and-industrial-democracy-in-progressive-era-new-york",
+   "type": "scholarly interpretation",
+   "locator": "Publisher's book description, June 2005 edition; synopsis only",
+   "accessed": "2026-11-08",
+   "rights": "Copyright retained by publisher/author. Synopsis paraphrased; book not redistributed.",
+   "notes": "Full book not reviewed. Used narrowly for the publisher-documented argument linking collective industrial negotiation and state investigation.",
+   "coverage": "SYNOPSIS_ONLY",
+   "scopeConstraint": "Full book not reviewed. Used narrowly for the publisher-documented argument linking collective industrial negotiation and state investigation."
+  },
+  {
+   "id": "tri-markowitz-rosner",
+   "title": "The revolution in workplace safety",
+   "author": "Gerald Markowitz and David Rosner",
+   "url": "https://dol.ny.gov/system/files/documents/2021/02/triangle-nycosh-booklet.pdf",
+   "type": "scholarly interpretation",
+   "locator": "NYCOSH Triangle centennial booklet (2011), essay headed The revolution in workplace safety, printed p. 22",
+   "accessed": "2026-11-08",
+   "rights": "Copyright retained by source; original short paraphrase and link only. State hosting does not make the booklet public domain.",
+   "notes": "Original essay by two historians, published in an advocacy/commemoration collection. Use the named essay, not the collection's other political claims.",
+   "coverage": "EXCERPT_WITH_CONTEXT",
+   "scopeConstraint": "Original essay by two historians, published in an advocacy/commemoration collection. Use the named essay, not the collection's other political claims."
+  },
+  {
+   "id": "tri-dyrud-insurance",
+   "title": "Fire! Three Case Studies in Ethics (Triangle Shirtwaist Factory Fire section)",
+   "author": "Marilyn A. Dyrud, Oregon Institute of Technology; 36th ASEE/IEEE Frontiers in Education Conference (2006)",
+   "url": "https://www.researchgate.net/publication/224061086_Fire_Three_Case_Studies_in_Ethics",
+   "type": "scholarly interpretation",
+   "locator": "Triangle Shirtwaist Factory Fire section: insurance settlement and civil-suit figures, citing Von Drehle (2003) and Pence et al. (2003)",
+   "accessed": "2026-11-09",
+   "rights": "Copyright retained by author/publisher; figures paraphrased and linked, paper not redistributed.",
+   "notes": "Reports, citing David Von Drehle, Triangle: The Fire That Changed America (2003), that Harris and Blanck collected $200,000 in insurance and an insurance settlement nearly $65,000 in excess of the factory's worth (about $445 per victim), while the 1914 civil settlement paid each plaintiff family $75 per life lost. The rounded popular account ($60,000 excess, about $400 per victim) is the same figure rounded down; this record states the paper's ~$65,000 / ~$445 figures.",
+   "coverage": "EXCERPT_WITH_CONTEXT",
+   "scopeConstraint": "Conference paper consulted for the insurance and settlement figures only, as reported from Von Drehle (2003); it is not a primary insurance record and does not establish the owners' intent."
+  }
+ ],
+ "facts": [
+  {
+   "id": "tri-f1",
+   "text": "The union's 1913 report records that the March 25, 1911 fire killed 146 people.",
+   "sourceIds": [
+    "tri-relief"
+   ],
+   "causalStatus": "DOCUMENTED_RECORD"
+  },
+  {
+   "id": "tri-f2",
+   "text": "Inspector G. I. Harmon testified that he inspected the building on February 27, 1911 and reported finding its stair doors unlocked then.",
+   "sourceIds": [
+    "tri-harmon"
+   ],
+   "causalStatus": "DOCUMENTED_RECORD"
+  },
+  {
+   "id": "tri-f3",
+   "text": "The commission's report lists fire drills and automatic sprinklers among the subjects of laws enacted in 1912.",
+   "sourceIds": [
+    "tri-fic"
+   ],
+   "causalStatus": "DOCUMENTED_RECORD"
+  },
+  {
+   "id": "tri-f4",
+   "text": "The 1913 laws listed by the commission included Department of Labor reorganization, an Industrial Board, and rules on exits, alarms and occupancy.",
+   "sourceIds": [
+    "tri-fic"
+   ],
+   "causalStatus": "DOCUMENTED_RECORD"
+  },
+  {
+   "id": "tri-f5",
+   "text": "The owners were acquitted in December 1911; the trial required proof of their knowledge that the relevant door was locked.",
+   "sourceIds": [
+    "tri-trial"
+   ],
+   "causalStatus": "DOCUMENTED_RECORD"
+  }
+ ],
+ "timeline": [
+  {
+   "date": "1909",
+   "title": "Organizing before disaster",
+   "text": "The union relief report describes a preceding strike at Triangle that failed to secure union control there.",
+   "sourceIds": [
+    "tri-relief"
+   ]
+  },
+  {
+   "date": "1911-02-27",
+   "title": "An inspection snapshot",
+   "text": "Harmon later testified to inspecting the building on this date.",
+   "sourceIds": [
+    "tri-harmon"
+   ]
+  },
+  {
+   "date": "1911-03-25",
+   "title": "Triangle fire",
+   "text": "The fire killed 146 people, according to the contemporary relief report.",
+   "sourceIds": [
+    "tri-relief"
+   ]
+  },
+  {
+   "date": "1911-06-30",
+   "title": "Investigation authorized",
+   "text": "The legislature approved funding to establish the Factory Investigating Commission.",
+   "sourceIds": [
+    "tri-cornell-reform"
+   ]
+  },
+  {
+   "date": "1911-12-27",
+   "title": "Criminal acquittal",
+   "text": "A jury acquitted the owners. Criminal liability and preventive reform followed different paths.",
+   "sourceIds": [
+    "tri-trial"
+   ]
+  },
+  {
+   "date": "1912–1913",
+   "title": "Rules and administrative capacity",
+   "text": "Enacted measures addressed fire precautions and reorganized labor administration.",
+   "sourceIds": [
+    "tri-fic"
+   ]
+  }
+ ],
+ "comparison": [
+  {
+   "dimension": "Inspection versus continuous safety",
+   "historical": "Harmon described unlocked doors at an earlier visit and acknowledged that announcing the inspection gave management time to change temporary conditions.",
+   "present": "For a workplace claim today, ask what an inspection observes, how long the observation remains valid, and how workers can report later changes.",
+   "limit": "This is a question for investigation. It does not establish conditions at any present-day employer.",
+   "sourceIds": [
+    "tri-harmon"
+   ],
+   "asOfDate": "2026-11-08",
+   "timeframe": "Immediate (emergency relief) vs. 1–4 Years (FIC investigation, 1912–1913 statutory reorganization, ongoing compliance audits)"
+  },
+  {
+   "dimension": "Worker evidence",
+   "historical": "The Women's Trade Union League gathered workers' accounts after the fire and used them in a campaign for investigation.",
+   "present": "Ask whether affected workers can document hazards and have their evidence considered by an institution able to act.",
+   "limit": "The political rights, employment relations and channels for reporting in a modern jurisdiction must be investigated separately.",
+   "sourceIds": [
+    "tri-cornell-reform"
+   ],
+   "asOfDate": "2026-11-08",
+   "timeframe": "Immediate (emergency relief) vs. 1–4 Years (FIC investigation, 1912–1913 statutory reorganization, ongoing compliance audits)"
+  },
+  {
+   "dimension": "Authority to act",
+   "historical": "The commission could require witnesses and documents; later legislation changed the organization of labor regulation.",
+   "present": "Identify who can obtain records, require a remedy, and verify that a remedy lasts.",
+   "limit": "A modern oversight body may have a different mandate. An institution's name alone supplies no equivalence.",
+   "sourceIds": [
+    "tri-fic"
+   ],
+   "asOfDate": "2026-11-08",
+   "timeframe": "Immediate (emergency relief) vs. 1–4 Years (FIC investigation, 1912–1913 statutory reorganization, ongoing compliance audits)"
+  },
+  {
+   "dimension": "Relief versus prevention",
+   "historical": "The relief committee described aid organized around immediate need rather than compensation for death or injury.",
+   "present": "Separate emergency aid, compensation, accountability and prevention when examining a response to harm.",
+   "limit": "Different legal and social-insurance arrangements alter what each form of remedy can provide.",
+   "sourceIds": [
+    "tri-relief"
+   ],
+   "asOfDate": "2026-11-08",
+   "timeframe": "Immediate (emergency relief) vs. 1–4 Years (FIC investigation, 1912–1913 statutory reorganization, ongoing compliance audits)"
+  }
+ ],
+ "outcomes": [
+  {
+   "text": "Documented intervention: New York enacted fire-safety provisions and reorganized labor regulation. These are verified institutional changes, not a quantified estimate of injuries prevented.",
+   "sourceIds": [
+    "tri-fic"
+   ],
+   "causalStatus": "DOCUMENTED_OUTCOME",
+   "confounders": [
+    "Pre-existing Progressive Era labor organizing (1909 strike)",
+    "Subsequent enforcement gaps (1913 repeat locked-door violation)"
+   ],
+   "counterfactualGap": "Enactment of 1912–1913 statutes is documented, but the exact reduction in statewide injury rates cannot be attributed to statutory text apart from inspection staffing."
+  },
+  {
+   "text": "Criminal case and compliance: the prosecution ended in acquittal. Cornell also records a later locked-door violation by owner Max Blanck in 1913, showing that reform did not ensure automatic compliance.",
+   "sourceIds": [
+    "tri-trial"
+   ],
+   "causalStatus": "DOCUMENTED_OUTCOME",
+   "confounders": [
+    "Pre-existing Progressive Era labor organizing (1909 strike)",
+    "Subsequent enforcement gaps (1913 repeat locked-door violation)"
+   ],
+   "counterfactualGap": "Enactment of 1912–1913 statutes is documented, but the exact reduction in statewide injury rates cannot be attributed to statutory text apart from inspection staffing."
+  },
+  {
+   "text": "Documented relief: union and Red Cross committees coordinated assistance to affected families. Relief addressed surviving needs; it could not reverse the loss of life.",
+   "sourceIds": [
+    "tri-relief"
+   ],
+   "causalStatus": "DOCUMENTED_OUTCOME",
+   "confounders": [
+    "Pre-existing Progressive Era labor organizing (1909 strike)",
+    "Subsequent enforcement gaps (1913 repeat locked-door violation)"
+   ],
+   "counterfactualGap": "Enactment of 1912–1913 statutes is documented, but the exact reduction in statewide injury rates cannot be attributed to statutory text apart from inspection staffing."
+  }
+ ],
+ "interpretations": [
+  {
+   "title": "A change in what counted as a preventable cause",
+   "text": "McEvoy argues that the fire made systemic explanations of industrial injury tangible and weakened intellectual barriers to regulation. This emphasizes a change in public and legal causal reasoning. Here the claim is represented from his accessible abstract, not a review of the full article.",
+   "sourceIds": [
+    "tri-mcevoy"
+   ],
+   "causalEmphasis": "Shift in legal & public causal attribution of industrial accidents (Abstract only)"
+  },
+  {
+   "title": "Reform through linked institutions",
+   "text": "Greenwald connects negotiated industrial arrangements with the commission, emphasizing interaction among labor, employers and the state. This foregrounds institutional development rather than treating a shocking event as a sufficient explanation. This summary is limited to the publisher's description of his book.",
+   "sourceIds": [
+    "tri-greenwald"
+   ],
+   "causalEmphasis": "Tripartite institutional corporatism: labor, employers, and state commission (Synopsis only)"
+  },
+  {
+   "title": "A longer movement, already under way",
+   "text": "Markowitz and Rosner place Triangle inside an existing movement against dangerous work. Their emphasis challenges any account that starts worker action only after the fire. These interpretations can overlap; the contest is over causal emphasis, not the documented date of the disaster.",
+   "sourceIds": [
+    "tri-markowitz-rosner"
+   ],
+   "causalEmphasis": "Long-term pre-1911 worker organizing and labor movement continuity"
+  }
+ ],
+ "limits": [
+  "This case does not estimate how much any single law reduced deaths or injuries. That requires outcome data and a defensible causal comparison.",
+  "Testimony is evidence about what witnesses reported. The inspector's earlier visit cannot settle every disputed condition at the time of the fire.",
+  "New York's specific institutions, workforce and political coalitions cannot be carried unchanged into another place or time.",
+  "A disaster followed by reform does not show that disasters are necessary, or that another disaster will produce reform.",
+  "The scholarship shown here offers differing causal emphases rather than a manufactured two-sided dispute about established casualties."
+ ],
+ "challengePrompts": [
+  "Which record would distinguish an inspection that merely records conditions from one that reliably changes them?",
+  "Does a claim about improved safety cite injury outcomes, or only the passage of a law?",
+  "What evidence of organizing before March 1911 would change a disaster-alone explanation?",
+  "Which present-day institution actually has power to enforce the proposed remedy?"
+ ],
+ "place": "New York, United States",
+ "theme": "Work & accountability",
+ "asOfDate": "2026-11-08",
+ "citizenGuide": {
+  "whatHappenedBefore": "On March 25, 1911, a fire at the Triangle Waist Company in New York City killed 146 garment workers—16 months after the 1909 garment strike raised safety demands and one month after a state labor inspector recorded unlocked stair doors during an announced visit.",
+  "whyComparable": "Illustrates the gap between periodic announced inspections, criminal liability standards, emergency charity relief, and statutory regulatory overhaul.",
+  "whatsDifferent": "New York's 1911–1915 reforms depended on an existing coalition of labor unions, the Women's Trade Union League, Tammany legislative allies, and the subpoena-empowered Factory Investigating Commission.",
+  "whatWorked": "Empowering the Factory Investigating Commission (1911–1915) to compel testimony, conduct unannounced inspections, and enact 1912–1913 laws reorganizing the Department of Labor and mandating sprinklers, fire drills, and exit standards.",
+  "whatFailed": "Announced inspections that let owners temporarily unlock doors (Feb 1911), criminal prosecution requiring proof of the owners' personal knowledge at the exact moment of the fire (acquittal Dec 1911), and statutory passage without continuous enforcement (owner Max Blanck was caught locking doors again in August 1913).",
+  "howWeKnow": "3 primary records (1911 inspector testimony, 1913 union relief report, 1915 Factory Investigating Commission report), 2 Cornell Kheel Center archival syntheses, and 3 scholarly works (McEvoy 1995 abstract, Greenwald 2005 synopsis, Markowitz & Rosner 2011 essay)."
+ },
+ "counterexamples": [
+  {
+   "id": "tri-ce-1",
+   "title": "Repeat locked-door violation by Triangle co-owner Max Blanck (August 1913)",
+   "text": "Despite the 1911 tragedy, the December 1911 criminal trial, and the 1912–1913 fire-safety statutes, Triangle co-owner Max Blanck was prosecuted again in August 1913 for locking a factory door during working hours and fined $20.",
+   "failureCondition": "Statutory reform and public outrage fail to guarantee compliance when penalties are trivial and continuous unannounced enforcement is absent.",
+   "sourceIds": [
+    "tri-trial"
+   ]
+  },
+  {
+   "id": "tri-ce-2",
+   "title": "Announced inspection of February 27, 1911",
+   "text": "Inspector G. I. Harmon testified that the building passed his February 27, 1911 inspection with unlocked doors, noting that advance notice at the front desk gave management time to unlock doors before he reached upper floors.",
+   "failureCondition": "Announced point-in-time inspections do not establish day-to-day operational safety.",
+   "sourceIds": [
+    "tri-harmon"
+   ]
+  },
+  {
+   "id": "tri-ce-3",
+   "title": "Owners' insurance profit vs. $75-per-life settlements",
+   "text": "Harris and Blanck collected about $200,000 in insurance for the fire; the settlement ran nearly $65,000 above the factory's reported losses (about $445 per victim), while the March 11, 1914 civil settlement paid victims' families $75 per life lost.",
+   "failureCondition": "A criminal acquittal plus a small civil settlement does not establish that the owners bore the financial cost of the fire — here the owners profited from it.",
+   "sourceIds": [
+    "tri-dyrud-insurance"
+   ]
+  }
+ ],
+ "rejectedComparisons": [
+  {
+   "id": "tri-rej-1",
+   "claim": "The December 1911 acquittal of owners Blanck and Harris proves the factory complied with safety standards, and passing new safety laws in 1912–1913 automatically eliminated locked doors.",
+   "failureCode": "LEGAL_BURDEN_CONFLATION_AND_COMPLIANCE_FALLACY",
+   "whyItFails": "Confuses a criminal jury burden ('beyond a reasonable doubt' that the owners personally knew the door was locked at that moment) with workplace safety compliance, and ignores the documented August 1913 repeat locked-door conviction of Max Blanck.",
+   "counterEvidence": "Cornell Kheel Center trial record (`tri-trial`) documenting both the narrow criminal mens rea instruction in Dec 1911 and Blanck's August 1913 locked-door violation.",
+   "sourceIds": [
+    "tri-trial",
+    "tri-harmon"
+   ]
+  }
+ ],
+ "consequentialCorrection": {
+  "targetSourceId": "tri-mcevoy",
+  "targetSourceTitle": "Arthur F. McEvoy, Law & Social Inquiry (1995 — Abstract Only)",
+  "challengeReason": "Source `tri-mcevoy` was curated from its publicly accessible journal abstract rather than a full-text review (`ABSTRACT_ONLY`); challenging its standing tests whether primary factual and statutory conclusions remain untouched when an abstract-only scholarly interpretation is reopened.",
+  "expectedImpact": "Challenging `tri-mcevoy` reopens only `triangle-interpretations-1` (quarantining the McEvoy causal-attribution interpretation pending full-text review) while all 17 primary factual, timeline, comparison, outcome, and competing scholarly records remain `AVAILABLE`."
+ },
+ "questionProfile": {
+  "primaryDomain": "Workplace safety, regulatory enforcement, labor organizing & legal accountability",
+  "whyRelevantSummary": "The March 25, 1911 Triangle Shirtwaist Factory fire in New York (146 killed) demonstrates why pre-disaster warnings and routine building inspections fail when statutes lack clear enforcement mandates, why criminal prosecution of factory owners resulted in acquittal despite mass casualties, and how coalition organizing plus the New York State Factory Investigating Commission (1911–1915) translated disaster into statutory fire and labor code reforms.",
+  "coreConcepts": [
+   "triangle",
+   "shirtwaist",
+   "factory fire",
+   "workplace safety",
+   "labor",
+   "union",
+   "strike",
+   "inspection",
+   "building code",
+   "fire escape",
+   "locked door",
+   "accountability",
+   "manslaughter",
+   "trial",
+   "acquittal",
+   "regulation",
+   "industrial accident",
+   "osha",
+   "worker protection"
+  ],
+  "supportedThemes": [
+   "Why prior worker warnings (the 1909–1910 shirtwaist strike) and routine inspections (February 27, 1911) failed to prevent the March 25, 1911 catastrophe",
+   "Why criminal prosecution (People v. Harris and Blanck) ended in acquittal under narrow statutory knowledge standards while legislative reform succeeded",
+   "How labor unions, civic reformers, and the Factory Investigating Commission enacted 30+ state safety laws—and where enforcement still fell short later"
+  ],
+  "knownCoverageGaps": [
+   "Does not cover modern federal OSHA administrative rulemaking, workers' compensation actuarial tables, or global garment supply-chain treaties (e.g., 2013 Rana Plaza Accord)",
+   "Full text of McEvoy (1995/2018) and Greenwald (2005) was not inspected; those two scholarly sources are represented solely from their public abstract and publisher synopsis"
   ]
+ },
+ "historicalArguments": [
+  {
+   "id": "triangle-arg-1",
+   "topic": "Routine inspection compliance & 'fireproof' loft construction vs. locked exits and occupancy traps",
+   "decisionWindow": "1909 Shirtwaist Strike – March 25, 1911 (Asch Building Fire)",
+   "contemporaryActor": "Triangle Waist Co. owners, Building/Labor Inspectors (G. I. Harmon) & WTUL/ILGWU strikers",
+   "contemporaryArgument": "Before the fire, building authorities treated the iron-and-stone Asch Building as structurally fireproof, and labor inspector G. I. Harmon testified that during his February 27, 1911 inspection visit the factory conditions he observed appeared passable under existing rules, whereas garment workers and union organizers argued during the 1909–1910 strike that overcrowded high-rise lofts, inward-opening or locked doors, and inadequate fire escapes created deadly traps.",
+   "policymakerExpectation": "Municipal and state officials assumed prior to March 1911 that structural fireproofing of the building shell and periodic inspector visits were sufficient to protect garment workers on upper floors without mandatory automatic sprinklers, outward-opening unlocked doors, or occupancy drills.",
+   "expectationVerdict": "CONTRADICTED_BY_EVENTS",
+   "subsequentEvidence": "On March 25, 1911, fire spread rapidly through cotton scrap on the 8th, 9th, and 10th floors of the Asch Building. Although the building's masonry shell survived intact, 146 workers died within roughly 18 minutes because the 9th-floor Washington Place door was locked, the Greene Street exit was blocked by flame, the single narrow exterior fire escape collapsed, and fire department ladders reached only the 6th floor (tri-harmon, tri-relief, tri-trial).",
+   "laterHistoriography": "Historians (tri-markowitz-rosner, tri-cornell-reform; abstract/synopsis in tri-mcevoy, tri-greenwald) show that the catastrophe exposed the fallacy of equating a fireproof building shell with occupant life safety and shifted public understanding of industrial accidents from individual misfortune to preventable structural hazard.",
+   "differenceThatLimits": "Early 20th-century New York loft manufacturing operated under fragmented municipal/state jurisdiction without modern NFPA life-safety codes or federal workplace inspection mandates.",
+   "asOfDate": "2026-11-08",
+   "sourceIds": [
+    "tri-harmon",
+    "tri-relief",
+    "tri-trial",
+    "tri-cornell-reform",
+    "tri-markowitz-rosner"
+   ],
+   "survivingTextByWithdrawnSource": {
+    "tri-markowitz-rosner": "Sworn inspection testimony (tri-harmon), the Joint Relief Committee report (tri-relief), trial records (tri-trial), and Cornell ILR archives (tri-cornell-reform) establish that the Asch Building shell survived while 146 workers died due to blocked/locked exits, collapsed fire escapes, and ladder height limits.",
+    "tri-cornell-reform": "Primary testimony (tri-harmon), Joint Relief records (tri-relief), trial records (tri-trial), and Markowitz & Rosner (tri-markowitz-rosner) document the failure of pre-1911 inspection standards and the fatal exit bottlenecks on March 25, 1911."
+   }
+  },
+  {
+   "id": "triangle-arg-2",
+   "topic": "Criminal manslaughter prosecution of individual owners vs. structural statutory reform",
+   "decisionWindow": "April – December 1911 (People v. Isaac Harris and Max Blanck)",
+   "contemporaryActor": "Manhattan District Attorney's Office vs. Defense Counsel Max Steuer & Trial Jury",
+   "contemporaryArgument": "Prosecutors argued that owners Isaac Harris and Max Blanck should be convicted of first- and second-degree manslaughter because the 9th-floor Washington Place exit door was locked during working hours to prevent theft, trapping workers such as Margaret Schwartz. Defense counsel argued that the prosecution could not prove beyond a reasonable doubt that the owners personally knew the door was locked at the exact moment of the fire.",
+   "policymakerExpectation": "Many grieving families, unions, and civic observers expected a criminal trial to establish legal accountability and deter unsafe factory operations, while legal critics warned that Judge Crain's strict jury instructions on personal knowledge at the time of the fire made conviction unlikely.",
+   "expectationVerdict": "CONTRADICTED_BY_EVENTS",
+   "subsequentEvidence": "On December 27, 1911, the jury acquitted Harris and Blanck after deliberating less than two hours because jurors concluded the state had not met the criminal standard of proving the owners personally knew the door was locked at the time of the fire (tri-trial). Subsequent civil suits settled on March 11, 1914 for $75 per life lost, and Blanck was later fined just $20 when caught locking a factory door again in 1913.",
+   "laterHistoriography": "Institutional and legal historians (tri-trial, tri-cornell-reform; abstract in tri-mcevoy) emphasize that acquittal in a criminal trial did not mean the workplace was safe; rather, the failure of after-the-fact criminal blame catalyzed demand for prospective statutory mandates and administrative inspection power.",
+   "differenceThatLimits": "Criminal manslaughter standards requiring proof of individual mens rea beyond a reasonable doubt remain distinct from strict-liability administrative safety citations.",
+   "asOfDate": "2026-11-08",
+   "sourceIds": [
+    "tri-trial",
+    "tri-cornell-reform",
+    "tri-mcevoy"
+   ],
+   "survivingTextByWithdrawnSource": {
+    "tri-mcevoy": "The Cornell Triangle Fire trial archive (tri-trial) and Legislative Reform record (tri-cornell-reform) establish that Harris and Blanck were acquitted under jury instructions requiring proof of personal knowledge that the door was locked at the time of the fire, spurring legislative reform.",
+    "tri-cornell-reform": "The Cornell trial record (tri-trial) and McEvoy's abstract (tri-mcevoy) establish that the December 1911 acquittal turned on narrow criminal proof requirements rather than a finding that the factory was safe.",
+    "tri-cornell-reform+tri-mcevoy": "The Cornell Investigation & Trial archive (tri-trial) directly documents the December 1911 acquittal of Harris and Blanck and why acquittal under criminal proof standards did not establish that the factory was safe."
+   }
+  },
+  {
+   "id": "triangle-arg-3",
+   "topic": "Private union-employer Protocols of Peace vs. state Factory Investigating Commission legislation",
+   "decisionWindow": "June 1911 – 1915 (New York State Factory Investigating Commission)",
+   "contemporaryActor": "Factory Investigating Commission (Robert F. Wagner, Alfred E. Smith, Frances Perkins) & ILGWU/WTUL reformers",
+   "contemporaryArgument": "Commission leaders and labor reformers argued that neither voluntary employer goodwill nor shop-by-shop collective bargaining alone could protect unorganized loft workers; instead, the state had to conduct on-site inspections across thousands of workplaces and enact mandatory statutory requirements for automatic sprinklers, unlocked outward-swinging doors, fire drills, occupancy limits, and a reorganized Department of Labor.",
+   "policymakerExpectation": "The Factory Investigating Commission expected that embedding technical fire-engineering rules into the New York Labor Law and empowering state inspectors would systematically eliminate high-rise loft fire traps across New York.",
+   "expectationVerdict": "SUPPORTED_WITH_LIMITS",
+   "subsequentEvidence": "Between 1912 and 1914, New York enacted more than 30 labor and fire-safety statutes recommended by the Commission, reorganizing the Labor Department and mandating sprinklers, exit capacity, and fire alarms (tri-fic, tri-cornell-reform). However, the Commission's own reports noted ongoing enforcement challenges when inspection budgets, judicial penalties, or municipal coordination lagged.",
+   "laterHistoriography": "Historians (tri-markowitz-rosner; publisher synopsis in tri-greenwald) conclude that durable workplace protection arose from the interaction between militant labor organizing, cross-class Progressive reform coalitions, and permanent state regulatory machinery—while warning that statutory victories erode whenever inspection staffing and penalties are weakened.",
+   "differenceThatLimits": "New York State's 1912–1914 factory laws bound factories within a single state jurisdiction and could not prevent manufacturers from relocating production to jurisdictions with weaker enforcement.",
+   "asOfDate": "2026-11-08",
+   "sourceIds": [
+    "tri-fic",
+    "tri-relief",
+    "tri-cornell-reform",
+    "tri-greenwald",
+    "tri-markowitz-rosner"
+   ],
+   "survivingTextByWithdrawnSource": {
+    "tri-greenwald": "The Factory Investigating Commission's 1915 Fourth Report (tri-fic), Joint Relief Committee report (tri-relief), Cornell Legislative Reform archive (tri-cornell-reform), and Markowitz & Rosner (tri-markowitz-rosner) establish how state investigation and labor coalition advocacy produced over 30 New York safety laws while still facing ongoing inspection enforcement limits.",
+    "tri-markowitz-rosner": "The Factory Investigating Commission's 1915 report (tri-fic), Joint Relief report (tri-relief), and Cornell Legislative Reform record (tri-cornell-reform) document the enactment of New York's post-1911 factory safety statutes and the continuing need for active inspection enforcement.",
+    "tri-greenwald+tri-markowitz-rosner": "Primary and institutional records in the Factory Investigating Commission's 1915 report (tri-fic), Joint Relief Committee report (tri-relief), and Cornell Legislative Reform archive (tri-cornell-reform) establish the enactment of New York's post-1911 factory safety statutes and the distinction between statutory enactment and ongoing enforcement."
+   }
+  }
+ ]
 }

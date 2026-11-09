@@ -1,5 +1,6 @@
 {
-  "testedAt": "2026-11-08T20:05:00Z",
+  "testedAt": "2026-11-09T14:35:00Z",
+  "version": "0.2.0",
   "evaluationMode": "SIMULATED_ACCEPTANCE_EXERCISE_HEADLESS_CHROMIUM_NO_REAL_HUMAN_PARTICIPANT",
   "bundleUrl": "dist/index.html",
   "viewports": {
@@ -7,7 +8,7 @@
       "width": 390,
       "height": 844,
       "caseRendered": "hormuz",
-      "combinationsTested": 40,
+      "combinationsTested": 85,
       "questionsTested": 6,
       "overflowCombinations": [],
       "clientWidth": 375,
@@ -15,13 +16,14 @@
       "horizontalOverflow": false,
       "integrityBadge": "3-Axis Verification PASS: 10 preserved citation cards passed SHA-256 byte checks. Checksums prove byte integrity, not historical truth or publisher signature.",
       "severeConsoleLogs": 0,
+      "frontDoorScreenshot": "v02_phone_390x844_front_door.png",
       "screenshot": "phone_390x844_hormuz.png"
     },
     "chromebook_1024x768": {
       "width": 1024,
       "height": 768,
       "caseRendered": "israel-palestine",
-      "combinationsTested": 40,
+      "combinationsTested": 85,
       "questionsTested": 6,
       "overflowCombinations": [],
       "clientWidth": 1009,
@@ -29,13 +31,14 @@
       "horizontalOverflow": false,
       "integrityBadge": "3-Axis Verification PASS: 11 preserved citation cards passed SHA-256 byte checks. Checksums prove byte integrity, not historical truth or publisher signature.",
       "severeConsoleLogs": 0,
+      "frontDoorScreenshot": "v02_chromebook_1024x768_front_door.png",
       "screenshot": "chromebook_1024x768_israel-palestine.png"
     },
     "desktop_1280x850": {
       "width": 1280,
       "height": 850,
       "caseRendered": "hormuz",
-      "combinationsTested": 40,
+      "combinationsTested": 85,
       "questionsTested": 6,
       "overflowCombinations": [],
       "clientWidth": 1265,
@@ -43,6 +46,7 @@
       "horizontalOverflow": false,
       "integrityBadge": "3-Axis Verification PASS: 10 preserved citation cards passed SHA-256 byte checks. Checksums prove byte integrity, not historical truth or publisher signature.",
       "severeConsoleLogs": 0,
+      "frontDoorScreenshot": "v02_desktop_1280x850_front_door.png",
       "screenshot": "desktop_1280x850_hormuz.png"
     }
   },
@@ -122,6 +126,44 @@
       "threeAxisInspectorVerified": true
     }
   ],
+  "v02InteractiveJourneyChecks": {
+    "quickLookOneMinuteViewVerified": true,
+    "step1_questionAndArchivalHotspotsVerified": true,
+    "step2_swipeableAndKeyboardTimelineVerified": true,
+    "step3_whatDidPeopleBelieveRevealVerified": true,
+    "step4_outcomesConfoundersAndCounterexamplesVerified": true,
+    "step5_beforeAndAfterComparisonExplorerVerified": true,
+    "step6_sourceInvestigationChallengeVerified": true,
+    "multiDepthConsequentialCorrectionSyncVerified": true
+  },
+  "accessibilityAndScreenReaderAudit": {
+    "accessibleSvgDiagramsCount": 0,
+    "hasLabeledDepthSwitcher": true,
+    "hasLabeledStepNav": true,
+    "hasMainLandmark": true,
+    "hasSearchLandmark": true,
+    "hasSkipLink": true,
+    "liveRegionsCount": 3,
+    "unlabeledButtonsCount": 0,
+    "unlabeledInputsCount": 0
+  },
+  "comparisonWithV010": {
+    "v010_initialVisibleWords": 4114,
+    "v02_initialVisibleWords": 1537,
+    "initialReadingBurdenReductionPercent": 62.6,
+    "v010_initialScrollHeightPx": 9962,
+    "v02_initialScrollHeightPx": 4607,
+    "v02_quickLookStageWords": 629,
+    "v010_progressiveDepthLevels": 1,
+    "v02_progressiveDepthLevels": 3,
+    "v010_expectationRevealInteractions": 0,
+    "v02_expectationRevealInteractions": 15,
+    "v010_plainLanguageConceptExplainers": 0,
+    "v02_plainLanguageConceptExplainers": 20,
+    "v010_sourceInvestigationChallenges": 0,
+    "v02_sourceInvestigationChallenges": 5,
+    "evidenceTraceabilityPreserved": "100% (42 sources, 104 core records, 15 comparable arguments, 151 ledger events)"
+  },
   "workflows": {
     "questionToHistoryAndComparableArguments": {
       "samplePillsVerified": true,
@@ -155,19 +197,13 @@
     "notebookExportImportRoundTrip": {
       "challengesCount": 1,
       "dataHashMatches": true,
-      "eventsCount": 6,
+      "eventsCount": 8,
       "schema": "openline-history-notebook.v1"
-    },
-    "simulatedFirstTimeReaderExercise": {
-      "simulatedOnlyNoHumanParticipant": true,
-      "step1_askOrdinaryLanguageQuestion": "Verified in Question-to-History Console: Enters ordinary-language questions on Hormuz, territorial conflicts, and banking panics, and receives SUPPORTED, PARTIALLY_SUPPORTED, or fail-closed UNSUPPORTED responses.",
-      "step2_compareContemporaryArgumentsVsHindsight": "Verified in 4-column Comparable Historical Arguments Matrix: Distinguishes what contemporaries argued and what policymakers expected from subsequent events and later historians' conclusions.",
-      "step3_identifyConsequentialDifferenceAndRejectAnalogy": "Verified in Citizen Guide Cell 03, Compare Tab & Live Analogy Falsifier: Rejects Red Sea -> Hormuz rerouting, SPR -> Qatari LNG drawdown, Sinai MFO -> Area C turnkey transplant, and ICJ/ICC procedural conflations.",
-      "step4_understandWhyConclusionChanged": "Verified in Consequential Correction Lab & inline `.reopen` / `.surviving-box` banners: Shows exact challenged source IDs, which sole-source claims are quarantined, and which multi-source claims and arguments narrow to surviving independent citations."
     },
     "accessibilityAndPrint": {
       "keyboardTabFocusActiveElement": "BUTTON",
-      "hasPrintStylesheet": true
+      "hasPrintStylesheet": true,
+      "hasPrefersReducedMotionStylesheet": true
     }
   },
   "consoleErrors": [],

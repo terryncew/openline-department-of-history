@@ -1,60 +1,62 @@
-# Limitations and Uncertainty Disclosures
+# Limitations and Uncertainty Disclosures (v0.2)
 
 Read this before relying on anything in this package. These limits are part of the product, not fine print to skip.
 
 ## 1. A small, bounded library — not all of history
 
-The package covers **5 inquiries, 42 sources, 104 records, and 15 argument chains**. That is the whole library. It is a curated set of precedents, not a survey of history. Anything outside those five inquiries is outside what the tool can answer, and the tool says so (SUPPORTED / PARTIALLY_SUPPORTED / UNSUPPORTED) rather than guessing.
+The package covers **5 inquiries, 44 sources, 105 core records, and 15 comparable argument chains**. That is the whole library. It is a curated set of precedents, not a survey of all human history. Anything outside those five inquiries is outside what the tool can answer, and the tool says so (`SUPPORTED` / `PARTIALLY_SUPPORTED` / `UNSUPPORTED`) rather than guessing or fabricating an analogy.
 
-The five inquiries: 1854 Broad Street cholera; 1911 Triangle Shirtwaist fire; 1933 U.S. banking crisis; Strait of Hormuz and maritime energy chokepoints; Israel-Palestine civilian protection and durable arrangements.
+The five inquiries:
+1. 1854 Broad Street cholera outbreak (`cholera`)
+2. 1911 Triangle Shirtwaist Factory fire (`triangle`)
+3. 1933 U.S. banking crisis (`banking`)
+4. Strait of Hormuz and maritime energy chokepoints (`hormuz`)
+5. Israel–Palestine civilian protection and durable arrangements (`israel-palestine`)
 
 ## 2. Five sources are abstract-only or synopsis-only
 
-Exactly five sources were not read in full. They are represented by an abstract or a published synopsis, paraphrased, with a link — never as full text:
+Exactly five sources in the 44-source library were not read in full text because full text is behind publisher paywalls or print copyright. They are represented by an official abstract or peer-reviewed published synopsis, paraphrased, with a link and explicit scope constraint — never as full text or verbatim quotes:
 
-- `bank-wigmore`
-- `tri-mcevoy`
-- `tri-greenwald`
-- `hormuz-gholz-press-2010`
-- `ip-shlaim-lustick-reviews`
+- `bank-wigmore` (`ABSTRACT_ONLY`)
+- `tri-mcevoy` (`ABSTRACT_ONLY`)
+- `tri-greenwald` (`ABSTRACT_ONLY`)
+- `hormuz-gholz-press-2010` (`ABSTRACT_ONLY`)
+- `ip-shlaim-lustick-reviews` (`SYNOPSIS_ONLY`)
 
-Any claim that rests only on one of these rests on a summary, not on the full work. The site's source cards say so. The consequential-correction feature exists in part for this reason: withdraw a source and see which claims survive without it.
+Any claim that rests only on one of these rests on a summary, not on the full work. Both the 3-axis source cards and the v0.2 `Examine the Evidence` mode state this explicitly. The consequential-correction feature exists in part for this reason: challenge a source in `Step 6` or `Examine the Evidence` and see which claims survive without it across `Quick Look`, `Explore`, and `Examine the Evidence`.
 
-## 3. Hashes prove the files have not changed — nothing more
+## 3. Archival diagrams are source-bound visual reconstructions, not photographs
 
-SHA-256 checksums on the 42 citation cards, the bundled 1933 Emergency Banking Act PDF, `dist/data.json`, and the 151-event authoring ledger prove only that local bytes have not been altered since curation (2026-11-08). They never certify that a historical claim is true, and they never certify publisher authenticity. The bank-act PDF was fetched by HTTPS GET with standard certificate validation; that is an observed response, not a publisher signature.
+In `v0.2`, `Step 1 (The Question)` includes 5 interactive SVG archival diagrams (`ARCHIVAL_EXHIBITS` in `engine.js`) with 20 clickable hotspots to make spatial and chronological structures understandable without external network requests. Every exhibit carries an explicit badge (`DOCUMENTED_ARCHIVAL_RECONSTRUCTION_DIAGRAM — NOT_A_PHOTOGRAPH`) and provenance caption stating which primary sources (`snow1855`, `tri-trial`, `bank-act`, `hormuz-eia-chokepoints`, `ip-armistice-1949`, etc.) establish each hotspot. They must never be cited or mistaken as camera photographs or facsimile scans. The only bundled facsimile original in the offline archive is the public-domain [Emergency Banking Act of March 9, 1933 PDF](https://www.govinfo.gov/content/pkg/STATUTE-48/pdf/STATUTE-48-Pg1.pdf) (`dist/originals/bank-act.pdf`, SHA-256 `2be96cc32f9d1317a45b86b643ddf1171c2484b6a60d81165987d0a7ca727b94`).
 
-Two hash records were corrected during finalization (Phase 7, 2026-11-09) and are no longer open:
+## 4. Hashes prove local bytes have not changed — nothing more
 
-- The engineering report (§5.3) previously stated a bank-act PDF hash (`332ee7fb…`) that matched no file in the tree. Corrected in the in-tree report to `2be96cc32f9d1317a45b86b643ddf1171c2484b6a60d81165987d0a7ca727b94`, the hash of both PDF copies, confirmed by two manifests. Report-text discrepancy only; source integrity was never affected.
-- `SOURCE_MANIFEST.json` carries a `data_sha256` value (`4c21b49e…`). Its definition is now documented in the in-tree report (§5.3 note) and confirmed by recomputation: it is the SHA-256 of the canonical dataset string (the canonical JSON of `{schema, version, curatedOn, cases}`) without the trailing newline that `scripts/build.py` appends when writing `dist/data.json`. The SHA-256 of the `dist/data.json` file bytes including that newline is `84f16aec…1439`.
+SHA-256 checksums on the 44 citation cards, the bundled 1933 Emergency Banking Act PDF, `dist/data.json`, and the 151-event authoring ledger (`evidence/authoring-ledger/history.sqlite3`, SHA-256 `fb87e229aab88aa03f2c05751450924eed6f4028d481ff4ec03bb1bf778234e3`) prove only that local bytes have not been altered since curation (`2026-11-08`). They never certify that a historical claim is objectively true, and they never certify publisher authenticity.
 
-## 4. Court orders are pre-trial thresholds, not findings on the merits
+In `v0.2.0`:
+- `SOURCE_MANIFEST.json` carries `data_sha256: "933bfa186b928a91bd6ae365c7c1362070cb5e99848ffe185e72310e93826e4a"`, which is the SHA-256 of the canonical dataset JSON string (`{schema, version, curatedOn, cases}`) verified at runtime by `Engine.verifyDataset()` in `engine.js`. The SHA-256 of the `dist/data.json` file on disk (which includes a trailing newline appended by `scripts/build.py`) is `abc519d754a87cd3d6f35074f391400ae6cd849f70304ef02537c5a724d61d9d`. Both hashes changed from `v0.1.0` (`4c21b49e0c46d25ff6898ee044fce6a8e4302fafb4dccb6cd4737aa68d529088` / `84f16aec8a6a120a50c5742da843b5ab2cbbe174c31861c3d3f4d8ab11fd1439`) because the v0.2 dataset gained two sources, one outcome record, and one counterexample (see `RELEASE_NOTES.md`); the authoring ledger is unchanged.
 
-In the Israel-Palestine inquiry:
+## 5. Court orders are pre-trial thresholds, not findings on the merits
 
-- The ICJ Orders of 26 Jan, 28 Mar, and 24 May 2024 are binding incidental Provisional Measures under Article 41, based on plausibility of rights and imminent risk of irreparable harm. They are not a final judgment on the merits of whether genocide occurred.
-- The ICC Pre-Trial Chamber I warrants of 21 Nov 2024 are pre-trial arrest warrants under Rome Statute Article 58(1)(a), on a threshold of reasonable grounds to believe. They are not a trial conviction beyond reasonable doubt under Article 66.
+In the Israel–Palestine inquiry (`israel-palestine`):
+- The ICJ Orders of 26 Jan, 28 Mar, and 24 May 2024 (`ip-icj-provisional-2024`) are binding incidental Provisional Measures under ICJ Statute Article 41, based on plausibility of rights and imminent risk of irreparable harm. They are not a final judgment on the merits of whether genocide occurred.
+- The ICC Pre-Trial Chamber I warrants of 21 Nov 2024 (`ip-icc-warrants-2024`) are pre-trial arrest warrants under Rome Statute Article 58(1)(a), on a threshold of reasonable grounds to believe. They are not a trial conviction beyond reasonable doubt under Article 66.
 
-The site presents these with their procedural posture stated. Do not quote them as verdicts.
+All three depths in `v0.2` (`Quick Look`, `Explore`, and `Examine the Evidence`) and the plain-language concept cards state this procedural posture explicitly.
 
-## 5. What the tool does not do
+## 6. Deterministic keyword/domain question routing — not an open-domain LLM
 
-- **No prediction.** It refuses future-forecast questions ("What will happen in 2030?"). Any answer about the future would be speculation, and the tool says so.
-- **No dispute settlement.** It shows competing arguments and where historians disagree. It does not declare a winner in a live political dispute.
-- **No automatic verification of historical truth.** No software check in this package can establish that a historical claim is true. What the package verifies is narrower: that the bytes are unchanged, that claims are tied to named sources, that withdrawing a source visibly changes what survives, and that the analogy checks run.
-- **No live monitoring.** Source standing is as of curation (2026-11-08). The package does not check whether a source has since been corrected, retracted, or superseded.
+`Engine.askHistory()` routes ordinary-language citizen questions using deterministic domain token matching, structural sub-facet rules, and fail-closed boundary guardrails (`engine.js`). While `M5.1` and `v0.2` expanded everyday synonyms (covering panics/bank runs, shipping blockades/oil tankers, cholera/water pumps, factory fires/exit doors, ceasefires/civilian protection, and the founding meta-question), unusual phrasings that share zero domain vocabulary with the 5 curated inquiries will return `UNSUPPORTED` rather than guessing. This is an intentional fail-closed design choice: the interface never turns an unsupported question into a confident historical answer.
 
-## 6. Simulated acceptance is not a real human study
+## 7. Simulated acceptance is not a real human usability study
 
-All browser playtests in M4, M4.1, M5, and M5.1 were run in automated headless Chromium and are explicitly labeled `SIMULATED_ACCEPTANCE_EXERCISE_HEADLESS_CHROMIUM_NO_REAL_HUMAN_PARTICIPANT`. Automated checks verify rendering, layout, and interaction flows. They do not show whether a real first-time reader understands the site.
+All browser playtests in `v0.2` (`scripts/browser_playtest.py`, recorded in `evidence/BROWSER_PLAYTEST_RESULTS.json`) were executed in real headless Chromium (`Google Chrome 145.0.7632.6` + `ChromeDriver`) across Phone (`390×844`), Chromebook (`1024×768`), and Desktop (`1280×850` / `1280×900`) viewports and are explicitly labeled `SIMULATED_ACCEPTANCE_EXERCISE_HEADLESS_CHROMIUM_NO_REAL_HUMAN_PARTICIPANT`. Automated browser verification proves layout integrity (`0` horizontal overflows across `273` tested states), keyboard/ARIA semantics, and functional step-through, but it does **not** substitute for testing with real human participants (teenagers, families, and non-specialist adults).
 
-The human comprehension test (15 minutes, 3-5 first-time readers, 4 tasks, per §6 of the engineering report) has **not been run**. The Phase 5 kit is prepared and marked PENDING. That test was originally required before public deployment; on 2026-11-09 the founder authorized publication as a public research preview before the test, with the pending status disclosed in the app itself. Until it runs, any claim that "users understand this" is unproven.
+## 8. Verification actuals on the v0.2 tree (2026-11-09)
 
-## 7. Test counts are re-run actuals from the final tree
-
-Re-run in Phase 7 (2026-11-09) on the final tree: Node 53/53, Python ledger/baseline 12/12, Mandate-Ledger recall 3/3 — total 68/68, zero failures — and browser playtest 138/138 viewport states with 0 overflows, reproduced with Playwright headless Chromium because the repo's own Selenium script could not run in this VM (no Selenium/ChromeDriver installed). The falsifier finding F1 from Phase 4 (two ordinary-worded false analogies evaded the detectors) was repaired in Phase 7: both are now REJECTED in the engine and the live UI, the 9/9 falsifier sample still passes, and the suites above were re-run after the repair.
-
-## 8. A law establishes authority, not proof of successful implementation
-
-The bundled Emergency Banking Act confirms emergency measures and changes authority for bank conservation and currency issuance. A statute is evidence of what was authorized. It is not, by itself, proof that the measures worked as intended.
+- **Node test suite (`node --test tests/*.test.cjs`)**: **66/66 PASS** (`59` baseline engine, notebook, 9-vector adversarial, Astra blind, M5.1 held-out, and v0.2 story journey tests + `7` new v0.2 repair tests in `tests/repair_v02.test.cjs`).
+- **Python ledger & baseline suite (`python3 -m unittest discover -s tests -p "test_*.py" -v`)**: **13/13 PASS** (`12` baseline tests + `1` new `v0.2` multi-depth and `v0.1.0` comparison test).
+- **Upstream Mandate-Ledger recall suite (`python3 -m unittest discover -s third_party/mandate-ledger -p "test_*.py" -v`)**: **3/3 PASS**.
+- **Total automated unit/integration tests**: **82/82 PASS, zero failures**.
+- **Headless Chromium browser playtest (`python3 scripts/browser_playtest.py`)**: **273/273 viewport-case-depth-step-tab-question states PASS**, `0` horizontal overflows, `0` console errors, `0` external network requests.
+- **Independent Playwright re-verification of the repaired tree (2026-11-09)**: **21/21 checks PASS** (desktop 1280×850 and phone 390×844, `0` console errors, `0` page errors), covering every repair in `RELEASE_NOTES.md`.

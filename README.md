@@ -1,98 +1,54 @@
-# OpenLine Department of History — v0.1.0
+# OpenLine Department of History — v0.2 (Make History Accessible to Everybody)
 
-A free, open-source, offline civic research tool. Ask a contemporary question in plain language and see what documented history says: what people argued, what was tried, what actually happened, where historians later disagreed, and where the comparison to today stops working.
+OpenLine Department of History (`v0.2.0`) is a free, open-source ([MIT License](LICENSE)), offline-capable public history experience and civic evidence engine. It transforms the `v0.1.0` specialist research interface into a welcoming, story-first experience for ordinary people, teenagers, families, and curious adults—while preserving 100% of the underlying OpenLine evidence engine, 3-axis verification, analogy falsification, and consequential source-withdrawal recall underneath.
 
-**Status: published 2026-11-09 as a public research preview (v0.1.0). This repo is the M5.1 release candidate plus the Phase 3 product fix (citizen-question routing vocabulary in `engine.js`, rebuilt `dist/index.html`), the Phase 7 falsifier repair (F1, see below), the Phase 7 report-text corrections (§5.3 bank-act hash; `data_sha256` definition), and the Phase 2a publication fixes (public-research-preview and human-study disclosures in the app UI, `private: false`, root `index.html` for GitHub Pages). Verification numbers below are re-run actuals from the final tree, re-verified on the staged public tree — not the engineering report's claims.**
+## What Is New in v0.2
 
-## What an ordinary citizen can actually do with it
+1. **Welcoming Front Door**: Opens with **"What does history say?"** and *"Something happening today sound familiar? Explore what happened before, what people believed, what they tried, and what happened next."* Provides a plain-English question console, 5 one-click everyday example questions, and 5 visual story cards—reducing initial visible words on load by **62.6%** (`4,114` words in `v0.1.0` → `1,537` words in `v0.2`) and moving cryptographic hashes and specialist controls into a `"How this works ↗"` modal and an expandable specialist drawer.
+2. **One Product, Three Progressive Depths**:
+   - **Quick Look (~1 min read)**: Understand the complete 6-step historical story, competing arguments, documented outcomes, and analogy limits on a single screen (~260–271 narrative words) with clickable source chips.
+   - **Explore (Interactive 6-Step Story Journey)**: Follow **`1. The Question → 2. Back Then → 3. The Debate → 4. What Happened → 5. What’s Different Today → 6. Explore the Evidence`**.
+   - **Examine the Evidence (Full Source Ledger & Specialist Lab)**: Inspect all 44 three-axis source cards, trigger consequential source-withdrawal drills, compare arguments across inquiries, and use the 8-tab specialist workbench (`Facts`, `Arguments`, `Timeline`, `Compare`, `Outcomes`, `Historians`, `Falsify`, `Notebook`).
+   - All three depths are deterministically generated from the exact same verified dataset (`dist/data.json`, canonical SHA-256 `933bfa186b928a91bd6ae365c7c1362070cb5e99848ffe185e72310e93826e4a`) and stay synchronized when any source is challenged in `notebook.standing`.
+3. **Interactive Historical Inquiry Without Trivialization or Gamification**:
+   - **Archival Reconstruction Exhibits (Step 1)**: 5 accessible SVG diagrams with 20 source-bound interactive hotspots and explicit `DOCUMENTED_ARCHIVAL_RECONSTRUCTION_DIAGRAM — NOT_A_PHOTOGRAPH` provenance disclosures, plus 20 plain-language concept explainers (`PLAIN_LANGUAGE_CONCEPTS`).
+   - **Swipeable & Keyboard-Accessible Timelines (Step 2)**: Step through chronological events via date pills, `"What happened next?"` buttons, `ArrowLeft`/`ArrowRight` keys, touch swipe, or `"Show all events at once"`.
+   - **"What Did People Believe?" Expectation-vs-Outcome Reveals (Step 3)**: Read what contemporaries argued and what policymakers expected before revealing the documented historical outcome and later historiography (with a 1-click `"Reveal all outcomes at once"` toggle).
+   - **Before-and-After Analogy Explorer (Step 5)**: Compare `Back Then` vs. `What to Examine Today` across 20 structural dimensions with explicit `"Where this analogy breaks"` warnings and rejected overclaims.
+   - **Source-Investigation Challenges (Step 6)**: 5 primary-vs-secondary source corroboration challenges with 1-click live Consequential Correction triggers.
+   - **Zero Manipulative Gamification**: No points, streaks, badges, ideological scoring, or entertainment mechanics around human suffering. Restrained motion respects `@media (prefers-reduced-motion: reduce)`.
 
-- **Ask a contemporary question in your own words.** For example: "What happened when governments responded to banking panics?" or "What can history tell us about a prolonged Strait of Hormuz disruption?" The site routes the question to one of five curated inquiries and answers with evidence, or refuses clearly when the question is outside what it covers.
-- **Explore documented precedents.** Five inquiries: the 1854 Broad Street cholera outbreak, the 1911 Triangle Shirtwaist fire, the 1933 U.S. banking crisis, the Strait of Hormuz and maritime energy chokepoints, and Israel-Palestine civilian protection and durable arrangements. 42 sources, 104 records, 15 argument chains.
-- **Inspect the evidence.** Every claim links to a source card. The 3-Axis Source Inspector shows what each source is and where it is thin. Five sources are abstract-only or synopsis-only (see LIMITATIONS.md); the site says so rather than pretending to have the full text.
-- **See where the analogy stops.** The Compare and Falsify tab tests a plausible-sounding analogy and shows the physical, demographic, or legal difference that breaks it.
-- **Watch a correction happen.** Withdraw a source, or run the consequential-correction test, and the site shows which claims were set aside, which narrowed to the sources that remain, and which were untouched.
+## Curated Inquiries (5 Dossiers, 44 Sources, 105 Core Records, 15 Argument Chains)
 
-## What it does not do
+1. **1854 Broad Street Cholera Outbreak (`cholera`)**: *When should a community act on incomplete evidence of a public-health hazard?* Grounded in [John Snow's 1855 monograph](https://www.academia.dk/MedHist/Biblioteket/Print/snow_1855.html) and the [1855 Parish of St. James Cholera Inquiry Report](https://upload.wikimedia.org/wikipedia/commons/1/1c/Report_on_the_cholera_outbreak_in_the_Parish_of_St._James,_Westminster,_during_the_autumn_of_1854_(IA_b21780778).pdf).
+2. **1911 Triangle Shirtwaist Factory Fire (`triangle`)**: *What turns warnings about unsafe work into enforceable protection?* Grounded in the [Cornell ILR Triangle Fire Archive](https://trianglefire.ilr.cornell.edu/) and [New York Factory Investigating Commission Fourth Report (1915)](https://trianglefire.ilr.cornell.edu/primary/reports/FourthReportOfFIC).
+3. **1933 U.S. Banking Crisis (`banking`)**: *What helps restore trust when a financial system is under strain?* Grounded in the [Emergency Banking Act of March 9, 1933](https://www.govinfo.gov/content/pkg/STATUTE-48/pdf/STATUTE-48-Pg1.pdf) (bundled offline in `dist/originals/bank-act.pdf`) and [FDR's First Fireside Chat of March 12, 1933](https://www.presidency.ucsb.edu/documents/fireside-chat-banking).
+4. **Case A — Strait of Hormuz & Maritime Energy Chokepoints (`hormuz`)**: *What can historical maritime chokepoint crises teach us about reducing energy-price shocks without escalating conflict?* Grounded in [U.S. EIA World Oil Transit Chokepoints (2026)](https://www.eia.gov/international/analysis/special-topics/World_Oil_Transit_Chokepoints), [U.S. EIA Short-Term Energy Outlook, August 2026 — Global Energy Security Data (Strait of Hormuz tables)](https://www.eia.gov/outlooks/steo/report/energysecurity/article.php), [U.S. EIA Red Sea Analysis (2024)](https://www.eia.gov/todayinenergy/detail.php?id=61363), [U.S. DOE Strategic Petroleum Reserve Quick Facts](https://www.energy.gov/hgeo/opr/spr-quick-facts), [IEA Collective Stock Release Records](https://www.iea.org/news/iea-governing-board-concludes-2022-collective-actions), [U.S. Navy NHHC H-Gram 018-1 on the 1987–1988 Tanker War](https://www.history.navy.mil/about-us/leadership/director/directors-corner/h-grams/h-gram-018/h-018-1.html), [CRS Insight IN11173](https://www.everycrsreport.com/reports/IN11173.html) & [CRS Report R42335](https://www.everycrsreport.com/reports/R42335.html), [UNCTAD Rapid Assessment of the Red Sea Crisis (2024)](https://unctad.org/publication/navigating-troubled-waters-impact-global-trade-disruption-shipping-routes-red-sea-black), [Caitlin Talmadge (International Security, 2008)](https://www.belfercenter.org/publication/closing-time-assessing-iranian-threat-strait-hormuz), [Eugene Gholz & Daryl G. Press (Security Studies, 2010 — Abstract Only)](https://www.tandfonline.com/doi/abs/10.1080/09636412.2010.505865), and [James D. Hamilton (NBER Working Paper 16790, 2011)](https://www.nber.org/papers/w16790).
+5. **Case B — Israel–Palestine, Civilian Protection & Durable Arrangements (`israel-palestine`)**: *What documented historical interventions have reduced civilian harm or sustained negotiated arrangements, and under what conditions did they succeed or fail?* Grounded in the [1949 Rhodes General Armistice Agreement (UN Peacemaker)](https://peacemaker.un.org/en/node/9440), [1979 Egypt–Israel Peace Treaty & Multinational Force and Observers (MFO)](https://www.mfo.org/origins), [1993–1995 Oslo I & II Accords](https://peacemaker.un.org/en/node/9432), [1994 Israel–Jordan Treaty of Peace](https://peacemaker.un.org/en/node/9431), [UN OCHA Phase One Ceasefire Operational Report (March 2025)](https://www.ochaopt.org/content/report-humanitarian-response-un-and-humanitarian-partners-during-phase-one-ceasefire), [IPC Acute Food Insecurity & Famine Review Committee Gaza Reports (2025–2026)](https://www.ipcinfo.org/ipc-country-analysis/en/?country=PSE), [ICJ Case 192 Provisional Measures Orders (Jan/Mar/May 2024)](https://www.icj-cij.org/case/192/orders), [ICJ Case 186 Advisory Opinion (July 19, 2024)](https://www.icj-cij.org/case/186/advisory-opinions), [ICC Pre-Trial Chamber I Article 58 Arrest Warrants (Nov 21, 2024)](https://www.icc-cpi.int/news/situation-state-palestine-icc-pre-trial-chamber-i-rejects-state-israels-challenges), [Carnegie Endowment Comparative Peace-Process Analysis (Feb 2026)](https://carnegieendowment.org/research/2026/02/gaza-trump-board-of-peace-negotiations-israel-lessons-from-oslo), and [IHR Review #153](https://reviews.history.ac.uk/review/153/) / [JPS Book Review Synthesis](https://online.ucpress.edu/jps/article/49/4/145/111934/Review-Paradigm-Lost-From-Two-State-Solution-to).
 
-It does not predict the future (it refuses "What will happen in 2030?"). It does not settle political disputes. It does not automatically verify that a historical claim is true. Hashes in this package prove the files have not changed since curation; they never prove the history is correct. See LIMITATIONS.md.
-
-## Installation and use
-
-No installation, no account, no network needed. The built site is a static page.
-
-Option A — open the file directly:
-
-1. Unzip the release.
-2. Open `index.html` in any modern browser. It works from `file://` with zero external network calls.
-
-Option B — serve it locally:
-
-```bash
-python3 -m http.server 8000 --directory dist
-# Open http://localhost:8000 in your browser
-```
-
-To rebuild the built page from source (optional):
+## Verification & Build Commands (Offline Standard Library Only)
 
 ```bash
-python3 scripts/build.py
-```
+# 1. Deterministic build of dist/data.json, dist/index.html, and root index.html
+python3 scripts/build.py && cp dist/index.html index.html
 
-Requirements: a modern browser for use; Python 3 (standard library only) for the build and ledger checks; Node.js 18+ only if you want to run the JavaScript tests.
-
-## How to verify
-
-From the repo root:
-
-```bash
-# 1. Verify every file in the public tree against the public manifest
-#    (SHA256SUMS.txt lists every file except itself)
-sha256sum -c SHA256SUMS.txt
-
-# 2. Verify the authoring ledger (151 events; head hash in evidence/AUTHORING_HEAD.json)
+# 2. Verify the hash-chained SQLite authoring ledger (151 events)
 python3 scripts/evidence_ledger.py --dir evidence/authoring-ledger verify --expected-head $(python3 -c 'import json;print(json.load(open("evidence/AUTHORING_HEAD.json"))["head"])')
 
-# 3. Run the test suites
+# 3. Run all 66 Node engine, notebook, 9-vector adversarial, Astra blind, M5.1, v0.2 journey, and v0.2 repair tests
 node --test tests/*.test.cjs
+
+# 4. Run all 13 Python ledger/baseline tests + 3 upstream Mandate-Ledger recall tests (16 Python tests total)
 python3 -m unittest discover -s tests -p "test_*.py" -v
 python3 -m unittest discover -s third_party/mandate-ledger -p "test_*.py" -v
+
+# 5. Generate and evaluate the Conventional Searchable Reference Baseline & v0.2 Comparison
+python3 scripts/conventional_baseline.py
+
+# 6. Run the real headless Chromium browser playtest across Phone, Chromebook, and Desktop (273 states)
+python3 scripts/browser_playtest.py
 ```
 
-Re-run actuals on the final tree (2026-11-09, Phase 7): Node 53/53, Python ledger/baseline 12/12, Mandate-Ledger recall 3/3, total 68/68, zero failures. Ledger verify (run on a copy, since the documented verify step mutates the shipped `history.sqlite3` file bytes; content unchanged): 151 events, head `f978269a4ddd55c03189f313813c7494106ea0175d1c529b98aa6fcd2edf8ca0`, hash chain valid. Browser playtest: 138/138 viewport states, 0 overflows, 0 console errors, 0 external network requests — reproduced with Playwright headless Chromium, because the repo's own Selenium playtest script could not run in this VM (no Selenium/ChromeDriver installed). The browser playtest is explicitly labeled a simulated headless-Chromium exercise with no real human participant; the human comprehension test (Phase 5 kit) is still PENDING. The founder authorized publication as a public research preview before that test on 2026-11-09, and the pending status is disclosed in the app itself.
+## Key v0.2 Documentation
 
-Falsifier finding F1 (Phase 4): two fresh ordinary-worded false analogies had evaded the live Analogy Falsifier. FIXED in Phase 7 by broadening the detector patterns in `engine.js` (deterministic/permanence phrasing, "caused only by" / single-decisive-cause phrasing, "fundamentally safe" fireproof-shell phrasing). Both evaded fallacies are now REJECTED in the engine and in the live UI, the 9/9 falsifier sample still passes, all valid controls still return DEFENSIBLE_WITH_LIMITS, and all suites still pass (see above). No wording-narrowing fallback was needed.
-
-## Finalization record (Phase 7, 2026-11-09)
-
-1. Base tree copied from the Phase 3 product agent's fixed tree; diff vs the RC original verified as exactly `engine.js` + `dist/index.html` before any further change. The shipped `history.sqlite3` bytes are the pristine RC-original bytes (SHA-256 `fb87e229aab88aa03f2c05751450924eed6f4028d481ff4ec03bb1bf778234e3`).
-2. F1 falsifier repair applied to `engine.js` and `dist/index.html` rebuilt with the repo's own `scripts/build.py` (`dist/data.json` byte-identical after rebuild; `data_sha256` unchanged).
-3. In-tree report corrected: §5.3 bank-act PDF hash now `2be96cc32f9d1317a45b86b643ddf1171c2484b6a60d81165987d0a7ca727b94` (was stale `332ee7fb…`), and a note added defining `SOURCE_MANIFEST.json` `data_sha256` as the SHA-256 of the canonical dataset string without the trailing newline `build.py` appends to `dist/data.json`.
-4. Full suites re-run after all edits: Node 53/53, Python 12/12, Mandate-Ledger recall 3/3 (68/68); browser 138/138 reproduced via Playwright; F1 probe (9/9 + 2 evaded + valid controls + guardrails) all PASS.
-5. Package manifest recomputed from scratch: `cd tree && find . -type f | sort | xargs sha256sum > ../PACKAGE_TREE_SHA256SUMS.txt` (136 entries), verified with `sha256sum -c`.
-
-Note on manifests: the release candidate's own manifest (135 entries) is superseded by the public manifest `SHA256SUMS.txt` at the repo root, which lists every file in the public tree except itself. The RC manifest fails on the files intentionally changed since the RC (`engine.js`, `dist/index.html`, `M5_FINAL_RECOVERY_AND_QUALIFICATION_REPORT.md`, plus the Phase 2a publication changes); that is expected. The RC manifest itself is preserved in the release history, not in this tree.
-
-## Publication record (Phase 2a, 2026-11-09)
-
-Staged for publication from the final package tree. Changed vs the final tree: `template.html` (both disclosures added to footer and method dialog), `dist/index.html` (rebuilt with `scripts/build.py`; `data_sha256` unchanged), `package.json` (`private: false`), `README.md` (this file, adapted to the repo layout), `SHA256SUMS.txt` (replaced by the public manifest). Added at the repo root: `index.html` (copy of the rebuilt `dist/index.html`, the GitHub Pages entry point), `LIMITATIONS.md`, `RELEASE_NOTES.md`, `LICENSE_REVIEW.md`, `PRODUCT_DESCRIPTION.md`. Nothing removed. The RC manifest (135 entries) is superseded by the public manifest `SHA256SUMS.txt` (140 entries — every file in the public tree except the manifest itself), verified with `sha256sum -c`. The founder authorized publication as a public research preview before the §6 human comprehension test on 2026-11-09; the test remains PENDING and is disclosed in the app.
-
-- **Offline:** the built page makes zero external network requests (Content Security Policy `default-src 'self'`, `connect-src 'self'`). Once downloaded, it works with no connection. The bundled 1933 Emergency Banking Act PDF is included in the package (`dist/originals/bank-act.pdf` and `research/originals/bank-act.pdf`).
-- **Keyboard and screen use:** the page uses real buttons and form controls, labelled regions (`aria-label` on the question form and briefing region, `aria-live="polite"` on the briefing), and a skip-style main landmark (`<main id="main" tabindex="-1">`). The automated playtest checked keyboard focus and print CSS.
-- **Not yet tested:** no screen-reader testing with a real assistive-technology user has happened, and no real-human usability testing has happened (that is the pending Phase 5 test). Do not claim the site is screen-reader verified. If you use a screen reader and find a barrier, that is a reportable defect, not a user error.
-- **Viewports:** the playtest covered phone (390x844), Chromebook (1024x768), and desktop (1280x850). Text is plain HTML; browser zoom and text scaling apply normally.
-
-## License and redistribution
-
-MIT License, copyright (c) 2026 Terrynce White — see `LICENSE` and `LICENSE_REVIEW.md`. The bundled third-party material has its own terms; the review records what is redistributable and the one rights caveat that matters (five copyrighted sources are represented only as abstract/synopsis paraphrases with links, never as redistributed full text).
-
-## Contents
-
-- `index.html` — the built single-file app (same build as `dist/index.html`); open this in a browser.
-- `dist/` — the built app and its data (`dist/index.html`, `dist/data.json`), plus the bundled 1933 Emergency Banking Act PDF in `dist/originals/`.
-- `app.js`, `engine.js`, `template.html`, `styles.css` — the app source; rebuild with `python3 scripts/build.py`.
-- `evidence/`, `research/`, `scripts/`, `tests/`, `third_party/` — evidence cards, research data, build/ledger scripts, test suites, and bundled third-party code.
-- `SHA256SUMS.txt` — SHA-256 manifest of the public tree (every file except the manifest itself). Verify with `sha256sum -c SHA256SUMS.txt`.
-- `LIMITATIONS.md` — what the package does not cover and what it cannot prove.
-- `RELEASE_NOTES.md` — release notes for v0.1.0.
-- `PRODUCT_DESCRIPTION.md` — one-page plain-language description.
-- `LICENSE_REVIEW.md` — license and redistribution-rights review.
+- `LIMITATIONS.md` — Explicit scope, coverage, procedural, and simulated-testing limitations.

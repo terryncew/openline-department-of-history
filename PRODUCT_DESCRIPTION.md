@@ -14,7 +14,7 @@ The Department of History is a free, open-source tool that lets an ordinary citi
 
 **Check where the comparison stops.** A past event is never a perfect match for today. The tool tests plausible-sounding analogies and shows the difference that breaks them: a physical limit, a different population, a different law. Knowing where the analogy stops is as useful as knowing where it holds.
 
-**Inspect the evidence yourself.** Every claim names its source. You can open the source inspector, see what each source is and where it is thin, and withdraw a source to watch what happens: some claims are set aside, some narrow to the sources that remain, some are untouched. Five of the 42 sources are represented only by an abstract or synopsis, and the tool says so.
+**Inspect the evidence yourself.** Every claim names its source. You can open the source inspector, see what each source is and where it is thin, and withdraw a source to watch what happens: some claims are set aside, some narrow to the sources that remain, some are untouched. Five of the 44 sources are represented only by an abstract or synopsis, and the tool says so.
 
 **Use it offline.** The whole thing is a single web page. Download it once and it works with no connection, no account, and no tracking. It makes zero external network requests.
 

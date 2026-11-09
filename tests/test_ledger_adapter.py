@@ -40,11 +40,11 @@ class ArgonLedgerAndBaselineTests(unittest.TestCase):
  def setUp(self):
   self.data = json.loads((ROOT / "dist" / "data.json").read_text(encoding="utf-8"))
 
- def test_five_cases_and_42_sources_present_in_dataset(self):
+ def test_five_cases_and_44_sources_present_in_dataset(self):
   case_ids = [c["id"] for c in self.data["cases"]]
   self.assertEqual(case_ids, ["cholera", "triangle", "banking", "hormuz", "israel-palestine"])
   total_sources = sum(len(c["sources"]) for c in self.data["cases"])
-  self.assertEqual(total_sources, 42)
+  self.assertEqual(total_sources, 44)  # Repair F7/F9: +2 sources (tri-dyrud-insurance, hormuz-eia-2026-closure)
 
  def test_hormuz_and_israel_palestine_consequential_withdrawal_in_sqlite_ledger(self):
   with tempfile.TemporaryDirectory() as tmp:
@@ -57,7 +57,7 @@ class ArgonLedgerAndBaselineTests(unittest.TestCase):
     for group in ["facts", "timeline", "comparison", "outcomes", "interpretations"]:
      for item in c[group]:
       h.bind(c["id"], item["id"], item["sourceIds"], "Curated dependency declaration; human historical validity review remains required")
-   self.assertEqual(len(h.rows()), 151)
+   self.assertEqual(len(h.rows()), 154)  # Repair F7/F9: +3 ledger events (+2 sources, +1 outcome)
 
    # 1. Challenge hormuz-gholz-press-2010 in Strait of Hormuz case
    h.withdraw("hormuz", "hormuz-gholz-press-2010", "Public online landing page provides only abstract and metadata; full text paywalled.")
@@ -69,7 +69,7 @@ class ArgonLedgerAndBaselineTests(unittest.TestCase):
     "hormuz-outcomes-1",
    ])
    hormuz_current = [r["review_id"] for r in h.status("hormuz") if r["status"] == "CURRENT"]
-   self.assertEqual(len(hormuz_current), 18)
+   self.assertEqual(len(hormuz_current), 19)  # Repair F9: +1 untouched Hormuz record (hormuz-outcomes-4)
 
    # 2. Challenge ip-icj-provisional-2024 in Israel-Palestine case
    h.withdraw("israel-palestine", "ip-icj-provisional-2024", "Quarantining ICJ Art. 41 Provisional Measures Order to test whether humanitarian facts survive on UN OCHA operational data.")
@@ -106,8 +106,8 @@ class ArgonLedgerAndBaselineTests(unittest.TestCase):
 
   summary = conventional_baseline.evaluate_comparison(self.data, brief_path)
   self.assertEqual(summary["casesCount"], 5)
-  self.assertEqual(summary["sourcesCount"], 42)
-  self.assertEqual(summary["recordsCount"], 104)
+  self.assertEqual(summary["sourcesCount"], 44)  # Repair F7/F9
+  self.assertEqual(summary["recordsCount"], 105)  # Repair F9: +1 outcome record
   self.assertEqual(len(summary["criteria"]), 6)
   verdicts = {c["id"]: c["verdict"] for c in summary["criteria"]}
   self.assertEqual(verdicts["C5_correction_after_challenged_evidence"], "PARITY_ON_SINGLE_SOURCE_LOOKUP_IMPROVED_ON_MULTI_SOURCE_COMBINATORIAL_NARROWING")
@@ -127,5 +127,17 @@ class ArgonLedgerAndBaselineTests(unittest.TestCase):
   summary = conventional_baseline.evaluate_comparison(self.data, brief_path)
   self.assertEqual(summary["argumentsCount"], 15)
   self.assertTrue(summary["searchableReferenceInterface"])
+
+
+ def test_v02_progressive_depths_and_v010_comparison_metrics(self):
+  brief_path = conventional_baseline.generate_conventional_brief(self.data)
+  summary = conventional_baseline.evaluate_comparison(self.data, brief_path)
+  self.assertEqual(summary["version"], "0.2.0")
+  v02m = summary["v02ComparisonMetrics"]
+  self.assertEqual(v02m["progressiveDepthLevels"], 3)
+  self.assertEqual(v02m["storyJourneySteps"], 6)
+  self.assertEqual(v02m["plainLanguageConcepts"], 20)
+  self.assertEqual(v02m["sourceInvestigationChallenges"], 5)
+  self.assertGreater(v02m["initialReadingBurdenReductionPercent"], 50.0)
 
 if __name__=="__main__":unittest.main()
